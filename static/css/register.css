@@ -1,0 +1,224 @@
+/* static/css/register.css */
+
+/* --- Variables (Importa o copia las necesarias si no están globales) --- */
+/* Es buena práctica tener las variables en :root de styles.css global */
+/* Si ya están allí, puedes incluso eliminar esta sección :root de aquí */
+:root {
+    --primario: #D42D2E;
+    --blanco: #FFFFFF;
+    --gris-oscuro: #181A1B;
+    --gris-claro: #858585;
+    --gris: #313131;
+    --gris-t: #313131d5; /* Fondo del contenedor */
+    --input-bg: #414141;
+    --input-border: #555;
+    --input-text: #e0e0e0;
+    --azul-marino-trans:#257787ca; /* Color de links */
+    --success-bg: #2a573a;
+    --success-text: #a7d7b4;
+    --error-bg: #4d2429;
+    --error-text: #f1b0b7;
+    --info-bg: #1d3b5e;
+    --info-text: #a8cffc;
+    --processing-text: #f0ad4e;
+    --Onest: "Onest", sans-serif;
+    --Orbitron: "Orbitron", sans-serif;
+    --Ubuntu: "Ubuntu Sans Mono", monospace;
+}
+
+/* --- Estilo para el WRAPPER principal --- */
+#register-wrapper {
+    max-width: 550px;
+    margin: 4rem auto;
+    padding: 30px 40px;
+    background-color: var(--gris-t);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+    box-sizing: border-box;
+    width: 90%;
+    color: var(--blanco); /* Color texto por defecto dentro del wrapper */
+}
+
+/* --- Contenedor del Formulario --- */
+#register-wrapper .register-form-container {
+    text-align: center;
+}
+
+/* --- Título de la Página ("Registro de Nuevo Usuario") --- */
+#register-wrapper .titulo-pagina {
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2.6rem;
+    margin-top: 1rem; /* Añadido espacio superior si no hay cabecera visual */
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+}
+
+/* --- Grupos de Formulario --- */
+#register-wrapper .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#register-wrapper label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gris-claro);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* --- Inputs --- */
+#register-wrapper input[type="text"],
+#register-wrapper input[type="email"],
+#register-wrapper input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    font-size: 1.5rem;
+    font-family: var(--Onest);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#register-wrapper input:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3);
+}
+
+/* --- Contenedor del Botón --- */
+#register-wrapper .button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* --- Botón Principal --- */
+#register-wrapper button[type="submit"] {
+    background-color: var(--primario);
+    color: white;
+    padding: 11px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--Ubuntu);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#register-wrapper button[type="submit"]:hover {
+    background-color: #b02122;
+}
+#register-wrapper button[type="submit"]:active {
+    transform: scale(0.98);
+}
+#register-wrapper button[type="submit"]:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- Links Inferiores --- */
+#register-wrapper .bottom-links {
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    color: var(--gris-claro);
+    text-align: center;
+}
+#register-wrapper .bottom-links p {
+    margin-bottom: 8px;
+}
+#register-wrapper .bottom-links a {
+    color: var(--azul-marino-trans);
+    text-decoration: none;
+    font-weight: 600;
+}
+#register-wrapper .bottom-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Mensajes Flash (Estilos y Posicionamiento iguales a login) --- */
+#register-wrapper .message-container {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Posicionamiento absoluto opcional (igual que en login.css) */
+    /* position: absolute; top: 15px; left: 50%; transform: translateX(-50%); ... */
+}
+
+#register-wrapper .flash-message {
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--blanco);
+    background-color: var(--gris);
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+#register-wrapper .flash-message.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: var(--success-text);
+}
+#register-wrapper .flash-message.danger {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border-color: var(--error-text);
+}
+#register-wrapper .flash-message.info {
+     background-color: var(--info-bg);
+    color: var(--info-text);
+    border-color: var(--info-text);
+}
+#register-wrapper .flash-message.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    #register-wrapper {
+        margin: 3rem auto;
+        padding: 25px 30px;
+    }
+    #register-wrapper .titulo-pagina {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+     #register-wrapper {
+        margin: 2rem auto;
+        padding: 20px 25px;
+    }
+    #register-wrapper .titulo-pagina {
+        font-size: 2rem;
+    }
+    #register-wrapper label {
+        font-size: 1.2rem;
+    }
+     #register-wrapper input {
+        font-size: 1.4rem;
+    }
+    #register-wrapper button[type="submit"] {
+        font-size: 1.4rem;
+    }
+     #register-wrapper .bottom-links {
+        font-size: 1.2rem;
+    }
+     #register-wrapper .flash-message {
+        font-size: 1.3rem;
+    }
+}

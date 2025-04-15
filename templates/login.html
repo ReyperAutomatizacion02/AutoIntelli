@@ -1,0 +1,95 @@
+{% extends 'base.html' %} {# Asegúrate de que hereda de la base #}
+
+{% block title %}Acceso - AutoIntelli{% endblock %} {# Título específico #}
+
+{% block head_extra %}
+    {# Carga la hoja de estilos específica para login #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    {# No necesitas preload aquí si ya lo haces en base.html para styles.css #}
+    {# <link rel="preload" href="{{ url_for('static', filename='css/login.css') }}" as="style"> #}
+{% endblock %}
+
+{% block content %}
+    {# Contenedor Wrapper específico para login #}
+    <div id="login-wrapper">
+        {# El logo se hereda del header en base.html, lo quitamos de aquí #}
+
+        {# Contenedor para el título y lottie #}
+        <div class="login-header-visuals">
+            <h1 class="titulo-login">AutoIntelli</h1> {# Renombrada clase para evitar conflicto con .titulo global #}
+            <dotlottie-player class="lottie-icon-login" {# Renombrada clase #}
+                src="https://lottie.host/94254579-f9c6-481c-8e0e-295e37f5319b/xR9EBMkfAQ.lottie"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                ></dotlottie-player>
+        </div>
+
+        {# Contenedor del formulario y mensajes #}
+        <div class="login-form-container">
+            <h2>Acceso</h2>
+
+             {# Contenedor para mensajes flash (mejor posicionamiento) #}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="message-container"> {# Nuevo contenedor para posicionar #}
+                    {% for category, message in messages %}
+                    <div role="alert" class="flash-message {{ category }}"> {# Añadir categoría como clase #}
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="{{ url_for('login') }}"> {# Usar url_for para la acción #}
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group form-action"> {# Clase para el botón #}
+                    <button type="submit">Accesar</button>
+                </div>
+                {# Agrupar links #}
+                <div class="form-links-group">
+                    <div class="form-links">
+                        <a href="{{ url_for('index') }}">Volver</a>
+                        <a href="{{ url_for('register') }}">Registrate</a>
+                    </div>
+                    <div class="form-links password-link">
+                        <a href="{{ url_for('recover_password') }}">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> {# Cierre de #login-wrapper #}
+{% endblock %}
+
+{% block scripts_extra %}
+    {# El script de Lottie ya debería estar en base.html, pero si no, mantenlo aquí #}
+
+    {# Script para auto-cerrar mensajes flash (lo mantenemos) #}
+    <script>
+        // ... (El script JS para auto-cerrar mensajes que ya tenías) ...
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            const autoCloseDelay = 5000;
+            const fadeOutDuration = 500;
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (message.parentNode) {
+                           message.style.display = 'none';
+                        }
+                    }, fadeOutDuration);
+                }, autoCloseDelay);
+            });
+        });
+    </script>
+{% endblock %}

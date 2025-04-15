@@ -1,0 +1,319 @@
+/* static/css/notion_request/styles.css (o el nombre que uses) */
+
+/* --- Variables (sin cambios) --- */
+:root {
+    --bg-color-light: #f4f4f4;
+    --container-bg-light: #fff;
+    --text-color-light: #333;
+    --label-color-light: #555;
+    --border-color-light: #ccc;
+    --input-bg-light: #fff;
+    --select-arrow-light: '%23343a40';
+    --shadow-light: rgba(0, 0, 0, 0.1);
+
+    --bg-color-dark: #1a1a1a;
+    --container-bg-dark: #2c2c2c;
+    --text-color-dark: #e0e0e0;
+    --label-color-dark: #b0b0b0;
+    --border-color-dark: #555;
+    --input-bg-dark: #3b3b3b;
+    --select-arrow-dark: '%23e0e0e0';
+    --shadow-dark: rgba(255, 255, 255, 0.08);
+
+    --primary-color: #D42D2E;
+    --primary-hover-color: #b02122;
+
+    --transition-speed: 0.3s;
+}
+
+/* --- Estilos para el CONTENEDOR PRINCIPAL de la herramienta --- */
+#request-material-wrapper {
+    /* Define el ancho máximo de esta sección y la centra en la página */
+    max-width: 900px; /* Ajusta según necesites */
+    margin: 3rem auto; /* Margen superior/inferior y centrado horizontal */
+    padding: 20px;     /* Espacio interno DENTRO del wrapper */
+    box-sizing: border-box;
+    width: 100%;       /* Ocupa el ancho disponible hasta el max-width */
+    /* background-color: var(--gris); /* Opcional: fondo para esta área */
+    /* border-radius: 8px; */
+}
+
+#request-material-wrapper .container {
+    background-color: var(--container-bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--shadow-light);
+    width: 90%; /* Puedes ajustar este porcentaje también si es necesario */
+    /* --- AUMENTA ESTE VALOR --- */
+    max-width: 800px; /* Antes era 600px, prueba con 800px, 900px, etc. */
+    margin: 0 auto;   /* Mantiene el contenedor centrado dentro del wrapper */
+    transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* --- Logo link (si hubiera uno DENTRO del wrapper) --- */
+#request-material-wrapper .logo-link,
+#request-material-wrapper .logo-link:hover,
+#request-material-wrapper .logo-link:visited,
+#request-material-wrapper .logo-link:focus {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+#request-material-wrapper .logo-link .logo {
+    display: block;
+}
+
+/* --- Logo (si hubiera uno DENTRO del wrapper) --- */
+#request-material-wrapper #logo {
+    display: block; margin: 0 auto 25px auto; max-width: 150px; height: auto;
+}
+
+/* --- Estilos específicos prefijados --- */
+#request-material-wrapper h1 {
+    font-family: 'Orbitron', sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; text-align: center; margin-bottom: 30px;
+    color: #D42D2E; transition: color var(--transition-speed) ease; border-bottom: 1px solid var(--primario);;
+}
+
+
+#request-material-wrapper .form-group { margin-bottom: 15px; }
+
+#request-material-wrapper .form-row { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 0; }
+#request-material-wrapper .form-row > .form-group { margin-bottom: 15px; }
+#request-material-wrapper .form-row .form-group { flex: 1; min-width: 180px; }
+#request-material-wrapper .form-group:not(.form-row .form-group) { margin-bottom: 15px; margin-top: 30px; }
+#request-material-wrapper #dimensiones-container .form-row > .form-group {
+    flex-grow: 0;         /* Evita que crezcan para llenar espacio extra */
+    flex-shrink: 1;       /* Permite que se encojan si es necesario */
+
+    /* Establece un ancho base. Con 4 items y gap: 20px, calc es bueno */
+    /* 25% por item, menos aprox. 3/4 del gap (15px si gap es 20px) */
+    flex-basis: calc(25% - 15px);
+
+    /* Opcionalmente, usa un porcentaje fijo simple si calc es complejo: */
+    /* flex-basis: 22%; */ /* Ajusta este porcentaje */
+
+    min-width: 0;         /* Anula cualquier min-width heredado que pueda forzar el wrap */
+                          /* O establece un mínimo pequeño: min-width: 80px; */
+}
+
+/* Asegúrate de que los input dentro de estos grupos usen todo el ancho del grupo */
+#request-material-wrapper #dimensiones-container .form-row .form-group input[type="text"] {
+    width: 100%;
+}
+
+#request-material-wrapper label {
+    display: block; margin-bottom: 5px; font-weight: 600; color: var(--label-color-light);
+    text-transform: uppercase; letter-spacing: 0.5px; transition: color var(--transition-speed) ease; font-size: 0.9em;
+}
+
+#request-material-wrapper input[type="text"],
+#request-material-wrapper input[type="number"],
+#request-material-wrapper input[type="date"],
+#request-material-wrapper select,
+#request-material-wrapper textarea {
+    width: 100%; padding: 10px; border: 1px solid var(--border-color-light); border-radius: 6px;
+    box-sizing: border-box; font-size: 16px; font-family: 'Ubuntu', sans-serif;
+    background-color: var(--input-bg-light); color: var(--text-color-light);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    line-height: 1.5;
+}
+
+#request-material-wrapper select {
+    padding-right: 30px; appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    background-repeat: no-repeat; background-position: right 10px center;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="#{var(--select-arrow-light)}" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>');
+}
+
+#request-material-wrapper textarea { height: 100px; resize: none; }
+
+#request-material-wrapper .folio-value {
+    display: block; width: 100%; padding: 10px; border: transparent;
+    border-radius: 6px; font-size: 16px; font-family: 'Ubuntu', sans-serif; box-sizing: border-box;
+    line-height: 1.5; background-color: transparent; color: #495057;
+    min-height: calc(1.5em + 20px + 2px); white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+#request-material-wrapper .error-field { border: 1px solid var(--primary-color) !important; background-color: #fdd !important; }
+
+#request-material-wrapper input.na-field:disabled,
+#request-material-wrapper select.na-field:disabled {
+    background-color: #e9ecef; color: #6c757d; cursor: not-allowed;
+    border-color: var(--border-color-light); opacity: 0.7;
+}
+
+#request-material-wrapper #dimensiones-container,
+#request-material-wrapper #torni-table-container {
+    margin-top: 25px; margin-bottom: 0; padding: 20px; border: 1px solid var(--border-color-light);
+    border-radius: 6px; background-color: rgba(0, 0, 0, 0.02);
+    transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+#request-material-wrapper #dimensiones-container h3,
+#request-material-wrapper #torni-table-container h3 { /* Corregido # faltante */
+    padding: 0; margin-top: 0; margin-bottom: 15px; color: var(--label-color-light);
+    font-weight: 600; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px;
+    transition: color var(--transition-speed) ease; text-align: left;
+}
+
+#request-material-wrapper #torni-table-container { padding-bottom: 5px; overflow-x: auto; }
+#request-material-wrapper #torni-items-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+
+#request-material-wrapper #torni-items-table th,
+#request-material-wrapper #torni-items-table td {
+    border: 1px solid var(--border-color-light); padding: 8px 10px; text-align: left;
+    vertical-align: top; transition: border-color var(--transition-speed) ease;
+}
+#request-material-wrapper #torni-items-table th {
+    background-color: #f8f9fa; font-weight: 600; font-size: 0.9em; text-transform: uppercase;
+    color: var(--label-color-light); transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+#request-material-wrapper #torni-items-table th:nth-child(1),
+#request-material-wrapper #torni-items-table td:nth-child(1) { width: 15%; min-width: 80px; } /* Cantidad */
+#request-material-wrapper #torni-items-table th:nth-child(4),
+#request-material-wrapper #torni-items-table td:nth-child(4) { width: 10%; min-width: 60px; text-align: center; } /* Acción */
+#request-material-wrapper #torni-items-table th:nth-child(2),
+#request-material-wrapper #torni-items-table td:nth-child(2) { width: 30%; } /* ID */
+#request-material-wrapper #torni-items-table th:nth-child(3),
+#request-material-wrapper #torni-items-table td:nth-child(3) { width: 45%;  } /* Descripcion */
+
+#request-material-wrapper #torni-items-table td:nth-child(3) div.awesomplete > input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#request-material-wrapper #torni-items-table input[type="number"],
+#request-material-wrapper #torni-items-table input[type="text"] {
+    width: 100%; padding: 6px; font-size: 14px; box-sizing: border-box;
+}
+#request-material-wrapper .delete-row-btn,
+#request-material-wrapper .add-row-btn { /* Corregido: Asegúrate de que add-row-btn sea una clase */
+    color: white; border: none; border-radius: 4px; padding: 4px 8px;
+    cursor: pointer; font-size: 12px; line-height: 1.2; transition: background-color 0.2s ease;
+}
+#request-material-wrapper .delete-row-btn { background-color: #dc3545; }
+#request-material-wrapper .delete-row-btn:hover { background-color: #c82333; }
+#request-material-wrapper .add-row-btn { background-color: #28a745; display: block; margin: 0 auto 15px auto; padding: 8px 15px; font-size: 14px; }
+#request-material-wrapper .add-row-btn:hover { background-color: #218838; }
+
+#request-material-wrapper button[type="submit"] {
+    background-color: var(--primary-color); color: white; padding: 12px 20px; border: none; border-radius: 6px;
+    cursor: pointer; font-size: 18px; font-weight: bold; transition: background-color var(--transition-speed) ease;
+    display: block; width: 100%; margin-top: 30px; font-family: 'Ubuntu', sans-serif; text-transform: uppercase; letter-spacing: 1px;
+}
+#request-material-wrapper button[type="submit"]:hover { background-color: var(--primary-hover-color); }
+
+#request-material-wrapper .mensaje {
+    margin-top: 15px; padding: 10px 15px; border-radius: 6px; text-align: center;
+    border: 1px solid transparent; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    line-height: 1.4;
+}
+#request-material-wrapper .mensaje.oculto { display: none !important; }
+#request-material-wrapper #mensaje-exito { background-color: #d4edda; color: #155724; border-color: #c3e6cb; }
+#request-material-wrapper #mensaje-exito a { color: #0d5b21; font-weight: bold; text-decoration: underline; }
+#request-material-wrapper #mensaje-exito.mensaje-warning-estilo { background-color: #fff3cd; color: #856404; border-color: #ffeeba; }
+#request-material-wrapper #mensaje-exito.mensaje-warning-estilo a { color: #664d03; }
+#request-material-wrapper .mensaje-error { background-color: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+
+#request-material-wrapper .oculto { display: none !important; } /* Esta regla está duplicada, puedes borrar una */
+
+/* --- Estilos Dark Mode (CORREGIDOS) --- */
+/* Aplica estilos a elementos DENTRO del wrapper CUANDO BODY tiene .dark-mode */
+body.dark-mode #request-material-wrapper .container {
+    background-color: var(--container-bg-dark);
+    box-shadow: 0 0 15px var(--shadow-dark);
+}
+body.dark-mode #request-material-wrapper h1 { color: #D42D2E; }
+body.dark-mode #request-material-wrapper label { color: var(--text-color-dark); }
+
+body.dark-mode #request-material-wrapper input[type="text"],
+body.dark-mode #request-material-wrapper input[type="number"],
+body.dark-mode #request-material-wrapper input[type="date"],
+body.dark-mode #request-material-wrapper select,
+body.dark-mode #request-material-wrapper textarea {
+    background-color: var(--input-bg-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+body.dark-mode #request-material-wrapper input::placeholder,
+body.dark-mode #request-material-wrapper textarea::placeholder { color: var(--label-color-dark); opacity: 0.7; }
+
+body.dark-mode #request-material-wrapper select option { background-color: var(--input-bg-dark); color: var(--text-color-dark); }
+body.dark-mode #request-material-wrapper select { background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="#{var(--select-arrow-dark)}" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>'); }
+
+body.dark-mode #request-material-wrapper .folio-value { background-color: transparent; border-color: transparent; color: #adb5bd; }
+body.dark-mode #request-material-wrapper .error-field { border-color: #ff7b7b !important; background-color: #5c3030 !important; }
+
+body.dark-mode #request-material-wrapper input.na-field:disabled,
+body.dark-mode #request-material-wrapper select.na-field:disabled {
+    background-color: #3a3f44; color: #adb5bd; border-color: var(--border-color-dark);
+}
+body.dark-mode #request-material-wrapper #dimensiones-container,
+body.dark-mode #request-material-wrapper #torni-table-container {
+     background-color: rgba(255, 255, 255, 0.03); border-color: var(--border-color-dark);
+}
+body.dark-mode #request-material-wrapper #dimensiones-container h3,
+body.dark-mode #request-material-wrapper #torni-table-container h3 { color: var(--label-color-dark); }
+
+body.dark-mode #request-material-wrapper #torni-items-table th,
+body.dark-mode #request-material-wrapper #torni-items-table td { border-color: var(--border-color-dark); }
+body.dark-mode #request-material-wrapper #torni-items-table th { background-color: #343a40; color: var(--label-color-dark); }
+
+body.dark-mode #request-material-wrapper #mensaje-exito { background-color: #1a3a24; color: #a7d7b4; border-color: #2a573a; }
+body.dark-mode #request-material-wrapper #mensaje-exito a { color: #c3e6cb; }
+body.dark-mode #request-material-wrapper #mensaje-exito.mensaje-warning-estilo { background-color: #4d3e1e; color: #ffeeba; border-color: #6b5821; }
+body.dark-mode #request-material-wrapper #mensaje-exito.mensaje-warning-estilo a { color: #ffeeba; }
+body.dark-mode #request-material-wrapper .mensaje-error { background-color: #4d2429; color: #f1b0b7; border-color: #7d3a40; }
+
+/* --- Toggle Dark Mode (Asegúrate de que pertenezca aquí o a CSS global) --- */
+#request-material-wrapper .dark-mode-toggle {
+    position: fixed; top: 100px; right: 15px; z-index: 1000; padding: 8px 12px; font-size: 1.2em;
+    background-color: var(--container-bg-light); color: var(--text-color-light); border: 1px solid var(--border-color-light);
+    border-radius: 5px; cursor: pointer; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease; line-height: 1;
+}
+#request-material-wrapper .dark-mode-toggle:hover { opacity: 0.8; }
+body.dark-mode #request-material-wrapper .dark-mode-toggle { background-color: var(--container-bg-dark); color: var(--text-color-dark); border-color: var(--border-color-dark); }
+
+/* --- Estilos Awesomplete Prefijados --- */
+#request-material-wrapper .awesomplete ul { border-radius: 4px; border: 1px solid var(--border-color-light); box-shadow: 0 3px 8px rgba(0,0,0,0.1); background: var(--input-bg-light); color: var(--text-color-light); z-index: 99; }
+body.dark-mode #request-material-wrapper .awesomplete ul { border-color: var(--border-color-dark); background: var(--input-bg-dark); color: var(--text-color-dark); }
+#request-material-wrapper .awesomplete ul li { padding: 5px 10px; font-size: 14px; transition: background-color 0.1s ease; }
+#request-material-wrapper .awesomplete ul li[aria-selected="true"],
+#request-material-wrapper .awesomplete ul li:hover { background-color: var(--primary-color); color: white; cursor: pointer; }
+body.dark-mode #request-material-wrapper .awesomplete ul li[aria-selected="true"],
+body.dark-mode #request-material-wrapper .awesomplete ul li:hover { background-color: var(--primary-hover-color); }
+#request-material-wrapper .awesomplete mark { background-color: #ffffa0; color: inherit; padding: 0; }
+body.dark-mode #request-material-wrapper .awesomplete mark { background-color: #86861a; }
+/* --- Fin Estilos Awesomplete --- */
+
+
+/* --- Media Queries (Selectores internos prefijados) --- */
+@media (max-width: 768px) {
+    #request-material-wrapper .form-row { flex-direction: column; gap: 0; }
+    #request-material-wrapper .form-row .form-group { min-width: 100%; margin-bottom: 15px; }
+    #request-material-wrapper .form-row .form-group:last-child { margin-bottom: 0; }
+    #request-material-wrapper .container { padding: 20px; }
+    #request-material-wrapper #dimensiones-container,
+    #request-material-wrapper #torni-table-container { padding: 15px; }
+    #request-material-wrapper #torni-items-table th:nth-child(1),
+    #request-material-wrapper #torni-items-table td:nth-child(1) { min-width: 60px; } /* Cantidad */
+    #request-material-wrapper #torni-items-table th:nth-child(4),
+    #request-material-wrapper #torni-items-table td:nth-child(4) { min-width: 40px; } /* Acción */
+}
+
+@media (max-width: 480px) {
+    #request-material-wrapper #logo { max-width: 100px; margin-bottom: 15px; }
+    #request-material-wrapper h1 { font-size: 1.5em; }
+    #request-material-wrapper button[type="submit"] { font-size: 16px; padding: 10px 15px; }
+    #request-material-wrapper input[type="text"],
+    #request-material-wrapper input[type="number"],
+    #request-material-wrapper input[type="date"],
+    #request-material-wrapper select,
+    #request-material-wrapper textarea,
+    #request-material-wrapper .folio-value { font-size: 15px; }
+    #request-material-wrapper #torni-items-table input[type="number"],
+    #request-material-wrapper #torni-items-table input[type="text"] { font-size: 13px; }
+    #request-material-wrapper #torni-items-table th,
+    #request-material-wrapper #torni-items-table td { padding: 6px 8px; }
+}

@@ -1,0 +1,7362 @@
+[
+  {
+    "id": "ABRA-001",
+    "description": "ABRAZADERA OMEGA GALV. 1/2\""
+  },
+  {
+    "id": "ABRA-002",
+    "description": "ABRAZADERA OMEGA GALV. 2\""
+  },
+  {
+    "id": "ABRA-003",
+    "description": "ABRAZADERA TIPO OMEGA DE 3/4\""
+  },
+  {
+    "id": "ABRA-004",
+    "description": "ABRAZADERA TIPO UÑAS INDUSTRIALES PARED DELGADA 2 X1/4"
+  },
+  {
+    "id": "ABRA-005",
+    "description": "ABRAZADERA SINFIN 7/16\""
+  },
+  {
+    "id": "ABRA-010",
+    "description": "ABRAZADERA SINFIN #4 (6-12MM)"
+  },
+  {
+    "id": "ABRA-011",
+    "description": "ABRAZADERA SINFIN GATES #12 (3/4\")"
+  },
+  {
+    "id": "ACEI-001",
+    "description": "ACEITE CASTROL HYSPIN AWS 68"
+  },
+  {
+    "id": "ACEI-002",
+    "description": "ACEITE CASTROL HYSPIN SPINDLE OIL 2"
+  },
+  {
+    "id": "ACEI-003",
+    "description": "ACEITE HIDRAULICO 220"
+  },
+  {
+    "id": "ACEI-004",
+    "description": "ACEITE HIDRAULICO ISO 150 32"
+  },
+  {
+    "id": "ACEI-005",
+    "description": "ACEITE MOBIL DTE 24 CODIGO 122690"
+  },
+  {
+    "id": "ACEI-006",
+    "description": "ACEITE MOBIL VACTRA N° 2"
+  },
+  {
+    "id": "ACEI-007",
+    "description": "ACEITE OSOCO VISCOUS-2"
+  },
+  {
+    "id": "ACEI-008",
+    "description": "ACEITE LUBRICANTE SEMISINTETICO PM460"
+  },
+  {
+    "id": "ACEI-009",
+    "description": "ACEITE TELLUS S2 MX 32"
+  },
+  {
+    "id": "ACEI-010",
+    "description": "ACEITE HIDRAHULICO Y TRANSMISION DE POTENCIA TELLUS S2 MX 46 (ISO VG 46)"
+  },
+  {
+    "id": "ACEI-011",
+    "description": "ACEITE MOBIL DTE OIL MED PAIL 5USG"
+  },
+  {
+    "id": "ACEI-012",
+    "description": "ACEITERA MIKEL´S 500 ml MANGUERA FLEXIBLE"
+  },
+  {
+    "id": "ACEI-013",
+    "description": "ACEITE MOBIL VELOCITE NO 3 DRUM 55USG EXPORT"
+  },
+  {
+    "id": "ACEI-014",
+    "description": "ACEITE MOBIL DTE OIL LIGHT DRUM"
+  },
+  {
+    "id": "ACEI-015",
+    "description": "ACEITE TONNA S2 MX 68"
+  },
+  {
+    "id": "ADAP-001",
+    "description": "ADAPTADOR DIFUSOR TIPO MILLER M-25 #169728"
+  },
+  {
+    "id": "ADAP-002",
+    "description": "ADAPTADOR NOZZLE TIPO MILLER M-25 #169729"
+  },
+  {
+    "id": "ADAP-003",
+    "description": "ADAPTADOR DIFUSOR 45 AMP #220670"
+  },
+  {
+    "id": "ADAP-004",
+    "description": "DIFUSOR D-M250 MDX250 MILLER\r\nSKU: 3066"
+  },
+  {
+    "id": "ADAP-005",
+    "description": "DIFUSOR MILLERMATIC 140,180, DVI, PASSPORT #169716 \r\nMILLER \r\nSKU: 395"
+  },
+  {
+    "id": "ADAP-006",
+    "description": "Difusor WLD*WM-K54A5"
+  },
+  {
+    "id": "ADHE-001",
+    "description": "ADHESIVO ESTRUCTURAL 20251 330 MCA. LOCTITE"
+  },
+  {
+    "id": "ADHE-002",
+    "description": "LOCTITE 242 - AZUL"
+  },
+  {
+    "id": "ADHE-003",
+    "description": "LOCTITE 262 - ROJO"
+  },
+  {
+    "id": "ADHE-004",
+    "description": "LOCTITE 290 -VERDE"
+  },
+  {
+    "id": "ADIT-001",
+    "description": "ADITIVO ANTIFOAM HANGSTERFER'S CLAVE H-7"
+  },
+  {
+    "id": "AGAR-001",
+    "description": "AGARRA PAPEL 32MM"
+  },
+  {
+    "id": "AGAR-002",
+    "description": "AGARRA PAPEL 41MM"
+  },
+  {
+    "id": "ALAM-001",
+    "description": "ALAMBRE MCA. 3G 0.25MM 900 N/MM 8KG"
+  },
+  {
+    "id": "ALCO-001",
+    "description": "ALCOHOL ISOPROPILICO"
+  },
+  {
+    "id": "ANILM001",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 25mm."
+  },
+  {
+    "id": "ANILM002",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 38mm."
+  },
+  {
+    "id": "ANILM003",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 40mm."
+  },
+  {
+    "id": "ANILM004",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 68mm."
+  },
+  {
+    "id": "ANILM005",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 20mm."
+  },
+  {
+    "id": "ANILM006",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 12mm."
+  },
+  {
+    "id": "ANILM007",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 30mm."
+  },
+  {
+    "id": "ANILM008",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 65mm."
+  },
+  {
+    "id": "ANILM009",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 28MM"
+  },
+  {
+    "id": "ANILM012",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 40mm."
+  },
+  {
+    "id": "ANILM024",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 11mm."
+  },
+  {
+    "id": "ANILM025",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 19mm."
+  },
+  {
+    "id": "ANILM027",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 72mm."
+  },
+  {
+    "id": "ANILM101",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 42mm."
+  },
+  {
+    "id": "ANILM102",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 48mm."
+  },
+  {
+    "id": "ANILM103",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 52mm."
+  },
+  {
+    "id": "ANILM104",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 62mm."
+  },
+  {
+    "id": "ANILM105",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 65mm."
+  },
+  {
+    "id": "ANILM106",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 70mm."
+  },
+  {
+    "id": "ANILM107",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 76mm."
+  },
+  {
+    "id": "ANILM108",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 46mm."
+  },
+  {
+    "id": "ANILM109",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 47mm."
+  },
+  {
+    "id": "ANILM110",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 12mm."
+  },
+  {
+    "id": "ANILM111",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 110mm."
+  },
+  {
+    "id": "ANILM112",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 28MM"
+  },
+  {
+    "id": "ANILS001",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 9/16\""
+  },
+  {
+    "id": "ANILS002",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 19/32\""
+  },
+  {
+    "id": "ANILS003",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 5/8\""
+  },
+  {
+    "id": "ANILS004",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 11/16\""
+  },
+  {
+    "id": "ANILS005",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 1 3/16\""
+  },
+  {
+    "id": "ANILS006",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 1\" 3/8\""
+  },
+  {
+    "id": "ANILS007",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 1\" 5/16\""
+  },
+  {
+    "id": "ANILS008",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 1 11/16\""
+  },
+  {
+    "id": "ANILS009",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 2\""
+  },
+  {
+    "id": "ANILS010",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 4\""
+  },
+  {
+    "id": "ANILS011",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 3 15/16\""
+  },
+  {
+    "id": "ANILS012",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 28MM"
+  },
+  {
+    "id": "ANILS012",
+    "description": "ANILLO DE RETENCION P/EXT. SEGURO OM 3 3/4\""
+  },
+  {
+    "id": "ANILS013",
+    "description": "ANILLO\r\n  DE RETENCION P/EXT. SEGURO OM 1/2\""
+  },
+  {
+    "id": "ANILS101",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 2 1/2\""
+  },
+  {
+    "id": "ANILS102",
+    "description": "ANILLO DE RETENCION P/INT. SEGURO OM 28MM"
+  },
+  {
+    "id": "ANTI-001",
+    "description": "ANTICONGELANTE KRONEN CLAVE 3966"
+  },
+  {
+    "id": "APAG-001",
+    "description": "APAGADOR DE SOBREPONER OVAL MARFIL WD0221"
+  },
+  {
+    "id": "ARANM001",
+    "description": "ARANDELA DE SEGURIDAD ACERO CINCADO 14 mm"
+  },
+  {
+    "id": "ATOM-001",
+    "description": "ATOMIZADOR DE USO RUDO DE 1/2 L"
+  },
+  {
+    "id": "AVEL-001",
+    "description": "AVELLANADOR 3/16 ANGULO 60° DE CARBURO"
+  },
+  {
+    "id": "AVELS301",
+    "description": "AVELLANADOR HSS 3/8 X 90°"
+  },
+  {
+    "id": "AVELS302",
+    "description": "AVELLANODOR HSS3/16 X 90°"
+  },
+  {
+    "id": "AVELS303",
+    "description": "AVELLANADOR HSS 1/8 X 45°"
+  },
+  {
+    "id": "AVELS304",
+    "description": "AVELLANADOR HSS DE 1/4 X 90°"
+  },
+  {
+    "id": "AVELS305",
+    "description": "AVELLANADOR HSS 5 / 16 90°"
+  },
+  {
+    "id": "AVELS306",
+    "description": "AVELLANADOR DE CARBURO 1/4 X 90°"
+  },
+  {
+    "id": "BACO-001",
+    "description": "BROCHE BACO 8CM"
+  },
+  {
+    "id": "BALA-001",
+    "description": "BALA ACERO INOX 316L DE 3/16\""
+  },
+  {
+    "id": "BALA-002",
+    "description": "BALA ACERO INOX 420 DE 3/16\""
+  },
+  {
+    "id": "BAND-002",
+    "description": "BANDA DE LIJA TZAX 6 X 48\""
+  },
+  {
+    "id": "BAND-003",
+    "description": "BANDA T 5 425 MM - 2 A 10 MM (KAWT5425)"
+  },
+  {
+    "id": "BAND-006",
+    "description": "BANDA GATES A32"
+  },
+  {
+    "id": "BAND-007",
+    "description": "BANDA GATES A25"
+  },
+  {
+    "id": "BAND-008",
+    "description": "BANDA GATES 1330"
+  },
+  {
+    "id": "BAND-009",
+    "description": "BANDA GATES K060355"
+  },
+  {
+    "id": "BAND-010",
+    "description": "BANDA DENTADA 6334GSMX"
+  },
+  {
+    "id": "BAND-012",
+    "description": "BANDA\r\n  P6.3815.1"
+  },
+  {
+    "id": "BAND-014",
+    "description": "BANDA\r\n  P6.3772.0"
+  },
+  {
+    "id": "BARR-004",
+    "description": "BARRA EN PASTA INOX. P/PULIR 2404"
+  },
+  {
+    "id": "BARR-301",
+    "description": "BARRA PARA BORING BB-3201500 304Y"
+  },
+  {
+    "id": "BARR-302",
+    "description": "BARRA PARA BRING BB-2301400 035V"
+  },
+  {
+    "id": "BARR-303",
+    "description": "BARRA PARA BORING BB-2301000"
+  },
+  {
+    "id": "BARR-304",
+    "description": "BARRA PARA BORING IT-2301000"
+  },
+  {
+    "id": "BARR-305",
+    "description": "BARRA PARA BORING BB-1801100"
+  },
+  {
+    "id": "BARR-306",
+    "description": "BARRA PARA BORING BB-2901500"
+  },
+  {
+    "id": "BARR-307",
+    "description": "BARRA PARA BORING BB-2301400"
+  },
+  {
+    "id": "BARR-308",
+    "description": "Barra TopNotch TAM02 A20QNNTOR2 Ømin = 26 mm - Zanco= 20 mm \r\nMM 1098949"
+  },
+  {
+    "id": "BARR-309",
+    "description": "BARRA DE INTERIOR A10K-SWLXL04-D120 (6989898)"
+  },
+  {
+    "id": "BASE-001",
+    "description": "BASE ADHERIBLE PEGOTE"
+  },
+  {
+    "id": "BASE-002",
+    "description": "BASE NIVELADORA PARA ITEM M10 X 80"
+  },
+  {
+    "id": "BASE-003",
+    "description": "BASE NIVELADORA PARA ITEM M8 X 80"
+  },
+  {
+    "id": "BIZA-001",
+    "description": "BISAGRA BOSCH PA66"
+  },
+  {
+    "id": "BIZA-002",
+    "description": "BISAGRA DE 1/2\""
+  },
+  {
+    "id": "BIZA-003",
+    "description": "BISAGRA DE 3/4\""
+  },
+  {
+    "id": "BIZA-004",
+    "description": "BISAGRA DE 5/8"
+  },
+  {
+    "id": "BIZA-005",
+    "description": "BISAGRA DE ALUMI NIO DE 1/2\" (ITEM)"
+  },
+  {
+    "id": "BOLI-001",
+    "description": "BOLIGRAFO ROJO PUNTO MEDIANO"
+  },
+  {
+    "id": "BOLI-002",
+    "description": "BOLIGRAFO NEGRO PUNTO MEDIANO"
+  },
+  {
+    "id": "BOLI-003",
+    "description": "BOLIGRAFO AZUL PUNTO MEDIANO"
+  },
+  {
+    "id": "BOQU-001",
+    "description": "BOQUILLA 45 AMP #220671"
+  },
+  {
+    "id": "BOQU-002",
+    "description": "BOQUILLA ER 16 3 - 4 mm"
+  },
+  {
+    "id": "BOQU-003",
+    "description": "BOQUILLA ER 16 4 - 5 mm"
+  },
+  {
+    "id": "BOQU-004",
+    "description": "BOQUILLA P/ EQUIPO DE CORTE DE GAS SC50-2"
+  },
+  {
+    "id": "BOQU-005",
+    "description": "BOQUILLA DE CERAMICA 54N14 GAS LENS #8 OBE SKU: 792"
+  },
+  {
+    "id": "BOQU-006",
+    "description": "BOQUILLAS ER-40 METRICAS 4-26mm (JGO 23 PZS) HPI\r\nHP-ER40-MSET"
+  },
+  {
+    "id": "BOQU-007",
+    "description": "BOQUILLA ER-40 25mm"
+  },
+  {
+    "id": "BORR-001",
+    "description": "BORRADOR PARA PIZARRON VERDE"
+  },
+  {
+    "id": "BOTA-001",
+    "description": "BOTA BORCEGUI RIV ATI-01 T24 NG"
+  },
+  {
+    "id": "BOTA-002",
+    "description": "BOTA BORCEGUI RIV ATI-01 T25NG"
+  },
+  {
+    "id": "BOTA-003",
+    "description": "BOTA BORCEGUI RIV ATI-01 T26 NG"
+  },
+  {
+    "id": "BOTA-004",
+    "description": "BOTA BORCEGUI RIV ATI-01 T27 NG"
+  },
+  {
+    "id": "BOTA-005",
+    "description": "BOTA BORCEGUI RIV ATI-01 T28 NG"
+  },
+  {
+    "id": "BOTA-006",
+    "description": "BOTA BORCEGUI RIV ATI-01 T29 NG"
+  },
+  {
+    "id": "BOTA-007",
+    "description": "BOTA BORCEGUI RIV ATI-01 T30 NG"
+  },
+  {
+    "id": "BOTA-008",
+    "description": "BOTIN RIVERLAND SPARKS SPS-01 #27 NG )"
+  },
+  {
+    "id": "BOTA-009",
+    "description": "BORCEGUI RIV EVOLUTION ELNG3-01 T27 NG)/"
+  },
+  {
+    "id": "BOTA-011",
+    "description": "BOTADOR NITRURADO DIAM 10 X 315 MM"
+  },
+  {
+    "id": "BOTA-012",
+    "description": "BOTADOR NITRURADO DIAM 20 X 315 MM"
+  },
+  {
+    "id": "BOTA-013",
+    "description": "BOTA BORCEGUI RIV EVOLUTION ELNG3-01 T26 NG)/"
+  },
+  {
+    "id": "BRCH-001",
+    "description": "BROCHA DE 4\""
+  },
+  {
+    "id": "BRCH-002",
+    "description": "BROCHA PERFECT 2\""
+  },
+  {
+    "id": "BROC-001",
+    "description": "BROCA DE CENTRO HSS #1"
+  },
+  {
+    "id": "BROC-002",
+    "description": "BROCA DE CENTRO HSS #2"
+  },
+  {
+    "id": "BROC-003",
+    "description": "BROCA DE CENTRO HSS #3"
+  },
+  {
+    "id": "BROC-004",
+    "description": "BROCA DE CENTRO HSS #4"
+  },
+  {
+    "id": "BROC-005",
+    "description": "BROCA DE CENTRO HSS #5"
+  },
+  {
+    "id": "BROC-006",
+    "description": "BROCA DE CENTRO HSS #6"
+  },
+  {
+    "id": "BROC-007",
+    "description": "BROCA DE CENTRO HSS #7"
+  },
+  {
+    "id": "BROC-008",
+    "description": "BROCA DE CENTRO HSS #8"
+  },
+  {
+    "id": "BROC-009",
+    "description": "BROCA NUMERICA #19"
+  },
+  {
+    "id": "BROC-010",
+    "description": "BROCA NUMERICA #30"
+  },
+  {
+    "id": "BROC-011",
+    "description": "BROCA DE CENTRO #2 DE CARBURO"
+  },
+  {
+    "id": "BROC-013",
+    "description": "BROCA NUMERICA #7"
+  },
+  {
+    "id": "BROCM001",
+    "description": "BROCA HSS 1mm"
+  },
+  {
+    "id": "BROCM002",
+    "description": "BROCA HSS 1.5mm"
+  },
+  {
+    "id": "BROCM003",
+    "description": "BROCA HSS 2mm"
+  },
+  {
+    "id": "BROCM004",
+    "description": "BROCA HSS 2.5mm"
+  },
+  {
+    "id": "BROCM005",
+    "description": "BROCA HSS 3mm"
+  },
+  {
+    "id": "BROCM006",
+    "description": "BROCA HSS 3.5mm"
+  },
+  {
+    "id": "BROCM007",
+    "description": "BROCA HSS 4mm"
+  },
+  {
+    "id": "BROCM008",
+    "description": "BROCA HSS 4.5mm"
+  },
+  {
+    "id": "BROCM009",
+    "description": "BROCA HSS 5mm"
+  },
+  {
+    "id": "BROCM010",
+    "description": "BROCA HSS 5.5mm"
+  },
+  {
+    "id": "BROCM011",
+    "description": "BROCA HSS 6mm"
+  },
+  {
+    "id": "BROCM012",
+    "description": "BROCA HSS 6.5mm"
+  },
+  {
+    "id": "BROCM013",
+    "description": "BROCA HSS 7mm"
+  },
+  {
+    "id": "BROCM014",
+    "description": "BROCA HSS 7.5mm"
+  },
+  {
+    "id": "BROCM015",
+    "description": "BROCA HSS 8mm"
+  },
+  {
+    "id": "BROCM016",
+    "description": "BROCA HSS 8.5mm"
+  },
+  {
+    "id": "BROCM017",
+    "description": "BROCA HSS 9mm"
+  },
+  {
+    "id": "BROCM018",
+    "description": "BROCA HSS 9.5mm"
+  },
+  {
+    "id": "BROCM019",
+    "description": "BROCA HSS 10mm"
+  },
+  {
+    "id": "BROCM020",
+    "description": "BROCA HSS 10.5mm"
+  },
+  {
+    "id": "BROCM021",
+    "description": "BROCA HSS 11mm"
+  },
+  {
+    "id": "BROCM022",
+    "description": "BROCA HSS 11.5mm"
+  },
+  {
+    "id": "BROCM023",
+    "description": "BROCA HSS 12mm"
+  },
+  {
+    "id": "BROCM024",
+    "description": "BROCA HSS 12.5mm"
+  },
+  {
+    "id": "BROCM025",
+    "description": "BROCA HSS 13mm"
+  },
+  {
+    "id": "BROCM026",
+    "description": "BROCA 1mm DE CARBURO"
+  },
+  {
+    "id": "BROCM027",
+    "description": "BROCA DE 8mm C/RECUBRIMIENTO DE TIALN"
+  },
+  {
+    "id": "BROCM028",
+    "description": "BROCA HSS 13.5mm"
+  },
+  {
+    "id": "BROCM101",
+    "description": "BROCA HSS CONICA 14.5mm"
+  },
+  {
+    "id": "BROCM102",
+    "description": "BROCA HSS CONICA 15mm"
+  },
+  {
+    "id": "BROCM103",
+    "description": "BROCA HSS CONICA 16mm"
+  },
+  {
+    "id": "BROCM104",
+    "description": "BROCA HSS CONICA 17mm"
+  },
+  {
+    "id": "BROCM105",
+    "description": "BROCA HSS CONICA 18mm"
+  },
+  {
+    "id": "BROCM106",
+    "description": "BROCA HSS CONICA 19mm"
+  },
+  {
+    "id": "BROCM107",
+    "description": "BROCA HSS CONICA 20mm"
+  },
+  {
+    "id": "BROCM108",
+    "description": "BROCA HSS CONICA 21mm"
+  },
+  {
+    "id": "BROCM109",
+    "description": "BROCA HSS CONICA 22mm"
+  },
+  {
+    "id": "BROCM110",
+    "description": "BROCA HSS CONICA 23mm"
+  },
+  {
+    "id": "BROCM111",
+    "description": "BROCA HSS CONICA 22.75mm"
+  },
+  {
+    "id": "BROCM201",
+    "description": "BROCA HSS 14mm C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCM202",
+    "description": "BROCA HSS 16mm C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCM203",
+    "description": "BROCA HSS 16.5mm C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCM204",
+    "description": "BROCA HSS 17mm C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCM205",
+    "description": "BROCA HSS 17.5mm C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCM210",
+    "description": "BROCA HSS 18.5mm. C/ZANCO DE 1/2"
+  },
+  {
+    "id": "BROCM301",
+    "description": "BROCA A1922S-8 HSS 8mm 650mm-LT/550mm-LE"
+  },
+  {
+    "id": "BROCM302",
+    "description": "BROCA A1822-9.5 HSS 9.5mm 380mm-LT/280mm-LE"
+  },
+  {
+    "id": "BROCM303",
+    "description": "BROCA A1922S-14 HSS 14mm 780mm-LT/680mm-LE"
+  },
+  {
+    "id": "BROCM304",
+    "description": "BROCA A1922S-8 HSS 8mm 445mm-LT/345mm-LE (MOD)"
+  },
+  {
+    "id": "BROCM305",
+    "description": "BROCA HSS 6mm 280mm-LT/65mm-LE"
+  },
+  {
+    "id": "BROCM306",
+    "description": "BROCA 19mm TDX190F25-3 (6718340)"
+  },
+  {
+    "id": "BROCM307",
+    "description": "BROCA TDS250F25-3 (6710985)"
+  },
+  {
+    "id": "BROCM401",
+    "description": "BROCA DE CARBURO 6.8MM"
+  },
+  {
+    "id": "BROCM402",
+    "description": "BROCA DE CARBURO 5MM"
+  },
+  {
+    "id": "BROCS001",
+    "description": "BROCA HSS 1/16\""
+  },
+  {
+    "id": "BROCS002",
+    "description": "BROCA HSS 5/64\""
+  },
+  {
+    "id": "BROCS003",
+    "description": "BROCA HSS 3/32\""
+  },
+  {
+    "id": "BROCS004",
+    "description": "BROCA HSS 7/64\""
+  },
+  {
+    "id": "BROCS005",
+    "description": "BROCA HSS 1/8\""
+  },
+  {
+    "id": "BROCS006",
+    "description": "BROCA HSS 9/64\""
+  },
+  {
+    "id": "BROCS007",
+    "description": "BROCA HSS 5/32\""
+  },
+  {
+    "id": "BROCS008",
+    "description": "BROCA HSS 11/64\""
+  },
+  {
+    "id": "BROCS009",
+    "description": "BROCA HSS 3/16\""
+  },
+  {
+    "id": "BROCS010",
+    "description": "BROCA HSS 13/64\""
+  },
+  {
+    "id": "BROCS011",
+    "description": "BROCA HSS 7/32\""
+  },
+  {
+    "id": "BROCS012",
+    "description": "BROCA HSS 15/64\""
+  },
+  {
+    "id": "BROCS013",
+    "description": "BROCA HSS 1/4\""
+  },
+  {
+    "id": "BROCS014",
+    "description": "BROCA HSS 17/64\""
+  },
+  {
+    "id": "BROCS015",
+    "description": "BROCA HSS 9/32\""
+  },
+  {
+    "id": "BROCS016",
+    "description": "BROCA HSS 19/64\""
+  },
+  {
+    "id": "BROCS017",
+    "description": "BROCA HSS 5/16\""
+  },
+  {
+    "id": "BROCS018",
+    "description": "BROCA HSS 21/64\""
+  },
+  {
+    "id": "BROCS019",
+    "description": "BROCA HSS 11/32\""
+  },
+  {
+    "id": "BROCS020",
+    "description": "BROCA HSS 23/64\""
+  },
+  {
+    "id": "BROCS021",
+    "description": "BROCA HSS 3/8\""
+  },
+  {
+    "id": "BROCS022",
+    "description": "BROCA HSS 25/64\""
+  },
+  {
+    "id": "BROCS023",
+    "description": "BROCA HSS 13/32\""
+  },
+  {
+    "id": "BROCS024",
+    "description": "BROCA HSS 27/64\""
+  },
+  {
+    "id": "BROCS025",
+    "description": "BROCA HSS 7/16\""
+  },
+  {
+    "id": "BROCS026",
+    "description": "BROCA HSS 29/64\""
+  },
+  {
+    "id": "BROCS027",
+    "description": "BROCA HSS 15/32\""
+  },
+  {
+    "id": "BROCS028",
+    "description": "BROCA HSS 31/64\""
+  },
+  {
+    "id": "BROCS029",
+    "description": "BROCA HSS 1/2\""
+  },
+  {
+    "id": "BROCS030",
+    "description": "BROCA HSS 49/64\""
+  },
+  {
+    "id": "BROCS031",
+    "description": "BROCA HSS 1/32\""
+  },
+  {
+    "id": "BROCS032",
+    "description": "BROCA HSS 1/64\""
+  },
+  {
+    "id": "BROCS033",
+    "description": "BROCA HSS 3/4\""
+  },
+  {
+    "id": "BROCS101",
+    "description": "BROCA HSS CONICA 1 3/8\""
+  },
+  {
+    "id": "BROCS102",
+    "description": "BROCA HSS CONICA 1 13/32\""
+  },
+  {
+    "id": "BROCS103",
+    "description": "BROCA HSS CONICA 1 1/2\""
+  },
+  {
+    "id": "BROCS201",
+    "description": "BROCA HSS 9/16\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS202",
+    "description": "BROCA HSS 5/8\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS203",
+    "description": "BROCA HSS 3/4\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS204",
+    "description": "BROCA HSS 7/8\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS205",
+    "description": "BROCA HSS 1\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS206",
+    "description": "BROCA HSS 39/64\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS207",
+    "description": "BROCA HSS 1 3/16\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS208",
+    "description": "BROCA HSS 1 1/2\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS209",
+    "description": "BROCA HSS 1 1/4\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS210",
+    "description": "BROCA HSS 1 3/4\" C/ZANCO DE 3/4\""
+  },
+  {
+    "id": "BROCS211",
+    "description": "BROCA HSS 1 1/8\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS212",
+    "description": "BROCA HSS 47/64\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS213",
+    "description": "BROCA HSS 19/32\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS214",
+    "description": "BROCA HSS 17/32\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS215",
+    "description": "BROCA HSS 13/16\" C/ZANCO DE 1/2\""
+  },
+  {
+    "id": "BROCS301",
+    "description": "BROCA HSS 19/32 300mm-LT/230-LE"
+  },
+  {
+    "id": "BROCS302",
+    "description": "BROCA HSS 19/64 300mm-LT/75-LE"
+  },
+  {
+    "id": "BROCS303",
+    "description": "BROCA HSS 17/64 305mm-LT/70-LE"
+  },
+  {
+    "id": "BROCS304",
+    "description": "BROCA HSS 1/2 310mm-LT/230-LE"
+  },
+  {
+    "id": "BROCS305",
+    "description": "BROCA HSS 9/16 260mm-LT/180-LE C/ZANCO DE 9/16\""
+  },
+  {
+    "id": "BROCS306",
+    "description": "BROCA HSS 5/32 150mm-LT/50mm-LE"
+  },
+  {
+    "id": "BROCS307",
+    "description": "BROCA HSS 5/16\" 145mm-LT/80mm-LE"
+  },
+  {
+    "id": "BROCS308",
+    "description": "BROCA HSS 7/32 220mm-LT/145-LE"
+  },
+  {
+    "id": "BROCS401",
+    "description": "BROCA P/CONCRETO 1/2\" X 6\""
+  },
+  {
+    "id": "BROCS402",
+    "description": "BROCA P/CONCRETO 1/2\" X 4\""
+  },
+  {
+    "id": "BROCS403",
+    "description": "BROCA P/CONCRETO 3/8\" X 4\""
+  },
+  {
+    "id": "BUJE-001",
+    "description": "BUJE DODGE 1108B 1/2"
+  },
+  {
+    "id": "BUJE-002",
+    "description": "BUJE DODGE 1310B 1/2\""
+  },
+  {
+    "id": "BUJE-003",
+    "description": "BUJE ATIDESGASTE INA PAP 2020 P10"
+  },
+  {
+    "id": "BUJE-004",
+    "description": "BUJE DODGE 2012 1 1/8"
+  },
+  {
+    "id": "BUJE-005",
+    "description": "BUJE DODGE 2012 1 1/2\" - KW"
+  },
+  {
+    "id": "BUJE-006",
+    "description": "BUJE ANTIDESGASTE INA PAP 1208 P10"
+  },
+  {
+    "id": "BURI-001",
+    "description": "BURIL DE COBALTO DE 5/16\" X 5716\" X 2 1/2\""
+  },
+  {
+    "id": "BURI-002",
+    "description": "BURIL DE COBALTO DE 3/8\" X 3/8\" X 3\""
+  },
+  {
+    "id": "BURI-003",
+    "description": "BURIL DE COBALTO 1/2x1/2x4\""
+  },
+  {
+    "id": "BURI-004",
+    "description": "BURIL DE COBALTO 5/8 X 5/8 X 41/2"
+  },
+  {
+    "id": "BURI-005",
+    "description": "BURIL DE COBALTO DE 3/4\" X 3/4\" X 5\""
+  },
+  {
+    "id": "BURI-006",
+    "description": "BURIL DE COBALTO 1\" X 7\""
+  },
+  {
+    "id": "BURI-007",
+    "description": "BURIL DERECHO PASTILLA DE CARBURO SOLD. 1/4"
+  },
+  {
+    "id": "BURI-008",
+    "description": "BURIL DERECHO PASTILLA DE CARBURO SOLD. 5/16"
+  },
+  {
+    "id": "BURI-009",
+    "description": "BURIL DERECHO PASTILLA DE CARBURO SOLD. 3/8"
+  },
+  {
+    "id": "BURI-010",
+    "description": "BURIL DERECHO PASTILLA DE CARBURO SOLD. 1/2"
+  },
+  {
+    "id": "BURI-011",
+    "description": "BURIL IZQUIERDO PASTILLERO DE CARBURO SOLD. 1/4"
+  },
+  {
+    "id": "BURI-012",
+    "description": "BURIL IZQUIERDO PASTILLA DE CARBURO SOLD. 5/16"
+  },
+  {
+    "id": "BURI-013",
+    "description": "BURIL IZQUIERDO PASTILLA DE CARBURO SOLDABLE 3/8"
+  },
+  {
+    "id": "BURI-014",
+    "description": "BURIL IZQUIERDO PASTILLA DE CARBURO SOLD. 1/2"
+  },
+  {
+    "id": "BURI-015",
+    "description": "BURIL IZQUIERDO PASTILLA DE CARBURO SOLD. 5/8"
+  },
+  {
+    "id": "BURI-016",
+    "description": "BURIL DE PUNTA PASTILLA DE CARBURO SOLD. 5/8"
+  },
+  {
+    "id": "BURI-017",
+    "description": "BURIL DE PUNTA PASTILLA DE CARBURO SOLD. 3/4"
+  },
+  {
+    "id": "BURI-018",
+    "description": "BURIL DE COBALTO 1/4\" X1/4\"X 3\""
+  },
+  {
+    "id": "CABE-001",
+    "description": "CABEZA DE BROCA HYDRA 13 MM DORMER"
+  },
+  {
+    "id": "CABE-002",
+    "description": "CABEZAL AM UNIVERSAL 2 BROCHES DERMA CARE"
+  },
+  {
+    "id": "CABL-001",
+    "description": "CABLE USO RUDO DE 4 POLOS CALIBRE 14"
+  },
+  {
+    "id": "CABL-002",
+    "description": "CABLE UTP CAT5E BELDEN 5663U5 008U1000 GRIS 24AWG\r\nESPECIAL PARA SEGURIDAD 1000FT 305 MTO"
+  },
+  {
+    "id": "CABL-003",
+    "description": "CABLE USO RUDO DE 3 POLOS CALIBRE 16"
+  },
+  {
+    "id": "CABL-004",
+    "description": "CABLE USO RUDO DE 4 POLOS CALIBRE 12"
+  },
+  {
+    "id": "CABL-005",
+    "description": "CABLE CALI.1/0 CON FORRO"
+  },
+  {
+    "id": "CABL-006",
+    "description": "CABLE DE COBRE DESNUDO CAL.1/0"
+  },
+  {
+    "id": "CABL-007",
+    "description": "CABLE USO RUDO 3 HILOS CAL. 10"
+  },
+  {
+    "id": "CAJA-001",
+    "description": "CAJA DE CARTON CORRUGADO SENCILLO DE 30 X 15 X 20"
+  },
+  {
+    "id": "CALI-001",
+    "description": "CALIBRADOR DIGIMATIC 6\"/150 MM"
+  },
+  {
+    "id": "CALI-002",
+    "description": "CALIBRADOR DIGIMATIC"
+  },
+  {
+    "id": "CALI-003",
+    "description": "CALIBRADOR DIGIMATIC 8\"/200 MM"
+  },
+  {
+    "id": "CALI-004",
+    "description": "MICROMETRRO DIGIMATIC 0-1\"/0-25 MM"
+  },
+  {
+    "id": "CAMI-001",
+    "description": "CAMISA DE MEZCLILLA T/40"
+  },
+  {
+    "id": "CAMI-002",
+    "description": "CAMISA DE MEZCLILLA T/42"
+  },
+  {
+    "id": "CAMI-003",
+    "description": "CAMISA AZUL T/40"
+  },
+  {
+    "id": "CANC-001",
+    "description": "CANCAMO DIN 580-M8-ST MCA. Elesa Ganter"
+  },
+  {
+    "id": "CAND-001",
+    "description": "CANDADO PHILIPS MOD 114"
+  },
+  {
+    "id": "CAND-002",
+    "description": "CANDADO PHILIPS MOD 112"
+  },
+  {
+    "id": "CAND-003",
+    "description": "CANDADO MASTER LOOK BLOQUEO 406"
+  },
+  {
+    "id": "CAND-004",
+    "description": "CANDADO MASTER LOOK BLOQUEO 410"
+  },
+  {
+    "id": "CAND-007",
+    "description": "CANDADO PHILIPS MOD 116"
+  },
+  {
+    "id": "CARB-001",
+    "description": "CARBON PARA PULIDORA BOSCH MOD- GWS 15-125 CIE"
+  },
+  {
+    "id": "CARD-001",
+    "description": "CARDA CIRCILAR #123249 MARCA SURTEK"
+  },
+  {
+    "id": "CARE-001",
+    "description": "CARETA FIBRA DE VIDRIO 2SC-200M INFRA"
+  },
+  {
+    "id": "CARE-002",
+    "description": "CARETA FACIAL PROTECTORA"
+  },
+  {
+    "id": "CARE-003",
+    "description": "CARETA INFRA ELECTRONICA 2SC702-NEGRA"
+  },
+  {
+    "id": "CARE-004",
+    "description": "CARETA INFRA CONCHA FV C/MTR 2SC200M"
+  },
+  {
+    "id": "CART-001",
+    "description": "CARTUCHO CASIO XR-9YW1 (9\")"
+  },
+  {
+    "id": "CART-002",
+    "description": "CARTUCHO EPSON 664 AZUL"
+  },
+  {
+    "id": "CART-003",
+    "description": "CARTUCHO EPSON 664 MAGENTA"
+  },
+  {
+    "id": "CART-004",
+    "description": "CARTUCHO EPSON 664 NEGRO"
+  },
+  {
+    "id": "CART-005",
+    "description": "CARTUCHO LEXMARK T650H80G"
+  },
+  {
+    "id": "CART-006",
+    "description": "CARTUCHO BROTHER LC3019 NEGRO"
+  },
+  {
+    "id": "CART-007",
+    "description": "CARTUCHO BROTHER LC3019 MAGNETA"
+  },
+  {
+    "id": "CART-008",
+    "description": "CARTUCHO BROTHER LC3019 YELLOW"
+  },
+  {
+    "id": "CART-009",
+    "description": "CARTUCHO BROTHER LC3019 CIA"
+  },
+  {
+    "id": "CASC-001",
+    "description": "CASCO DE SEGURIDAD 3M C/SUSP. MATRACA H701R BC D"
+  },
+  {
+    "id": "CASC-002",
+    "description": "CASCO DE SEGURIDAD 3M C/SUSP. MATRACA H701R NJ D"
+  },
+  {
+    "id": "CASC-003",
+    "description": "CASCO DE SEGURIDAD 3M C/SUSP. MATRACA H701R RJ D"
+  },
+  {
+    "id": "CASQM001",
+    "description": "CASQUILLO #22 ( 8-1.25 X 12-1.50 X 20)"
+  },
+  {
+    "id": "CENT-001",
+    "description": "CENTRO DE CARGA 2P./50A. QOD2S SOBREPONER SQUARE D"
+  },
+  {
+    "id": "CEPI-001",
+    "description": "CEPILLO CIRCULAR ALAMBRE ONDULADO 150 X 0.356mm (986)"
+  },
+  {
+    "id": "CEPI-002",
+    "description": "CEPILLO DE ALAMBRE ACERO AL CARBON"
+  },
+  {
+    "id": "CEPI-004",
+    "description": "CEPILLO TIPO COPA ALAMBRE TRENZADO DIAM. 3\" BARRENO MULTIROSCA ACERO AL CARBON (965)"
+  },
+  {
+    "id": "CEPI-005",
+    "description": "CEPILLO TIPO COPA ALAMBRE TRENZADO DIAM. 3\" DE ACERO INOXIDABLE (967)"
+  },
+  {
+    "id": "CEPI-006",
+    "description": "CEPILLO TIPO COPA ALAMBRE TRENZADO DIAM. 4 3/4\" DE ACERO AL CARBON (2888)"
+  },
+  {
+    "id": "CEPI-007",
+    "description": "CEPILLO TIPO COPA ALAMBRE TRENZADO DIAM. 5\" (963)"
+  },
+  {
+    "id": "CEPI-008",
+    "description": "CEPILLO TIPO COPA ALAMBRE TRENZADO DIAM. 4\" (968)"
+  },
+  {
+    "id": "CEPI-009",
+    "description": "CEPILLO P/INOX MANGO DE MADERA"
+  },
+  {
+    "id": "CERA-001",
+    "description": "CERAMICA 10N47 #7\r\nSKU-790"
+  },
+  {
+    "id": "CERR-001",
+    "description": "CERRADURA PHILLIPS DERECHA MOD. 715"
+  },
+  {
+    "id": "CEST-001",
+    "description": "CESTO DE BASURA"
+  },
+  {
+    "id": "CHAL-001",
+    "description": "CHALECO MBR GABARDINA MD NARANJA"
+  },
+  {
+    "id": "CHAL-002",
+    "description": "CHALECO MBR GABARDINA CH NARANJA"
+  },
+  {
+    "id": "CHAL-003",
+    "description": "CHALECO MBR GABARDINA GD NARANJA"
+  },
+  {
+    "id": "CHAL-004",
+    "description": "CHALECO MBR GABARDINA GD ROJO"
+  },
+  {
+    "id": "CHAM-001",
+    "description": "CHAMARRA MUJER T/30"
+  },
+  {
+    "id": "CHAM-002",
+    "description": "CAMARRA MUJER T/32"
+  },
+  {
+    "id": "CHAM-003",
+    "description": "CAMARRA MUJER T/34"
+  },
+  {
+    "id": "CHAM-004",
+    "description": "CHAMARRA HOMBRE T/M"
+  },
+  {
+    "id": "CHAM-005",
+    "description": "CHAMARRA HOMBRE T/G"
+  },
+  {
+    "id": "CHAM-006",
+    "description": "CHAMARRA HOMBRE T/XG"
+  },
+  {
+    "id": "CHAM-007",
+    "description": "CHAMARRA HOMBRE CHICA"
+  },
+  {
+    "id": "CHUM-001",
+    "description": "CHUMACERA DE COCOL FL208 UC 208"
+  },
+  {
+    "id": "CHUM-002",
+    "description": "CHUMACERA DE PARED FK F208 UC 208"
+  },
+  {
+    "id": "CHUM-003",
+    "description": "CHUMACERA DE PISO ETK P206 UC 206-18"
+  },
+  {
+    "id": "CHUM-004",
+    "description": "CHUMACERA DE PISO FAG 1 1/2\" UCP 208-24-J7"
+  },
+  {
+    "id": "CHUM-005",
+    "description": "CHUMACERA DE PISO FK P205 UC 205-16"
+  },
+  {
+    "id": "CHUM-006",
+    "description": "CHUMACERA DE PISO NBF 211-32 (2\")"
+  },
+  {
+    "id": "CHUM-007",
+    "description": "CHUMACERA DE PISO DE 50 mm"
+  },
+  {
+    "id": "CHUM-008",
+    "description": "CHUMACERA COCOL FAG 30 mm UCFL206"
+  },
+  {
+    "id": "CHUM-011",
+    "description": "CHUMACERA SKF SY 1. TF\r\n( SKF YAR-205-100-2F Y SKF SY-505-M)"
+  },
+  {
+    "id": "CINC-001",
+    "description": "CINCHILLO DE PLASTICO 100 X 2.5mm (100 PZS)"
+  },
+  {
+    "id": "CINC-002",
+    "description": "CINCHILLO DE PLASTICO 300 X 4.6mm"
+  },
+  {
+    "id": "CINC-003",
+    "description": "CINCEL 1 X 12 MARCA URREA MODELO 86A1X12"
+  },
+  {
+    "id": "CINC-004",
+    "description": "CINCHILLO DE PLASTICO 203 X 4.6 MM (50 PZS)"
+  },
+  {
+    "id": "CINT-001",
+    "description": "CINTA TEFLON 1/2 SURTEK 138052"
+  },
+  {
+    "id": "CINT-002",
+    "description": "CINTA TEFLON 3/4 SURTEK 138053"
+  },
+  {
+    "id": "CINT-005",
+    "description": "CINTA ADHESIVA"
+  },
+  {
+    "id": "CINT-006",
+    "description": "CINTA AISLANTE SURTEK 138000"
+  },
+  {
+    "id": "CLAM-001",
+    "description": "CLAMP ASC422 D30 6853214"
+  },
+  {
+    "id": "CLAM-002",
+    "description": "CLAMP ACP45 (6853757)"
+  },
+  {
+    "id": "CLAM-015",
+    "description": "CLAMP CK10 MM 1018331"
+  },
+  {
+    "id": "CLAV-001",
+    "description": "CLAVIJA 110V 15A CON PIN DE TIERRA, DE HULE Y ENTRADA RECTA"
+  },
+  {
+    "id": "CLAV-002",
+    "description": "CLAVIJA 110V 15A CON PIN DE TIERRA, DE VINIL USO RUDO"
+  },
+  {
+    "id": "CLAV-004",
+    "description": "CLAVIJA SENCILLA 15 A 250 V R500"
+  },
+  {
+    "id": "CLIP-001",
+    "description": "CLIP N1 INOXIDABLE 100 PIEZAS"
+  },
+  {
+    "id": "CLIP-002",
+    "description": "CLIP N2 INOXIDABLE 100 PIEZAS"
+  },
+  {
+    "id": "CLIP-003",
+    "description": "CLIP JUMBO INOXIDABLE 100 PIEZAS"
+  },
+  {
+    "id": "CLIP-004",
+    "description": "CLIP MARIPOSA BASICO #1"
+  },
+  {
+    "id": "CLOR-001",
+    "description": "CLORALEX DE 1 GALON"
+  },
+  {
+    "id": "CLOR-002",
+    "description": "CLORALEX DE 10 LITROS"
+  },
+  {
+    "id": "CODO-001",
+    "description": "CODO CONDUIT PARED DELGADAD GALV. 2\""
+  },
+  {
+    "id": "COFI-001",
+    "description": "COFIA PLISADA RD-CP08 DERMA CARE"
+  },
+  {
+    "id": "CONE-001",
+    "description": "CONECTOR PARA CONDUIT EMT EN ACERO GALVANIZADO DE 2\""
+  },
+  {
+    "id": "CONO-001",
+    "description": "CONO MORSE PARA BROCA CONICA CHICO"
+  },
+  {
+    "id": "CONO-002",
+    "description": "CONO MORSE PARA BROCA CONICA GRANDE"
+  },
+  {
+    "id": "CONT-001",
+    "description": "CONTACTO DUPLEX POLARIZADO 15A 125V"
+  },
+  {
+    "id": "CONT-002",
+    "description": "CONTACTO DUPLEX MARFIL DE SOBREPONER WD0198 ROYER"
+  },
+  {
+    "id": "CONT-007",
+    "description": "PAPEL CONTACT 45CM ANCHO"
+  },
+  {
+    "id": "COPA-001",
+    "description": "COPA 45 AMP. PMX 45 #220713"
+  },
+  {
+    "id": "COPL-001",
+    "description": "COPLE PARA CONDUIT EMT EN ACERO GALVANIZADO DE 2\""
+  },
+  {
+    "id": "CORR-002",
+    "description": "CINTA CORRECTORA AZUL"
+  },
+  {
+    "id": "CORT-001",
+    "description": "CORTADORA PARA METAL 14\""
+  },
+  {
+    "id": "CORTM001",
+    "description": "CORTADOR CIRCULAR 12mm. C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTM002",
+    "description": "CORTADOR VERTICAL DE CARBURO 2mm 4FILOS PLANO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTM003",
+    "description": "CORTADOR VERTICAL DE CARBURO 4mm. 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM004",
+    "description": "CORTADOR VERTICAL DE CARBURO 6mm. 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM005",
+    "description": "CORTADOR 4F 8x8x60 CR 2.0 G859082"
+  },
+  {
+    "id": "CORTM006",
+    "description": "CORTADOR VERTICAL DE CARBURO 9mm. 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTM007",
+    "description": "CORTADOR VERTICAL DE CARBURO 10mm. 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTM008 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 12mm. 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTM008 T",
+    "description": "CORTADOR VERTICAL DE CARBURO 12mm. 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTM009",
+    "description": "CORTADOR VERTICAL DE CARBURO 11 MM 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM010",
+    "description": "CORTADOR TORICO 6mm R1.5 4F (CO37710011)"
+  },
+  {
+    "id": "CORTM011",
+    "description": "CORTADOR TORICO 8mm R2 4F (CO37710016)"
+  },
+  {
+    "id": "CORTM012",
+    "description": "CORTADOR VERTICAL PLANO 8X8X19X63 6FR CLAVE G8D63080"
+  },
+  {
+    "id": "CORTM013",
+    "description": "CORTADOR ESFERICO 4MM 5170734 EBO 40A07-4 C06-IC900 CLAVE 05620569"
+  },
+  {
+    "id": "CORTM014",
+    "description": "CORTADOR VERTICAL DE CARBURO 2mm 4 FILOS ESFERICO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM015",
+    "description": "CORTADOR VERTICAL DE CARBURO 5mm 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM016",
+    "description": "CORTADOR VERTICAL DE CARBURO 5mm 4 FILOS ESFERICO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM017",
+    "description": "CORTADOR VERTICAL DE CARBURO 6 mm 4 FILOS ESFERICO CON RECUB TIALN"
+  },
+  {
+    "id": "CORTM018",
+    "description": "CORTADOR TORICO DE CARBURO 10 mm 4 FILOS CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM019",
+    "description": "CORTADOR VERTICAL DE CARBURO 5mm 2 FILOS ESFERICO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTM020",
+    "description": "CORTADOR VERTICAL DE CARBURO 1mm 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTM021",
+    "description": "CORTADOR VERTICAL DE CARBURO DE 1.5mm 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTM034",
+    "description": "CORTADOR DE CARBURO 8mm R2 PLANO 75N508053LT MM2544450"
+  },
+  {
+    "id": "CORTM301",
+    "description": "CORTADOR TORICO DE CARBURO 6XR1.5"
+  },
+  {
+    "id": "CORTM302",
+    "description": "CORTADOR VERTICAL DE CARBURO 3MM 2 FILOS ESFERICO"
+  },
+  {
+    "id": "CORTM303",
+    "description": "CORTADOR VERTICAL DE CARBURO 4MM 2 FILOS ESFERICO"
+  },
+  {
+    "id": "CORTM304",
+    "description": "CORTADOR VERTICAL DE CERBURO 5MM 2 FILOS ESFERICO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTM305",
+    "description": "CORTADOR VERTICAL TORICO 4 X R1"
+  },
+  {
+    "id": "CORTM306",
+    "description": "CORTADOR TORICO DE CARBURO 8 X R2"
+  },
+  {
+    "id": "CORTM307",
+    "description": "CORTADOR VERTICAL DE CARBURO 1MM 4 FILOS ESFERICO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTM309",
+    "description": "CORTADOR CARB. BL 4 X 6 X 50mm 2FL CO91100411"
+  },
+  {
+    "id": "CORTS001",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/16 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTS002 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/8 4 FILOS C/RECUB. TIALN PLANO"
+  },
+  {
+    "id": "CORTS002 T",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/8 4 FILOS C/RECUB. TIALN PLANO"
+  },
+  {
+    "id": "CORTS003 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 3/16 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTS003 T",
+    "description": "CORTADOR VERTICAL DE CARBURO 3/16 4 FILOS PLANO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTS004 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/4 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS004 T",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/4 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS005 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 5/16 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS005 T",
+    "description": "CORTADOR VERTICAL DE CARBURO 5/16 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS006 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/2 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS007 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/2 GALVANIZADO 2\" ZANCO 2\" 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS008 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 8MM GALVANIZADO 50 MM ZANCO 2\" 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS009 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/4 LARGO TOTAL 100MM 4 FILOS PLANO C/RECUB. TIALN"
+  },
+  {
+    "id": "CORTS010 F",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/4 4 FILOS ESFERICO CON RECUB. TIALN"
+  },
+  {
+    "id": "CORTS011",
+    "description": "CORTADOR DE CARBURO 1/32 4F PLANO C/RECUB TIALN"
+  },
+  {
+    "id": "CORTS012",
+    "description": "CORTADOR DE CARBURO 3/32 4F PLANO C/RECUB TIALN"
+  },
+  {
+    "id": "CORTS014",
+    "description": "CORTADOR DE CARBURO 3/8 X 2 X 4 C/RECUB. TIALN MCA. FULLERTON"
+  },
+  {
+    "id": "CORTS301",
+    "description": "CORTADOR VERTICAL DOBLE DE 1/2 PLANO PARA ACERO INOXIDABLE"
+  },
+  {
+    "id": "CORTS302",
+    "description": "CORTADOR VERTICAL DE 1/2 4 FILOS PLANO, PARA ACERO INOXIDABLE"
+  },
+  {
+    "id": "CORTS303",
+    "description": "CORTADOR VERTICAL DE CARBURO 1/2 4 FILOS PLANO, CONN RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS304",
+    "description": "CORTADOR VERTICAL DOBLE FILO DE CARBURO DE 1/2, 5 FILOS PLANO"
+  },
+  {
+    "id": "CORTS305",
+    "description": "CORTADOR VERTICAL DE CARBURO DOBLE FILO DE 1/8 PLANO, CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS306",
+    "description": "CORTADOR VERTICAL DOBLE FILO DE 1/8 PARA ACERO INOXIDABLE"
+  },
+  {
+    "id": "CORTS307",
+    "description": "CORTADOR VERTICAL DOBLE FILO DE 1/8 PLANO PARA ACERO INOXIDABLE"
+  },
+  {
+    "id": "CORTS308",
+    "description": "CORTADOR VERTICAL DE CARBURO DE 1/8 4 FILOS PLANO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS309",
+    "description": "CORTADOR VERTICAL DE CARBURO DE 1/8 R0.15 4 FILOS PLANO CON RECUBRIMIENTO DE TIALN"
+  },
+  {
+    "id": "CORTS310",
+    "description": "CORTADOR VERTICAL DOBLE FILO 3/16 PLANO PARA ACERO INOXIDABLE"
+  },
+  {
+    "id": "CORTS311",
+    "description": "CORTADOR VERTICAL 3/16 4 FILOS PLANO PARA ACERO INOXIDABLE"
+  },
+  {
+    "id": "CORTS312",
+    "description": "CORTADOR VERTICAL DE CARBURO 3/16 R0.015 4 FILOS PLANO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS313",
+    "description": "CORTADOR VERTICAL DOBLE FILO 7/32 PLANO PARA ACERO INOXIDABLE"
+  },
+  {
+    "id": "CORTS314",
+    "description": "CORTADOR VERTICAL DE CARBURO 3/16 4 FILOS PLANO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS315",
+    "description": "CORTADOR VERTCAL DE CARBURO 3/8 4 FILOS PLANNO CON RECUBBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS316",
+    "description": "CORTADOR VERTICAL DE CARBURO DE 1/2 4 FILOS PLANO CON RECUBRIMIENTO DE TIAL"
+  },
+  {
+    "id": "CORTS317",
+    "description": "CORTADOR VERTICAL DE CARBURO 3/16 2 FILOS ESFERICO CON RECUBRIMIENTO DE TIALN"
+  },
+  {
+    "id": "CORTS318",
+    "description": "CORTADOR VERTICAL DE CARBURO DE 1/8 4 FILOS PLANO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS319",
+    "description": "CORTADOR VERTICAL DE CARBURO DE 1/4 4 FILOS PLANO CON RECUBRIMIENTO TIALN"
+  },
+  {
+    "id": "CORTS320",
+    "description": "CORTADOR VERTICAL HSS 1/8 4 FILOS PLANO"
+  },
+  {
+    "id": "CORTS401",
+    "description": "CORTADOR HSS WOODRUFF DE 1 1/2\" X 1/4\""
+  },
+  {
+    "id": "CRAY-001",
+    "description": "CRAYON P/METAL TIPO GIS"
+  },
+  {
+    "id": "CRIS-001",
+    "description": "CRISTAL RECTANGULAR CLARO"
+  },
+  {
+    "id": "CRIS-002",
+    "description": "CRISTAL RECTANGULAR OBSCURO \r\nSOMBRA 11"
+  },
+  {
+    "id": "CUBE-001",
+    "description": "CUBETA DE PLASCTICO"
+  },
+  {
+    "id": "CUBR-001",
+    "description": "CUBREBOCAS 2 CAPS"
+  },
+  {
+    "id": "CUBR-002",
+    "description": "CUBREBOCAS DE TELA"
+  },
+  {
+    "id": "CUCH-001",
+    "description": "CUCHILLA E-100 HSS P/REBABIADO PP-001-106"
+  },
+  {
+    "id": "DEDA-001",
+    "description": "DEDAL DE HULE"
+  },
+  {
+    "id": "DELT-001",
+    "description": "DELTACOR 70 CU REFRIGERANTE SOLUBLE 017 (20 LT)"
+  },
+  {
+    "id": "DESA-001",
+    "description": "DESARMADOR CAB. PLANA DE 1/4\" X 4\" MCA. URREA MOS. 9604"
+  },
+  {
+    "id": "DESA-002",
+    "description": "DESARMADOR CAB. DE CRUZ DE 2 1/4\" MCA. URREA MOD. 9684"
+  },
+  {
+    "id": "DESE-001",
+    "description": "DESENGRAPADORA"
+  },
+  {
+    "id": "DETE-001",
+    "description": "DETERGENTE MULTIUSOS ARCOIRIS BOLSA 9 KG"
+  },
+  {
+    "id": "DETE-002",
+    "description": "DETERGENTE MULTIUSOS ROMA BOLSA 10 KG"
+  },
+  {
+    "id": "DISC-001",
+    "description": "DISCO DE SIERRA 10\" P/CORTE DE ALUMINIO\r\nDWA03210"
+  },
+  {
+    "id": "DISC-002",
+    "description": "DISCO LAMINADO 4 1/2\" C-2718"
+  },
+  {
+    "id": "DISC-003",
+    "description": "DISCO LAMINADO 7\" C-2732"
+  },
+  {
+    "id": "DISC-004",
+    "description": "DISCO P/CORTE DE METAL 14\" C-700"
+  },
+  {
+    "id": "DISC-005",
+    "description": "DISCO P/CORTE DE METAL 4 1/2\" C-778"
+  },
+  {
+    "id": "DISC-006",
+    "description": "DISCO P/CORTE DE METAL 7\" C-2008"
+  },
+  {
+    "id": "DISC-007",
+    "description": "DISCO P/CORTE DE METAL 9\" C-876"
+  },
+  {
+    "id": "DISC-009",
+    "description": "DISCO P/DESBASTE DE METAL 4 1/2\" C-2004"
+  },
+  {
+    "id": "DISC-010",
+    "description": "DISCO P/DESBASTE DE METAL 7\" C-2007"
+  },
+  {
+    "id": "DISC-013",
+    "description": "DISCO CORTE LOSETA 10\" LISO BLANCO BARRENO 15.9"
+  },
+  {
+    "id": "ELEC-001",
+    "description": "ELECTRODO 45 AMP #220669"
+  },
+  {
+    "id": "ELEC-002",
+    "description": "ELECTRODO 6013 1/8"
+  },
+  {
+    "id": "ELEC-003",
+    "description": "ELECTRODO 7018 1/8"
+  },
+  {
+    "id": "ELEC-004",
+    "description": "ELECTRODO 7018 5/32"
+  },
+  {
+    "id": "ELEC-005",
+    "description": "ELECTRODO PARA ALUMINIO 4043 1/8 CLAVE SKU-12"
+  },
+  {
+    "id": "ELEC-006",
+    "description": "ELECTRODO APORTE BRONCE C/FUNDENTE 1/8 C"
+  },
+  {
+    "id": "ELEC-007",
+    "description": "ELECTRODO APORTE BRONCE DESNUDO 1/8 CLAV"
+  },
+  {
+    "id": "ELEC-008",
+    "description": "ELECTRODO APORTE INOX. 316L EN 1/16 PROW"
+  },
+  {
+    "id": "ELEC-009",
+    "description": "ELECTRODO TUNGSTENO 2% THORIO EN 3/32 WELD500\r\nSKU-927"
+  },
+  {
+    "id": "ELEC-010",
+    "description": "ELECTRODO DE CARBON COBRIZADO P/CORTE 1/"
+  },
+  {
+    "id": "ELEC-011",
+    "description": "ELECTRODO PARA INOX. UTP 65 1/8"
+  },
+  {
+    "id": "ELEC-012",
+    "description": "ELECTRODO PARA INOX. XUPER 680 CGS CA CD 1/8"
+  },
+  {
+    "id": "ELEC-013",
+    "description": "ELECTRODO PARA FIERRO COLADO 40 CA CD 5/32\""
+  },
+  {
+    "id": "ELEC-014",
+    "description": "ELECTRODO 9018 1/8"
+  },
+  {
+    "id": "ELEC-015",
+    "description": "ELECTRODO 6010 1/8 SKU: 662"
+  },
+  {
+    "id": "ELEC-016",
+    "description": "ELECTRODO PARA FIERRO COLADO UTP 807 1/8\""
+  },
+  {
+    "id": "ELEC-017",
+    "description": "ELECTRODO APORTE INOX. 308L EN 1/8 DELTA"
+  },
+  {
+    "id": "ELEC-018",
+    "description": "ELECTRODO 6010 3/32"
+  },
+  {
+    "id": "ELEC-019",
+    "description": "ELECTRODO TUNGSTENO TIG 3 TIERRAS 3/32 WELD500\r\nSKU:743"
+  },
+  {
+    "id": "ELEC-020",
+    "description": "ELECTRODO FOSCO STAY-SILV EN 1/8 HARRIS (SKU-632)"
+  },
+  {
+    "id": "ELEC-021",
+    "description": "NANO ALLOY 6395N XHD 4.0 mm\r\n6395NXHD-40-5K"
+  },
+  {
+    "id": "ELEC-022",
+    "description": "ELECTRODO APORTE INOX. 308L EN 3/32"
+  },
+  {
+    "id": "ELEC-023",
+    "description": "ELECTRODO APORTE A/CARBON 705-6 EN 1/16"
+  },
+  {
+    "id": "ELEC-024",
+    "description": "ELECTRODO APORTE A/CARBON 705-6 EN 3/32"
+  },
+  {
+    "id": "ELEC-025",
+    "description": "ELECTRODO\r\n  TUNGSTENO TIG 3 TIERRAS EN 1/16 \r\n    WELD500 \r\n    \r\n    SKU-1497"
+  },
+  {
+    "id": "ELEC-026",
+    "description": "ELECTRODO\r\n  6013 3/32"
+  },
+  {
+    "id": "EMPA-001",
+    "description": "EMPAQUES K-1008-SMT (FIBRA RIJA) #4513 INF \r\nSKU:3019"
+  },
+  {
+    "id": "ENGR-001",
+    "description": "ENGRAPADORA GRAPA 26X6"
+  },
+  {
+    "id": "ESCO-001",
+    "description": "ESCOBA TIPO CEPILLO CON BASTON DE MADERA DE 1.20 CM"
+  },
+  {
+    "id": "ESCO-002",
+    "description": "ESCOBILLON PARA WC CON TAZON DE PLASTICO"
+  },
+  {
+    "id": "ESCU-001",
+    "description": "ESCUDO FRONTAL 30 AMP- PMX 30XP #420116"
+  },
+  {
+    "id": "ESCU-002",
+    "description": "ESCUDO 45 AMP. PMX 45 #220674"
+  },
+  {
+    "id": "ESCU-003",
+    "description": "ESCUADRA DE COMBINACION SURTEK MOD. 122254 (12\")"
+  },
+  {
+    "id": "ESCU-004",
+    "description": "ESCUADRA DE CANTERO SURTEK MOD. 122281 (24\")"
+  },
+  {
+    "id": "ESMA-001",
+    "description": "ESMALTE SECADO RAPIDO AMARILLO CROMO"
+  },
+  {
+    "id": "ESMA-002",
+    "description": "ESMALTE SECADO RAPIDO AZUL PRUSIA"
+  },
+  {
+    "id": "ESMA-003",
+    "description": "ESMALTE SECADO RAPIDO AZUL SEGÚN MUESTRA"
+  },
+  {
+    "id": "ESMA-004",
+    "description": "ESMALTE SECADO RAPIDO BLANCO"
+  },
+  {
+    "id": "ESMA-005",
+    "description": "ESMALTE SECADO RAPIDO CAFÉ"
+  },
+  {
+    "id": "ESMA-006",
+    "description": "ESMALTE SECADO RAPIDO CREMA"
+  },
+  {
+    "id": "ESMA-007",
+    "description": "ESMALTE SECADO RAPIDO GRIS CLARO"
+  },
+  {
+    "id": "ESMA-008",
+    "description": "ESMALTE SECADO RAPIDO GRIS OBSCURO"
+  },
+  {
+    "id": "ESMA-009",
+    "description": "ESMALTE SECADO RAPIDO NARANJA"
+  },
+  {
+    "id": "ESMA-010",
+    "description": "ESMALTE SECADO RAPIDO NEGRO"
+  },
+  {
+    "id": "ESMA-011",
+    "description": "ESMALTE SECADO RAPIDO PLATA"
+  },
+  {
+    "id": "ESMA-012",
+    "description": "ESMALTE SECADO RAPIDO ROJO BERMELLON"
+  },
+  {
+    "id": "ESMA-013",
+    "description": "ESMALTE SECADO RAPIDO ROSA"
+  },
+  {
+    "id": "ESMA-014",
+    "description": "ESMALTE SECADO RAPIDO VERDE MILITAR"
+  },
+  {
+    "id": "ESMA-015",
+    "description": "ESMALTE SECADO RAPIDO ALUMINIO PARA ALTA TEMPERATURA"
+  },
+  {
+    "id": "ESPAM001",
+    "description": "ESPARRAGO ROSC. 8mm."
+  },
+  {
+    "id": "ESPAM002",
+    "description": "ESPARRAGO ROSC. 10mm."
+  },
+  {
+    "id": "ESPAM003",
+    "description": "ESPARRAGO ROSC. 16mm"
+  },
+  {
+    "id": "ESPAM004",
+    "description": "ESPARRAGO ROSC. ACME M24 PASO 3"
+  },
+  {
+    "id": "ESPAM005",
+    "description": "ESPARRAGO ROSC. INOX. 10mm."
+  },
+  {
+    "id": "ESPAM006",
+    "description": "ESPARRAGO ROSC. 18mm"
+  },
+  {
+    "id": "ESPAS001",
+    "description": "ESPARRAGO ROSC. 1/2\""
+  },
+  {
+    "id": "ESPAS002",
+    "description": "ESPARRAGO ROSC. 5/8\""
+  },
+  {
+    "id": "ESPAS003",
+    "description": "ESPARRAGO ROSC. GALV. 3/4\""
+  },
+  {
+    "id": "ESPAS004",
+    "description": "ESPARRAGO ROSC. INOX. 1/4\""
+  },
+  {
+    "id": "ESPAS005",
+    "description": "ESPARRAGO ROSC. INOX. 1/2\""
+  },
+  {
+    "id": "ESPAS006",
+    "description": "ESPARRAGO CUERDA ACME 1/2\""
+  },
+  {
+    "id": "ESPAS007",
+    "description": "ESPARRAGO ROSC. INOX. 3/8\""
+  },
+  {
+    "id": "ESPAS008",
+    "description": "ESPARRAGO ROSC. 3/4\""
+  },
+  {
+    "id": "ESPAS009",
+    "description": "ESPARRAGO ACME 7/8"
+  },
+  {
+    "id": "ESPAS010",
+    "description": "ESPARRAGO ACME 7/8"
+  },
+  {
+    "id": "ESPI-002",
+    "description": "ESPIGA DE 3/4 CON ROSCA MACHO"
+  },
+  {
+    "id": "ESTE-001",
+    "description": "ESTERAS P6.3572.0"
+  },
+  {
+    "id": "ETIQ-001",
+    "description": "ETIQUETA ADHERIBLES TAMAÑO CARTA"
+  },
+  {
+    "id": "ETIQ-002",
+    "description": "ETIQUETAS PARA LASER T/CARTA"
+  },
+  {
+    "id": "EXTR-001",
+    "description": "EXTRACTOR"
+  },
+  {
+    "id": "F",
+    "description": "SILICON PERTAMEX TRANSPARENTE DE 80ML"
+  },
+  {
+    "id": "FAJA-001",
+    "description": "FAJA ELASTICA JYR 825 T/CHICA"
+  },
+  {
+    "id": "FAJA-002",
+    "description": "FAJA ELASTICA JYR 825 T/MEDIANA"
+  },
+  {
+    "id": "FAJA-003",
+    "description": "FAJA ELASTICA JYR 825 T/GRANDE"
+  },
+  {
+    "id": "FAJA-004",
+    "description": "FAJA ELASTICA JYR 825 T/ EXTRA GRANDE"
+  },
+  {
+    "id": "FAJA-005",
+    "description": "FAJA DE CUERO MBA TIPO PESISTA T36 )-"
+  },
+  {
+    "id": "FAJA-006",
+    "description": "FAJA DE CUERO MBA TIPO PESISTA T40 )"
+  },
+  {
+    "id": "FAJA-007",
+    "description": "FAJA ELAS. JYR 825 C/3ER CINT.TXXL )//"
+  },
+  {
+    "id": "FILT-001",
+    "description": "FILTRO AD320 H341158/20"
+  },
+  {
+    "id": "FILT-002",
+    "description": "FILTRO DE AIRE P6-4212.0"
+  },
+  {
+    "id": "FILT-003",
+    "description": "FILTRO DE ACEITE P6-3461.1"
+  },
+  {
+    "id": "FILT-004",
+    "description": "FILTRO 45V26 GAS LENS EN 3/32 OB SKU: 737"
+  },
+  {
+    "id": "FILT-005",
+    "description": "FILTRO SMC AMG - EL150"
+  },
+  {
+    "id": "FILT-006",
+    "description": "FILTRO SEPARADOR DE ACEITE P6.3795.1"
+  },
+  {
+    "id": "FILT-007",
+    "description": "FILTRO CH56P"
+  },
+  {
+    "id": "FILT-008",
+    "description": "ROLLO DE PAPEL FILTRANTE CDF*150/50/50\r\nNO. DE PARTE: 2798885"
+  },
+  {
+    "id": "FILT-009",
+    "description": "FILTRO DE AIRE P6.4432.0"
+  },
+  {
+    "id": "FILT-011",
+    "description": "FILTRO 3M 2097 VAPORES ORGANICOS D-"
+  },
+  {
+    "id": "FILT-014",
+    "description": "FILTRO SEPARADOR DE ACEITE P6.3792.2"
+  },
+  {
+    "id": "FILT-016",
+    "description": "FILTRO DE ACEITE P6.3462.1"
+  },
+  {
+    "id": "FIRB-001",
+    "description": "FIBRA 225 X 150mm. MARRON GRANO MEDIO"
+  },
+  {
+    "id": "FLEX-001",
+    "description": "FLEXOMETRO ANTI-IMPACTO 5 MT. MCA. SURTEK MOD. B122081"
+  },
+  {
+    "id": "FLEX-002",
+    "description": "FLEXOMETRO ANTI-IMPACTO 8 MT. MCA. SURTEK MOD. B122082"
+  },
+  {
+    "id": "FLUI-001",
+    "description": "FLUIDO TAMPIC # 1 GOLD\r\nNO. DE PARTE: 81-007-050"
+  },
+  {
+    "id": "FOLD-001",
+    "description": "FOLDER CON COSTILLA TAMAÑO CARTA"
+  },
+  {
+    "id": "FOLD-002",
+    "description": "FOLDER DE CARTULINA CREMA T/CARTA"
+  },
+  {
+    "id": "FOLD-003",
+    "description": "FOLDER COLGANTE T/CARTA"
+  },
+  {
+    "id": "FUSI-001",
+    "description": "FUSIBLE FNQ 20A/500"
+  },
+  {
+    "id": "FUSI-002",
+    "description": "FUSIBLE FNQ 30A/500"
+  },
+  {
+    "id": "FUSI-003",
+    "description": "FUSE[P450H] CLAVE: 2580156"
+  },
+  {
+    "id": "GAGE-001",
+    "description": "GAGES PARA CUERDA DE 60° MARCA MITUTOYO MOD. 950-201"
+  },
+  {
+    "id": "GOMA-001",
+    "description": "GOMA PARA BORRAR"
+  },
+  {
+    "id": "GRAP-001",
+    "description": "GRAPAS ESTANDAR No.400 PATA 6.35mm 100 PZS"
+  },
+  {
+    "id": "GRAS-001",
+    "description": "GRASA SINTETICA MOBILITH SHC 007"
+  },
+  {
+    "id": "GRAS-002",
+    "description": "GRASA MOBILUX EP1"
+  },
+  {
+    "id": "GRAS-003",
+    "description": "GRASERA RECTA 1/4"
+  },
+  {
+    "id": "GRAS-004",
+    "description": "GRASERA RECTA 1/8 NPT"
+  },
+  {
+    "id": "GRAS-005",
+    "description": "GRASERA RECTA 6mm"
+  },
+  {
+    "id": "GRAS-006",
+    "description": "GRASA PARA CHUCK HIDRAHULICO MARCA KITAGAWA 14 OZ"
+  },
+  {
+    "id": "GRAS-008",
+    "description": "GRASERA A 45° M6"
+  },
+  {
+    "id": "GRAS-009",
+    "description": "GRASERA\r\n  RECTA 8mm"
+  },
+  {
+    "id": "GRAS-010",
+    "description": "GRASERA\r\n  A 90° 6mm"
+  },
+  {
+    "id": "GUAN-001",
+    "description": "GUANTE AZUL INFRA CODIGO MIG 5273"
+  },
+  {
+    "id": "GUAN-002",
+    "description": "GUANTE DE USCARIA SUAVE"
+  },
+  {
+    "id": "GUAN-003",
+    "description": "GUANTE DERMA-GRIP FLEX NYL 51975 T9"
+  },
+  {
+    "id": "GUAN-004",
+    "description": "GUANTE DERMA-GRIP FLEX NYL TIPO JAPONES 16975 T9)//"
+  },
+  {
+    "id": "GUAN-005",
+    "description": "GUANTE KING-COBRA P/SOLDADOR 99-814"
+  },
+  {
+    "id": "GUAN-006",
+    "description": "GUANTE RGF CARNAZA CORTOS"
+  },
+  {
+    "id": "GUAN-007",
+    "description": "GUANTE SF T601 ALTA TEMPERATURA PALM CAR"
+  },
+  {
+    "id": "GUAN-008",
+    "description": "GUANTE ANSELL SOLVEX NITRILO 37175 T9"
+  },
+  {
+    "id": "GUAN-009",
+    "description": "GUANTE ANSELL SOLVEX NITRILO 37175 T10"
+  },
+  {
+    "id": "GUAN-010",
+    "description": "GUANTE AMBIDERM LATEX MED. BLANCO"
+  },
+  {
+    "id": "GUAN-011",
+    "description": "GUANTE DERMACRON NITR P/CALC 67602 T9)//"
+  },
+  {
+    "id": "GUAN-012",
+    "description": "GUANTE IMT OSCARIA ARGONERO #11 C/CAMP"
+  },
+  {
+    "id": "HOJA-001",
+    "description": "HOJA DE LIJA J-86 GRADO 80"
+  },
+  {
+    "id": "HOJA-002",
+    "description": "HOJA DE PAPEL DE COLORES T/CARTA"
+  },
+  {
+    "id": "HOJA-003",
+    "description": "HOJA OPALINA T/CARTA"
+  },
+  {
+    "id": "HULE-001",
+    "description": "HULE NEOPRENO 1/4"
+  },
+  {
+    "id": "INSE-001",
+    "description": "INSERTO 266RG-16VM01A002M 1125"
+  },
+  {
+    "id": "INSE-002",
+    "description": "INSERTO 415N-05 02 06M-M30 1010"
+  },
+  {
+    "id": "INSE-003",
+    "description": "INSERTO 419R-1405M-PM 1130"
+  },
+  {
+    "id": "INSE-004",
+    "description": "INSERTO 490R-08T308M-PM 4240"
+  },
+  {
+    "id": "INSE-005",
+    "description": "INSERTO 880-05 03 05H-C-LM 1144"
+  },
+  {
+    "id": "INSE-006",
+    "description": "INSERTO 880-05 03 W08H P-LM 4324"
+  },
+  {
+    "id": "INSE-007",
+    "description": "INSERTO AOMT070208PDPR-MJ AH725 (6861274)"
+  },
+  {
+    "id": "INSE-008",
+    "description": "INSERTO ASMT11T308PDPR-MJ AH120 (6822078)"
+  },
+  {
+    "id": "INSE-010",
+    "description": "INSERTO CCMT060208-PS AH725 (6856762)"
+  },
+  {
+    "id": "INSE-012",
+    "description": "INSERTO CCMT09T304-PS T9115"
+  },
+  {
+    "id": "INSE-013",
+    "description": "INSERTO CCMT09T308-PS AH725 (6856765)"
+  },
+  {
+    "id": "INSE-015",
+    "description": "INSERTO CNMG090408E-TSF T9115"
+  },
+  {
+    "id": "INSE-018",
+    "description": "INSERTO 345R-1305M-PM 1130"
+  },
+  {
+    "id": "INSE-019",
+    "description": "INSERTO DCGW11T30450130F 7015"
+  },
+  {
+    "id": "INSE-021",
+    "description": "INSERTO DCMT070208-MM 125"
+  },
+  {
+    "id": "INSE-022",
+    "description": "INSERTO DCMT11T304-PS AH905 (6879337)"
+  },
+  {
+    "id": "INSE-023",
+    "description": "INSERTO ALTO AVANCE XDLW090408SR-D X400 (5652239)"
+  },
+  {
+    "id": "INSE-024",
+    "description": "INSERTO DE ALTO AVANCE XDPT090408ERD41 SC6525 \r\nMM 6010771"
+  },
+  {
+    "id": "INSE-025",
+    "description": "INSERTO DE CARBURO TRIANGULAR 1/2, RADIO 0.8mm\r\nTPUN220408 KCK15B"
+  },
+  {
+    "id": "INSE-026",
+    "description": "INSERTO CNMG432A-1B SPO819 \r\nMM 5653066"
+  },
+  {
+    "id": "INSE-027",
+    "description": "INSERTO NT2LK KC730 \r\nMM 1112913"
+  },
+  {
+    "id": "INSE-028",
+    "description": "INSERTO DE CERAMICA TRIANGULAR 1/2, RADIO0.4mm\r\nTPGN220404T01025 HC2"
+  },
+  {
+    "id": "INSE-029",
+    "description": "INSERTO DE CERAMICA TRIANGULAR 1/2 TPGN220408T02020"
+  },
+  {
+    "id": "INSE-030",
+    "description": "INSERTO DGM2-020 AH725 (6860478)"
+  },
+  {
+    "id": "INSE-031",
+    "description": "INSERTO DGM4-030 AH725 (6860438)"
+  },
+  {
+    "id": "INSE-032",
+    "description": "INSERTO FRESADO 390R-070208M-PM 1130"
+  },
+  {
+    "id": "INSE-033",
+    "description": "INSERTO LMMU110708PNER-MJ AH725 (6860045)"
+  },
+  {
+    "id": "INSE-034",
+    "description": "INSERTO LNMU0303ZER-MJ AH725 (6864162)"
+  },
+  {
+    "id": "INSE-035",
+    "description": "INSERTO N123E2-0200-0002-CM 4325"
+  },
+  {
+    "id": "INSE-036",
+    "description": "INSERTO N123H2-0400-0004-TF 1125"
+  },
+  {
+    "id": "INSE-037",
+    "description": "INSERTO NTK2L KC730\r\nMM 1114258"
+  },
+  {
+    "id": "INSE-038",
+    "description": "INSERTO POSITIVO WNMG060408MP KCM25B\r\nMM 5591912"
+  },
+  {
+    "id": "INSE-039",
+    "description": "INSERTO R245-12 T3M PM 1130"
+  },
+  {
+    "id": "INSE-040",
+    "description": "INSERTO R300-0720E-PM 1130"
+  },
+  {
+    "id": "INSE-041",
+    "description": "INSERTO R300-1240M-PH 1010"
+  },
+  {
+    "id": "INSE-042",
+    "description": "INSERTO R300-1240M-PM 1130"
+  },
+  {
+    "id": "INSE-043",
+    "description": "INSERTO R390 -11 T3 08M-PM 1130"
+  },
+  {
+    "id": "INSE-044",
+    "description": "INSERTO RDHX 0501M0SN CTPP235"
+  },
+  {
+    "id": "INSE-046",
+    "description": "INSERTO RPHX 10T3MOSN-CTPP235"
+  },
+  {
+    "id": "INSE-047",
+    "description": "INSERTO RPNX 10T3MOSN-F50 CTPP235"
+  },
+  {
+    "id": "INSE-048",
+    "description": "INSERTO SDEB080208 KC0725M\r\nMM 1157497"
+  },
+  {
+    "id": "INSE-050",
+    "description": "INSERTO TNMG220408-TM T9215 (6772332)"
+  },
+  {
+    "id": "INSE-051",
+    "description": "INSERTO TR-DC130 4F 1115"
+  },
+  {
+    "id": "INSE-052",
+    "description": "INSERTO TR-DC1304-F 4315"
+  },
+  {
+    "id": "INSE-053",
+    "description": "INSERTO VNMG160404-TM AH120 (6812134)"
+  },
+  {
+    "id": "INSE-054",
+    "description": "INSERTO VNMG160408-TM T9115 (6862455)"
+  },
+  {
+    "id": "INSE-055",
+    "description": "INSERTO XPMT08T308R-DJ AH725"
+  },
+  {
+    "id": "INSE-056",
+    "description": "INSERTO TCEX 050101L F 1125"
+  },
+  {
+    "id": "INSE-058",
+    "description": "INSERTO 490R-08T308M-PM 1130"
+  },
+  {
+    "id": "INSE-059",
+    "description": "INSERTO FRESADO R300-1240E-PM 1130"
+  },
+  {
+    "id": "INSE-060",
+    "description": "INSERTO DNMG150604-T-SF T915"
+  },
+  {
+    "id": "INSE-061",
+    "description": "INSERTO DNMG150604-SF AH6225 (6825248)"
+  },
+  {
+    "id": "INSE-062",
+    "description": "INSERTO CNMG120408MS KCU25\r\nMM 4050454"
+  },
+  {
+    "id": "INSE-064",
+    "description": "INSERTO 4QP-CNMA 432-W BXC50 (6822272)"
+  },
+  {
+    "id": "INSE-065",
+    "description": "INSERTO CNMG120408E4E SP0819 \r\nMM 5652137"
+  },
+  {
+    "id": "INSE-066",
+    "description": "INSERTO 345R-1305M-PM 1010"
+  },
+  {
+    "id": "INSE-067",
+    "description": "INSERTO CCMT060204-PS AH725 (6856761)"
+  },
+  {
+    "id": "INSE-070",
+    "description": "INSERTO 880 0403W07H PGT4334"
+  },
+  {
+    "id": "INSE-071",
+    "description": "INSERTO 880 040305H C LM 1144"
+  },
+  {
+    "id": "INSE-072",
+    "description": "INSERTO DNMG110404E-SM T6120"
+  },
+  {
+    "id": "INSE-073",
+    "description": "INSERTO R300-1240E-PM 1010"
+  },
+  {
+    "id": "INSE-074",
+    "description": "INSERTO PNCU0905GNER-MJ AH725 (6860126)"
+  },
+  {
+    "id": "INSE-075",
+    "description": "INSERTO DNGA110408S01525H 7115 (CBN)"
+  },
+  {
+    "id": "INSE-076",
+    "description": "INSERTO VNMG160412-TM T9135"
+  },
+  {
+    "id": "INSE-077",
+    "description": "INSERTO 266RG 16VM01A001M 1125 (R1-2)"
+  },
+  {
+    "id": "INSE-078",
+    "description": "INSERTO 2NUCNGA 120408 BN350"
+  },
+  {
+    "id": "INSE-079",
+    "description": "INSERTO CNMG 432-TF IC807 (5507750) TIMS"
+  },
+  {
+    "id": "INSE-080",
+    "description": "INSERTO TAG N3C IC808 (6003577)"
+  },
+  {
+    "id": "INSE-081",
+    "description": "INSERTO AVGT060308PBER-MJ AH3135 (6733156)"
+  },
+  {
+    "id": "INSE-082",
+    "description": "INSERTO 327R06-12250VM-TH 1025"
+  },
+  {
+    "id": "INSE-083",
+    "description": "INSERTO R216-1608 M-M 4240"
+  },
+  {
+    "id": "INSE-084",
+    "description": "INSERTO CNMG120408N-MU AC8025P"
+  },
+  {
+    "id": "INSE-085",
+    "description": "INSERTO CNMG120412-TSF T9215\r\n(6772152)"
+  },
+  {
+    "id": "INSE-086",
+    "description": "INSERTO R216-1603 E-M 1130"
+  },
+  {
+    "id": "INSE-087",
+    "description": "INSERTO NG2M200LK KCP25B (5968011)"
+  },
+  {
+    "id": "INSE-088",
+    "description": "INSERTO N123E2-0200-RO 1125"
+  },
+  {
+    "id": "INSE-089",
+    "description": "INSERTO N1512-250-5E 1125"
+  },
+  {
+    "id": "INSE-090",
+    "description": "INSERTO DNMG110404E-TM T9125 (6708400)"
+  },
+  {
+    "id": "INSE-091",
+    "description": "INSERTO TOMT100408PDER-MJ AH3135 (6999178)"
+  },
+  {
+    "id": "INSE-092",
+    "description": "INSERTO 490R-08T308M-PM 4340"
+  },
+  {
+    "id": "INSE-093",
+    "description": "INSERTO TRVB1302F 1125"
+  },
+  {
+    "id": "INSE-094",
+    "description": "INSERTO TCMT 090202 PF 4325"
+  },
+  {
+    "id": "INSE-095",
+    "description": "INSERTO NG2M100RK KCU25 4109689"
+  },
+  {
+    "id": "INSE-096",
+    "description": "INSERTO TR-VB1304F 4315"
+  },
+  {
+    "id": "INSE-097",
+    "description": "INSERTO 4QP-VNGA 331 S9051"
+  },
+  {
+    "id": "INSE-098",
+    "description": "INSERTO NG2M050LK KC5010\r\nMM3397369"
+  },
+  {
+    "id": "INSE-099",
+    "description": "INSERTO 490R-08T308M-PM 1010"
+  },
+  {
+    "id": "INSE-100",
+    "description": "INSERTO PNCU0905GNFR-AJ TH10 (6860117)"
+  },
+  {
+    "id": "INSE-101",
+    "description": "INSERTO 70 357 318 TC16-1E1,5 ISO CWN240 (2282392)"
+  },
+  {
+    "id": "INSE-102",
+    "description": "INSERTO 70 357 314 TC16-1E1,0 ISO CWN240 (2248423)"
+  },
+  {
+    "id": "INSE-103",
+    "description": "INSERTO 70 357 332 TC16-2E2,0 ISO CWN240 (2242330)"
+  },
+  {
+    "id": "INSE-104",
+    "description": "INSERTO DNMG150608-PF 4315"
+  },
+  {
+    "id": "INSE-105",
+    "description": "INSERTO VNMG160412-MP MC6025\r\nVNMG333MP"
+  },
+  {
+    "id": "INSE-106",
+    "description": "INSERTO DNMG150616MP MC6025\r\nDNMG444MP"
+  },
+  {
+    "id": "INSE-107",
+    "description": "INSERTO XPMT06X308R-DJ AH725 (6861361)"
+  },
+  {
+    "id": "INSE-108",
+    "description": "INSERTO WXGU040308R-TS AH725 (6989927)"
+  },
+  {
+    "id": "INSE-109",
+    "description": "INSERTO WWMU060306R-DJ AH3135 (6767667)"
+  },
+  {
+    "id": "INSE-110",
+    "description": "INSERTO DCMT070208FP KCP25B\r\nMM 5537437"
+  },
+  {
+    "id": "INSE-111",
+    "description": "INSERTO DE CARBURO R790 160405PH NL H13A"
+  },
+  {
+    "id": "INSE-112",
+    "description": "INSERTO NG2031LK KC5010\r\nMM 1817713"
+  },
+  {
+    "id": "INSE-113",
+    "description": "INSERTO 2QP-DCGW11T304-LT (6792414)"
+  },
+  {
+    "id": "INSE-114",
+    "description": "INSERTO NTK2L KCU25 MM 4109958"
+  },
+  {
+    "id": "INSE-115",
+    "description": "INSERTO LNPU15T608SRGER KCK15 MM6830679"
+  },
+  {
+    "id": "INSE-116",
+    "description": "INSERTO RDPX12T3M0SHN KC510M MM1895255"
+  },
+  {
+    "id": "INSE-117",
+    "description": "INSERTO LNPU432SRG KC522M MM 6131502"
+  },
+  {
+    "id": "INSE-118",
+    "description": "INSERTO LNPU15T608SRGE KCPM40 (5684657)"
+  },
+  {
+    "id": "INSE-119",
+    "description": "INSERTO 2QP-DCGW32.51-LT"
+  },
+  {
+    "id": "INSE-120",
+    "description": "INSERTO 345N-1305E-PW8 1130"
+  },
+  {
+    "id": "INSE-122",
+    "description": "INSERTO\r\n  DE FRESADO XDLW070308TN, HB7705 \r\n    212930"
+  },
+  {
+    "id": "INSE-123",
+    "description": "INSERTO LNPU110408SRGE\r\n  KC522M"
+  },
+  {
+    "id": "INSE-126",
+    "description": "PLAQUITA REV. RDMW 12T3 MOTN HB7505"
+  },
+  {
+    "id": "INSE-127",
+    "description": "INSERTO TNMU070308PER-MJ AH3135 (6774144)"
+  },
+  {
+    "id": "INSE-130",
+    "description": "INSERTO CCMT09T304-PS T9215 (6772427)"
+  },
+  {
+    "id": "INSE-131",
+    "description": "INSERTO\r\n  APKT11/APMT11"
+  },
+  {
+    "id": "INSE-132",
+    "description": "INSERTO\r\n  PCD CGW09T304-DIA-DX160 (6801366)"
+  },
+  {
+    "id": "INSE-133",
+    "description": "INSERTO\r\n  DE CERMEC CCMT09T304-24 NS9530"
+  },
+  {
+    "id": "INSE-134",
+    "description": "INSERTO\r\n  345R 1305M PH 4340"
+  },
+  {
+    "id": "INSE-136",
+    "description": "INSERTO\r\n  DCMT070208FP KCM25B (5591127)"
+  },
+  {
+    "id": "INSE-137",
+    "description": "INSERTO\r\n  RANURADO 2.5mm GX16-1E250N02-UF4 WSM33S \r\n    6152258"
+  },
+  {
+    "id": "INSE-138",
+    "description": "INSERTO LNMX0405R6-MJ AH3135"
+  },
+  {
+    "id": "INSE-139",
+    "description": "INSERTO ZFBM080R00-MJ AH725 (6725821)"
+  },
+  {
+    "id": "INSE-140",
+    "description": "INSERTO CNMG432UR WP35CT WDA \r\n(4169960)"
+  },
+  {
+    "id": "INSE-141",
+    "description": "INSERTO CCMT3252MU WP35CT WDA\r\n5623439"
+  },
+  {
+    "id": "INSE-142",
+    "description": "INSERTO WNMG080408E-4E SP0819\r\nMM 5653039"
+  },
+  {
+    "id": "INSE-143",
+    "description": "INSERTO DNMG150408E-1B SP0819 \r\nMM 5653067"
+  },
+  {
+    "id": "INSE-144",
+    "description": "INSERTO NT4RK KCU25 MM4109953"
+  },
+  {
+    "id": "INSE-145",
+    "description": "INSERTO VGD4.00-040-GM VPG MM 127-00020"
+  },
+  {
+    "id": "INSE-146",
+    "description": "INSERTO VGD5.00-040-GT VPG MM084-00010"
+  },
+  {
+    "id": "INSE-147",
+    "description": "INSERTO VGD5.00-250-GR VPG MM 084-00025"
+  },
+  {
+    "id": "INSE-148",
+    "description": "INSERTO\r\n  WNMG080408-VM HB7130-2 252070"
+  },
+  {
+    "id": "INSE-149",
+    "description": "INSERTO KDMB16M0ERLD"
+  },
+  {
+    "id": "INSE-150",
+    "description": "INSERTO VCGX220508-FR HU7810 211856 ALU"
+  },
+  {
+    "id": "INSE-151",
+    "description": "INSERTO 490R 08T308E MLH13A"
+  },
+  {
+    "id": "INSE-152",
+    "description": "INSERTO ZDET16M525FR721 GH1 MM5667922"
+  },
+  {
+    "id": "INSE-153",
+    "description": "INSERTO KDMB16M0ERLD MM3964240"
+  },
+  {
+    "id": "INSE-154",
+    "description": "INSERTO NTK2R KCU25"
+  },
+  {
+    "id": "INSE-155",
+    "description": "INSERTO NT2RK KCU25"
+  },
+  {
+    "id": "INSE-156",
+    "description": "INSERTO DXGU070308L-TSAH725 (6888912)"
+  },
+  {
+    "id": "INSE-157",
+    "description": "INSERTO SNMG090308-TMT9225 (6780872)"
+  },
+  {
+    "id": "INSE-158",
+    "description": "INSERTO WWMU08X408R-DJ AH9030"
+  },
+  {
+    "id": "INSE-159",
+    "description": "INSERTO XDLW070308TNHB7720 (212925)"
+  },
+  {
+    "id": "INSE-160",
+    "description": "INSERTO RDX0501M0 - HB7520  (212195)"
+  },
+  {
+    "id": "INSE-161",
+    "description": "INSERTO TCMT110204 - HBT725 (260982)"
+  },
+  {
+    "id": "INSE-162",
+    "description": "INSERTO XDLW070308TN - HB7720 (212925)"
+  },
+  {
+    "id": "INSE-163",
+    "description": "INSERTO XDUN070308TN - HB7705 (212930)"
+  },
+  {
+    "id": "INSE-164",
+    "description": "INSERTO LNGU4325RGE - KC522M G132022"
+  },
+  {
+    "id": "INSE-165",
+    "description": "INSERTO APMT1135PDER-M2 VP15TF"
+  },
+  {
+    "id": "INSE-166",
+    "description": "INSERTO 4QP-VNGA160404 BXC50 (6818120)"
+  },
+  {
+    "id": "INSE-167",
+    "description": "INSERTO 4QP-VNGA160408 BXC50 (6818121)"
+  },
+  {
+    "id": "INSE-168",
+    "description": "INSERTO 2QP-CCGT09T308-HP BR35F (6929245)"
+  },
+  {
+    "id": "INSE-169",
+    "description": "INSERTO NG2M100LK KC730 1114293"
+  },
+  {
+    "id": "INSE-170",
+    "description": "INSERTO ENMU0603ER-C JP4120 62063517"
+  },
+  {
+    "id": "INSE-171",
+    "description": "INSERTO DE CERAMICA WNGA080412502025 KYHK15B 6770710"
+  },
+  {
+    "id": "INSE-172",
+    "description": "INSERTO DE CERAMICA WNGA080408T02020 KY3500 1181986"
+  },
+  {
+    "id": "INSE-173",
+    "description": "INSERTO DE CBN WNGA080404501015MT KBH20 532983"
+  },
+  {
+    "id": "INSE-174",
+    "description": "INSERTO DE CBN 080408501225MTWNGA KBH20 5329838"
+  },
+  {
+    "id": "INSE-175",
+    "description": "INSERTO 2QP-DCGW11T302-L BXA20 (6791088)"
+  },
+  {
+    "id": "INSE-176",
+    "description": "INSERTO 2QP-VCGW160408-H BXA20 (6791024)"
+  },
+  {
+    "id": "INSE-177",
+    "description": "INSERTO DNGA 150604S01225DMT KBH10B"
+  },
+  {
+    "id": "INSE-178",
+    "description": "INSERTO ZCFG080SG-R2.0 TH308 (6102612)"
+  },
+  {
+    "id": "INSE-179",
+    "description": "INSERTO DNGA150608T01020 KYHK15B"
+  },
+  {
+    "id": "INSE-180",
+    "description": "INSERTO NG2M200LK KC 730 (1114298)"
+  },
+  {
+    "id": "INSE-181",
+    "description": "INSERTO CNGA120408T01020 KYHK15B"
+  },
+  {
+    "id": "INSE-182",
+    "description": "INSERTO 327R06-10 10000-GM 1025"
+  },
+  {
+    "id": "INSE-183",
+    "description": "INSERTO RANU 2.0 MM 327R06-1020002-GM 1025"
+  },
+  {
+    "id": "INSE-184",
+    "description": "INSERTO VBMT160408LF KCP10B"
+  },
+  {
+    "id": "INSE-185",
+    "description": "INSERTO VNMG160408E4E SP0819 (5655001)"
+  },
+  {
+    "id": "INSE-186",
+    "description": "INSERTO ENGU0603ER-C JP4105 (22830340)"
+  },
+  {
+    "id": "INSE-187",
+    "description": "INSERTO SDMT120520TR JP4120"
+  },
+  {
+    "id": "INSE-188",
+    "description": "INSERTO EPHW0402TN-2 JP4105 EDP6203151"
+  },
+  {
+    "id": "INSE-189",
+    "description": "INSERTO SDNW120520TR JP4105"
+  },
+  {
+    "id": "INSE-190",
+    "description": "INSERTO CCMT060204FW KC5010"
+  },
+  {
+    "id": "INSE-191",
+    "description": "INSERTO CCMT060208FP KCP25"
+  },
+  {
+    "id": "INSE-192",
+    "description": "INSERTO TPMMT110204LF KT315 1620373"
+  },
+  {
+    "id": "INSE-193",
+    "description": "INSERTO TPMT110202LF KCU10B 7093207"
+  },
+  {
+    "id": "INSE-194",
+    "description": "INSERTO NTK2LK KCU25"
+  },
+  {
+    "id": "INSE-195",
+    "description": "INSERTO TPGR220404K KCP25C"
+  },
+  {
+    "id": "INSE-196",
+    "description": "INSERTO A4C0205N00CF02 KCU25B"
+  },
+  {
+    "id": "INSE-197",
+    "description": "INSERTO DCGW11T304801015MT KBH10"
+  },
+  {
+    "id": "INSE-198",
+    "description": "INSERTO C21-H2N-0400-0004-TF1225"
+  },
+  {
+    "id": "INSE-199",
+    "description": "INSERTO VNMG160404FP KCS10B"
+  },
+  {
+    "id": "INSE-200",
+    "description": "INSERTO EPHW0402TN-2 JP4115 EDP"
+  },
+  {
+    "id": "INTE-001",
+    "description": "INTERRUPTOR TERMOMAGNETICO 1 POLO 10 A. ENCHUFABLE"
+  },
+  {
+    "id": "INTE-002",
+    "description": "INTERRUPTOR TERMOMAGNETICO 3 POLO 150 A. 18KA HDA36150 S.Q.D"
+  },
+  {
+    "id": "IPSM-001",
+    "description": "IPS TAPA PARA ITEM 40 X 110"
+  },
+  {
+    "id": "IPSM-002",
+    "description": "IPS TAPA PARA ITEM 40 X 40"
+  },
+  {
+    "id": "IPSM-003",
+    "description": "IPS TAPA PARA ITEM 40 X 40"
+  },
+  {
+    "id": "IPSM-004",
+    "description": "IPS TAPA PARA ITEM 80 X 40"
+  },
+  {
+    "id": "IPSM-005",
+    "description": "IPS TAPA PARA ITEM 40 X 55"
+  },
+  {
+    "id": "IPSM-006",
+    "description": "IPS TAPON MEDIANO"
+  },
+  {
+    "id": "IPSM-007",
+    "description": "IPS TAPON CHICO"
+  },
+  {
+    "id": "IPSM-008",
+    "description": "IPS TAPON GRANDE"
+  },
+  {
+    "id": "IPSM-009",
+    "description": "IPSM MANIJA PESADA PA28 23-033"
+  },
+  {
+    "id": "IPSM-010",
+    "description": "IPSM JALADERA U"
+  },
+  {
+    "id": "JABO-001",
+    "description": "JABON PARA MANOS"
+  },
+  {
+    "id": "JALA-001",
+    "description": "JALADOR PARA PISO"
+  },
+  {
+    "id": "JUEG-001",
+    "description": "JUEGO DE EXTRACTOR DE TORNILLOS"
+  },
+  {
+    "id": "KITD-001",
+    "description": "KIT DE PINTURA POLIURETANO 11000 GRIS CO"
+  },
+  {
+    "id": "KITD-002",
+    "description": "KIT DE PINTURA POLIURETANO AZUL CON CATALIZADOR (BOTE 15L Y 2BOTES 1)"
+  },
+  {
+    "id": "KITD-003",
+    "description": "KIT DE REPARACION 1/4 C DIXRK092"
+  },
+  {
+    "id": "KITD-005",
+    "description": "KIT DE BROCAS MILIMETRICAS DE 1 A 13 mm"
+  },
+  {
+    "id": "KITD-006",
+    "description": "KIT DE BROCAS ESTANDAR DE 1/16 A 1/2\""
+  },
+  {
+    "id": "KITD-007",
+    "description": "KIT DE LLAVES ALLEN DE 1.5 - 10 MM"
+  },
+  {
+    "id": "KITD-008",
+    "description": "KIT DE LLAVES ALLEN DE 0.050 - 3/8\" STD"
+  },
+  {
+    "id": "KITD-010",
+    "description": "KIT DE REPARACION VALVULA TE HRES MIN. P402141.0"
+  },
+  {
+    "id": "KITD-011",
+    "description": "KIT DE REPARACION VALVULA DE ADMISION P200751.0"
+  },
+  {
+    "id": "KITD-013",
+    "description": "KIT DE REPARACION VALVULA P400707"
+  },
+  {
+    "id": "KOLA-001",
+    "description": "KOLA LOCA GOTERITO"
+  },
+  {
+    "id": "LAIN-001",
+    "description": "LAINA ACERO 0.05MM ROLLO 150MM X 2.5MTS. \r\nMOD. MMS05 NO. DE PARTE: 71-202-500"
+  },
+  {
+    "id": "LAIN-002",
+    "description": "LAINA ACERO 0.10MM ROLLO 150MM X 2.5MTS. \r\nMOD. MMS10 NO. DE PARTE: 71-202-505"
+  },
+  {
+    "id": "LAIN-003",
+    "description": "LAINA ACERO 0.15MM ROLLO 150MM X 2.5MTS. \r\nMOD. MMS15 NO. DE PARTE: 71-202-510"
+  },
+  {
+    "id": "LAIN-004",
+    "description": "LAINA ACERO 0.20MM ROLLO 150MM X 2.5MTS. \r\nMOD. MMS20 NO. DE PARTE: 71-202-515"
+  },
+  {
+    "id": "LAMP-001",
+    "description": "LAMP LED A19 14W100-240V6500KE271500LM"
+  },
+  {
+    "id": "LAPI-001",
+    "description": "LAPIZ HEXAGONAL #2"
+  },
+  {
+    "id": "LAPI-002",
+    "description": "LAPIZ ADHESIVO"
+  },
+  {
+    "id": "LENT-001",
+    "description": "GOGGLE CREWS 2310AF STRYKER CL )-D"
+  },
+  {
+    "id": "LENT-002",
+    "description": "LENTE DE SEGURIDAD CLARO DERMA STEEL AL0"
+  },
+  {
+    "id": "LENT-006",
+    "description": "LENTE DE SEGURIDAD OBSCURO DERMA STEEL A"
+  },
+  {
+    "id": "LENT-007",
+    "description": "LENTE DERMA VISITANTE AL048 CL"
+  },
+  {
+    "id": "LIBR-001",
+    "description": "LIBRETA PROFESIONAL C 7mm 100 HOJAS"
+  },
+  {
+    "id": "LIJA-002",
+    "description": "LIJA DE AGUA T417 GRADO P220"
+  },
+  {
+    "id": "LIJA-004",
+    "description": "LIJA DE ESMERIL J-73 GRADO 120"
+  },
+  {
+    "id": "LIJA-006",
+    "description": "LIJA DE ESMERIL J-86 GRADO 60"
+  },
+  {
+    "id": "LIMA-007",
+    "description": "LIMA DE JOYERO"
+  },
+  {
+    "id": "LIMA-009",
+    "description": "LIMA PLANA MUSA 6\" MCA.SURTEK MOD.120341"
+  },
+  {
+    "id": "LIMA-010",
+    "description": "LIMA TRIANGULAR 6\""
+  },
+  {
+    "id": "LIMA-012",
+    "description": "LIMA REDONDA 8\""
+  },
+  {
+    "id": "LIMA-013",
+    "description": "LIMA ROTATIVA DE CARBURO SM-5"
+  },
+  {
+    "id": "LIQU-001",
+    "description": "LIQUIDO ENFRIADOR ABRALUB KSV CLAVE:690"
+  },
+  {
+    "id": "LLAV-001",
+    "description": "LLAVE ESPAÑOLA PULIDO ESPEJO 3/4\" X 7/8\" MCA URREA MOD. 3039"
+  },
+  {
+    "id": "LLAV-002",
+    "description": "LLAVE STILLSON HERRERO MALEA 14 MARCA URREA MODL 814UR"
+  },
+  {
+    "id": "LUBR-001",
+    "description": "LUBRICANTE AFLOJATODO WD40 8oz"
+  },
+  {
+    "id": "LUBR-002",
+    "description": "LUBRICANTE OSOCO HUSILLOS-10"
+  },
+  {
+    "id": "LUMI-001",
+    "description": "LUMINARIA STANKA WATERPROOF C/TUBO LED T8 2X17W FRIO"
+  },
+  {
+    "id": "MACHM001",
+    "description": "MACHUELO HSS M3 X 0.5"
+  },
+  {
+    "id": "MACHM002",
+    "description": "MACHUELO HSS M4 X 0.7"
+  },
+  {
+    "id": "MACHM003",
+    "description": "MACHUELO HSS M5 X 0.8"
+  },
+  {
+    "id": "MACHM004",
+    "description": "MACHUELO HSS M6 X 1.0"
+  },
+  {
+    "id": "MACHM005",
+    "description": "MACHUELO HSS M8 X 1.25"
+  },
+  {
+    "id": "MACHM006",
+    "description": "MACHUELO HSS M10 X 1.5"
+  },
+  {
+    "id": "MACHM007",
+    "description": "MACHUELO HSS M12 X 1.75"
+  },
+  {
+    "id": "MACHM008",
+    "description": "MACHUELO HSS M2 X 0.4"
+  },
+  {
+    "id": "MACHM009",
+    "description": "MACHUELO HSS M5 X 0.80 BARREO CIEGO T830M050X080RGH-D1 \r\nMM5417287"
+  },
+  {
+    "id": "MACHM010",
+    "description": "MACHUELO HSS M6 X 1.0 BARREO CIEGO T830M060X100RGH-D1 KSP32\r\nMM5417290"
+  },
+  {
+    "id": "MACHM011",
+    "description": "MACHUELO HSS M8 X 1.25 BARREO CIEGO T830M080X125RGH-D1 \r\nMM5417294"
+  },
+  {
+    "id": "MACHM012",
+    "description": "MACHUELO HSS M20 X 2.5"
+  },
+  {
+    "id": "MACHM013",
+    "description": "MACHUELO HSS M2.5 X 0.45"
+  },
+  {
+    "id": "MACHM014",
+    "description": "MACHUELOS ISO2 HSSG M3"
+  },
+  {
+    "id": "MACHM015",
+    "description": "MACHUELOS ISO2 HSSG M4"
+  },
+  {
+    "id": "MACHM016",
+    "description": "MACHUELOS ISO2 HSSG M5"
+  },
+  {
+    "id": "MACHM017",
+    "description": "MACHUELOS ISO2 HSSG M6"
+  },
+  {
+    "id": "MACHM018",
+    "description": "MACHUELOS ISO2 HSSG M8"
+  },
+  {
+    "id": "MACHM019",
+    "description": "MACHUELOS ISO2 HSSG M10"
+  },
+  {
+    "id": "MACHM020",
+    "description": "MACHUELOS ISO2 HSSG M12"
+  },
+  {
+    "id": "MACHM021",
+    "description": "MACHUELO HSS M16 X 2.0"
+  },
+  {
+    "id": "MACHM022",
+    "description": "MACHUELO HSS M14 X 1.25"
+  },
+  {
+    "id": "MACHM023",
+    "description": "MACHUELO HSS M18 X 2.5"
+  },
+  {
+    "id": "MACHM024",
+    "description": "MACHUELO HSS M18 X 2.5 C/RECUBRIMIENTO DE CARBURO"
+  },
+  {
+    "id": "MACHM025",
+    "description": "MACHUELO HSS M30 X 2.0 UNF"
+  },
+  {
+    "id": "MACHM026",
+    "description": "MACHUELO HSS M24 X 1.5 UNF"
+  },
+  {
+    "id": "MACHM027",
+    "description": "MACHUELO HSS M24 X 2.0 UNF"
+  },
+  {
+    "id": "MACHM028",
+    "description": "MACHUELO HSS M24 X 3.0 UNC"
+  },
+  {
+    "id": "MACHM029",
+    "description": "MACHUELO HSS M20 X 1.5 UNF"
+  },
+  {
+    "id": "MACHM030",
+    "description": "MACHUELO M24 X 1 SKD-11"
+  },
+  {
+    "id": "MACHM031",
+    "description": "MACHUELO HSS 5/16-18 BARRENO CIEGO \r\nT838NC03125-18RH3-A KSP32\r\nMM 6140683"
+  },
+  {
+    "id": "MACHM032",
+    "description": "MACHUELO HSS 1/4-20 BARRENO CIEGO\r\nT838NC02500-20RH3-A KSP32\r\nMM 6140637"
+  },
+  {
+    "id": "MACHM033",
+    "description": "MACHUELO HSS M12 X 1.5"
+  },
+  {
+    "id": "MACHM034",
+    "description": "MACHUELO HSS # 8 - 32 NC SEMICONICO"
+  },
+  {
+    "id": "MACHM035",
+    "description": "MACHUELO HSS M30 X 1.5"
+  },
+  {
+    "id": "MACHM036",
+    "description": "MACHUELO HSS M10 X 1.50 BARREO CIEGO T820M100X150RGH-D1\r\nMM5417245"
+  },
+  {
+    "id": "MACHM041",
+    "description": "MACHUELO HSS M10 X 1.0"
+  },
+  {
+    "id": "MACHS101",
+    "description": "MACHUELO HSS 3/16-24 NC"
+  },
+  {
+    "id": "MACHS102",
+    "description": "MACHUELO HSS 1/4-20 NC"
+  },
+  {
+    "id": "MACHS103",
+    "description": "MACHUELO HSS 5/16-18 NC"
+  },
+  {
+    "id": "MACHS104",
+    "description": "MACHUELO HSS 3/8-16 NC"
+  },
+  {
+    "id": "MACHS105",
+    "description": "MACHUELO HSS 1/8-27 NPT"
+  },
+  {
+    "id": "MACHS106",
+    "description": "MACHUELO HSS 1/2-13 NC"
+  },
+  {
+    "id": "MACHS107",
+    "description": "MACHUELO HSS 3/4-10 UNC"
+  },
+  {
+    "id": "MACHS108",
+    "description": "MACHUELO HSS 1-8 UNC"
+  },
+  {
+    "id": "MACHS109",
+    "description": "MACHUELO HSS 1-12 UNF"
+  },
+  {
+    "id": "MACHS110",
+    "description": "MACHUELO HSS 1/4-18 NPT"
+  },
+  {
+    "id": "MACHS111",
+    "description": "MACHUELO HSS 1/4-19 BSP"
+  },
+  {
+    "id": "MACHS112",
+    "description": "MACHUELO HSS 1/4-28 UNF"
+  },
+  {
+    "id": "MACHS113",
+    "description": "MACHUELO HSS 7/16-14 UNC"
+  },
+  {
+    "id": "MACHS114",
+    "description": "MACHUELO HSS 3/8-24 UNF"
+  },
+  {
+    "id": "MACHS115",
+    "description": "MACHUELO HSS 3/8-24 UNF DERECHO"
+  },
+  {
+    "id": "MACHS116",
+    "description": "MACHUELO HSS 5/8-11 UNC"
+  },
+  {
+    "id": "MACHS117",
+    "description": "MACHUELO HSS 1/4-19 BSP ROSCA PARALELA P/TUBO"
+  },
+  {
+    "id": "MACHS118",
+    "description": "MACHUELO HSS 3/4-14 NPT"
+  },
+  {
+    "id": "MACHS119",
+    "description": "MACHUELO HSS 1 - 8 NC"
+  },
+  {
+    "id": "MACHS301",
+    "description": "MACHUELO DE CARBURO 5/16 - 18 , PARA INTERPOLAR"
+  },
+  {
+    "id": "MAND-001",
+    "description": "MANDIL TNM DE CARNAZA ECON"
+  },
+  {
+    "id": "MANE-001",
+    "description": "MANERAL P/MACHUELO 1/8-1/2"
+  },
+  {
+    "id": "MANE-002",
+    "description": "MANERAL EN T P/MACHUELO 1/16-1/4"
+  },
+  {
+    "id": "MANE-003",
+    "description": "MANERAL CON TARRAJA HSS M4 X 0.7"
+  },
+  {
+    "id": "MANE-004",
+    "description": "MANERAL PARA TARRAJA DIAM. 1 1/2\""
+  },
+  {
+    "id": "MANE-005",
+    "description": "MANERAL PARA TARRAJA DIAM. 1 1/4\""
+  },
+  {
+    "id": "MANE-006",
+    "description": "MANERAL PARA TARRAJA DIAM. 1\""
+  },
+  {
+    "id": "MANE-007",
+    "description": "MANERAL EN T SURTEK 123904"
+  },
+  {
+    "id": "MANE-301",
+    "description": "MANERAL PARA TARRAJA DE 38MM (1 1/2)"
+  },
+  {
+    "id": "MANE-302",
+    "description": "MANERAL PARA TARRAJA DE 50MM (2\")"
+  },
+  {
+    "id": "MANG-001",
+    "description": "MANGA TNM DE CARNAZA P/SOLDADOR ECON"
+  },
+  {
+    "id": "MANG-002",
+    "description": "MANGUERA PARA REFRIGERANTE DE 1/4 (084400)"
+  },
+  {
+    "id": "MANG-003",
+    "description": "MANGUERA RETRACTIL AZUL"
+  },
+  {
+    "id": "MARR-001",
+    "description": "MARRO DE BRONCE 29oz MANGO MADERA MARCA URREA MOD. 1430"
+  },
+  {
+    "id": "MART-001",
+    "description": "MARTILLO DE BOLA 24oz URREA MOD. 1324PN"
+  },
+  {
+    "id": "MAZO-001",
+    "description": "MAZO CABEZA DE HULE NEGRO 16oz MARCA URREA MOD. 1367"
+  },
+  {
+    "id": "MECH-001",
+    "description": "MECHUDO DE PABILO DE 500 GR CON BASTON DE MADERA DE 1.20 CM"
+  },
+  {
+    "id": "MICA-001",
+    "description": "MICA BLANCA UNIVERSAL P/CARETA FACIAL"
+  },
+  {
+    "id": "MICA-002",
+    "description": "MICA EXTERIOR PANORAMICA CLARA 4.5\" X 5.25\" \r\nPOLICARBONATO W5 (SKU-1707)"
+  },
+  {
+    "id": "MICR-001",
+    "description": "MICRO ALAMBRE SOLIDO 0.035 CLAVE SKU-880 (15 KG)"
+  },
+  {
+    "id": "MICR-002",
+    "description": "MICRO ALAMBRE SOLIDO 0.045 (15 KG)"
+  },
+  {
+    "id": "MICR-003",
+    "description": "MICRO ALAMBRE TUBULAR 1/16"
+  },
+  {
+    "id": "MICR-004",
+    "description": "MICRO ALAMBRE SOLIDO 1/16\" GUIA ALAMBRE"
+  },
+  {
+    "id": "MICR-005",
+    "description": "MICRO ALAMBRE SOLIDO 0.045"
+  },
+  {
+    "id": "MOLE-001",
+    "description": "MOLETEADOR GRANDE"
+  },
+  {
+    "id": "MOLE-002",
+    "description": "MOLETEADOR MEDIANO"
+  },
+  {
+    "id": "MOLE-003",
+    "description": "MOLETEADOR CHICO"
+  },
+  {
+    "id": "MOLE-004",
+    "description": "MOLETA RECTA DOBLE A TIPO TOSCO"
+  },
+  {
+    "id": "MORD-001",
+    "description": "MORDAZA 10N24 EN 3/32 OB SKU: 760"
+  },
+  {
+    "id": "MOTO-301",
+    "description": "MOTOTOOL CHICAGO PNEUMATIC CP872"
+  },
+  {
+    "id": "MOUS-001",
+    "description": "MOUSE LOGITECH M90 ALaMBRICO USB NEGRO"
+  },
+  {
+    "id": "MULT-001",
+    "description": "MULTICONTACTO TIRA DE 6 C/PROTECTOR"
+  },
+  {
+    "id": "MUSC-001",
+    "description": "MR. MUSCULO"
+  },
+  {
+    "id": "NIPL-001",
+    "description": "NIPLE GALV C/C C-40 DE 1/2\" X 3\""
+  },
+  {
+    "id": "NIPL-002",
+    "description": "NIPLE GALV C/C C-40 DE 1/2\" X 1 1/2\""
+  },
+  {
+    "id": "NIVE-001",
+    "description": "NIVEL DE GOTA DE ALUMINIO"
+  },
+  {
+    "id": "OPREM001",
+    "description": "OPRESOR M 3 X 8 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM002",
+    "description": "OPRESOR M 4 X 16 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM003",
+    "description": "OPRESOR M 5 X 6 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM004",
+    "description": "OPRESOR M 5 X 8 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM005",
+    "description": "OPRESOR M 5 X 12 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM006",
+    "description": "OPRESOR M 5 X 16 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM007",
+    "description": "OPRESOR M 5 X 35 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM008",
+    "description": "OPRESOR M 6 X 8 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM009",
+    "description": "OPRESOR M 6 X 10 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM010",
+    "description": "OPRESOR M 6 X 12 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM011",
+    "description": "OPRESOR M 8 X 12 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM012",
+    "description": "OPRESOR M 8 X 45 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM013",
+    "description": "OPRESOR M10 X 5 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM014",
+    "description": "OPRESOR M10 X 10 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM015",
+    "description": "OPRESOR M10 X 12 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM016",
+    "description": "OPRESOR M10 X 20 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM017",
+    "description": "OPRESOR M10 X 25 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM018",
+    "description": "OPRESOR M12 X 35 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM019",
+    "description": "OPRESOR M8 X 8 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM020",
+    "description": "OPRESOR M8 X 35 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM021",
+    "description": "OPRESOR M8 X 25 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM022",
+    "description": "OPRESOR M 4 X 6 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM023",
+    "description": "OPRESOR M 4 X 4 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM101",
+    "description": "OPRESOR INOX. M 5 X 8 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM102",
+    "description": "OPRESOR INOX. M 5 X 10 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM103",
+    "description": "OPRESOR INOX. M 6 X 10 (PRISIONERO)"
+  },
+  {
+    "id": "OPREM104",
+    "description": "OPRESOR INOX. M 6 X 20 (PRISIONERO)"
+  },
+  {
+    "id": "OPRES001",
+    "description": "OPRESOR 1/4 X 1/2\" (PRISIONERO)"
+  },
+  {
+    "id": "OPRES002",
+    "description": "OPRESOR 5/16 X 1/4\" (PRISIONERO)"
+  },
+  {
+    "id": "OPRES003",
+    "description": "OPRESOR 3/8 X 3/8\" (PRISIONERO)"
+  },
+  {
+    "id": "OPRES004",
+    "description": "OPRESOR 3/8 X 1/2\" (PRISIONERO)"
+  },
+  {
+    "id": "OPRES005",
+    "description": "OPRESOR 5/16 X 1\" (PRISIONERO)"
+  },
+  {
+    "id": "OPRES006",
+    "description": "OPRESOR 1/8\" NPT (PRISIONERO)"
+  },
+  {
+    "id": "OREJ-001",
+    "description": "OREJERAS MONTABLES PARA CASCO"
+  },
+  {
+    "id": "ORIN-001",
+    "description": "ORING 3mm"
+  },
+  {
+    "id": "ORIN-002",
+    "description": "ORING 227"
+  },
+  {
+    "id": "ORIN-003",
+    "description": "ORING"
+  },
+  {
+    "id": "ORIN-004",
+    "description": "ORING EXT. 16.1 ESPESOR DE HILO 1.6"
+  },
+  {
+    "id": "ORIN-005",
+    "description": "O-RING DE BUNA 2-322"
+  },
+  {
+    "id": "ORIN-006",
+    "description": "O-RING DE VITON 2-322"
+  },
+  {
+    "id": "ORIN-007",
+    "description": "O-RING DE VITON 2-325"
+  },
+  {
+    "id": "ORIN-008",
+    "description": "O-RING DE VITON 2-323"
+  },
+  {
+    "id": "ORIN-009",
+    "description": "O-RING DE VITON 2-324"
+  },
+  {
+    "id": "PALA-001",
+    "description": "PALANCA DE LEVA GN 310-8-63-A-ZB MCA. Elesa \r\nGanter"
+  },
+  {
+    "id": "PALP-001",
+    "description": "PALPADOR 1mm NO. DE PARTE: 626113-0100-020\r\nstylus with thread, M3 XXT, shouldered, tungsten carbide shaft, ruby \r\nsphere, DG5, DK1,0, L20, ML10,9, MLE5,1, DS1, DSE0,8, weight= 0,69g"
+  },
+  {
+    "id": "PANE-001",
+    "description": "PANEL FILTRANTE P5.3353.0"
+  },
+  {
+    "id": "PANT-001",
+    "description": "PANTALON HIGHLINE T/30"
+  },
+  {
+    "id": "PANT-002",
+    "description": "PANTALON HIGHLINE T/32"
+  },
+  {
+    "id": "PANT-003",
+    "description": "PANTALON HIGHLINE T/34"
+  },
+  {
+    "id": "PANT-004",
+    "description": "PANTALON HIGHLINE T/36"
+  },
+  {
+    "id": "PANT-005",
+    "description": "PANTALON HIGHLINE T/38"
+  },
+  {
+    "id": "PANT-006",
+    "description": "PANTALON HIGHLINE T/30 PARA DAMA"
+  },
+  {
+    "id": "PANT-007",
+    "description": "PANTALON HIGHLINE T/32 PARA DAMA"
+  },
+  {
+    "id": "PANT-008",
+    "description": "PANTALON HIGHLINE T/29"
+  },
+  {
+    "id": "PAPE-001",
+    "description": "PAPEL BOND TAMAÑO CARTA 500 HOJAS"
+  },
+  {
+    "id": "PAPE-002",
+    "description": "PAPEL HIGIENICO"
+  },
+  {
+    "id": "PAQU-001",
+    "description": "TOALLA INTERDOBLADA GC PAPER CAJA CON 20 PAQ. DE 100 HOJAS"
+  },
+  {
+    "id": "PAST-001",
+    "description": "PASTILLA AZUL PARA TANQUE WIESE DE 2 PSTILLAS"
+  },
+  {
+    "id": "PELI-001",
+    "description": "PELICULA STRETCH CAL. 60 GRANDE"
+  },
+  {
+    "id": "PELI-002",
+    "description": "PELICULA STRETCH CAL. 60 MEDIANO C/MANGO"
+  },
+  {
+    "id": "PERF-002",
+    "description": "PERFORADORA DE DOBLE AGUJERO"
+  },
+  {
+    "id": "PERF-003",
+    "description": "PERFORADORA DE UN AGUJERO"
+  },
+  {
+    "id": "PERNM001",
+    "description": "PERNO ESPIROL RANURADO 5 X 20 (TACO)"
+  },
+  {
+    "id": "PERNM002",
+    "description": "PERNO MACIZO 3 X 10"
+  },
+  {
+    "id": "PERNM003",
+    "description": "PERNO MACIZO 3 X 20"
+  },
+  {
+    "id": "PERNM004",
+    "description": "PERNO MACIZO 3 X 24"
+  },
+  {
+    "id": "PERNM005",
+    "description": "PERNO MACIZO 4 X 12"
+  },
+  {
+    "id": "PERNM006",
+    "description": "PERNO MACIZO 4 X 16"
+  },
+  {
+    "id": "PERNM007",
+    "description": "PERNO MACIZO 4 X 24"
+  },
+  {
+    "id": "PERNM008",
+    "description": "PERNO MACIZO 4 X 25"
+  },
+  {
+    "id": "PERNM009",
+    "description": "PERNO MACIZO 6 X 20"
+  },
+  {
+    "id": "PERNM010",
+    "description": "PERNO MACIZO 6 X 24"
+  },
+  {
+    "id": "PERNM011",
+    "description": "PERNO MACIZO 6 X 28"
+  },
+  {
+    "id": "PERNM012",
+    "description": "PERNO MACIZO 8 X 20"
+  },
+  {
+    "id": "PERNM013",
+    "description": "PERNO MACIZO 8 X 24"
+  },
+  {
+    "id": "PERNM014",
+    "description": "PERNO MACIZO 8 X 28"
+  },
+  {
+    "id": "PERNM015",
+    "description": "PERNO MACIZO 8 X 40"
+  },
+  {
+    "id": "PERNM016",
+    "description": "PERNO MACIZO 10 X 40"
+  },
+  {
+    "id": "PERNM017",
+    "description": "PERNO MACIZO 10 X 50"
+  },
+  {
+    "id": "PERNM018",
+    "description": "PERNO MACIZO 12 X 40"
+  },
+  {
+    "id": "PERNM019",
+    "description": "PERNO DE EXTRACION 12 X 40 EXTRACTOR M8"
+  },
+  {
+    "id": "PERNM020",
+    "description": "PERNO MACIZO 12 X 32"
+  },
+  {
+    "id": "PERNM021",
+    "description": "PERNO MACIZO 5 X 12"
+  },
+  {
+    "id": "PERNM022",
+    "description": "PERNO DE EXTRACCIÓN DE 6 mm x 40 mm"
+  },
+  {
+    "id": "PERNM023",
+    "description": "PERNO DE EXTRACCIÓN de 6 mm x 32 mm"
+  },
+  {
+    "id": "PERNM024",
+    "description": "PERNO DE EXTRACCIÓN DE 6 mm x 36 mm"
+  },
+  {
+    "id": "PERNM025",
+    "description": "PERNO DE SEGURIDAD DIN 11023 M5 X 32 (CLAVE: 00472 5)"
+  },
+  {
+    "id": "PERNM026",
+    "description": "PERNO DE SEGURIDAD DIN 11023 M8 X 42 (CLAVE: 00472 8)"
+  },
+  {
+    "id": "PERNM027",
+    "description": "PERNO HUECO DE EXPANSIÓN 3 X 20"
+  },
+  {
+    "id": "PERNM028",
+    "description": "PERNO HUECO DE EXPANSIÓN 3 X 10"
+  },
+  {
+    "id": "PERNM029",
+    "description": "PERNO HUECO DE EXPANSIÓN 8 X 30"
+  },
+  {
+    "id": "PERNM030",
+    "description": "PERNO MACIZO 10 X 25"
+  },
+  {
+    "id": "PERNM030",
+    "description": "PERNO HUECO DE EXPANSIÓN 8 X 30"
+  },
+  {
+    "id": "PERNM031",
+    "description": "PERNO MACIZO 8 X 50"
+  },
+  {
+    "id": "PERNM032",
+    "description": "PERNO MACIZO 10 X 20"
+  },
+  {
+    "id": "PERNM033",
+    "description": "PERNO MACIZO 10 X 36"
+  },
+  {
+    "id": "PERNM034",
+    "description": "PERNO MACIZO 6 X 16"
+  },
+  {
+    "id": "PERNM035",
+    "description": "PERNO MACIZO 5 X 20"
+  },
+  {
+    "id": "PERNM037",
+    "description": "PERNO MACIZO 10 X 28"
+  },
+  {
+    "id": "PERNM038",
+    "description": "PERNO MACIZO 8 X 12"
+  },
+  {
+    "id": "PERNM045",
+    "description": "PERNO MACIZO 8 X 16"
+  },
+  {
+    "id": "PERNM046",
+    "description": "PERNO MACIZO 6 X 50"
+  },
+  {
+    "id": "PERNM047",
+    "description": "PERNO MACIZO 6 X 60"
+  },
+  {
+    "id": "PERNS001",
+    "description": "PERNO ESPIROL 1/4 X 3/4\" (TACO)"
+  },
+  {
+    "id": "PERNS002",
+    "description": "PERNO MACIZO 1/4 X 1/2\""
+  },
+  {
+    "id": "PERNS003",
+    "description": "PERNO MACIZO 1/4 X 3/4\""
+  },
+  {
+    "id": "PERNS004",
+    "description": "PERNO MACIZO 1/4 X 1\""
+  },
+  {
+    "id": "PERNS005",
+    "description": "PERNO MACIZO 1/4 X 1 1/4\""
+  },
+  {
+    "id": "PERNS006",
+    "description": "PERNO MACIZO 1/4 X 1 1/2\""
+  },
+  {
+    "id": "PERNS007",
+    "description": "PERNO MACIZO 1/4 X 2\""
+  },
+  {
+    "id": "PERNS008",
+    "description": "PERNO MACIZO 5/16 X 1\""
+  },
+  {
+    "id": "PERNS009",
+    "description": "PERNO MACIZO 3/8 X 1/2\""
+  },
+  {
+    "id": "PERNS010",
+    "description": "PERNO MACIZO 3/8 X 3/4\""
+  },
+  {
+    "id": "PERNS011",
+    "description": "PERNO MACIZO 3/8 X 1\""
+  },
+  {
+    "id": "PERNS012",
+    "description": "PERNO MACIZO 3/8 X 1 1/4\""
+  },
+  {
+    "id": "PERNS013",
+    "description": "PERNO MACIZO 3/16 x 5/8\""
+  },
+  {
+    "id": "PERNS014",
+    "description": "PERNO MACIZO 3/16 X 1/2\""
+  },
+  {
+    "id": "PERNS015",
+    "description": "PERNO MACIZO 1/2 X 1 1/2\""
+  },
+  {
+    "id": "PIED-001",
+    "description": "PIEDRA RUBI OXIDO ALUM 1 X 1 X 6 ROSA 29255"
+  },
+  {
+    "id": "PIED-002",
+    "description": "PIEDRA P/RECTIFCADO 18B151 SMS"
+  },
+  {
+    "id": "PIED-003",
+    "description": "PIEDRA /RECTIFICADO 20B151 SMS"
+  },
+  {
+    "id": "PIED-004",
+    "description": "PIEDRA /RECTIFICADO 8B151 SMS"
+  },
+  {
+    "id": "PIED-005",
+    "description": "PIEDRA /RECTIFICADO 12B151 SMS"
+  },
+  {
+    "id": "PIED-006",
+    "description": "PIEDRA /RECTIFICADO 14B151 SMS"
+  },
+  {
+    "id": "PIED-007",
+    "description": "PIEDRA /RECTIFICADO 8B1.1 SMS"
+  },
+  {
+    "id": "PIED-008",
+    "description": "PIEDRA /RECTIFICADO 5.0B151 SMS"
+  },
+  {
+    "id": "PIED-009",
+    "description": "PIEDRA /RECTIFICADO 132740 - 12B151 SMS"
+  },
+  {
+    "id": "PIED-010",
+    "description": "PIEDRA /RECTIFICADO 200412 6B151 SMS 10878"
+  },
+  {
+    "id": "PIED-011",
+    "description": "PIEDRA /RECTIFICADO 220184 8B151 SMS 10920"
+  },
+  {
+    "id": "PIED-012",
+    "description": "PIEDRA/ RECTIFICADO 4.0B151 SMS"
+  },
+  {
+    "id": "PIED-013",
+    "description": "PIEDRA/ RECTIFICADO 2B151 SMS"
+  },
+  {
+    "id": "PIED-014",
+    "description": "PIEDRA PARA ELIMINAR MARCA DE MAQUINADO #120 CODIGO: CWA1025-120"
+  },
+  {
+    "id": "PIED-015",
+    "description": "PIEDRA PARA ELIMINAR GRANO DE EROSION #180 CODIGO: S0613-180"
+  },
+  {
+    "id": "PIED-016",
+    "description": "PIEDRA PARA ELIMINAR GRANO DE EROSION #120 CODIGO: S0613-120"
+  },
+  {
+    "id": "PIED-017",
+    "description": "PIEDRA DE DIAMANTE PARA DRILL DOC 750X \r\nNO. DE PARTE: 87-145-142"
+  },
+  {
+    "id": "PIED-018",
+    "description": "PIEDRA P/DESBASTE EN ACEROS ENDURECIDO #120\r\nCODIGI: MR313-120"
+  },
+  {
+    "id": "PIED-021",
+    "description": "PIEDRA P/ELIMINAR MARCAS DE MAQUINADO #80, 6 ESPESOR X 13 ANCHO X 150mm LARGO\r\nCODIGO: CWA613-80"
+  },
+  {
+    "id": "PIED-022",
+    "description": "PIEDRAS P/TRABAJOS DE ACERO ENDURECIDO #180, 6 ESPESOR X 6 ANCHO X 150mm LARGO \r\nCODIGO: DS66-180"
+  },
+  {
+    "id": "PIED-023",
+    "description": "PIEDRA P/DESBASTE #180, 5 ESPESOR X 13 ANCHO X 150 mm LARGO\r\nCODIGO: GS513-180"
+  },
+  {
+    "id": "PIED-024",
+    "description": "PIEDRA P/DESBASTE #180, 3 ESPESOR X 13 ANCHO X 150mm largo\r\nCODIGO: BS313-120"
+  },
+  {
+    "id": "PIED-025",
+    "description": "PIEDRA PARA ELIMINAR MARCA DE MAQUINADO #120, 6 DE ESPESOR X 13 DE ANCHO X 150 DE LARGO CWA613-120"
+  },
+  {
+    "id": "PIES-001",
+    "description": "PIES ANGULARES 160 X 60"
+  },
+  {
+    "id": "PIJAM001",
+    "description": "PIJA 8 X 3/4\""
+  },
+  {
+    "id": "PIJAM002",
+    "description": "PIJA 8 X 1\""
+  },
+  {
+    "id": "PIJAM003",
+    "description": "PIJA 8 X 1 1/4\""
+  },
+  {
+    "id": "PIJAM004",
+    "description": "PIJA 10 X 1\""
+  },
+  {
+    "id": "PIJAM005",
+    "description": "PIJA 10 X 2\""
+  },
+  {
+    "id": "PIJAM006",
+    "description": "PIJA K-LATH PUNTA DE BROCA 8 X 1/2\""
+  },
+  {
+    "id": "PIJAM007",
+    "description": "PIJA K-LATH PUNTA DE BROCA 8 X 1\""
+  },
+  {
+    "id": "PIJAM008",
+    "description": "PIJA # 12 x 2 \" FIJADORA COMB"
+  },
+  {
+    "id": "PIJAM009",
+    "description": "PIJA # 14 x 2 \" FIJADORA COMB"
+  },
+  {
+    "id": "PIJAS001",
+    "description": "PIJA HEX. P/LAMINA GALV. 3/16 X 1/2\""
+  },
+  {
+    "id": "PIJAS002",
+    "description": "PIJA HEX. P/LAMINA GALV. 7/32 X 3/4\""
+  },
+  {
+    "id": "PIJAS003",
+    "description": "PIJA HEX. P/LAMINA GALV. 1/4 X 1\""
+  },
+  {
+    "id": "PIJAS004",
+    "description": "PIJA CAB. PLANA DE 1/4 X 1 1/2\""
+  },
+  {
+    "id": "PIJAS012",
+    "description": "PIJA CAB. PLANA 1/4 X 1\""
+  },
+  {
+    "id": "PIJAS013",
+    "description": "PIJA HEX. P/LAMINA GALV. 1/4 X 3/4"
+  },
+  {
+    "id": "PILA-002",
+    "description": "PILA CIRCULAR SONY A76 LR44 1.5V"
+  },
+  {
+    "id": "PILA-003",
+    "description": "PILA CIRCULR SONY CR 2031 3V"
+  },
+  {
+    "id": "PILA-004",
+    "description": "PILA LITHIUM 2CR5"
+  },
+  {
+    "id": "PILA-006",
+    "description": "PILA AA"
+  },
+  {
+    "id": "PILA-007",
+    "description": "PILA AAA"
+  },
+  {
+    "id": "PINS-001",
+    "description": "PINS PARA PIZARRON 100 PZA"
+  },
+  {
+    "id": "PINT-001",
+    "description": "PINTURA EN AEROSOL VERDE BOTELLA"
+  },
+  {
+    "id": "PINT-002",
+    "description": "PINTURA EN AEROSOL ROJO FUEGO"
+  },
+  {
+    "id": "PINT-003",
+    "description": "PINTURA EN AEROSOL BLANCO"
+  },
+  {
+    "id": "PINT-004",
+    "description": "PINTURA EN AEROSOL NARANJA"
+  },
+  {
+    "id": "PINT-005",
+    "description": "PINTURA EN AEROSOL NEGRO"
+  },
+  {
+    "id": "PINT-006",
+    "description": "PINTURA EN AEROSOL AMARILLO"
+  },
+  {
+    "id": "PINT-007",
+    "description": "PINTURA EN AEROSOL GRIS OBSCURO"
+  },
+  {
+    "id": "PINT-008",
+    "description": "PINTURA EN AEROSOL AZUL CIELO"
+  },
+  {
+    "id": "PINT-009",
+    "description": "PINTURA EN AEROSOL MORADO"
+  },
+  {
+    "id": "PINT-010",
+    "description": "PINTURA EN AEROSOL VERDE FOSFORECENTE"
+  },
+  {
+    "id": "PINT-011",
+    "description": "PINTURA EN AEROSOL ROSA MEXICANO"
+  },
+  {
+    "id": "PINT-012",
+    "description": "PINTURA EN AEROSOL ROSA CLARO"
+  },
+  {
+    "id": "PINZ-001",
+    "description": "PINZA P/SEGURO OMEGA 90°"
+  },
+  {
+    "id": "PINZ-002",
+    "description": "PINZA P/SEGURO OMEGA RECTA"
+  },
+  {
+    "id": "PINZ-003",
+    "description": "PINZA P/SEGURO OMEGA CURVAS"
+  },
+  {
+    "id": "PINZ-004",
+    "description": "PINZA DE PRESION 7\" USO IND. MCA URREA MOD. 291R"
+  },
+  {
+    "id": "PINZ-005",
+    "description": "PINZA PUNTA CONICA CORTE LATERAL 6 1/4\" MARCA URREA MOD. 226GS"
+  },
+  {
+    "id": "PINZ-006",
+    "description": "PINZA P/ELECTRICISTA IND MARCA URREA MODELO 2292G"
+  },
+  {
+    "id": "PINZ-007",
+    "description": "PINZA DE PRESION TIPO \"C\""
+  },
+  {
+    "id": "PIST-001",
+    "description": "PISTOLA DE AIRE CON EXTENSION DE TUBO DE COBRE DE 3/16\" X 30 CM DE LARGO"
+  },
+  {
+    "id": "PLAC-001",
+    "description": "PLACAS DE FIJACION P/ITEM 8mm"
+  },
+  {
+    "id": "PLAC-002",
+    "description": "PLACA DE ASIENTO ASV322 D30 (6853221)"
+  },
+  {
+    "id": "PLAC-003",
+    "description": "PLACA PARA CONTACTO DUPLEX"
+  },
+  {
+    "id": "PLAC-004",
+    "description": "PLACA DE APOYO SM37 KP"
+  },
+  {
+    "id": "PLAC-005",
+    "description": "PLACA DE ASIENTO 5322 234 01"
+  },
+  {
+    "id": "PLAC-006",
+    "description": "PLACA DE ASIENTO ASD322 550N (6708751)"
+  },
+  {
+    "id": "PLAC-007",
+    "description": "PLACA DE APOYO 5322 389 11"
+  },
+  {
+    "id": "PLAC-010",
+    "description": "PLAQUITA DE CORTE WNMG060408-VM HB7140-1"
+  },
+  {
+    "id": "PLAC-011",
+    "description": "PLAQUITA CORTE CCGW09T308-G BU7220"
+  },
+  {
+    "id": "PLAC-012",
+    "description": "PLAQUITA DE TRONZADO ANCHO 2 mm/HB7020"
+  },
+  {
+    "id": "PLAC-013",
+    "description": "PLAQUITA LOEU090408TR-M, HB735"
+  },
+  {
+    "id": "PLAC-014",
+    "description": "PLACA DE APOYO 5322-474-01"
+  },
+  {
+    "id": "PLAC-020",
+    "description": "PLAQUITA REV. RDMW12T3MOT. HB75805"
+  },
+  {
+    "id": "PLAC-038",
+    "description": "PLACA DE APOYO IVSN-322 MVJNL1630"
+  },
+  {
+    "id": "PLAY-001",
+    "description": "PLAYERA MUJER T/CH"
+  },
+  {
+    "id": "PLAY-002",
+    "description": "PLAYERA MUJER T/M"
+  },
+  {
+    "id": "PLAY-003",
+    "description": "PLAYERA MUJER T/G"
+  },
+  {
+    "id": "PLAY-004",
+    "description": "PLAYERA HOMBRE T/CH"
+  },
+  {
+    "id": "PLAY-005",
+    "description": "PLAYERA HOMBRE T/M"
+  },
+  {
+    "id": "PLAY-006",
+    "description": "PLAYERA HOMBRE T/G"
+  },
+  {
+    "id": "PLAY-007",
+    "description": "PLAYERA HOMBRE T/XG"
+  },
+  {
+    "id": "PLAY-008",
+    "description": "PLAYERA HOMBRE CUELLO REDONDO T/G"
+  },
+  {
+    "id": "PLAY-009",
+    "description": "PLAYERA AZUL HOMBRE CUELLO SPORT T/CH"
+  },
+  {
+    "id": "PLAY-010",
+    "description": "PLAYERA AZUL HOMBRE CUELLO SPORT T/MD"
+  },
+  {
+    "id": "PLAY-011",
+    "description": "PLAYERA AZUL HOMBRE CUELLO SPORT T/GD"
+  },
+  {
+    "id": "PLAY-012",
+    "description": "PLAYERA AZUL MUJER CUELLO SPORT T/CH"
+  },
+  {
+    "id": "PLAY-013",
+    "description": "PLAYERA AZUL MUJER CUELLO SPORT T/MD"
+  },
+  {
+    "id": "PLAY-014",
+    "description": "PLAYERA AZUL MUJER CUELLO SPORT T/GD"
+  },
+  {
+    "id": "PLET-001",
+    "description": "PLETINA 40 X 80 BARRENO M8 P/ITEM"
+  },
+  {
+    "id": "PLUM-001",
+    "description": "PLUMON NEGRO ESTERBROOK PERMANENTE"
+  },
+  {
+    "id": "PLUM-002",
+    "description": "PLUMON MARCATEXTOS AMARILLO PUNTO MEDIO"
+  },
+  {
+    "id": "PLUM-003",
+    "description": "PLUMON PARA PIZARRON PUNTA REDONDA AZUL"
+  },
+  {
+    "id": "PLUM-004",
+    "description": "PLUMON PARA PIZARRON PUNTA BISELADA NEGRO"
+  },
+  {
+    "id": "PLUM-005",
+    "description": "PLUMON PARA PIZARRON PUNTA BISELADA ROJO"
+  },
+  {
+    "id": "PLUM-006",
+    "description": "PLUMON PARA PIZARRON FINO 4 COLORES"
+  },
+  {
+    "id": "PLUM-007",
+    "description": "PLUMON RESALTADOR MARCATEXTOS ROSA PUNTO MEDIO"
+  },
+  {
+    "id": "PLUM-008",
+    "description": "PLUMON MARCATEXTOS ROSA PUNTO GRUESO"
+  },
+  {
+    "id": "PLUM-009",
+    "description": "PLUMON MARCATEXTOS NARANJA PUNTO GRUESO"
+  },
+  {
+    "id": "POLA-001",
+    "description": "POLAINAS SEM CARNAZA CON VELCRO GR ="
+  },
+  {
+    "id": "POLI-001",
+    "description": "POLIFOAM DE 1/8\""
+  },
+  {
+    "id": "PORT-001",
+    "description": "PORTAELECTRODO INFRA 300A MOD. SP500"
+  },
+  {
+    "id": "PORT-002",
+    "description": "PORTA MORDAZA 10N32 EN 3/32 SKU: 768"
+  },
+  {
+    "id": "PORT-003",
+    "description": "PORTA CANDADO MASTER LOOK 420"
+  },
+  {
+    "id": "POST-004",
+    "description": "POSTIT"
+  },
+  {
+    "id": "PRIM-001",
+    "description": "PRIMER UNIVERSAL GRIS"
+  },
+  {
+    "id": "PRIM-002",
+    "description": "PRIMER UNIVERSAL ROJO"
+  },
+  {
+    "id": "PROL-001",
+    "description": "PROL GEL SANITIZANTE DESINFECTANTE PARA MANOSSIN ENJUAGE ELIMINA BACTERIAS Y GERMENES EN MANOS CONCENTRADO AL 65% PRSENTACION DE 1 LT"
+  },
+  {
+    "id": "PROT-001",
+    "description": "PROTECTOR FACIAL INFRA C/MTR 3PF500T"
+  },
+  {
+    "id": "PROT-002",
+    "description": "PROTECTOR DE HOJAS TRANSPARENTE T/CARTA"
+  },
+  {
+    "id": "PROT-003",
+    "description": "ABSTR.BEWEGL.SCHUTZABD. X\r\nZeichn.-Nr.: 3809019 (PROTECTOR)"
+  },
+  {
+    "id": "PROT-004",
+    "description": "ABSTREIF.SCHIEBEBLECH OB.LINKS \r\nZeichn.-Nr.: 3809007 (PROTECTOR)"
+  },
+  {
+    "id": "PROT-005",
+    "description": "ABSTREIF.SCHIEBEBL. UNT.LINKS \r\nZeichn.-Nr.: 3809008 (PROTECTOR)"
+  },
+  {
+    "id": "PROT-006",
+    "description": "ABSTREIF.SCHIEBEBLECH RECHTS \r\nZeichn.-Nr.: 3809009 (PROTECTOR)"
+  },
+  {
+    "id": "PUÑO-001",
+    "description": "PUÑO DE ESPONJA CLL129W200 NEGRO"
+  },
+  {
+    "id": "PUNT-001",
+    "description": "PUNTA DE INDICADOR DE CARBURO MARCA MITUTOYO 137747"
+  },
+  {
+    "id": "PUNT-002",
+    "description": "PUNTA DE CONTACTO P/ELECTRODO ALAMBRE 0.035"
+  },
+  {
+    "id": "PUNT-003",
+    "description": "PUNTA DE CONTACTO P/ELECTRODO ALAMBRE 0.030"
+  },
+  {
+    "id": "PUNT-004",
+    "description": "PUNTA DE CONTACTO P/ELECTRODO ALAMBRE 0.040"
+  },
+  {
+    "id": "PUNT-005",
+    "description": "PUNTA MONTADA A-3 P/INOX CAFE 413"
+  },
+  {
+    "id": "PUNT-006",
+    "description": "PUNTA MONTADA A-3 ROSA 392"
+  },
+  {
+    "id": "PUNT-007",
+    "description": "PUNTA OXIDO DE ALUMINIO PM B132 10 X 13"
+  },
+  {
+    "id": "PUNT-008",
+    "description": "PUNTA DE BROCA DMP180 AH725"
+  },
+  {
+    "id": "PUNT-009",
+    "description": "PUNTA PM A24 6 X 20 X 6.4 88A90O6VT9 400"
+  },
+  {
+    "id": "PUNT-010",
+    "description": "PUNTA DE CONTACTO 0.035\" T-M035 MDX250 MILLER\r\nSKU:3063"
+  },
+  {
+    "id": "PUNT-011",
+    "description": "PUNTA\r\n  DE INDICADOR DE CARBURO MARCA MITUTOYO 103018 (CORTAS)"
+  },
+  {
+    "id": "RECE-001",
+    "description": "RECEPTACULO MUNEGRA 4P 4W 30A 277/480V"
+  },
+  {
+    "id": "RECE-002",
+    "description": "RECEPTACULO 50A/250V 2F-3H 5709N"
+  },
+  {
+    "id": "RECO-001",
+    "description": "RECOGEDOR DE LAMINA CON BASTON DE LAMINA DE 80 CM"
+  },
+  {
+    "id": "RECO-002",
+    "description": "RECOPILADOR CON ARGOLLA DE T/C"
+  },
+  {
+    "id": "RECT-001",
+    "description": "RECTIFICADOR DE DIAMANTE CONO MORSE 2K"
+  },
+  {
+    "id": "REJI-001",
+    "description": "REJILLA 172M X 150MM(5.9\"),P/VENT.#TP-FAN10172BE/20-172BE"
+  },
+  {
+    "id": "RELE-001",
+    "description": "RELEVADOR DE SEGURIDAD MOD. 2981800"
+  },
+  {
+    "id": "REMAS001",
+    "description": "REMACHE POP 5/64\""
+  },
+  {
+    "id": "REMAS002",
+    "description": "REMACHE POP 1/8\""
+  },
+  {
+    "id": "REMAS003",
+    "description": "REMACHE POP 3/16\""
+  },
+  {
+    "id": "RESO-001",
+    "description": "RESORTE DE COMP INOX DIAM. HILO 0.5 X DIAM. EXT. 5.55 X LARGO 14.30 H/8 HILOS Y PUNTAS PLANAS"
+  },
+  {
+    "id": "RESO-002",
+    "description": "RESOSRTE PARA TROQUEL ROJO 3/4 X 130"
+  },
+  {
+    "id": "RESO-003",
+    "description": "RESORTE AZUL CARGA MEDIA D20 005"
+  },
+  {
+    "id": "RESO-004",
+    "description": "RESORTE A2005 GALV. 5.5\" DE LARGO"
+  },
+  {
+    "id": "RESO-005",
+    "description": "RESORTE DE TENSION GALV. S/M"
+  },
+  {
+    "id": "RESO-006",
+    "description": "RESORTE DE TENSION INOX. DIAM. EXT. 30.5 mm x 133 mm DE LONG. 8 REVOLUCIONES, DIAM. DEL HILO 3mm CON PUNTAS PLANAS"
+  },
+  {
+    "id": "RESO-007",
+    "description": "RESORTE PARA BROCAL SMI MOD. BAL1003T01"
+  },
+  {
+    "id": "RESO-008",
+    "description": "RESORTE DE COMPRESIÓN De 6mm L 14mm C 06mm 7 E+T ACP"
+  },
+  {
+    "id": "RESO-009",
+    "description": "RESORTE DE COMPRESION Material : acero inoxidable Longitud : 35mm Diámetro de hilo : 0.7mm Diámetro interior : 9mm Numero de vueltas : 12 vueltas Puntas planas"
+  },
+  {
+    "id": "RESO-010",
+    "description": "RESORTE DE COMPRESION Material: acero piano LONG. 49 MM DIAM. EXT. 15 MM DIAM. DEL HILO 1.6 MM NO. DE VUELTAS 10 PUNTAS PLANAS"
+  },
+  {
+    "id": "RESO-011",
+    "description": "RESORTE DE COMPRESIÓN INOXIDABLE De 15.5mm Di 12.5mm C 1.5mm L 16mm V 4 Esm. Esc ."
+  },
+  {
+    "id": "RESO-012",
+    "description": "RESORTE DE ACERO PIANO DE DIAM. INT. 55 MM X DIAM. DEL HILO 7/16 X 50 MM DE LARGO 3 VUELTAS Y PUNTAS PLANAS"
+  },
+  {
+    "id": "RESO-013",
+    "description": "RESORTE DE COMPRESION EXT. 8.5MM. DI DE HILO 1MM. LONG 35MM PASO 3MM PUNTAS PLANAS"
+  },
+  {
+    "id": "RESO-018",
+    "description": "RESORTE\r\n  DE COMPRESION ACERO TEMPLADO DIAM. EXT. 56.3MM, DIMA. HILO 6.35MM LARGO\r\n  250MM, 14 VUELTAS, PUNTAS PLANAS"
+  },
+  {
+    "id": "RESP-001",
+    "description": "RESPIRADOR 3M 8210 P/PARTICULAS"
+  },
+  {
+    "id": "RESP-002",
+    "description": "RESPALDO P/DISCO AUTO ADHERIBLE 125 X 15.9 MM 11H\r\nCLAVE: 1457"
+  },
+  {
+    "id": "RETE-003",
+    "description": "RETEN 35 47 7"
+  },
+  {
+    "id": "RETE-004",
+    "description": "RETEN 58 80 10"
+  },
+  {
+    "id": "RETE-010",
+    "description": "RETEN 60 100 10"
+  },
+  {
+    "id": "RIMA-024",
+    "description": "RIMA DE COBALTO DE 6mm"
+  },
+  {
+    "id": "RIMAM001",
+    "description": "RIMA HSS 3mm"
+  },
+  {
+    "id": "RIMAM002",
+    "description": "RIMA HSS 4mm"
+  },
+  {
+    "id": "RIMAM003",
+    "description": "RIMA HSS 5mm"
+  },
+  {
+    "id": "RIMAM004",
+    "description": "RIMA HSS 6mm"
+  },
+  {
+    "id": "RIMAM005",
+    "description": "RIMA HSS 8mm"
+  },
+  {
+    "id": "RIMAM006",
+    "description": "RIMA HSS 10mm"
+  },
+  {
+    "id": "RIMAM007",
+    "description": "RIMA HSS 12mm"
+  },
+  {
+    "id": "RIMAM008",
+    "description": "RIMA HSS 14mm"
+  },
+  {
+    "id": "RIMAM009",
+    "description": "RIMA HSS 16mm"
+  },
+  {
+    "id": "RIMAM010",
+    "description": "RIMA HSS 20mm"
+  },
+  {
+    "id": "RIMAM011",
+    "description": "RIMA DE CARBURO DE 6mm"
+  },
+  {
+    "id": "RIMAM012",
+    "description": "RIMA DE CARBURO DE 8mm"
+  },
+  {
+    "id": "RIMAM013",
+    "description": "RIMA HSS 9mm"
+  },
+  {
+    "id": "RIMAM014",
+    "description": "RIMA 8MM LARGO TOTAL 80MM C/RECUB. TIALN"
+  },
+  {
+    "id": "RIMAM015",
+    "description": "RIMA HSS 2.5mm"
+  },
+  {
+    "id": "RIMAM016",
+    "description": "RIMA HSS 13mm"
+  },
+  {
+    "id": "RIMAM017",
+    "description": "RIMA HSS 15mm"
+  },
+  {
+    "id": "RIMAM018",
+    "description": "RIMA HSS 9.9mm"
+  },
+  {
+    "id": "RIMAM019",
+    "description": "RIMA DE CARBURO DE 7mm"
+  },
+  {
+    "id": "RIMAM020",
+    "description": "RIMA HSS 17mm"
+  },
+  {
+    "id": "RIMAS101",
+    "description": "RIMA HSS 1/4\""
+  },
+  {
+    "id": "RIMAS102",
+    "description": "RIMA HSS 1/2\""
+  },
+  {
+    "id": "RIMAS103",
+    "description": "RIMA HSS 5/16\""
+  },
+  {
+    "id": "RIMAS104",
+    "description": "RIMA HSS 7/16\""
+  },
+  {
+    "id": "RIMAS105",
+    "description": "RIMA HSS 3/4\""
+  },
+  {
+    "id": "RODA-001",
+    "description": "RODAMIENTO 6304 2ZR FAG"
+  },
+  {
+    "id": "RODA-002",
+    "description": "RODAMIENTO CONO T-157 TIM"
+  },
+  {
+    "id": "RODA-003",
+    "description": "RODAMIENTO DE AGUJA INA R40 X 45 X 17"
+  },
+  {
+    "id": "RODA-004",
+    "description": "RODAMIENTO ZSG 6201 ZZ"
+  },
+  {
+    "id": "RODA-005",
+    "description": "RODAMIENTO FAG 6202 2RS"
+  },
+  {
+    "id": "RODA-006",
+    "description": "RODAMIENTO FAG 6204 2RSR"
+  },
+  {
+    "id": "RODA-007",
+    "description": "RODAMIENTO 6206 ZZ"
+  },
+  {
+    "id": "RODA-008",
+    "description": "RODAMIENTO 6208 2RS"
+  },
+  {
+    "id": "RODA-009",
+    "description": "RODAMIENTO FRANTZ MOD. 2500"
+  },
+  {
+    "id": "RODA-010",
+    "description": "RODAMIENTO TL 6303 ZZ"
+  },
+  {
+    "id": "RODA-011",
+    "description": "RODAMIENTO ZSG 6302 ZZ"
+  },
+  {
+    "id": "RODA-012",
+    "description": "RODAMIENTO FAG 6303 2RSR L38"
+  },
+  {
+    "id": "RODA-013",
+    "description": "RODAMIENTO FAG 6303 2ZR C3"
+  },
+  {
+    "id": "RODA-014",
+    "description": "RODAMIENTO ZSG 6307 ZZ"
+  },
+  {
+    "id": "RODA-015",
+    "description": "RODAMIENTO FAG 30305A"
+  },
+  {
+    "id": "RODA-016",
+    "description": "RODAMIENTO SNR 6004 Z"
+  },
+  {
+    "id": "RODA-017",
+    "description": "RODAMIENTO INA SL183008-A-XL"
+  },
+  {
+    "id": "RODA-018",
+    "description": "RODAMIENTO INA PISTA INT. NA 6906-XL"
+  },
+  {
+    "id": "RODA-019",
+    "description": "RODAMIENTO FAG 32215"
+  },
+  {
+    "id": "RODA-020",
+    "description": "RODAMIENTO AS 28580/28520"
+  },
+  {
+    "id": "RODA-021",
+    "description": "RODAMIENTO FAG 22220"
+  },
+  {
+    "id": "RODA-022",
+    "description": "RODAMIENTO FRANTZ MODELO 5000 BRG"
+  },
+  {
+    "id": "RODA-023",
+    "description": "RADAMIENTO 16005"
+  },
+  {
+    "id": "RODA-024",
+    "description": "RODAMIENTO FAG 608 2RS"
+  },
+  {
+    "id": "RODA-025",
+    "description": "RODAMIENTO ZSG 686 ZZ"
+  },
+  {
+    "id": "RODA-026",
+    "description": "RODAMIENTO ZSG 696 ZZ"
+  },
+  {
+    "id": "RODA-027",
+    "description": "RODAMIENTO ZSG 61801 ZZ"
+  },
+  {
+    "id": "RODA-028",
+    "description": "RODAMIENTO FAG 6003.2ZR"
+  },
+  {
+    "id": "RODA-029",
+    "description": "RODAMIENTO NBR LR-203-2RS"
+  },
+  {
+    "id": "RODA-030",
+    "description": "RODAMIENTO FAG 6300 2RSR"
+  },
+  {
+    "id": "RODA-031",
+    "description": "RODAMIENTO FAG 6203 2RSR"
+  },
+  {
+    "id": "RODA-032",
+    "description": "RODAMIENTO 6205.2ZR"
+  },
+  {
+    "id": "RODA-033",
+    "description": "RODAMIENTO 6001.2ZR"
+  },
+  {
+    "id": "RODA-055",
+    "description": "RODAMIENTO DE AGUJAS DC502807"
+  },
+  {
+    "id": "RODA-058",
+    "description": "RODAMIENTO INA HK 2816"
+  },
+  {
+    "id": "RODA-059",
+    "description": "RODAMIENTO TIMKEN T110-904A1"
+  },
+  {
+    "id": "RODI-001",
+    "description": "RODILLO DE FIBRA 17-280 100 X 100 \r\nCLAVE: 593547"
+  },
+  {
+    "id": "RODI-002",
+    "description": "RODILLO DE FIBRA C/LIJA GRANO 80 100 X 50 X 15.9 MM CLAVE 1390"
+  },
+  {
+    "id": "RONDM001",
+    "description": "RONDANA PLANA 8mm"
+  },
+  {
+    "id": "RONDM002",
+    "description": "RONDANA PLANA 12mm"
+  },
+  {
+    "id": "RONDM003",
+    "description": "RONDANA PLANA 20mm"
+  },
+  {
+    "id": "RONDM004",
+    "description": "RONDANA PLANA 24mm"
+  },
+  {
+    "id": "RONDM005",
+    "description": "RONDANA PLANA 18mm"
+  },
+  {
+    "id": "RONDM006",
+    "description": "RONDANA PLANA 14mm"
+  },
+  {
+    "id": "RONDM007",
+    "description": "RONDANA PLANA 6mm"
+  },
+  {
+    "id": "RONDM008",
+    "description": "RONDANA PLANA 3mm"
+  },
+  {
+    "id": "RONDM009",
+    "description": "RONDANA PLANA 16mm"
+  },
+  {
+    "id": "RONDM101",
+    "description": "RONDANA PLANA INOX. 5mm"
+  },
+  {
+    "id": "RONDM201",
+    "description": "RONDANA PLANA GALV. M 4"
+  },
+  {
+    "id": "RONDM202",
+    "description": "RONDANA PLANA GALV. M 5"
+  },
+  {
+    "id": "RONDM203",
+    "description": "RONDANA PLANA GALV. M 6"
+  },
+  {
+    "id": "RONDM204",
+    "description": "RONDANA PLANA GALV. 5/16"
+  },
+  {
+    "id": "RONDM301",
+    "description": "RONDANA DE PRESION 8mm"
+  },
+  {
+    "id": "RONDM302",
+    "description": "RONDANA DE PRESION 12mm"
+  },
+  {
+    "id": "RONDM303",
+    "description": "RONDANA DE PRESION 20mm"
+  },
+  {
+    "id": "RONDM304",
+    "description": "RONDANA DE PRESION 24mm"
+  },
+  {
+    "id": "RONDM305",
+    "description": "RONDANA DE PRESION 16mm"
+  },
+  {
+    "id": "RONDM306",
+    "description": "RONDANA DE PRESION 14mm"
+  },
+  {
+    "id": "RONDS001",
+    "description": "RONDANA PLANA 5/32\""
+  },
+  {
+    "id": "RONDS002",
+    "description": "RONDANA PLANA 3/16\""
+  },
+  {
+    "id": "RONDS003",
+    "description": "RONDANA PLANA 1/4\""
+  },
+  {
+    "id": "RONDS004",
+    "description": "RONDANA PLANA 5/16\""
+  },
+  {
+    "id": "RONDS005",
+    "description": "RONDANA PLANA 3/8\""
+  },
+  {
+    "id": "RONDS006",
+    "description": "RONDANA PLANA 1/2\""
+  },
+  {
+    "id": "RONDS007",
+    "description": "RONDANA PLANA 5/8\""
+  },
+  {
+    "id": "RONDS008",
+    "description": "RONDANA PLANA 3/4\""
+  },
+  {
+    "id": "RONDS009",
+    "description": "RONDANA PLANA 7/8\""
+  },
+  {
+    "id": "RONDS010",
+    "description": "RONDANA PLANA 1\""
+  },
+  {
+    "id": "RONDS101",
+    "description": "RONDANA PLANA INOX. 1/2\""
+  },
+  {
+    "id": "RONDS102",
+    "description": "RONDANA PLANA INOX. 1/4\""
+  },
+  {
+    "id": "RONDS103",
+    "description": "RONDANA PLANA INOX. 5/16\""
+  },
+  {
+    "id": "RONDS104",
+    "description": "RONDANA PLANA INOX. 5/8”"
+  },
+  {
+    "id": "RONDS301",
+    "description": "RONDANA DE PRESION 5/16\""
+  },
+  {
+    "id": "RONDS302",
+    "description": "RONDANA DE PRESION 1/2\""
+  },
+  {
+    "id": "RONDS303",
+    "description": "RONDANA DE PRESION 5/8\""
+  },
+  {
+    "id": "RONDS304",
+    "description": "RONDANA DE PRESION 3/4\""
+  },
+  {
+    "id": "RONDS401",
+    "description": "RONDANA PLANA F436 3/4\""
+  },
+  {
+    "id": "RONDS402",
+    "description": "RONDANA DE PRESION INOX 5/16\""
+  },
+  {
+    "id": "RONDS404",
+    "description": "RONDANA DE PRESION INOX. 5/8”"
+  },
+  {
+    "id": "RUED-001",
+    "description": "RUEDA 5 25 X 25 X 9.5 82A60K5VH1 22644"
+  },
+  {
+    "id": "RUED-002",
+    "description": "RUEDA 5 50 X 25 X 9.5 82A60K5VH1 22643"
+  },
+  {
+    "id": "RUED-003",
+    "description": "RUEDA ABRASIVA 175 X 13 X 31.7"
+  },
+  {
+    "id": "RUED-004",
+    "description": "RUEDA ABRASIVA 3SB54K7VP4 1 250 X 25 X 76.20"
+  },
+  {
+    "id": "RUED-005",
+    "description": "RUEDA ABRASIVA 3SB60K5VP4 1 350 X 25 X 127"
+  },
+  {
+    "id": "RUED-007",
+    "description": "RUEDA ESME OXI ALUM. 6\" CLAVE 228 GRANO 100 3/4 VERDE"
+  },
+  {
+    "id": "RUED-008",
+    "description": "RUEDA ESME OXI ALUM. 6\" CLAVE 9 GRANO 80 3/4 GRIS"
+  },
+  {
+    "id": "RUED-009",
+    "description": "RUEDA FLAP CON VASTAGO 25 X 25 X 6.4 GRANO 60 CLAVE 905"
+  },
+  {
+    "id": "RUED-011",
+    "description": "RUEDA FLAP CON VASTAGO 50 X 25 X 6.4 GRANO 60 CLAVE 915"
+  },
+  {
+    "id": "RUED-012",
+    "description": "RUEDA FLAP P/REBABEO Y ACABADO 150 X 25 X 25.4 GRANO 120"
+  },
+  {
+    "id": "RUED-013",
+    "description": "RUEDA TRAPO P/PULIR 4\""
+  },
+  {
+    "id": "RUED-015",
+    "description": "RUEDA DE ESMERIL OXIDO DE ALUMINIO 8\" VERDE GRANO 100"
+  },
+  {
+    "id": "RUED-016",
+    "description": "RUEDA DE ESMERIL OXIDO DE ALUMINIO 8\" GRIS GRANO 36"
+  },
+  {
+    "id": "RUED-017",
+    "description": "RUEDA ROSA 10\" 250 X 25 X 76.2mm 52A541J2pVTR\r\nCLAVE: 74"
+  },
+  {
+    "id": "RUED-018",
+    "description": "RUEDA ABRASIVA ROSA 350 X 25 X 127\r\nCLAVE: 076"
+  },
+  {
+    "id": "RUED-019",
+    "description": "RUEDA FLAP DE FELPA 25 X 25 X 6.4mm."
+  },
+  {
+    "id": "RUED-031",
+    "description": "RUEDA\r\n  TRAPO P/PULIR 6\""
+  },
+  {
+    "id": "SACA-001",
+    "description": "SACAPUNTAS DE PLASTICO"
+  },
+  {
+    "id": "SACO-001",
+    "description": "SACO DE RESINA 25lts."
+  },
+  {
+    "id": "SANI-001",
+    "description": "SANIPROL SANITIZANTE DESIFECTANTE A BASE DE SALES CAUTERINAS DE AMONIO ELIMINA LA CARGA BACTERINA EN SUPERFICIES COMO ESCRITORIOS, MESA DE TRABAJO , PUERTAS, CHAPAS ETC. CON UNA DISOLUCION DE 2.5 ML POR CADA LITRO DE AGUA"
+  },
+  {
+    "id": "SEGU-001",
+    "description": "SEGUETA PARA ARCO 1812"
+  },
+  {
+    "id": "SEGU-002",
+    "description": "SEGUETA P/CALAR T101B DIENTE GRUESO"
+  },
+  {
+    "id": "SEGU-003",
+    "description": "SEGUETA P/CALAR T111C DIENTE FINO"
+  },
+  {
+    "id": "SELL-001",
+    "description": "SELLADOR SIKAFLEX NEGRO"
+  },
+  {
+    "id": "SELL-002",
+    "description": "SELLADOR SILICON BLANCO"
+  },
+  {
+    "id": "SIER-001",
+    "description": "SIERRA CINTA 20 X 0.90 5/8 DDP 93\" X 2362 #528"
+  },
+  {
+    "id": "SIER-002",
+    "description": "SIERRA CIRCULAR P/CORTE DE METAL 6 X 1/8 X 1\""
+  },
+  {
+    "id": "SIER-003",
+    "description": "SIERRA CIRCULAR"
+  },
+  {
+    "id": "SIER-004",
+    "description": "SIERRA\r\n  CINTA MVGLB 3/4\" X 3/4 DPP X 93\" (2.36 Mts) \r\n    AMADA"
+  },
+  {
+    "id": "SILB-001",
+    "description": "SILBATO PARA PREVENCION DEL DELITO"
+  },
+  {
+    "id": "SOLD-001",
+    "description": "SOLDADURA EN POLVO EUTEC BOR 10009"
+  },
+  {
+    "id": "SOLU-001",
+    "description": "SOLUBLE ANTIWEAR 2 HANGSTERFER\"S AW2P"
+  },
+  {
+    "id": "SOLU-002",
+    "description": "SOLUBLE HANGSTERFER\"S S-500 CF"
+  },
+  {
+    "id": "SOLV-002",
+    "description": "SOLVENTE DIELECTRICO ELECTROSOL CITRAL"
+  },
+  {
+    "id": "SPRA-001",
+    "description": "SPRAY ANTISALPICADURAS WELD500 PARA BOQUILLAS Y PUNTAS DE CONTACTO"
+  },
+  {
+    "id": "SPRO-001",
+    "description": "SPROCKET MARTIN 40 A 36(MAR) TIPO A"
+  },
+  {
+    "id": "SUSP-001",
+    "description": "SUSPENCION MATRACA INFRA MTR 25CM21"
+  },
+  {
+    "id": "SUSP-002",
+    "description": "SUSPENSION FW44P7 P/CARETAS ELITE,FURIUS, SWEISS\r\nSKU-3059"
+  },
+  {
+    "id": "TABL-001",
+    "description": "TABLERO DE CONEXIONES PRIMAS P/SOLDADURA"
+  },
+  {
+    "id": "TABL-002",
+    "description": "TABLA SUJETA HOJAS T/CARTA CON CLIP METALICO"
+  },
+  {
+    "id": "TALA-001",
+    "description": "TALADRO TIPO ESPADA"
+  },
+  {
+    "id": "TALA-002",
+    "description": "TALADRO MAGNETICO"
+  },
+  {
+    "id": "TAPE-002",
+    "description": "TAPE CINTA ADHESIVA"
+  },
+  {
+    "id": "TAPE-003",
+    "description": "MASKING TAPE 48mm X 50m"
+  },
+  {
+    "id": "TAPO-001",
+    "description": "TAPON AUDITIVO 3M 1110"
+  },
+  {
+    "id": "TAPO-002",
+    "description": "TAPON AUDITIVO 3M 1250 NEON DESECHABLE"
+  },
+  {
+    "id": "TAPO-003",
+    "description": "TAPON MACHO 1/4 NTP EN ACERO"
+  },
+  {
+    "id": "TAPO-004",
+    "description": "TAPON MACHO 3/8 NTP EN ACERO"
+  },
+  {
+    "id": "TAQUS001",
+    "description": "TAQUETE DE PLASTICO 3/16\""
+  },
+  {
+    "id": "TAQUS002",
+    "description": "TAQUETE DE PLASTICO 1/4\""
+  },
+  {
+    "id": "TAQUS003",
+    "description": "TAQUETE DE PLASTICO 3/8\""
+  },
+  {
+    "id": "TAQUS004",
+    "description": "TAQUETE DE PLASTICO 3/8\""
+  },
+  {
+    "id": "TAQUS006",
+    "description": "TAQUETE\r\n  TIPO ARPON (HILTI) 1/2 X 5 1/2\""
+  },
+  {
+    "id": "TAQUS101",
+    "description": "TAQUETE TIPO ARPON (HILTI) 1/4 X 2 1/4\""
+  },
+  {
+    "id": "TAQUS102",
+    "description": "TAQUETE TIPO ARPON (HILTI) 1/4 X 2 1/2\""
+  },
+  {
+    "id": "TAQUS103",
+    "description": "TAQUETE TIPO ARPON (HILTI) 3/8 X 1/2\""
+  },
+  {
+    "id": "TAQUS104",
+    "description": "TAQUETE TIPO ARPON (HILTI) 1/2 X 2 1/2\""
+  },
+  {
+    "id": "TAQUS105",
+    "description": "TAQUETE TIPO ARPON (HILTI) 5/8 X 6\""
+  },
+  {
+    "id": "TAQUS106",
+    "description": "TAQUETE TIPO ARPON (HILTI) 3/4 X 7\""
+  },
+  {
+    "id": "TAQUS107",
+    "description": "TAQUETE TIPO ARPON (HILTI) 3/8 X 3 3/4\""
+  },
+  {
+    "id": "TAQUS108",
+    "description": "TAQUETE TIPO ARPON (HILTI) 1/2 X 3 3/4\""
+  },
+  {
+    "id": "TARJ-001",
+    "description": "TARJETA MIFARE CLASSIC"
+  },
+  {
+    "id": "TARR-301",
+    "description": "TARRAJA HSS UNC 2\" 1-8"
+  },
+  {
+    "id": "TARR-302",
+    "description": "TARRAJA HSS UNC 2\" 7/8 - 9"
+  },
+  {
+    "id": "TARR-303",
+    "description": "TARRAJA HSS UNC 1 1/2\" 5/8 -11"
+  },
+  {
+    "id": "TARR-304",
+    "description": "TARRAJA HSS UNC 1 1/2\" 3/4 - 10"
+  },
+  {
+    "id": "TARR-305",
+    "description": "TARRAJA HSS UNC 1\" 1/4 - 20"
+  },
+  {
+    "id": "TARR-306",
+    "description": "TARRAJA HSS UNC 1\" 1/2 -13"
+  },
+  {
+    "id": "TARRM001",
+    "description": "TARRAJA HSS M8 X 1.25"
+  },
+  {
+    "id": "TARRM002",
+    "description": "TARRAJA HSS M10 X 1.5"
+  },
+  {
+    "id": "TARRM003",
+    "description": "TARRAJA HSS M12 X 1.75"
+  },
+  {
+    "id": "TARRM004",
+    "description": "TARRAJA HSS 4.7mm"
+  },
+  {
+    "id": "TARRS101",
+    "description": "TARRAJA HSS 1/8 -27 NPT"
+  },
+  {
+    "id": "TARRS102",
+    "description": "TARRAJA HSS 1/4-18 NPT"
+  },
+  {
+    "id": "TARRS103",
+    "description": "TARRAJA HSS 5/16-18 UNC"
+  },
+  {
+    "id": "TARRS104",
+    "description": "TARRAJA HSS 3/8-16 UNC"
+  },
+  {
+    "id": "TARRS105",
+    "description": "TARRAJA HSS 1/2-13 UNC"
+  },
+  {
+    "id": "TARRS106",
+    "description": "TARRAJA HSS 3/8-24 NF"
+  },
+  {
+    "id": "TEEG-001",
+    "description": "TEE GALV HIERRO ROSC 150 LBS DE 1/2\""
+  },
+  {
+    "id": "TERM - 011",
+    "description": "TERMINAL DE EMPALME 12 - 10"
+  },
+  {
+    "id": "TERM - 012",
+    "description": "TERMINAL DE EMPALME 22 - 16"
+  },
+  {
+    "id": "TERM-001",
+    "description": "TERMINAL DE ESPADA 3/16"
+  },
+  {
+    "id": "TERM-002",
+    "description": "TERMINAL AISLADA ARILLO 3/16\" 16-14 AZUL"
+  },
+  {
+    "id": "TERM-003",
+    "description": "TERMINAL AISLADA ARILLO 3/16\" 12-10 AMARILLO"
+  },
+  {
+    "id": "TERM-004",
+    "description": "TERMINAL DE PUNTA C-16"
+  },
+  {
+    "id": "TERM-005",
+    "description": "TERMINAL DE PUNTA C-4"
+  },
+  {
+    "id": "TERM-006",
+    "description": "TERMINAL DE ESPADA 14 - 16"
+  },
+  {
+    "id": "TERM-007",
+    "description": "TERMINAL DE ESPADA 22 - 18"
+  },
+  {
+    "id": "THIN-001",
+    "description": "THINNER STD"
+  },
+  {
+    "id": "TIJE-001",
+    "description": "TIJERAS DE ACERO INOXIDABLE"
+  },
+  {
+    "id": "TIJE-002",
+    "description": "TIJERAS PARA CORTE DE LAMINA"
+  },
+  {
+    "id": "TOAL-001",
+    "description": "TOALLAS SHOP SCOTT"
+  },
+  {
+    "id": "TOAL-002",
+    "description": "TOALLAS HUMEDAS DESINFECTANTES GREEN FREG (400 PZ)"
+  },
+  {
+    "id": "TOBE-001",
+    "description": "TOBERA M-25 M-40 1/2 #169724"
+  },
+  {
+    "id": "TOBE-002",
+    "description": "TOBERA M15 1/2 #169715"
+  },
+  {
+    "id": "TOBE-003",
+    "description": "TOBERA N-M1200C MDX250 MILLER\r\nSKU-3065"
+  },
+  {
+    "id": "TOBE-004",
+    "description": "BOQUILLA 23-50 250 AMP PRO"
+  },
+  {
+    "id": "TOBE-005",
+    "description": "BOQUILLA 23-62 250 AMP PRO"
+  },
+  {
+    "id": "TORN-001",
+    "description": "TORNILLO DE RETENCION 1026590"
+  },
+  {
+    "id": "TORN-002",
+    "description": "TORNILLO DE BANCO INDUSTRIAL 4\" MOD. 424N MCA. URREA"
+  },
+  {
+    "id": "TORNH801",
+    "description": "TORNILLO CSTB-2.5 L046 (7066668)"
+  },
+  {
+    "id": "TORNH802",
+    "description": "TORNILLO CSTB-2.5 6815313"
+  },
+  {
+    "id": "TORNH803",
+    "description": "TORNILLO PARA INSERTO 416.1-834"
+  },
+  {
+    "id": "TORNH804",
+    "description": "TORNILLO PARA CLAMP CLM20"
+  },
+  {
+    "id": "TORNH805",
+    "description": "TORNILLO PARA CLAMP CLM21"
+  },
+  {
+    "id": "TORNH806",
+    "description": "TORNILLO CSTB- 3.5 06802569"
+  },
+  {
+    "id": "TORNH807",
+    "description": "TORNILLO CAB. PLANA ESTRELLA CSTB - 3.5 L110 07050332"
+  },
+  {
+    "id": "TORNH808",
+    "description": "TORNILLO CSPB - 2.5 S 06819732"
+  },
+  {
+    "id": "TORNH809",
+    "description": "TORNILLO PARA INSERTO ALTO AVANCE F3510T8"
+  },
+  {
+    "id": "TORNH810",
+    "description": "TORNILLO 5513 020 09"
+  },
+  {
+    "id": "TORNH811",
+    "description": "TORNILLO ACS - 5W 06852685"
+  },
+  {
+    "id": "TORNH812",
+    "description": "TORNILLO 5513 020 28"
+  },
+  {
+    "id": "TORNH813",
+    "description": "TORNILLO CSTB4S 6802580"
+  },
+  {
+    "id": "TORNH814",
+    "description": "TORNILLO CSPB-2H 6851333"
+  },
+  {
+    "id": "TORNH815",
+    "description": "TORNILLO 5513 020 13"
+  },
+  {
+    "id": "TORNH816",
+    "description": "TORNILLO 5513 020 05"
+  },
+  {
+    "id": "TORNH817",
+    "description": "TORNILLO 5513 020 58"
+  },
+  {
+    "id": "TORNH818",
+    "description": "TORNILLO 5513 020 35"
+  },
+  {
+    "id": "TORNH819",
+    "description": "TORNILLO 5513 020 57"
+  },
+  {
+    "id": "TORNH820",
+    "description": "TORNILLO 5513 020 82"
+  },
+  {
+    "id": "TORNH821",
+    "description": "TORNILLO 5513 020 78"
+  },
+  {
+    "id": "TORNH822",
+    "description": "TORNILLO F3508T"
+  },
+  {
+    "id": "TORNH823",
+    "description": "TORNILLO 7011251"
+  },
+  {
+    "id": "TORNH824",
+    "description": "TORNILLO 5513 020 36"
+  },
+  {
+    "id": "TORNH825",
+    "description": "TORNILLO 7002353"
+  },
+  {
+    "id": "TORNH826",
+    "description": "TORNILLO 5513 020 41"
+  },
+  {
+    "id": "TORNH827",
+    "description": "TORNILLO 700-023-53"
+  },
+  {
+    "id": "TORNH828",
+    "description": "TORNILLO 5513-020-78"
+  },
+  {
+    "id": "TORNH829",
+    "description": "TORNILLO 219802"
+  },
+  {
+    "id": "TORNH830",
+    "description": "TORNILLO MS-2071"
+  },
+  {
+    "id": "TORNH831",
+    "description": "TORNILLO 219842"
+  },
+  {
+    "id": "TORNH832",
+    "description": "TORNILLO 219810"
+  },
+  {
+    "id": "TORNH833",
+    "description": "TORNILLO 219807"
+  },
+  {
+    "id": "TORNH834",
+    "description": "TORNILLO 219805"
+  },
+  {
+    "id": "TORNH835",
+    "description": "TORNILLO CSPB 2.5SH (6851335)"
+  },
+  {
+    "id": "TORNH837",
+    "description": "TORNILLO F3510T"
+  },
+  {
+    "id": "TORNH838",
+    "description": "TORNILLO MS-2071"
+  },
+  {
+    "id": "TORNH839",
+    "description": "TORNILLO PARA PLACA DE APOYO 5512-090-11"
+  },
+  {
+    "id": "TORNH840",
+    "description": "TORNILLO 5680084-02"
+  },
+  {
+    "id": "TORNH841",
+    "description": "TORNILLO 6807509"
+  },
+  {
+    "id": "TORNH842",
+    "description": "TORNILLO DP5009A"
+  },
+  {
+    "id": "TORNH843",
+    "description": "TORNILLO MS 1200 CAB. DE GOTA 3.5 X 20"
+  },
+  {
+    "id": "TORNH846",
+    "description": "TORNILLO HUECO 5512 090 09"
+  },
+  {
+    "id": "TORNH847",
+    "description": "TORNILLO S125 MM1019656"
+  },
+  {
+    "id": "TORNH848",
+    "description": "TORNILLO STC4 MM1029380"
+  },
+  {
+    "id": "TORNH850",
+    "description": "TORNILLO PARA CORTADOR T04N EOP 862188 250-141"
+  },
+  {
+    "id": "TORNH852",
+    "description": "TORNILLO 862145 240-140 TORNILLO PARA RH2P (12mm)"
+  },
+  {
+    "id": "TORNH853",
+    "description": "TORNILLO 219800"
+  },
+  {
+    "id": "TORNM001",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 3 X 16"
+  },
+  {
+    "id": "TORNM002",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 3 X 20"
+  },
+  {
+    "id": "TORNM003",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 12"
+  },
+  {
+    "id": "TORNM004",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 16"
+  },
+  {
+    "id": "TORNM005",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 20"
+  },
+  {
+    "id": "TORNM006",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 25"
+  },
+  {
+    "id": "TORNM007",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 50"
+  },
+  {
+    "id": "TORNM008",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 5"
+  },
+  {
+    "id": "TORNM009",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 10"
+  },
+  {
+    "id": "TORNM010",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 20"
+  },
+  {
+    "id": "TORNM011",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 25"
+  },
+  {
+    "id": "TORNM012",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 50"
+  },
+  {
+    "id": "TORNM013",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 80"
+  },
+  {
+    "id": "TORNM014",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 16"
+  },
+  {
+    "id": "TORNM015",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 20"
+  },
+  {
+    "id": "TORNM016",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 25"
+  },
+  {
+    "id": "TORNM017",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 30"
+  },
+  {
+    "id": "TORNM018",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 35"
+  },
+  {
+    "id": "TORNM019",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 45"
+  },
+  {
+    "id": "TORNM020",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 12"
+  },
+  {
+    "id": "TORNM021",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 16"
+  },
+  {
+    "id": "TORNM022",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 20"
+  },
+  {
+    "id": "TORNM023",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 25"
+  },
+  {
+    "id": "TORNM024",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 30"
+  },
+  {
+    "id": "TORNM025",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 35"
+  },
+  {
+    "id": "TORNM026",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 40"
+  },
+  {
+    "id": "TORNM027",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 50"
+  },
+  {
+    "id": "TORNM028",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 55"
+  },
+  {
+    "id": "TORNM029",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 80"
+  },
+  {
+    "id": "TORNM030",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 90"
+  },
+  {
+    "id": "TORNM031",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 120"
+  },
+  {
+    "id": "TORNM032",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 20"
+  },
+  {
+    "id": "TORNM033",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 25"
+  },
+  {
+    "id": "TORNM034",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 30"
+  },
+  {
+    "id": "TORNM035",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 35"
+  },
+  {
+    "id": "TORNM036",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 40"
+  },
+  {
+    "id": "TORNM037",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 45"
+  },
+  {
+    "id": "TORNM038",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 70"
+  },
+  {
+    "id": "TORNM039",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 80"
+  },
+  {
+    "id": "TORNM040",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 90"
+  },
+  {
+    "id": "TORNM041",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 140"
+  },
+  {
+    "id": "TORNM042",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 20"
+  },
+  {
+    "id": "TORNM043",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 25"
+  },
+  {
+    "id": "TORNM044",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 35"
+  },
+  {
+    "id": "TORNM045",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 40"
+  },
+  {
+    "id": "TORNM046",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 45"
+  },
+  {
+    "id": "TORNM047",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 50"
+  },
+  {
+    "id": "TORNM048",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 60"
+  },
+  {
+    "id": "TORNM049",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 70"
+  },
+  {
+    "id": "TORNM050",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 75"
+  },
+  {
+    "id": "TORNM051",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 100"
+  },
+  {
+    "id": "TORNM052",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 140"
+  },
+  {
+    "id": "TORNM053",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M12 X 160"
+  },
+  {
+    "id": "TORNM054",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M14 X 50"
+  },
+  {
+    "id": "TORNM055",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M14 X 200"
+  },
+  {
+    "id": "TORNM056",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M16 X 30"
+  },
+  {
+    "id": "TORNM057",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M16 X 40"
+  },
+  {
+    "id": "TORNM058",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M16 X 70"
+  },
+  {
+    "id": "TORNM059",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M16 X 80"
+  },
+  {
+    "id": "TORNM060",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M16 X 90"
+  },
+  {
+    "id": "TORNM061",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M20 X 60"
+  },
+  {
+    "id": "TORNM062",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M20 X 80"
+  },
+  {
+    "id": "TORNM063",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 160"
+  },
+  {
+    "id": "TORNM064",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 110"
+  },
+  {
+    "id": "TORNM065",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 30"
+  },
+  {
+    "id": "TORNM066",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 3 X 8"
+  },
+  {
+    "id": "TORNM067",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 8"
+  },
+  {
+    "id": "TORNM068",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 4 X 10"
+  },
+  {
+    "id": "TORNM069",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 8 X 180"
+  },
+  {
+    "id": "TORNM070",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M16 X 55"
+  },
+  {
+    "id": "TORNM071",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M14 X 45"
+  },
+  {
+    "id": "TORNM072",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 80"
+  },
+  {
+    "id": "TORNM073",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 150"
+  },
+  {
+    "id": "TORNM074",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 12"
+  },
+  {
+    "id": "TORNM075",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 12"
+  },
+  {
+    "id": "TORNM076",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 16"
+  },
+  {
+    "id": "TORNM077",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 6 X 12"
+  },
+  {
+    "id": "TORNM078",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 50"
+  },
+  {
+    "id": "TORNM079",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M10 X 16"
+  },
+  {
+    "id": "TORNM080",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M16 X 50"
+  },
+  {
+    "id": "TORNM081",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 3 X 12"
+  },
+  {
+    "id": "TORNM101",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 4 X 1"
+  },
+  {
+    "id": "TORNM102",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 4 X 6"
+  },
+  {
+    "id": "TORNM103",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 4 X 10"
+  },
+  {
+    "id": "TORNM104",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 4 X 20"
+  },
+  {
+    "id": "TORNM105",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 5 X 20"
+  },
+  {
+    "id": "TORNM105",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN M 5 X 10"
+  },
+  {
+    "id": "TORNM106",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 5 X 25"
+  },
+  {
+    "id": "TORNM107",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 5 X 30"
+  },
+  {
+    "id": "TORNM108",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 6 X 20"
+  },
+  {
+    "id": "TORNM109",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 6 X 25"
+  },
+  {
+    "id": "TORNM110",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 8 X 30"
+  },
+  {
+    "id": "TORNM111",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 8 X 50"
+  },
+  {
+    "id": "TORNM112",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 8 X 70"
+  },
+  {
+    "id": "TORNM113",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M12 X 20"
+  },
+  {
+    "id": "TORNM114",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 5 X 10"
+  },
+  {
+    "id": "TORNM115",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 5 X 16"
+  },
+  {
+    "id": "TORNM116",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 6 X 16"
+  },
+  {
+    "id": "TORNM117",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 3 X 10"
+  },
+  {
+    "id": "TORNM118",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN INOX. M 8 X 20"
+  },
+  {
+    "id": "TORNM120",
+    "description": "TORNILLO\r\n  CAB. CILINDRICA ALLEN INOX. M10 X 25"
+  },
+  {
+    "id": "TORNM121",
+    "description": "TORNILLO\r\n  CAB. CILINDRICA ALLEN INOX. M10 X 35"
+  },
+  {
+    "id": "TORNM201",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 4 X 6"
+  },
+  {
+    "id": "TORNM202",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 4 X 8"
+  },
+  {
+    "id": "TORNM203",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 4 X 15"
+  },
+  {
+    "id": "TORNM204",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 6 X 25"
+  },
+  {
+    "id": "TORNM205",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 6 X 30"
+  },
+  {
+    "id": "TORNM206",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 6 X 35"
+  },
+  {
+    "id": "TORNM207",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 8 X 12"
+  },
+  {
+    "id": "TORNM208",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M12 X 30"
+  },
+  {
+    "id": "TORNM209",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 8 X 20"
+  },
+  {
+    "id": "TORNM210",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 8 X 25"
+  },
+  {
+    "id": "TORNM211",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 8 X 15"
+  },
+  {
+    "id": "TORNM212",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 6 X 20"
+  },
+  {
+    "id": "TORNM213",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 4 X 10"
+  },
+  {
+    "id": "TORNM214",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 5 X 8"
+  },
+  {
+    "id": "TORNM215",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 5 X 10"
+  },
+  {
+    "id": "TORNM216",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 5 X 12"
+  },
+  {
+    "id": "TORNM217",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 6 X 8"
+  },
+  {
+    "id": "TORNM218",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 6 X 12"
+  },
+  {
+    "id": "TORNM219",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 8 X 10"
+  },
+  {
+    "id": "TORNM220",
+    "description": "TORNILLO CAB. DE GOTA ALLEN M 8 X 16"
+  },
+  {
+    "id": "TORNM301",
+    "description": "TORNILLO CAB. HEX M10 X 30"
+  },
+  {
+    "id": "TORNM302",
+    "description": "TORNILLO CAB. HEX M10 X 125"
+  },
+  {
+    "id": "TORNM303",
+    "description": "TORNILLO CAB. HEX M12 X 35"
+  },
+  {
+    "id": "TORNM304",
+    "description": "TORNILLO CAB. HEX M12 X 40"
+  },
+  {
+    "id": "TORNM305",
+    "description": "TORNILLO CAB. HEX M12 X 50"
+  },
+  {
+    "id": "TORNM306",
+    "description": "TORNILLO CAB. HEX M14 X 30"
+  },
+  {
+    "id": "TORNM307",
+    "description": "TORNILLO CAB. HEX M14 X 40"
+  },
+  {
+    "id": "TORNM308",
+    "description": "TORNILLO CAB. HEX M14 X 70"
+  },
+  {
+    "id": "TORNM309",
+    "description": "TORNILLO CAB. HEX M16 X 60"
+  },
+  {
+    "id": "TORNM310",
+    "description": "TORNILLO CAB. HEX M16 X 70"
+  },
+  {
+    "id": "TORNM311",
+    "description": "TORNILLO CAB. HEX M16 X 80"
+  },
+  {
+    "id": "TORNM312",
+    "description": "TORNILLO CAB. HEX M16 X 90"
+  },
+  {
+    "id": "TORNM313",
+    "description": "TORNILLO CAB. HEX M20 X 55"
+  },
+  {
+    "id": "TORNM314",
+    "description": "TORNILLO CAB. HEX M20 X 60"
+  },
+  {
+    "id": "TORNM315",
+    "description": "TORNILLO CAB. HEX M12 X 30"
+  },
+  {
+    "id": "TORNM316",
+    "description": "TORNILLO CAB. HEX M18 X 60"
+  },
+  {
+    "id": "TORNM317",
+    "description": "TORNILLO CAB. HEX M10 X 45"
+  },
+  {
+    "id": "TORNM318",
+    "description": "TORNILLO CAB. HEX M10 X 35"
+  },
+  {
+    "id": "TORNM319",
+    "description": "TORNILLO CAB. HEX M10 X 55"
+  },
+  {
+    "id": "TORNM320",
+    "description": "TORNILLO CAB. HEX M 8 X 25"
+  },
+  {
+    "id": "TORNM321",
+    "description": "TORNILLO CAB. HEX M14 X 45"
+  },
+  {
+    "id": "TORNM322",
+    "description": "TORNILLO CAB. HEX M16 X 50"
+  },
+  {
+    "id": "TORNM323",
+    "description": "TORNILLO CAB. HEX. M10 X 15"
+  },
+  {
+    "id": "TORNM324",
+    "description": "TORNILLO\r\n  CAB. HEX M16 X 150"
+  },
+  {
+    "id": "TORNM351",
+    "description": "TORNILLO CAB. HEX INOX. M 8 X 35"
+  },
+  {
+    "id": "TORNM401",
+    "description": "TORNILLO CAB. PLANA ALLEN M 3 X 8"
+  },
+  {
+    "id": "TORNM402",
+    "description": "TORNILLO CAB. PLANA ALLEN M 3 X 12"
+  },
+  {
+    "id": "TORNM403",
+    "description": "TORNILLO CAB. PLANA ALLEN M 3 X 16"
+  },
+  {
+    "id": "TORNM404",
+    "description": "TORNILLO CAB. PLANA ALLEN M 4 X 8"
+  },
+  {
+    "id": "TORNM405",
+    "description": "TORNILLO CAB. PLANA ALLEN M 4 X 10"
+  },
+  {
+    "id": "TORNM406",
+    "description": "TORNILLO CAB. PLANA ALLEN M 4 X 15"
+  },
+  {
+    "id": "TORNM407",
+    "description": "TORNILLO CAB. PLANA ALLEN M 5 X 8"
+  },
+  {
+    "id": "TORNM408",
+    "description": "TORNILLO CAB. PLANA ALLEN M 6 X 8"
+  },
+  {
+    "id": "TORNM409",
+    "description": "TORNILLO CAB. PLANA ALLEN M 6 X 16"
+  },
+  {
+    "id": "TORNM410",
+    "description": "TORNILLO CAB. PLANA ALLEN M 6 X 25"
+  },
+  {
+    "id": "TORNM411",
+    "description": "TORNILLO CAB. PLANA ALLEN M 6 X 35"
+  },
+  {
+    "id": "TORNM412",
+    "description": "TORNILLO CAB. PLANA ALLEN M 6 X 40"
+  },
+  {
+    "id": "TORNM413",
+    "description": "TORNILLO CAB. PLANA ALLEN M 8 X 20"
+  },
+  {
+    "id": "TORNM414",
+    "description": "TORNILLO CAB. PLANA ALLEN M 8 X 25"
+  },
+  {
+    "id": "TORNM415",
+    "description": "TORNILLO CAB. PLANA ALLEN M 8 X 12"
+  },
+  {
+    "id": "TORNM416",
+    "description": "TORNILLO CAB. PLANA ALLEN M 8 X 60"
+  },
+  {
+    "id": "TORNM417",
+    "description": "TORNILLO CAB. PLANA ALLEN M10 X 18"
+  },
+  {
+    "id": "TORNM418",
+    "description": "TORNILLO CAB. PLANA ALLEN M10 X 40"
+  },
+  {
+    "id": "TORNM419",
+    "description": "TORNILLO CAB. PLANA ALLEN M 8 X 10"
+  },
+  {
+    "id": "TORNM420",
+    "description": "TORNILLO CAB. PLANA ALLEN M 8 X 35"
+  },
+  {
+    "id": "TORNM421",
+    "description": "TORNILLO CAB. PLANA ALLEN M 4 X 30"
+  },
+  {
+    "id": "TORNM422",
+    "description": "TORNILLO CAB. PLANA ALLEN M 3 X 10"
+  },
+  {
+    "id": "TORNM423",
+    "description": "TORNILLO CAB. PLANA ALLEN M 2 X 5"
+  },
+  {
+    "id": "TORNM424",
+    "description": "TORNILLO CAB. PLANA ALLEN M 8 X 16"
+  },
+  {
+    "id": "TORNM425",
+    "description": "TORNILLO CAB. PLANA ALLEN M 5 X 20"
+  },
+  {
+    "id": "TORNM426",
+    "description": "TORNILLO CAB. PLANA ALLEN M 6X12"
+  },
+  {
+    "id": "TORNM427",
+    "description": "TORNILLO CAB. PLANA ALLEN 3/16 X 3/4"
+  },
+  {
+    "id": "TORNM428",
+    "description": "TORNILLO CAB. PLANA ALLEN M 6 X 20"
+  },
+  {
+    "id": "TORNM429",
+    "description": "TORNILLO CAB. PLANA ALLEN M 5 X 20"
+  },
+  {
+    "id": "TORNM501",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 4 X 10"
+  },
+  {
+    "id": "TORNM502",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 5 X 10"
+  },
+  {
+    "id": "TORNM503",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 5 X 15"
+  },
+  {
+    "id": "TORNM504",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 6 X 12"
+  },
+  {
+    "id": "TORNM505",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 5 X 20"
+  },
+  {
+    "id": "TORNM506",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 6 X 20"
+  },
+  {
+    "id": "TORNM507",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 6 X 25"
+  },
+  {
+    "id": "TORNM508",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 8 X 20"
+  },
+  {
+    "id": "TORNM509",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M10 X 25"
+  },
+  {
+    "id": "TORNM510",
+    "description": "TORNILLO CAB. PLANA ALLEN INOX. M 6 X 16"
+  },
+  {
+    "id": "TORNM601",
+    "description": "TORNILLO CAB. QUESO M 4 X 10"
+  },
+  {
+    "id": "TORNM602",
+    "description": "TORNILLO CAB. QUESO M 5 X 10"
+  },
+  {
+    "id": "TORNM603",
+    "description": "TORNILLO CAB. QUESO M 6 X 10"
+  },
+  {
+    "id": "TORNM651",
+    "description": "TARNILLO CAB. BOTON ALLEN M 4 X 6 (LLAVE ALLEN)"
+  },
+  {
+    "id": "TORNM652",
+    "description": "TORNILLO CAB. BOTON M 4 X 8 (LLAVE ALLEN)"
+  },
+  {
+    "id": "TORNM653",
+    "description": "TORNILLO CAB. BOTON M 4 X 10 (LLAVE ALLEN)"
+  },
+  {
+    "id": "TORNM654",
+    "description": "TORNILLO CAB. BOTON M 4 X 10 (DESARMADOR DE CRUZ)"
+  },
+  {
+    "id": "TORNM655",
+    "description": "TORNILLO CAB. BOTON M 4 X 50 (LLAVE ALLEN)"
+  },
+  {
+    "id": "TORNM656",
+    "description": "TORNILLO CAB. BOTON M 5 X 12 (LLAVE ALLEN)"
+  },
+  {
+    "id": "TORNM701",
+    "description": "TORNILLO GUIA M12 X 50"
+  },
+  {
+    "id": "TORNM702",
+    "description": "TORNILLO GUIA M12 X 80"
+  },
+  {
+    "id": "TORNM703",
+    "description": "TORNILLO GUIA M 8 X 16"
+  },
+  {
+    "id": "TORNM704",
+    "description": "TORNILLO GUIA M10 X 50"
+  },
+  {
+    "id": "TORNM705",
+    "description": "TORNILLO GUIA M16 X 40"
+  },
+  {
+    "id": "TORNM706",
+    "description": "TORNILLO GUIA M16 X 40"
+  },
+  {
+    "id": "TORNS001",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/16 X 3/4\""
+  },
+  {
+    "id": "TORNS002",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/16 X 1\""
+  },
+  {
+    "id": "TORNS003",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/16 X 1 1/2\""
+  },
+  {
+    "id": "TORNS004",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/16 X 2\""
+  },
+  {
+    "id": "TORNS005",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/16 X 2 1/2\""
+  },
+  {
+    "id": "TORNS006",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 3/4\""
+  },
+  {
+    "id": "TORNS007",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 1\""
+  },
+  {
+    "id": "TORNS008",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 1 1/4\""
+  },
+  {
+    "id": "TORNS009",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 1 1/2\""
+  },
+  {
+    "id": "TORNS010",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 2\""
+  },
+  {
+    "id": "TORNS011",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 2 1/2\""
+  },
+  {
+    "id": "TORNS012",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 4 1/2\""
+  },
+  {
+    "id": "TORNS013",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 1\""
+  },
+  {
+    "id": "TORNS014",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 1 1/4\""
+  },
+  {
+    "id": "TORNS015",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 1 1/2\""
+  },
+  {
+    "id": "TORNS016",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 2\""
+  },
+  {
+    "id": "TORNS017",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 3\""
+  },
+  {
+    "id": "TORNS018",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 3 1/2\""
+  },
+  {
+    "id": "TORNS019",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 4\""
+  },
+  {
+    "id": "TORNS020",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 4 1/2\""
+  },
+  {
+    "id": "TORNS021",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 3/4\""
+  },
+  {
+    "id": "TORNS022",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 1\""
+  },
+  {
+    "id": "TORNS023",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 1 1/4\""
+  },
+  {
+    "id": "TORNS024",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 1 1/2\""
+  },
+  {
+    "id": "TORNS025",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 2 1/2\""
+  },
+  {
+    "id": "TORNS026",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 3\""
+  },
+  {
+    "id": "TORNS027",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 3 1/2\""
+  },
+  {
+    "id": "TORNS028",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 4\""
+  },
+  {
+    "id": "TORNS029",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 6\""
+  },
+  {
+    "id": "TORNS030",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 7/16 X 3\""
+  },
+  {
+    "id": "TORNS031",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/8 X 2\""
+  },
+  {
+    "id": "TORNS032",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/8 X 2 3/4\""
+  },
+  {
+    "id": "TORNS033",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 4 1/4\""
+  },
+  {
+    "id": "TORNS034",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 3/16 X 1/2\""
+  },
+  {
+    "id": "TORNS035",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 6\""
+  },
+  {
+    "id": "TORNS036",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4 X 3\""
+  },
+  {
+    "id": "TORNS037",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 1/4” X 1/2”"
+  },
+  {
+    "id": "TORNS039",
+    "description": "TORNILLO CAB. CILINDRICA ALLEN 5/16 X 3/4”"
+  },
+  {
+    "id": "TORNS201",
+    "description": "TORNILLO CAB. DE GOTA ALLEN 5/16 X 1 1/2\""
+  },
+  {
+    "id": "TORNS202",
+    "description": "TORNILLO CAB. DE GOTA ALLEN 5/16 X 1\""
+  },
+  {
+    "id": "TORNS203",
+    "description": "TORNILLO CAB. DE GOTA ALLEN 5/16 X 2\""
+  },
+  {
+    "id": "TORNS204",
+    "description": "TORNILLO CAB. DE GOTA ALLEN 5/16 X 2 1/4\""
+  },
+  {
+    "id": "TORNS301",
+    "description": "TORNILLO CAB. HEX 1/4 X 1 1/2\""
+  },
+  {
+    "id": "TORNS302",
+    "description": "TORNILLO CAB. HEX 5/16 X 3/4\""
+  },
+  {
+    "id": "TORNS303",
+    "description": "TORNILLO CAB. HEX 5/16 X 1\" GALV."
+  },
+  {
+    "id": "TORNS304",
+    "description": "TORNILLO CAB. HEX 5/16 X 2\" GALV."
+  },
+  {
+    "id": "TORNS305",
+    "description": "TORNILLO CAB. HEX 3/8 X 1\" GALV."
+  },
+  {
+    "id": "TORNS306",
+    "description": "TORNILLO CAB. HEX 3/8 X 1 1/2\" GALV."
+  },
+  {
+    "id": "TORNS307",
+    "description": "TORNILLO CAB. HEX 3/8 X 2\""
+  },
+  {
+    "id": "TORNS308",
+    "description": "TORNILLO CAB. HEX 3/8 X 2 1/2\" GALV."
+  },
+  {
+    "id": "TORNS309",
+    "description": "TORNILLO CAB. HEX 7/16 X 1 1/2\""
+  },
+  {
+    "id": "TORNS310",
+    "description": "TORNILLO CAB. HEX 7/16 X 2 1/2\""
+  },
+  {
+    "id": "TORNS311",
+    "description": "TORNILLO CAB. HEX 1/2 X 1 1/2\""
+  },
+  {
+    "id": "TORNS312",
+    "description": "TORNILLO CAB. HEX 1/2 X 3 1/2\""
+  },
+  {
+    "id": "TORNS313",
+    "description": "TORNILLO CAB. HEX 5/8 X 1 1/2\""
+  },
+  {
+    "id": "TORNS314",
+    "description": "TORNILLO CAB. HEX 5/8 X 3 1/2\" GALV."
+  },
+  {
+    "id": "TORNS315",
+    "description": "TORNILLO CAB. HEX 3/4 X 1 1/2\""
+  },
+  {
+    "id": "TORNS316",
+    "description": "TORNILLO CAB. HEX 3/4 X 2\""
+  },
+  {
+    "id": "TORNS317",
+    "description": "TORNILLO CAB. HEX 3/4 X 4\""
+  },
+  {
+    "id": "TORNS318",
+    "description": "TORNILLO CAB. HEX 3/4 X 5 1/2\""
+  },
+  {
+    "id": "TORNS319",
+    "description": "TORNILLO CAB. HEX 1/2 X 2 GALV."
+  },
+  {
+    "id": "TORNS320",
+    "description": "TORNILLO CAB. HEX 1/2 X 3"
+  },
+  {
+    "id": "TORNS321",
+    "description": "TORNILLO CAB. HEX 5/8 X 2"
+  },
+  {
+    "id": "TORNS322",
+    "description": "TORNILLO CAB. HEX 5/16 X 2"
+  },
+  {
+    "id": "TORNS323",
+    "description": "TORNILLO CAB. HEX 5/8 X 3 1/2\""
+  },
+  {
+    "id": "TORNS324",
+    "description": "TORNILLO CAB. HEX 3/8 X 1 1/4\" GALV."
+  },
+  {
+    "id": "TORNS325",
+    "description": "TORNILLO CAB. HEX 3/8 X 1 1/4\" GALV."
+  },
+  {
+    "id": "TORNS326",
+    "description": "TORNILLO CAB. HEX 1/2 X 4 1/2\""
+  },
+  {
+    "id": "TORNS330",
+    "description": "TORNILLO CAB. HEX 5/16 X 2 1/2\""
+  },
+  {
+    "id": "TORNS338",
+    "description": "TORNILLO CAB. HEX 5/8” X 2 1/2” INOX."
+  },
+  {
+    "id": "TORNS401",
+    "description": "TORNILLO CAB. PLANA ALLEN 3/16 X 1 1/4\""
+  },
+  {
+    "id": "TORNS402",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/4 X 1\""
+  },
+  {
+    "id": "TORNS403",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/4 X 1 1/4\""
+  },
+  {
+    "id": "TORNS404",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/4 X 1 1/2\""
+  },
+  {
+    "id": "TORNS405",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/4 X 2\""
+  },
+  {
+    "id": "TORNS406",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/4 X 2 1/2\""
+  },
+  {
+    "id": "TORNS407",
+    "description": "TORNILLO CAB. PLANA ALLEN 3/8 X 1 1/2\""
+  },
+  {
+    "id": "TORNS408",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/2 X 3\""
+  },
+  {
+    "id": "TORNS409",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/2 X 3/4\""
+  },
+  {
+    "id": "TORNS410",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/4 X 2 1/4\""
+  },
+  {
+    "id": "TORNS411",
+    "description": "TORNILLO CAB. PLANA ALLEN 3/16 X 1/2\""
+  },
+  {
+    "id": "TORNS412",
+    "description": "TORNILLO CAB. PLANA ALLEN 1/4 X 3/4”"
+  },
+  {
+    "id": "TORNS701",
+    "description": "TORNILLO GUIA ALLEN 1/2 X 1 1/2\""
+  },
+  {
+    "id": "TORNS702",
+    "description": "TORNILLO GUIA ALLEN 1/2 X 1 1/4\""
+  },
+  {
+    "id": "TRAP-001",
+    "description": "TRAPO DE ALGODON"
+  },
+  {
+    "id": "TRAZ-001",
+    "description": "TRAZADOR MARCA MITUTOYO \r\nMODELO;900258"
+  },
+  {
+    "id": "TUBO-001",
+    "description": "TUBO CONDUIT PARED DELGADA 2\""
+  },
+  {
+    "id": "TUERM001",
+    "description": "TUERCA HEX. 4mm."
+  },
+  {
+    "id": "TUERM002",
+    "description": "TUERCA HEX. 6mm."
+  },
+  {
+    "id": "TUERM003",
+    "description": "TUERCA HEX. 8mm."
+  },
+  {
+    "id": "TUERM004",
+    "description": "TUERCA HEX. 12mm."
+  },
+  {
+    "id": "TUERM005",
+    "description": "TUERCA HEX. 16mm."
+  },
+  {
+    "id": "TUERM006",
+    "description": "TUERCA HEX. 24mm."
+  },
+  {
+    "id": "TUERM007",
+    "description": "TUERCA HEX. DE SEGURIDAD 16mm."
+  },
+  {
+    "id": "TUERM008",
+    "description": "TUERCA P/RAN.40 M8 (ITEM)"
+  },
+  {
+    "id": "TUERM009",
+    "description": "Tuerca FAG KM-16"
+  },
+  {
+    "id": "TUERM010",
+    "description": "TUERCA HEX. 20mm."
+  },
+  {
+    "id": "TUERM011",
+    "description": "TUERCA HEX. 10mm."
+  },
+  {
+    "id": "TUERM012",
+    "description": "TUERCA HEX. 3mm."
+  },
+  {
+    "id": "TUERM013",
+    "description": "TUERCA HEX. 5mm."
+  },
+  {
+    "id": "TUERM014",
+    "description": "TUERCA HEX. DE SEGURIDAD 12mm"
+  },
+  {
+    "id": "TUERM015",
+    "description": "TUERCA P/RAN.40 M4 (ITEM)"
+  },
+  {
+    "id": "TUERM016",
+    "description": "TUERCA P/RAN.40 M5 (ITEM)"
+  },
+  {
+    "id": "TUERM017",
+    "description": "TUERCA P/RAN.40 M6 (ITEM)"
+  },
+  {
+    "id": "TUERM018",
+    "description": "TUERCA HEX. 18MM"
+  },
+  {
+    "id": "TUERM019",
+    "description": "TUERCA HEX. DE SEGURIDAD 20MM"
+  },
+  {
+    "id": "TUERM020",
+    "description": "TUERCA HEX. DE SEGUIRIDAD 14MM"
+  },
+  {
+    "id": "TUERM021",
+    "description": "TUERCA HEX. DE SEGURIDAD 10MM"
+  },
+  {
+    "id": "TUERM022",
+    "description": "TUERCA HEX. DE SEGURIDAD 16mm. INOX."
+  },
+  {
+    "id": "TUERS001",
+    "description": "TUERCA CIEGA 1/2\""
+  },
+  {
+    "id": "TUERS002",
+    "description": "TUERCA HEX. 1/4\""
+  },
+  {
+    "id": "TUERS003",
+    "description": "TUERCA HEX. 5/16\" GALV"
+  },
+  {
+    "id": "TUERS004",
+    "description": "TUERCA HEX. 3/8\""
+  },
+  {
+    "id": "TUERS005",
+    "description": "TUERCA HEX. 1/2\""
+  },
+  {
+    "id": "TUERS006",
+    "description": "TUERCA HEX. 5/8\""
+  },
+  {
+    "id": "TUERS007",
+    "description": "TUERCA HEX. 3/4\""
+  },
+  {
+    "id": "TUERS008",
+    "description": "TUERCA HEX. 1\""
+  },
+  {
+    "id": "TUERS009",
+    "description": "TUERCA HEX. DE SEGURIDAD 1/4\""
+  },
+  {
+    "id": "TUERS010",
+    "description": "TUERCA HEX. DE SEGURIDAD 1/2\""
+  },
+  {
+    "id": "TUERS011",
+    "description": "TUERCA HEX. INOX. 3/8\""
+  },
+  {
+    "id": "TUERS012",
+    "description": "TUERCA HEX. INOX. 1/2\""
+  },
+  {
+    "id": "TUERS013",
+    "description": "TUERCA UNION GALV. ROSC. 150 LBS. 1/2\""
+  },
+  {
+    "id": "TUERS014",
+    "description": "TUERCA FLAGE (CON PESTAÑA) 1/2\""
+  },
+  {
+    "id": "TUERS015",
+    "description": "TUERCA ACME 1/2\""
+  },
+  {
+    "id": "TUERS016",
+    "description": "TUERCA HEX. 5/16\""
+  },
+  {
+    "id": "TUERS017",
+    "description": "TUERCA UNION GALV HIERRO ROSC 150 LBS DE 1\""
+  },
+  {
+    "id": "TUERS018",
+    "description": "TUERCA HEX INOX 1/4\""
+  },
+  {
+    "id": "TUERS019",
+    "description": "TUERCA HEX INOX 5/16\""
+  },
+  {
+    "id": "TUERS020",
+    "description": "TUERCA HEX INOX 7/16\""
+  },
+  {
+    "id": "TUERS021",
+    "description": "TUERCA HEX. INOX. 1\""
+  },
+  {
+    "id": "TUERS022",
+    "description": "TUERCA HEX. 1 1/2\" - 6 HILOS"
+  },
+  {
+    "id": "TUERS023",
+    "description": "TUERCA HEX. 2\" - 4 1/2 HILOS"
+  },
+  {
+    "id": "TUERS026",
+    "description": "TUERCA DE SEGURIDAD INOX. 5/8”"
+  },
+  {
+    "id": "VALV-001",
+    "description": "VALVULA BOLA BCE 555 DE 1/2\""
+  },
+  {
+    "id": "VENTS001",
+    "description": "VENTILA SUPERVENTS 1/4\" X 8mm"
+  },
+  {
+    "id": "VENTS002",
+    "description": "VENTILA SUPERVENTS 5/16 X 8mm"
+  },
+  {
+    "id": "VENTS003",
+    "description": "VENTILA SUPERVENTS 3/8\" X 8mm"
+  },
+  {
+    "id": "VENTS004",
+    "description": "VENTILA SUPERVENTS 1/2\" X 8mm"
+  },
+  {
+    "id": "VENTS005",
+    "description": "VENTILA DE REJILLA DE 1/4\" X 8 mm APER 0.5"
+  },
+  {
+    "id": "VENTS006",
+    "description": "VENTILA DE REJILLA DE 5/16\" X 8mm APER. 0.3"
+  },
+  {
+    "id": "VENTS007",
+    "description": "VENTILA DE REJILLA DE 3/8\" X 8mm"
+  },
+  {
+    "id": "VENTS008",
+    "description": "VENTILA DE REJILLA DE 1/2\" X 8mm APER. 0.3"
+  },
+  {
+    "id": "VENTS009",
+    "description": "VENTILA DE REJILLA DE 3/4\" X 8mm APER 0.3"
+  },
+  {
+    "id": "VENTS010",
+    "description": "VENTILA RANURADA DE LATON DE 5/16\""
+  },
+  {
+    "id": "VENTS011",
+    "description": "VENTILA RANURADA DE LATON DE 3/8\""
+  },
+  {
+    "id": "VENTS012",
+    "description": "VENTILA DE REJILLA DE LATON DE 5/16\""
+  },
+  {
+    "id": "VENTS013",
+    "description": "VENTILA DE REJILLA DE LATON DE 3/8\""
+  },
+  {
+    "id": "VINI-001",
+    "description": "VINILICA BLANCO SATINADO"
+  },
+  {
+    "id": "ZAPA-001",
+    "description": "ZAPATA DE OJILLO 12 - 10 1/4"
+  },
+  {
+    "id": "ZAPA-002",
+    "description": "ZAPATA DE OJILLO 12 -10 3/16"
+  },
+  {
+    "id": "ZAPA-003",
+    "description": "ZAPATA DE OJILLO C-4 3/8"
+  },
+  {
+    "id": "ZAPA-004",
+    "description": "ZAPATA DE OJILLO 16 - 14 1/8"
+  },
+  {
+    "id": "ZAPA-005",
+    "description": "ZAPATA DE OJILLO 16 - 14 1/4"
+  },
+  {
+    "id": "ZAPA-006",
+    "description": "ZAPATA DE OJILLO 16 - 14 3/16"
+  },
+  {
+    "id": "ZAPA-007",
+    "description": "ZAPATA DE OJILLO C-6 3/16"
+  },
+  {
+    "id": "ZAPA-008",
+    "description": "ZAPATA DE OJILLO C-2 5/16"
+  },
+  {
+    "id": "ZAPA-009",
+    "description": "ZAPATA BRONCE 300 A SKU:109"
+  },
+  {
+    "id": "ZAPA-010",
+    "description": "ZAPATA COBRE 300 A CABLE 1/0 2/0 #43-04 TO SKU: 1167"
+  },
+  {
+    "id": "ZAPA-011",
+    "description": "ZAPATA TERM. CU. CAL. 1/0 CAÑON CORTO OJILLO 5/16\""
+  }
+]

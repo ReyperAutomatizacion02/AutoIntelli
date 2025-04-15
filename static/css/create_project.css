@@ -1,0 +1,185 @@
+/* static/css/create_project.css */
+
+/* --- Variables de Color (Asumiendo herencia o copia) --- */
+:root {
+    --primario: #D42D2E;
+    --secundario: #000000;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --gris-oscuro: #181A1B;
+    --gris-claro: #858585;
+    --gris: #313131;
+    --gris-t: #313131d5;
+    --input-bg: #414141;
+    --input-border: #555;
+    --input-text: #e0e0e0;
+    --success-bg: #2a573a;
+    --success-text: #a7d7b4;
+    --error-bg: #4d2429;
+    --error-text: #f1b0b7;
+    --processing-text: #f0ad4e;
+}
+
+/* --- Estilos para el CONTENEDOR PRINCIPAL --- */
+#create-project-wrapper {
+    max-width: 650px; /* Un poco más estrecho quizás? Ajusta */
+    margin: 3rem auto;
+    padding: 25px 35px;
+    background-color: var(--gris-t);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 95%;
+    color: var(--blanco);
+}
+
+/* --- Título de la Página --- */
+#create-project-wrapper .titulo-pagina {
+    color: var(--primario);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--primario);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Secciones/Grupos del Formulario --- */
+#create-project-wrapper .form-section {
+    margin-bottom: 1.5rem; /* Espacio entre secciones si añades más */
+}
+#create-project-wrapper .form-group {
+    margin-bottom: 20px; /* Espacio debajo de cada grupo label/input */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* --- Labels --- */
+#create-project-wrapper label {
+    font-weight: 600;
+    color: var(--gris-claro);
+    font-size: 1.4rem;
+}
+
+/* --- Inputs --- */
+#create-project-wrapper input[type="text"],
+#create-project-wrapper input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    font-size: 1.5rem;
+    font-family: 'Onest', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#create-project-wrapper input:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3);
+}
+
+/* --- Contenedor del Botón --- */
+#create-project-wrapper .button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* --- Botón Principal --- */
+#create-project-wrapper button[type="submit"] {
+    background-color: var(--primario);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#create-project-wrapper button[type="submit"]:hover {
+    background-color: #b02122;
+}
+#create-project-wrapper button[type="submit"]:active {
+    transform: scale(0.98);
+}
+#create-project-wrapper button[type="submit"]:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- Contenedor de Resultados --- */
+#create-project-wrapper #result { /* Aplica a #result dentro del wrapper */
+    margin-top: 2.5rem;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.5rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+#create-project-wrapper #result.processing {
+    border-color: var(--processing-text);
+    color: var(--processing-text);
+    background-color: rgba(240, 173, 78, 0.1);
+}
+#create-project-wrapper #result.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: var(--success-text);
+}
+#create-project-wrapper #result.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border-color: var(--error-text);
+}
+
+/* --- Media Queries (Ajustes Responsivos Opcionales) --- */
+@media (max-width: 768px) {
+    #create-project-wrapper {
+        padding: 20px 25px;
+        width: 98%;
+    }
+    #create-project-wrapper .titulo-pagina {
+        font-size: 2.4rem;
+    }
+    #create-project-wrapper button[type="submit"] {
+        padding: 10px 25px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+     #create-project-wrapper {
+        padding: 15px 20px;
+    }
+    #create-project-wrapper .titulo-pagina {
+        font-size: 2rem;
+    }
+    #create-project-wrapper label {
+        font-size: 1.3rem;
+    }
+     #create-project-wrapper input {
+        font-size: 1.4rem;
+        padding: 8px 10px;
+    }
+    #create-project-wrapper button[type="submit"] {
+        font-size: 1.4rem;
+    }
+     #create-project-wrapper #result {
+        font-size: 1.4rem;
+    }
+}

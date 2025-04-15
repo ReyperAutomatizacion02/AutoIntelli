@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título con bloque para personalización -->
+    <title>{% block title %}AutoIntelli{% endblock %}</title>
+    <!-- CSS Común -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <link rel="preload" href="{{ url_for('static', filename='css/styles.css') }}" as="style">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <!-- Fuentes Comunes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Major+Mono+Display&family=Onest:wght@100..900&family=Orbitron:wght@400..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Bloque para CSS/JS extra específicos de cada página en el head -->
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <!-- HEADER COMÚN (Exactamente como lo tenías en index.html) -->
+    <header>
+        <div class="header">
+            <a href="{{ url_for('index') }}" class="logo-link"> <!-- Enlace en el logo -->
+                <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo AutoIntelli - Ir al Inicio">
+            </a>
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-trigger" href="#" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">
+                            Notion
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url_for('notion_request_index') }}">Solicitudes de Materiales</a>
+                            <a class="dropdown-item" href="{{ url_for('adjust_dates') }}">Ajuste de horarios</a>
+                            <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li>
+                        <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="auth-links">
+            <ul class="navbar-nav">
+                {% if current_user.is_authenticated %}
+                    <li>
+                        <span class="usuario">{{ current_user.username }}</span>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{ url_for('login') }}">Accesar</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('register') }}">Registrate</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+
+    <!-- Bloque principal para el contenido específico de cada página -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Scripts JS Comunes -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <!-- Bloque para Scripts extra específicos de cada página al final del body -->
+    {% block scripts_extra %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,47 @@
+/AutoIntelli_Project/
+|-- .env
+|-- .gotignore
+|-- app.py
+|-- crono.txt
+|-- mH2.py
+|-- notion_integration.log
+|-- nuevosRegistros.py
+|-- README.md
+|-- requirements.txt
+|-- /_pycahe_/
+|-- /.venv/
+|-- /.vscode/
+|-- /instance/
+|-- /migrations/
+|-- /static/
+|   |-- /css/
+|   |   |-- adjust_dates.css
+|   |   |-- awesomplete.min.css
+|   |   |-- create_project.css
+|   |   |-- login.css
+|   |   |-- recover_password.css
+|   |   |-- register.css
+|   |   |-- request_for_material.css
+|   |   |-- styles.css
+|   |-- /data/
+|   |   |-- accesorios.csv
+|   |   |-- accesorios.json
+|   |   |-- standard_dimensions_by_unit.json
+|   |   |-- torni_items_masterlist.json
+|   |-- /img/
+|   |   |-- favicon.ico
+|   |   |-- logo_reyper.png
+|   |   |-- logo.png
+|   |   |-- machine.jpg
+|   |-- /js/
+|   |   |-- awesomplete.min.js
+|   |   |-- request_for_material.js
+|-- /templates/
+|   |-- adjust_dates.html
+|   |-- base.html
+|   |-- create_project.html
+|   |-- index.html
+|   |-- login.html
+|   |-- recover_password.html
+|   |-- register.html
+|   |-- request_for_material.html

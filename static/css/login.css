@@ -1,0 +1,248 @@
+/* static/css/login.css */
+
+/* --- Variables (Importa o copia las necesarias) --- */
+:root {
+    --primario: #D42D2E;
+    --blanco: #FFFFFF;
+    --gris-oscuro: #181A1B;
+    --gris-claro: #858585;
+    --gris: #313131;
+    --gris-t: #313131d5; /* Fondo del contenedor */
+    --primario-acc: #FF2037;
+    --input-bg: #414141;
+    --input-border: #555;
+    --input-text: #e0e0e0;
+    --azul-marino-trans:#257787ca;
+    --success-bg: #2a573a; /* Fondo para mensajes success */
+    --success-text: #a7d7b4;
+    --error-bg: #4d2429;   /* Fondo para mensajes danger */
+    --error-text: #f1b0b7;
+    --info-bg: #1d3b5e;    /* Fondo para mensajes info */
+    --info-text: #a8cffc;
+    --Onest: "Onest", sans-serif;
+    --Orbitron: "Orbitron", sans-serif;
+}
+
+/* --- ELIMINA las reglas para 'html' y 'body' --- */
+
+/* --- Estilo para el WRAPPER principal --- */
+#login-wrapper {
+    max-width: 500px; /* Ancho del contenedor de login */
+    margin: 5rem auto; /* Margen arriba/abajo y centrado */
+    padding: 30px 40px; /* Padding interno */
+    background-color: var(--gris-t);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    text-align: center; /* Centra elementos como el título y el botón por defecto */
+    position: relative; /* Contexto para posicionar mensajes */
+    box-sizing: border-box;
+    width: 90%;
+}
+
+/* --- Contenedor del Formulario --- */
+#login-wrapper .login-form-container {
+    /* Puede necesitar estilos si quieres separar visualmente */
+    margin-top: 1rem;
+}
+
+#login-wrapper h2 { /* Título "Acceso" */
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    font-weight: normal;
+}
+
+/* --- Grupos de Formulario --- */
+#login-wrapper .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Alinea label a la izquierda */
+}
+#login-wrapper .form-group.form-action {
+    text-align: center; /* Centra el botón */
+    margin-top: 25px;
+}
+
+#login-wrapper label {
+    display: block;
+    margin-bottom: 8px; /* Aumentado espacio */
+    color: var(--gris-claro);
+    font-size: 1.3rem; /* Ligeramente más pequeño */
+    font-weight: 600;
+}
+
+/* --- Inputs --- */
+#login-wrapper input[type="text"],
+#login-wrapper input[type="password"] {
+    width: 100%;
+    /* max-width: 30rem; /* Quitado, el wrapper ya limita */
+    padding: 10px 12px;
+    margin-bottom: 0; /* Quitamos margen inferior, el .form-group lo maneja */
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    font-size: 1.5rem;
+    font-family: var(--Onest);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#login-wrapper input:focus {
+     outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3);
+}
+
+/* --- Botón --- */
+#login-wrapper button[type="submit"] {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 10px 25px; /* Ajustado padding */
+    border: none;
+    border-radius: 6px; /* Igual que inputs */
+    cursor: pointer;
+    font-size: 1.5rem; /* Consistente */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-family: var(--Ubuntu);
+    text-transform: uppercase;
+}
+#login-wrapper button[type="submit"]:hover {
+    background-color: #b02122;
+}
+#login-wrapper button[type="submit"]:active {
+     transform: scale(0.98);
+}
+
+/* --- Links del Formulario --- */
+#login-wrapper .form-links-group {
+    margin-top: 25px;
+    font-size: 1.3rem;
+}
+#login-wrapper .form-links {
+    margin-bottom: 10px;
+    display: flex; /* Para espaciar links si hay varios */
+    justify-content: center;
+    gap: 15px; /* Espacio entre links */
+}
+#login-wrapper .form-links a {
+    color: var(--azul-marino-trans);
+    text-decoration: none;
+    padding: 5px; /* Reducido padding */
+    margin-top: 0; /* Quitamos margen superior */
+}
+#login-wrapper .form-links a:hover {
+    text-decoration: underline;
+}
+#login-wrapper .password-link {
+    margin-top: 15px; /* Más espacio para link de olvido */
+    font-size: 1.2rem;
+}
+
+/* --- Mensajes Flash (Posicionamiento tipo Toast) --- */
+#login-wrapper .message-container {
+    /* Este contenedor no se ve, solo posiciona */
+    position: absolute;
+    top: 15px; /* Distancia desde arriba DEL WRAPPER */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px); /* Ancho casi completo del wrapper */
+    max-width: 400px; /* Pero no más de 400px */
+    z-index: 1050; /* Encima de otros elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio entre mensajes si hay varios */
+}
+
+#login-wrapper .flash-message {
+    padding: 12px 18px; /* Más padding */
+    margin-bottom: 0; /* Ya no es necesario, gap lo maneja */
+    border: 1px solid transparent; /* Borde base */
+    border-radius: 6px;
+    color: var(--blanco); /* Color base */
+    background-color: var(--gris); /* Fondo base oscuro */
+    text-align: center;
+    width: 100%; /* Ocupa el ancho del message-container */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out; /* Añadida transición de transform */
+    font-size: 1.4rem;
+}
+/* Estilos específicos por categoría */
+#login-wrapper .flash-message.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: var(--success-text);
+}
+#login-wrapper .flash-message.danger {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border-color: var(--error-text);
+}
+#login-wrapper .flash-message.info {
+     background-color: var(--info-bg);
+    color: var(--info-text);
+    border-color: var(--info-text);
+}
+/* Clase para desvanecer/deslizar */
+#login-wrapper .flash-message.fade-out {
+    opacity: 0;
+    transform: translateY(-20px); /* Efecto de deslizar hacia arriba al desaparecer */
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    #login-wrapper {
+        margin: 3rem auto;
+        padding: 25px 30px;
+        width: 90%;
+    }
+    #login-wrapper .titulo-login {
+        font-size: 3.5rem;
+    }
+    #login-wrapper .lottie-icon-login {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+     #login-wrapper {
+        margin: 2rem auto;
+        padding: 20px 25px;
+        width: 95%;
+    }
+    #login-wrapper .titulo-login {
+        font-size: 3rem;
+    }
+    #login-wrapper .lottie-icon-login {
+        width: 80px;
+        height: 80px;
+        margin-top: -1rem;
+    }
+     #login-wrapper h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+     #login-wrapper input[type="text"],
+     #login-wrapper input[type="password"] {
+        font-size: 1.4rem;
+        padding: 8px 10px;
+    }
+     #login-wrapper button[type="submit"] {
+        font-size: 1.4rem;
+        padding: 9px 20px;
+    }
+    #login-wrapper .form-links-group {
+        font-size: 1.2rem;
+    }
+     #login-wrapper .flash-message {
+        font-size: 1.3rem;
+        padding: 10px 15px;
+    }
+     #login-wrapper .message-container {
+        top: 10px;
+        width: calc(100% - 30px);
+    }
+}
