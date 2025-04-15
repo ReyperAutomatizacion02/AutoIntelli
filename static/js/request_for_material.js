@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Datos del formulario a enviar:', datosSolicitud);
 
             // 5. Fetch al backend
-            fetch('http://127.0.0.1:5000/submit-request', { method: 'POST', headers: { 'Content-Type': 'application/json', }, body: JSON.stringify(datosSolicitud) })
+            fetch('/submit-request', { method: 'POST', headers: { 'Content-Type': 'application/json', }, body: JSON.stringify(datosSolicitud) })
             .then(response => { if (!response.ok) { return response.json().then(errData => { let msg = errData.error || `Error: ${response.status}`; if(errData.notion_error) msg += ` (Notion: ${errData.notion_error.message})`; throw new Error(msg); }).catch(()=> {throw new Error(`Error: ${response.status}`)})}; return response.json(); })
             .then(data => {
                 console.log('Respuesta backend:', data);
