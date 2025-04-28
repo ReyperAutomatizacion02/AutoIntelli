@@ -30,8 +30,8 @@
                             Notion
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url_for('notion_request_index') }}">Solicitudes de Materiales</a>
-                            <a class="dropdown-item" href="{{ url_for('adjust_dates') }}">Ajuste de horarios</a>
+                            <a class="dropdown-item" href="{{ url_for('solicitudes.request_for_material_index') }}">Solicitudes de Materiales</a> {# Endpoint: 'nombre_blueprint.nombre_funcion' #}
+                            <a class="dropdown-item" href="{{ url_for('ajustes.adjust_dates_page') }}">Ajuste de horarios</a>
                             <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
                         </div>
                     </li>

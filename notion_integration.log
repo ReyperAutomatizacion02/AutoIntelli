@@ -11154,3 +11154,1319 @@
 2025-04-15 14:40:58,121 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
 2025-04-15 14:41:03,264 - werkzeug - WARNING -  * Debugger is active!
 2025-04-15 14:41:03,271 - werkzeug - INFO -  * Debugger PIN: 810-284-793
+2025-04-15 15:54:29,390 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+2025-04-15 15:54:29,391 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 15:54:29,409 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 15:54:34,387 - werkzeug - WARNING -  * Debugger is active!
+2025-04-15 15:54:34,397 - werkzeug - INFO -  * Debugger PIN: 810-284-793
+2025-04-15 15:54:38,342 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:38] "GET / HTTP/1.1" 200 -
+2025-04-15 15:54:38,450 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 15:54:38,459 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:38] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-15 15:54:38,473 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:38] "[36mGET /static/img/machine.jpg HTTP/1.1[0m" 304 -
+2025-04-15 15:54:38,822 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:38] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2025-04-15 15:54:42,663 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:42] "GET /login HTTP/1.1" 200 -
+2025-04-15 15:54:42,696 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 15:54:42,702 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:42] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-04-15 15:54:42,704 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:42] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-15 15:54:47,180 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-04-15 15:54:47,517 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:47] "GET / HTTP/1.1" 200 -
+2025-04-15 15:54:47,550 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 15:54:47,553 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:47] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,452 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "GET /notion-request HTTP/1.1" 200 -
+2025-04-15 15:54:51,495 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,505 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/css/awesomplete.min.css HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,506 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/css/request_for_material.css HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,509 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,511 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/js/awesomplete.min.js HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,515 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/js/request_for_material.js HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,530 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/data/standard_dimensions_by_unit.json HTTP/1.1[0m" 304 -
+2025-04-15 15:54:51,531 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:54:51] "[36mGET /static/data/torni_items_masterlist.json HTTP/1.1[0m" 304 -
+2025-04-15 15:55:08,590 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/pages "HTTP/1.1 200 OK"
+2025-04-15 15:55:09,172 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/pages "HTTP/1.1 200 OK"
+2025-04-15 15:55:09,278 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:55:09] "POST /submit-request HTTP/1.1" 200 -
+2025-04-15 15:58:22,331 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "GET /notion-request HTTP/1.1" 200 -
+2025-04-15 15:58:22,363 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 15:58:22,379 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/css/awesomplete.min.css HTTP/1.1[0m" 304 -
+2025-04-15 15:58:22,380 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-15 15:58:22,380 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/js/awesomplete.min.js HTTP/1.1[0m" 304 -
+2025-04-15 15:58:22,381 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/css/request_for_material.css HTTP/1.1[0m" 304 -
+2025-04-15 15:58:22,410 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "GET /static/js/request_for_material.js HTTP/1.1" 200 -
+2025-04-15 15:58:22,461 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/data/standard_dimensions_by_unit.json HTTP/1.1[0m" 304 -
+2025-04-15 15:58:22,462 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/data/torni_items_masterlist.json HTTP/1.1[0m" 304 -
+2025-04-15 15:58:22,516 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:22] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2025-04-15 15:58:32,006 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/pages "HTTP/1.1 200 OK"
+2025-04-15 15:58:32,382 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/pages "HTTP/1.1 200 OK"
+2025-04-15 15:58:32,493 - werkzeug - INFO - 127.0.0.1 - - [15/Apr/2025 15:58:32] "POST /submit-request HTTP/1.1" 200 -
+2025-04-15 16:08:35,869 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\graphviz\\__init__.py', reloading
+2025-04-15 16:08:36,452 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\graphviz\\graphs.py', reloading
+2025-04-15 16:08:36,492 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\graphviz\\dot.py', reloading
+2025-04-15 16:08:36,542 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\graphviz\\quoting.py', reloading
+2025-04-15 16:08:36,579 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\graphviz\\base.py', reloading
+2025-04-15 16:08:36,867 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 16:08:42,103 - werkzeug - WARNING -  * Debugger is active!
+2025-04-15 16:08:42,110 - werkzeug - INFO -  * Debugger PIN: 810-284-793
+2025-04-15 16:08:42,161 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\exceptions.py', reloading
+2025-04-15 16:08:42,162 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\loaders.py', reloading
+2025-04-15 16:08:42,183 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\runtime.py', reloading
+2025-04-15 16:08:42,207 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\utils.py', reloading
+2025-04-15 16:08:42,225 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jsonschema_specifications\\__init__.py', reloading
+2025-04-15 16:08:42,239 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\kiwisolver\\__init__.py', reloading
+2025-04-15 16:08:42,268 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\kiwisolver\\exceptions.py', reloading
+2025-04-15 16:08:42,278 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\mako\\__init__.py', reloading
+2025-04-15 16:08:42,295 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\markupsafe\\__init__.py', reloading
+2025-04-15 16:08:42,310 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\mpremote\\__init__.py', reloading
+2025-04-15 16:08:42,325 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\__init__.py', reloading
+2025-04-15 16:08:42,361 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\dataframe.py', reloading
+2025-04-15 16:08:42,388 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\dtypes.py', reloading
+2025-04-15 16:08:42,415 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\expr.py', reloading
+2025-04-15 16:08:42,443 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\functions.py', reloading
+2025-04-15 16:08:42,463 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\schema.py', reloading
+2025-04-15 16:08:42,487 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\series.py', reloading
+2025-04-15 16:08:42,551 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\translate.py', reloading
+2025-04-15 16:08:42,580 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\narwhals\\utils.py', reloading
+2025-04-15 16:08:42,611 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\notion_client\\errors.py', reloading
+2025-04-15 16:08:42,776 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User2\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\numpy\\_typing\\_extended_precision.py', reloading
+2025-04-15 16:08:43,300 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 16:08:48,131 - werkzeug - WARNING -  * Debugger is active!
+2025-04-15 16:08:48,140 - werkzeug - INFO -  * Debugger PIN: 810-284-793
+2025-04-28 12:47:42,111 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 12:47:42,117 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 12:48:28,483 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 12:48:28,484 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 12:48:34,352 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 123, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 12:48:34,368 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:48:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 12:48:34,700 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:48:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 12:49:22,867 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 123, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 12:49:22,881 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:49:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 12:59:01,514 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 12:59:01,515 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 12:59:09,971 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:09] "GET / HTTP/1.1" 200 -
+2025-04-28 12:59:10,134 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:10] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-28 12:59:10,165 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:10] "GET /static/img/logo.png HTTP/1.1" 200 -
+2025-04-28 12:59:10,294 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:10] "GET /static/img/machine.jpg HTTP/1.1" 200 -
+2025-04-28 12:59:11,464 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:11] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+2025-04-28 12:59:24,229 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:24] "[32mGET /solicitudes/ HTTP/1.1[0m" 302 -
+2025-04-28 12:59:24,261 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:24] "GET /login?next=/solicitudes/ HTTP/1.1" 200 -
+2025-04-28 12:59:24,338 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 12:59:24,341 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:24] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 12:59:24,363 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:24] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-04-28 12:59:26,448 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:26] "GET / HTTP/1.1" 200 -
+2025-04-28 12:59:26,505 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 12:59:26,509 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:26] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 12:59:26,524 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 12:59:26] "[36mGET /static/img/machine.jpg HTTP/1.1[0m" 304 -
+2025-04-28 13:00:45,413 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:45] "[32mGET /solicitudes/ HTTP/1.1[0m" 302 -
+2025-04-28 13:00:45,419 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:45] "GET /login?next=/solicitudes/ HTTP/1.1" 200 -
+2025-04-28 13:00:45,486 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:00:45,492 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:45] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-04-28 13:00:45,495 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:45] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:00:53,639 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-04-28 13:00:53,926 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:53] "GET / HTTP/1.1" 200 -
+2025-04-28 13:00:54,072 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:00:54,087 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:54] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:00:54,204 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:54] "[36mGET /static/img/machine.jpg HTTP/1.1[0m" 304 -
+2025-04-28 13:00:57,890 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:57] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-04-28 13:00:57,897 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:57] "GET / HTTP/1.1" 200 -
+2025-04-28 13:00:57,949 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:00:57,952 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:57] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:00:59,186 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:59] "GET /login HTTP/1.1" 200 -
+2025-04-28 13:00:59,240 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:00:59,254 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:59] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-04-28 13:00:59,260 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:59] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:00:59,379 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:00:59] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2025-04-28 13:01:00,701 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:00] "GET /recover_password HTTP/1.1" 200 -
+2025-04-28 13:01:00,748 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:01:00,767 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:00] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:01:00,794 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:00] "GET /static/css/recover_password.css HTTP/1.1" 200 -
+2025-04-28 13:01:19,690 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:19] "[32mPOST /recover_password HTTP/1.1[0m" 302 -
+2025-04-28 13:01:19,721 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:19] "GET /login HTTP/1.1" 200 -
+2025-04-28 13:01:19,802 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:01:19,805 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:19] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-04-28 13:01:19,818 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:01:38,049 - autointelli.app - ERROR - Exception on /reset_password/InJleXBlci5hdXRvbWF0aXphY2lvbi4yQGdtYWlsLmNvbSI.aA_QfQ.ICO8JpbavlqaJe8Jrb4D4hDNFfI [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 272, in reset_password
+    return render_template('reset_password.html', token=token)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: reset_password.html
+2025-04-28 13:01:38,155 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:38] "[35m[1mGET /reset_password/InJleXBlci5hdXRvbWF0aXphY2lvbi4yQGdtYWlsLmNvbSI.aA_QfQ.ICO8JpbavlqaJe8Jrb4D4hDNFfI HTTP/1.1[0m" 500 -
+2025-04-28 13:01:38,287 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:01:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 13:02:05,365 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:02:05] "GET / HTTP/1.1" 200 -
+2025-04-28 13:02:05,439 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:02:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:02:05,454 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:02:05] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:02:05,513 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:02:05] "[36mGET /static/img/machine.jpg HTTP/1.1[0m" 304 -
+2025-04-28 13:51:12,607 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:12] "GET / HTTP/1.1" 200 -
+2025-04-28 13:51:12,649 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:51:12,659 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:12] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:51:12,695 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:12] "[36mGET /static/img/machine.jpg HTTP/1.1[0m" 304 -
+2025-04-28 13:51:13,177 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:13] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2025-04-28 13:51:17,560 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:17] "[32mGET /adjust_dates HTTP/1.1[0m" 302 -
+2025-04-28 13:51:17,579 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:17] "GET /login?next=/adjust_dates HTTP/1.1" 200 -
+2025-04-28 13:51:17,643 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:51:17,651 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:17] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-04-28 13:51:17,657 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:17] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:51:17,756 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:17] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2025-04-28 13:51:19,700 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:19] "GET / HTTP/1.1" 200 -
+2025-04-28 13:51:19,748 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 13:51:19,751 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 13:51:19,770 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 13:51:19] "[36mGET /static/img/machine.jpg HTTP/1.1[0m" 304 -
+2025-04-28 14:06:10,795 - notion_ajustes - ERROR - ERROR al inicializar Notion Client para Ajustes: name 'Client' is not defined
+2025-04-28 14:06:10,819 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:06:10,820 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:06:18,444 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:06:18,460 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:06:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:06:46,212 - notion_ajustes - ERROR - ERROR al inicializar Notion Client para Ajustes: name 'Client' is not defined
+2025-04-28 14:06:46,242 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:06:46,243 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:06:56,304 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:06:56,317 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:06:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:08:57,215 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:08:57,225 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:08:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:08:57,794 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:08:57,799 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:08:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:08:58,432 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:08:58,448 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:08:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:09:09,220 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:09:09,245 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:09:09,246 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:09:22,905 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:09:22,923 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:09:22] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:09:24,973 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:09:24,988 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:09:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:09:45,381 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:09:45,403 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:09:45,404 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:09:49,992 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:09:50,002 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:09:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:12:57,977 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:12:58,005 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:12:58,005 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:13:02,981 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:13:02,993 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:17,191 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    # --- Fin Registro Blueprints ---
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:13:17,204 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:18,391 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    # --- Fin Registro Blueprints ---
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:13:18,403 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:19,238 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    # --- Fin Registro Blueprints ---
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:13:19,246 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:19,408 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    # --- Fin Registro Blueprints ---
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:13:19,415 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:19,566 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    # --- Fin Registro Blueprints ---
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:13:19,573 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:19,706 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 94, in index
+    # --- Fin Registro Blueprints ---
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-04-28 14:13:19,716 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:29,816 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:13:29,858 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:13:29,859 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:13:32,347 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'create_project'. Did you mean 'register' instead?
+2025-04-28 14:13:32,391 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:32,990 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'create_project'. Did you mean 'register' instead?
+2025-04-28 14:13:33,002 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:13:48,458 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:13:48,484 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:13:48,484 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:13:52,768 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'create_project'. Did you mean 'register' instead?
+2025-04-28 14:13:52,781 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:13:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:16:58,228 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('app.create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'create_project'. Did you mean 'register' instead?
+2025-04-28 14:16:58,267 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:16:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:17:06,874 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:17:06,897 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:17:06,897 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:17:11,421 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('app.create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'register' instead?
+2025-04-28 14:17:11,433 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:17:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:17:35,073 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:17:35,097 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:17:35,097 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:17:41,849 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('app.create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'register' instead?
+2025-04-28 14:17:41,860 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:17:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:37:07,672 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('app.create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'register' instead?
+2025-04-28 14:37:07,683 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:37:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:37:08,354 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 104, in index
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('app.create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'register' instead?
+2025-04-28 14:37:08,362 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:37:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:37:16,827 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:37:17,065 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:37:17,066 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:37:22,991 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 113, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('app.create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'create_project' instead?
+2025-04-28 14:37:23,003 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:37:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:41:42,760 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 113, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'create_project' instead?
+2025-04-28 14:41:42,769 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:41:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:41:43,403 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 113, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'create_project' instead?
+2025-04-28 14:41:43,421 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:41:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:41:43,593 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 113, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'create_project' instead?
+2025-04-28 14:41:43,602 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:41:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:41:43,777 - autointelli.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\autointelli\app.py", line 113, in index
+    return render_template('index.html')
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\index.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\templates\base.html", line 35, in top-level template code
+    <a class="dropdown-item" href="{{ url_for('create_project') }}">Nuevo Proyecto</a>
+    
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\User2\Documents\Scripts Python\movHorarios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'app.create_project'. Did you mean 'create_project' instead?
+2025-04-28 14:41:43,786 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:41:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 14:42:04,221 - notion_ajustes - INFO - Cliente de Notion para Ajustes inicializado.
+2025-04-28 14:42:04,316 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 14:42:04,317 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 14:42:07,795 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:07] "GET / HTTP/1.1" 200 -
+2025-04-28 14:42:07,928 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:07] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-28 14:42:07,930 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:07] "GET /static/img/logo.png HTTP/1.1" 200 -
+2025-04-28 14:42:07,979 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:07] "GET /static/img/machine.jpg HTTP/1.1" 200 -
+2025-04-28 14:42:08,848 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:08] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+2025-04-28 14:42:14,383 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:14] "GET / HTTP/1.1" 200 -
+2025-04-28 14:42:14,416 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 14:42:14,417 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:14] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2025-04-28 14:42:14,442 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:14] "[36mGET /static/img/machine.jpg HTTP/1.1[0m" 304 -
+2025-04-28 14:42:14,755 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 14:42:14] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
