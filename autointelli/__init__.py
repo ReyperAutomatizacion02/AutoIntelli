@@ -146,12 +146,6 @@ def create_app():
          # Ejemplo: Acceder a app.notion_client si necesitas usarlo globalmente
          pass # No necesitas hacer nada especial aquí solo para que current_app funcione
 
-    # Añadir variables al contexto de la plantilla (opcional, si las usas en base.html por ejemplo)
-    @app.context_processor
-    def inject_user():
-        # current_user ya se inyecta por Flask-Login, esto es solo un ejemplo
-        return dict(current_user=current_user)
-
 
     # Retornar la instancia de la aplicación configurada
     return app
