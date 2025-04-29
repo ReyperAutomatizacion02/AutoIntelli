@@ -1,0 +1,350 @@
+:root{
+    --primario: #D42D2E;
+    --secundario: #000000;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --gris-oscuro: #181A1B;
+    --gris-claro: #858585;
+    --gris:#313131;
+    --gris-t:#31313189;
+    --Onest: "Onest", sans-serif;
+    --Major: "Major Mono Display", monospace;
+    --Orbitron: "Orbitron", sans-serif;
+    --Ubuntu: "Ubuntu Sans Mono", monospace;
+    --Alumni: "Alumni Sans Pinstripe", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family: var(--Onest);
+    font-size: 1.4rem;
+    margin: 0rem; /* Reset margin */
+    background-color: var(--gris-oscuro);
+    padding: 2rem;
+    color: var(--gris-claro);
+    display: flex;
+    flex-direction: column; /* Por defecto apilamos verticalmente */
+    align-items: stretch; /* Centramos horizontalmente en pantallas pequeñas */
+}
+
+/* https://fonts.google.com/share?selection.family=Alumni+Sans+Pinstripe:ital@0;1|Major+Mono+Display|Onest:wght@100..900|Orbitron:wght@400..900|Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700 */
+
+/* ------ */
+/* HEADER */
+/* ------ */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: -1.5rem;
+    margin-left: 0.5rem;
+}
+
+.logo {
+    margin: 0.5rem;
+    height: 4rem;
+    margin-bottom: 1.5rem; /* Añadimos un margen inferior para separarlo de la navegación */
+}
+
+.navbar {
+    background-color: var(--gris);
+    border-bottom: var(--blanco);
+    height: 4rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 1rem 2rem 1rem;
+
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-left: 1rem;
+}
+
+.nav-link {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.nav-link::after {
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0rem;
+    z-index: 1000;
+    float: left;
+    min-width: 18rem;
+    padding: 0.5rem;
+    margin: 0.125rem 0 0;
+    font-size: 1.2rem;
+    text-align: left;
+    list-style: none;
+    background-color: var(--gris-t);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: var(--blanco);
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--blanco);
+    background-color: var(--primario);
+    width: 14rem;
+    border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ----------- */
+/* PRIMARY BOX */
+/* ----------- */
+.primary-box-container { /* Nuevo contenedor para el primary-box y el image-box */
+    display: flex; /* Colocamos los elementos en fila */
+    flex-direction: row;
+    align-items: flex-start; /* Alineamos en la parte superior */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    gap: 2rem;
+}
+
+.primary-box {
+    background-color: var(--primario);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    margin-top: 0.5rem; /* Reducido el margen superior */
+    flex-direction: column;
+    padding: 2rem;
+    flex: 1;
+}
+
+.lottie-icon {
+    width: auto; /* El ancho se ajustará según la proporción */
+    height: auto; /* La altura se ajustará según la proporción */
+    max-width: 40%; /* El icono no ocupará más del 70% del ancho del primary-box */
+    max-height: 40%;
+}
+
+.titulo {
+    color: var(--blanco);
+    font-family: var(--Orbitron);
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.description {
+    color: var(--blanco);
+    font-family: var(--Ubuntu);
+    font-size: 2rem;
+    padding: 3rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    text-align: justify;
+    letter-spacing: 0.15rem;
+
+}
+
+.image-box {
+    background-image: linear-gradient(to top, rgba(137, 33, 33, 0.83), rgba(0, 0, 0, 0.581)), url("../img/machine.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    margin-top: 0.5rem;
+    flex: 1;
+    min-height: calc(100vh + 4rem);
+}
+
+.auth-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0rem;
+    margin-right: 2rem;
+}
+
+.auth-links a {
+    color: var(--gris-claro);
+    text-decoration: none;
+    padding: 1rem 0.6rem;
+    border-radius: 0.25rem;
+}
+
+.auth-links .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.auth-links .usuario{
+    margin-right: 2rem;
+}
+
+span.usuario {
+    color: var(--primario);
+}
+
+/* --- Contenedor Título y Lottie --- */
+.login-header-visuals {
+    display: flex;
+    flex-direction: row; /* <<< CAMBIO: Pone los elementos en fila */
+    align-items: center; /* <<< Alinea verticalmente al centro */
+    justify-content: center; /* <<< Centra el grupo (título + lottie) horizontalmente */
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Permite que pasen a la siguiente línea si no caben */
+}
+
+/* --- Título Específico de Login --- */
+.titulo-login {
+    color: var(--primario);
+    font-family: var(--Orbitron);
+    font-size: 6rem; /* O el tamaño que prefieras */
+    /* text-align: center; /* Quitado para que se alinee con flex */
+    margin: 0; /* Quitamos márgenes para mejor control con flex/gap */
+    filter: drop-shadow(0.2rem 0.4rem 0.6rem red);
+    line-height: 1; /* Ayuda a la alineación vertical */
+}
+
+/* --- Lottie Específico de Login --- */
+.lottie-icon-login {
+    width: 45px; /* <<< REDUCIDO: Tamaño mucho más pequeño */
+    height: 45px; /* <<< REDUCIDO: */
+    filter: drop-shadow(0.3rem 0.5rem 0.7rem red);
+    margin: 0; /* Quitamos márgenes */
+    flex-shrink: 0; /* Evita que el icono se encoja demasiado */
+    transform: translateY(8px);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .header {
+        margin-bottom: -0.5rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .navbar {
+        margin-bottom: 1rem;
+    }
+
+    .primary-box-container {
+        display: block; /* Colocamos los elementos en fila */
+    }
+
+    .primary-box {
+        width: 95%;
+        min-height: calc(100vh - 10rem);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .lottie-icon {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .titulo {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+    .image-box {
+        width: 100%;
+        height: 100%;
+        margin-top: 0rem;
+        min-height: calc(100vh - 20rem)
+
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .dropdown-menu {
+        font-size: 1.5rem;
+    }
+
+    .primary-box {
+        width: 95%;
+        padding: 1rem;
+        min-height: calc(100vh - 15rem);
+    }
+
+    .lottie-icon {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .titulo {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .image-box {
+        width: 100%;
+        height: 100%;
+        min-height: calc(100vh - 25rem)
+    }
+}

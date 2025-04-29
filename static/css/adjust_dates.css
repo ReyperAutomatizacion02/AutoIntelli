@@ -1,0 +1,266 @@
+/* static/css/adjust_dates.css */
+
+/* --- Variables de Color (Puedes importar desde un archivo base o redefinir) --- */
+:root {
+    --primario: #D42D2E;
+    --secundario: #000000;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --gris-oscuro: #181A1B; /* Fondo del body (heredado) */
+    --gris-claro: #858585;   /* Color de texto secundario/labels */
+    --gris: #313131;         /* Color de fondo del contenedor */
+    --gris-t: #313131d5;      /* Fondo del contenedor con transparencia */
+    --input-bg: #414141;      /* Fondo de inputs */
+    --input-border: #555;
+    --input-text: #e0e0e0;
+    --success-bg: #2a573a;
+    --success-text: #a7d7b4;
+    --error-bg: #4d2429;
+    --error-text: #f1b0b7;
+    --processing-text: #f0ad4e; /* Amarillo/Naranja para procesando */
+}
+
+/* --- Estilos para el CONTENEDOR PRINCIPAL de la herramienta --- */
+#adjust-dates-wrapper {
+    max-width: 800px; /* Ancho máximo para esta sección */
+    margin: 3rem auto; /* Margen superior/inferior y centrado horizontal */
+    padding: 25px 35px; /* Padding interno */
+    background-color: var(--gris-t); /* Fondo semi-transparente */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 95%;
+    color: var(--blanco); /* Color de texto principal dentro del wrapper */
+}
+
+/* --- Título de la Página --- */
+#adjust-dates-wrapper .titulo-pagina {
+    color: var(--primario);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; /* O la fuente que uses para títulos */
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--primario);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Secciones del Formulario --- */
+#adjust-dates-wrapper .form-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--input-border);
+}
+#adjust-dates-wrapper .form-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* --- Filas del Formulario --- */
+#adjust-dates-wrapper .form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+    gap: 20px; /* Espacio entre elementos en la misma fila */
+    margin-bottom: 15px; /* Espacio debajo de cada fila */
+}
+#adjust-dates-wrapper .form-row:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Grupos de Formulario --- */
+#adjust-dates-wrapper .form-group {
+    flex: 1; /* Intenta que los grupos ocupen espacio equitativo */
+    min-width: 200px; /* Ancho mínimo antes de pasar a la siguiente línea */
+    display: flex;
+    flex-direction: column; /* Apila label e input verticalmente */
+    gap: 8px; /* Espacio entre label e input */
+}
+/* Ajuste para el checkbox */
+#adjust-dates-wrapper .bloqueMovimiento {
+   flex-direction: row; /* Checkbox y label en horizontal */
+   align-items: center;
+   flex-basis: 100%; /* Ocupa toda la fila si es necesario */
+   margin-top: 10px; /* Pequeño espacio extra */
+}
+
+/* --- Labels --- */
+#adjust-dates-wrapper label {
+    font-weight: 600;
+    color: var(--gris-claro);
+    font-size: 1.4rem;
+}
+#adjust-dates-wrapper .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--gris-claro);
+    font-weight: normal; /* Normal para checkbox */
+}
+#adjust-dates-wrapper .checkbox-label span {
+    margin-left: 8px; /* Espacio entre checkbox y texto */
+}
+
+/* --- Inputs y Selects --- */
+#adjust-dates-wrapper input[type="number"],
+#adjust-dates-wrapper input[type="date"],
+#adjust-dates-wrapper input[type="text"],
+#adjust-dates-wrapper select {
+    width: 100%; /* Ocupa el ancho del .form-group */
+    padding: 10px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    font-size: 1.5rem;
+    font-family: 'Onest', sans-serif; /* O tu fuente de texto principal */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#adjust-dates-wrapper input:focus,
+#adjust-dates-wrapper select:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3); /* Sutil brillo rojo al enfocar */
+}
+#adjust-dates-wrapper input[type="checkbox"] {
+    width: auto; /* Tamaño natural del checkbox */
+    margin-right: 5px; /* Pequeño espacio a la derecha */
+    accent-color: var(--primario); /* Color del check */
+    cursor: pointer;
+    transform: scale(1.2); /* Hacerlo ligeramente más grande */
+}
+
+/* --- Títulos de Filtros --- */
+#adjust-dates-wrapper .filtros-titulo {
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+#adjust-dates-wrapper h3.subFiltro {
+    color: var(--gris-claro);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--input-border);
+    padding-bottom: 0.5rem;
+}
+#adjust-dates-wrapper .input-group {
+    margin-bottom: 15px; /* Espacio entre label/input dentro de un filtro */
+}
+#adjust-dates-wrapper .input-group label {
+    font-size: 1.3rem; /* Labels de filtro un poco más pequeñas */
+    color: #bbb; /* Ligeramente más claras */
+}
+
+/* --- Contenedor del Botón --- */
+#adjust-dates-wrapper .boton-container {
+    text-align: center; /* Centra el botón */
+    margin-top: 3rem;
+}
+
+/* --- Botón Principal --- */
+#adjust-dates-wrapper button[type="submit"] {
+    background-color: var(--primario);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif; /* O tu fuente preferida */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#adjust-dates-wrapper button[type="submit"]:hover {
+    background-color: #b02122; /* Un rojo más oscuro */
+}
+#adjust-dates-wrapper button[type="submit"]:active {
+    transform: scale(0.98); /* Efecto al presionar */
+}
+#adjust-dates-wrapper button[type="submit"]:disabled {
+    background-color: #555; /* Color cuando está deshabilitado */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- Contenedor de Resultados --- */
+#adjust-dates-wrapper #result {
+    margin-top: 2.5rem;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.5rem;
+    min-height: 50px; /* Para que no colapse al estar vacío */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent; /* Borde base */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+#adjust-dates-wrapper #result.processing {
+    border-color: var(--processing-text);
+    color: var(--processing-text);
+    background-color: rgba(240, 173, 78, 0.1); /* Fondo sutil amarillo */
+}
+#adjust-dates-wrapper #result.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: var(--success-text);
+}
+#adjust-dates-wrapper #result.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border-color: var(--error-text);
+}
+
+
+/* --- Media Queries (Ajustes Responsivos Opcionales) --- */
+@media (max-width: 768px) {
+    #adjust-dates-wrapper {
+        padding: 20px 25px;
+        width: 98%;
+    }
+    #adjust-dates-wrapper .form-row {
+        flex-direction: column; /* Apilar en pantallas pequeñas */
+        gap: 15px; /* Reducir gap vertical */
+    }
+    #adjust-dates-wrapper .form-group {
+        min-width: 100%; /* Ocupar todo el ancho al apilar */
+    }
+    #adjust-dates-wrapper .titulo-pagina {
+        font-size: 2.4rem;
+    }
+    #adjust-dates-wrapper button[type="submit"] {
+        padding: 10px 25px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+     #adjust-dates-wrapper {
+        padding: 15px 20px;
+    }
+    #adjust-dates-wrapper .titulo-pagina {
+        font-size: 2rem;
+    }
+    #adjust-dates-wrapper label {
+        font-size: 1.3rem;
+    }
+     #adjust-dates-wrapper input, #adjust-dates-wrapper select {
+        font-size: 1.4rem;
+        padding: 8px 10px;
+    }
+    #adjust-dates-wrapper button[type="submit"] {
+        font-size: 1.4rem;
+    }
+     #adjust-dates-wrapper #result {
+        font-size: 1.4rem;
+    }
+}
