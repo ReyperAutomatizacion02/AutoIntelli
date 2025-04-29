@@ -38,14 +38,14 @@ def login():
             flash('Ingresa usuario y contraseña.', 'danger')
             return render_template('auth/login.html'), 400 # Usar auth/ subdirectorio para plantillas
 
-        user = db.session.filter(User).filter_by(username=username).first() # Usar db.session.filter
+        user = User.query.filter_by(username=username).first() # Buscar el usuario por username (o email si lo prefieres)
         # O simplemente: user = User.query.filter_by(username=username).first() # Ambos son válidos en contexto de app
 
         if user and check_password_hash(user.password, password):
             login_user(user)
             flash('Login exitoso.', 'success')
             next_page = request.args.get('next')
-            return redirect(next_page or url_for('index')) # Redirigir al index (o ruta principal)
+            return redirect(next_page or url_for('main.index')) # Redirigir al index (o ruta principal)
         else:
             flash('Login fallido. Verifica usuario y contraseña.', 'danger')
             return render_template('auth/login.html'), 401 # Unauthorized
@@ -79,12 +79,12 @@ def register():
             flash(str(e), 'danger')
             return render_template('auth/register.html'), 400 # Usar auth/ subdirectorio
 
-        existing_user = db.session.filter(User).filter_by(username=username).first()
+        existing_user = User.query.filter_by(username=username).first()
         if existing_user:
             flash('El nombre de usuario ya está registrado. Por favor, elige otro.', 'danger')
             return render_template('auth/register.html'), 409 # Conflict
 
-        existing_email = db.session.filter(User).filter_by(email=email).first()
+        existing_email = User.query.filter_by(email=email).first()
         if existing_email:
             flash('El correo electrónico ya está registrado. Por favor, utiliza otro.', 'danger')
             return render_template('auth/register.html'), 409 # Conflict
@@ -110,7 +110,7 @@ def register():
 def logout():
     logout_user()
     flash('Logout exitoso.', 'info')
-    return redirect(url_for('index')) # Redirigir al index (o ruta principal)
+    return redirect(url_for('main.index')) # Redirigir al index (o ruta principal)
 
 
 @auth_bp.route('/recover_password', methods=['GET', 'POST'])
@@ -206,7 +206,7 @@ def reset_password(token):
         # Cargar el email desde el token, verificando la expiración
         email = s.loads(token, salt='recover-key', max_age=3600)
         # Buscar al usuario por el email extraído del token
-        user = db.session.filter(User).filter_by(email=email).first()
+        user = User.query.filter_by(email=email).first()
         if not user:
              logger.warning(f"Intento de restablecimiento de contraseña con token válido pero usuario no encontrado para email: {email}")
              raise Exception("Usuario no encontrado.") # Causa que caiga en el except y flashee error

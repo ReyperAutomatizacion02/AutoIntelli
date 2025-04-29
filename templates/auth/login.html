@@ -43,7 +43,7 @@
                 {% endif %}
             {% endwith %}
 
-            <form method="POST" action="{{ url_for('login') }}"> {# Usar url_for para la acción #}
+            <form method="POST" action="{{ url_for('auth.login') }}"> {# Usar url_for para la acción #}
                 <div class="form-group">
                     <label for="username">Usuario</label>
                     <input type="text" id="username" name="username" required>
@@ -58,11 +58,11 @@
                 {# Agrupar links #}
                 <div class="form-links-group">
                     <div class="form-links">
-                        <a href="{{ url_for('index') }}">Volver</a>
-                        <a href="{{ url_for('register') }}">Registrate</a>
+                        <a href="{{ url_for('main.index') }}">Volver</a>
+                        <a href="{{ url_for('auth.register') }}">Registrate</a>
                     </div>
                     <div class="form-links password-link">
-                        <a href="{{ url_for('recover_password') }}">¿Olvidaste tu contraseña?</a>
+                        <a href="{{ url_for('auth.recover_password') }}">¿Olvidaste tu contraseña?</a>
                     </div>
                 </div>
             </form>
