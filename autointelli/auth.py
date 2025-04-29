@@ -10,6 +10,9 @@ import logging
 # Importar db y modelos desde el paquete
 from .models import db, User, AuditLog # <<< Importación correcta
 
+# Importar la clase Message de flask_mail
+from flask_mail import Message
+
 # Crear el Blueprint. Prefijo /auth para todas las rutas.
 auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
 
@@ -28,7 +31,7 @@ def get_mail_and_serializer():
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('index')) # Redirigir al index (o ruta principal) si ya logueado
+        return redirect(url_for('main.index')) # Redirigir al index (o ruta principal) si ya logueado
 
     if request.method == 'POST':
         username = request.form.get('username')
@@ -56,7 +59,7 @@ def login():
 @auth_bp.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
-        return redirect(url_for('index')) # Redirigir al index (o ruta principal) si ya logueado
+        return redirect(url_for('main.index')) # Redirigir al index (o ruta principal) si ya logueado
 
     if request.method == 'POST':
         username = request.form.get('username')
@@ -116,7 +119,7 @@ def logout():
 @auth_bp.route('/recover_password', methods=['GET', 'POST'])
 def recover_password():
     if current_user.is_authenticated:
-         return redirect(url_for('index')) # Redirigir si ya está autenticado
+         return redirect(url_for('main.index')) # Redirigir si ya está autenticado
 
     if request.method == 'POST':
         username = request.form.get('username')
@@ -127,7 +130,7 @@ def recover_password():
              return render_template('auth/recover_password.html'), 400 # Usar auth/ subdirectorio
 
         # Buscar usuario por username Y email
-        user = db.session.filter(User).filter_by(username=username, email=email).first()
+        user = User.query.filter_by(username=username, email=email).first()
 
         if user:
             # Obtener mail y s de la aplicación

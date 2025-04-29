@@ -80,6 +80,8 @@ def create_app():
     login_manager.init_app(app)
     mail.init_app(app)
 
+    app.mail = mail
+
     # Actualizar el serializer con la SECRET_KEY de la app configurada
     global s # Acceder a la variable global s
     s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
