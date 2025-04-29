@@ -1,0 +1,111 @@
+{% extends 'base.html' %} {# Asegúrate de que hereda de la base #}
+
+{% block title %}Solicitud de Materiales - AutoIntelli{% endblock %} {# Título específico #}
+
+{# ---- BLOQUE CRÍTICO PARA EL CSS ---- #}
+{% block head_extra %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/awesomplete.min.css') }}">
+    <!-- Stylesheet Principal -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/request_for_material.css') }}">
+{% endblock %}
+{# ---- FIN BLOQUE CSS ---- #}
+
+{% block content %}
+    {# Aquí va TODO el contenido HTML *único* de tu formulario/herramienta Notion #}
+    {# (El <form>, los inputs, divs específicos de esa página, etc.) #}
+    <div id="request-material-wrapper">
+        <!-- Botón Modo Oscuro -->
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Cambiar modo oscuro/claro"></button>
+        
+        <!-- Contenedor Principal -->
+        <div class="container">
+            <!-- Título Principal -->
+            <h1 class="titulo-pagina">Solicitud de Materiales</h1>
+
+            <!-- Formulario -->
+            <form id="materialForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group folio-display">
+                        <label>Folio Solicitud:</label>
+                        <span id="folio-display-value" class="folio-value">- Generando... -</span>
+                        <input type="hidden" id="folio_solicitud" name="folio_solicitud">
+                    </div>
+                </div>
+                <!-- Fila 1: Folio, Proyecto, Solicitante, Fecha -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre_solicitante">Nombre del Solicitante:</label>
+                        <select id="nombre_solicitante" name="nombre_solicitante" required> <option value="" disabled>...</option> <option value="Maribel Reyes" selected>Maribel Reyes</option> <option value="Miguel Cerón">Miguel Cerón</option> <option value="Anahi Estrada">Anahi Estrada</option> </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="proyecto">Proyecto:</label>
+                        <input type="text" id="proyecto" name="Proyecto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_solicitud">Fecha de Solicitud:</label>
+                        <input type="date" id="fecha_solicitud" name="fecha_solicitud" required>
+                    </div>
+                </div> <!-- Fin Fila 1 -->
+
+                <!-- Fila 2: Proveedor y Departamento -->
+                <div class="form-row">
+                    <div class="form-group"> <label for="departamento_area">Departamento / Área:</label> <select id="departamento_area" name="departamento_area" required> <option value="" disabled>...</option> <option value="Producción" selected>Producción</option> <option value="Retrabajo">Retrabajo</option> <option value="Pailería">Pailería</option> <option value="Automatización">Automatización</option> <option value="Mantenimiento">Mantenimiento</option> </select> </div>
+                    <div class="form-group"> <label for="proveedor">Proveedor:</label> <select id="proveedor" name="proveedor" required> <option value="" disabled selected>...</option> <option value="Grupo Collado">Grupo Collado</option> <option value="Cameisa">Cameisa</option> <option value="LBO">LBO</option> <option value="Mipsa">Mipsa</option> <option value="Surcosa">Surcosa</option> <option value="Diace">Diace</option> <option value="Torni">Torni</option> </select> </div>
+                    <div class="form-group" id="nombre-material-group"> <label for="nombre_material">Nombre del material:</label> <select id="nombre_material" name="nombre_material" disabled> <option value="" disabled selected>...</option> </select> </div>
+                </div> <!-- Fin Fila 2 -->
+
+                <!-- Contenedor Tabla Torni (Oculto/Visible según Proveedor) -->
+                <div id="torni-table-container" class="oculto">
+                    <h3>Detalles de Pedido:</h3>
+                    <table id="torni-items-table">
+                        <thead>
+                            <tr>
+                                <th>Cantidad</th>
+                                <th>ID de Producto</th>
+                                <th>Descripción</th> <!-- Etiqueta actualizada -->
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="torni-items-tbody">
+                            <!-- Filas añadidas por JS -->
+                        </tbody>
+                    </table>
+                    <button type="button" id="add-torni-item-btn" class="add-row-btn">+ Añadir Producto</button>
+                </div> <!-- Fin Contenedor Torni -->
+
+                <!-- Fila 4: Cantidad y Unidad Estándar (Ocultos/Visibles según Proveedor) -->
+                <div class="form-row" id="cantidad-unidad-group">
+                    <div class="form-group" id="tipo-material-group"> <label for="tipo_material">Tipo de Material:</label> <select id="tipo_material" name="tipo_material" disabled> <option value="" disabled selected>...</option> <option value="Metal">Metal</option> <option value="Plastico">Plástico</option> <option value="Consumible">Consumible</option> <option value="Tornilleria">Tornilleria</option> </select> </div>
+                    <div class="form-group" id="cantidad-solicitada-group"> <label for="cantidad_solicitada">Cantidad Solicitada:</label> <input type="number" id="cantidad_solicitada" name="cantidad_solicitada" min="1" value="1"> </div>
+                    <div class="form-group" id="unidad-medida-group"> <label for="unidad_medida">Unidad de Medida:</label> <select id="unidad_medida" name="unidad_medida"> <option value="" disabled selected>...</option> <option value="Milímetros">Milímetros</option> <option value="Pulgadas">Pulgadas</option> <option value="Centimetros">Centímetros</option> <option value="Metros">Metros</option> <option value="Piezas">Piezas</option> <option value="N/A">N/A</option> </select> </div>
+                </div> <!-- Fin Fila 4 -->
+
+                <!-- Sección Dimensiones (Oculto/Visible según Proveedor) -->
+                <div id="dimensiones-container"> <h3>Dimensiones:</h3> <div class="form-row"> <div class="form-group"> <label for="largo">Largo:</label> <input type="text" id="largo" name="largo" list="dimensionList" inputmode="decimal" autocomplete="off"> </div> <div class="form-group"> <label for="ancho">Ancho:</label> <input type="text" id="ancho" name="ancho" list="dimensionList" inputmode="decimal" autocomplete="off"> </div> <div class="form-group"> <label for="alto">Alto:</label> <input type="text" id="alto" name="alto" list="dimensionList" inputmode="decimal" autocomplete="off"> </div> <div class="form-group"> <label for="diametro">Diametro:</label> <input type="text" id="diametro" name="diametro" list="dimensionList" inputmode="decimal" autocomplete="off"> </div> </div> </div> <!-- Fin Sección Dimensiones -->
+
+                <!-- Especificaciones Adicionales -->
+                <div class="form-group"> <label for="especificaciones_adicionales">Especificaciones Adicionales:</label> <textarea id="especificaciones_adicionales" name="especificaciones_adicionales"></textarea> </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit">Enviar Solicitud</button>
+
+                <!-- Mensajes de Feedback -->
+                <div id="mensaje-validacion" class="mensaje mensaje-error oculto"></div>
+                <div id="mensaje-exito" class="mensaje mensaje-exito oculto"></div>
+                <div id="mensaje-error-envio" class="mensaje mensaje-error oculto"></div>
+            </form>
+
+            <!-- Datalist para las dimensiones (llenado por JS) -->
+            <datalist id="dimensionList"></datalist>
+
+        </div>
+    </div>
+{% endblock %}
+
+{# ---- BLOQUE CRÍTICO PARA EL JS ---- #}
+{% block scripts_extra %}
+    <script src="{{ url_for('static', filename='js/awesomplete.min.js') }}"></script>
+    <!-- Script principal -->
+    <script src="{{ url_for('static', filename='js/request_for_material.js') }}"></script>
+{% endblock %}
+{# ---- FIN BLOQUE JS ---- #}
