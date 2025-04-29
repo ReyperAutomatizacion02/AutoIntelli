@@ -165,3 +165,5 @@ def run_adjust_script():
              logger.error(f"[{current_user.username}] ERROR al crear registro de auditoría de fallo inesperado: {audit_e}")
              db.session.rollback()
         return jsonify({"error": error_msg}), 500
+    
+proyectos_bp = Blueprint('proyectos', __name__, url_prefix='/proyectos')
