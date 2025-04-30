@@ -1,319 +1,640 @@
-/* static/css/notion_request/styles.css (o el nombre que uses) */
+/* static/css/request_for_material.css */
 
-/* --- Variables (sin cambios) --- */
+/* --- Variables (Asegúrate de que estas están en styles.css y no duplicadas) --- */
+/* Si tus variables están en styles.css, puedes eliminar este bloque completo */
 :root {
-    --bg-color-light: #f4f4f4;
-    --container-bg-light: #fff;
-    --text-color-light: #333;
-    --label-color-light: #555;
-    --border-color-light: #ccc;
-    --input-bg-light: #fff;
-    --select-arrow-light: '%23343a40';
-    --shadow-light: rgba(0, 0, 0, 0.1);
+    /* Variables de color/fondo/texto para Light Mode */
+    --bg-color-light: #f4f4f4; /* Color del body (background general) */
+    --container-bg-light: #fff; /* Fondo del contenedor interno */
+    --text-color-light: #333; /* Color de texto principal en light mode */
+    --label-color-light: #555; /* Color de labels en light mode */
+    --border-color-light: #ccc; /* Color de bordes en light mode */
+    --input-bg-light: #fff; /* Fondo de inputs en light mode */
+    --select-arrow-light: '%23343a40'; /* Color de flecha select para URL SVG */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra en light mode */
 
-    --bg-color-dark: #1a1a1a;
-    --container-bg-dark: #2c2c2c;
-    --text-color-dark: #e0e0e0;
-    --label-color-dark: #b0b0b0;
-    --border-color-dark: #555;
-    --input-bg-dark: #3b3b3b;
-    --select-arrow-dark: '%23e0e0e0';
-    --shadow-dark: rgba(255, 255, 255, 0.08);
+    /* Variables de color/fondo/texto para Dark Mode */
+    --bg-color-dark: #1a1a1a; /* Color del body en dark mode */
+    --container-bg-dark: #2c2c2c; /* Fondo del contenedor interno en dark mode */
+    --text-color-dark: #e0e0e0; /* Color de texto principal en dark mode */
+    --label-color-dark: #b0b0b0; /* Color de labels en dark mode */
+    --border-color-dark: #555; /* Color de bordes en dark mode */
+    --input-bg-dark: #3b3b3b; /* Fondo de inputs en dark mode */
+    --select-arrow-dark: '%23e0e0e0'; /* Color de flecha select para URL SVG en dark mode */
+    --shadow-dark: rgba(255, 255, 255, 0.08); /* Sombra en dark mode */
 
-    --primary-color: #D42D2E;
-    --primary-hover-color: #b02122;
+    /* Variables de colores específicos (primario, éxito, error, etc.) */
+    --primario: #D42D2E; /* Color principal (rojo) */
+    --primary-hover-color: #b02122; /* Color de hover para primary */
+    --gris-oscuro: #181A1B; /* Podría ser el fondo del body en dark mode */
+    --gris-claro: #858585; /* Podría ser el color de label en light mode */
+    --gris: #313131; /* Podría ser un color de fondo secundario */
+    --gris-t: #313131d5; /* Fondo del contenedor interno con transparencia */
+    --input-border: #555; /* Borde de inputs (usado en light y dark si es el mismo) */
+    --input-text: #e0e0e0; /* Color de texto de inputs (usado en dark si es diferente al general) */
 
-    --transition-speed: 0.3s;
+    --success-bg: #2a573a; /* Fondo para mensajes success */
+    --success-text: #a7d7b4; /* Texto para mensajes success */
+    --error-bg: #4d2429;   /* Fondo para mensajes danger/error */
+    --error-text: #f1b0b7; /* Texto para mensajes danger/error */
+     --info-bg: #1d3b5e;    /* Fondo para mensajes info */
+     --info-text: #a8cffc; /* Texto para mensajes info */
+    --processing-text: #f0ad4e; /* Amarillo/Naranja para procesando */
+
+    /* Variables de Fuentes (Asegúrate de que están definidas globalmente) */
+    --Onest: "Onest", sans-serif;
+    --Orbitron: "Orbitron", sans-serif;
+    --Ubuntu: 'Ubuntu Sans Mono', monospace; /* Asegúrate de que esta variable está definida */
+
+
+    --transition-speed: 0.3s; /* Velocidad de transición general */
+
+    /* Si tienes una variable para la altura del header en styles.css, úsala */
+    --header-height: 80px; /* Altura de ejemplo del header */
 }
 
-/* --- Estilos para el CONTENEDOR PRINCIPAL de la herramienta --- */
+
+/* --- Estilos para el WRAPPER principal (Posicionamiento y Espaciado) --- */
+/* Este contenedor posiciona el recuadro en el centro de la página */
+/* Debe coincidir con el ID <div id="request-material-wrapper"> en la plantilla */
 #request-material-wrapper {
-    /* Define el ancho máximo de esta sección y la centra en la página */
-    max-width: 900px; /* Ajusta según necesites */
-    margin: 3rem auto; /* Margen superior/inferior y centrado horizontal */
-    padding: 20px;     /* Espacio interno DENTRO del wrapper */
+    display: flex; /* Para centrar el contenido interno (el recuadro) */
+    justify-content: center;
+    align-items: center;
+    /* Altura mínima: Viewport height menos la altura del header */
+    min-height: calc(100vh - var(--header-height));
+    padding: 20px; /* Espacio alrededor del recuadro */
     box-sizing: border-box;
-    width: 100%;       /* Ocupa el ancho disponible hasta el max-width */
-    /* background-color: var(--gris); /* Opcional: fondo para esta área */
-    /* border-radius: 8px; */
 }
 
+/* --- Estilos del Dark Mode para el WRAPPER --- */
+/* Aplica estilos al wrapper CUANDO BODY tiene la clase .dark-mode */
+body.dark-mode #request-material-wrapper {
+    background-color: var(--bg-color-dark); /* Fondo del body en dark mode */
+}
+
+
+/* --- Estilos para el CONTENEDOR INTERNO (El "Recuadro" principal) --- */
+/* Aplica a .container dentro del wrapper los estilos del recuadro (padding, fondo, sombra, etc.) */
+/* Debe coincidir con <div class="container"> dentro de #request-material-wrapper en la plantilla */
 #request-material-wrapper .container {
-    background-color: var(--container-bg-light);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px var(--shadow-light);
-    width: 90%; /* Puedes ajustar este porcentaje también si es necesario */
-    /* --- AUMENTA ESTE VALOR --- */
-    max-width: 800px; /* Antes era 600px, prueba con 800px, 900px, etc. */
-    margin: 0 auto;   /* Mantiene el contenedor centrado dentro del wrapper */
-    transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    /* Ancho máximo similar al que tenías, ajusta si 900px del wrapper es demasiado */
+    /* Usa el max-width del wrapper - (padding * 2) si quieres que el container interno sea más estrecho */
+     max-width: calc(900px - (20px * 2)); /* Ejemplo: max-width del wrapper menos padding del wrapper */
+    width: 100%; /* Ocupa todo el ancho disponible del wrapper (hasta su max-width) */
+    margin: 0 auto; /* Centrado horizontal dentro del flex container del wrapper */
+
+    /* Estilos copiados y adaptados del recuadro de login/create_project/reset_password */
+    padding: 30px 40px; /* Padding interno similar */
+    background-color: var(--gris-t); /* Fondo translúcido similar */
+    border-radius: 12px; /* Bordes redondeados similares */
+    box-shadow: 0 5px 20px var(--shadow-light); /* Sombra similar, usando variable light */
+    color: var(--text-color-light); /* Color de texto principal por defecto (light mode) */
+    text-align: left; /* Alinea texto e inline/inline-block elementos a la izquierda (ajusta si quieres centrar) */
+    position: relative; /* Para posicionar mensajes flash dentro */
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease, color var(--transition-speed) ease; /* Transiciones */
 }
 
-/* --- Logo link (si hubiera uno DENTRO del wrapper) --- */
+/* --- Estilos del Dark Mode para el CONTENEDOR INTERNO --- */
+body.dark-mode #request-material-wrapper .container {
+    background-color: var(--container-bg-dark); /* Fondo en dark mode */
+    box-shadow: 0 5px 20px var(--shadow-dark); /* Sombra en dark mode */
+    color: var(--text-color-dark); /* Color de texto principal en dark mode */
+}
+
+
+/* --- Logo (si hubiera uno DENTRO del wrapper) --- */
+/* Si el logo está en el header (base.html), estos estilos no se aplicarán a él */
+/* Si tienes un logo específico en esta página, asegúrate de que tiene el ID/clase correcto */
+#request-material-wrapper #logo {
+    display: block; margin: 0 auto 25px auto; max-width: 150px; height: auto;
+}
 #request-material-wrapper .logo-link,
 #request-material-wrapper .logo-link:hover,
 #request-material-wrapper .logo-link:visited,
 #request-material-wrapper .logo-link:focus {
-    text-decoration: none;
-    border: none;
-    outline: none;
+    text-decoration: none; border: none; outline: none; /* Estilos para enlaces de logos */
 }
-#request-material-wrapper .logo-link .logo {
+#request-material-wrapper .logo-link .logo { display: block; }
+
+
+/* --- Título de la Página --- */
+/* Apunta al título h1 dentro del contenedor interno */
+#request-material-wrapper .container h1.titulo-pagina {
+    font-family: var(--Orbitron); /* Usa variable */
+    font-weight: 700; /* Negrita para título */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center; /* Centra el título */
+    margin-bottom: 30px;
+    color: var(--primario); /* Color principal rojo */
+    transition: color var(--transition-speed) ease;
+    border-bottom: 1px solid var(--primario); /* Borde inferior con color principal */
+    padding-bottom: 0.5rem;
+    font-size: 2.8rem; /* Tamaño similar a create_project */
+}
+/* No necesita estilo dark mode si el color es siempre var(--primario) */
+
+
+/* --- Estilo para el display del Folio --- */
+/* Apunta al grupo y al span del folio */
+#request-material-wrapper .container .folio-display {
+    margin-bottom: 20px; /* Espacio debajo */
+    /* Puedes añadir estilos de fondo, borde si quieres que se vea como un campo */
+    /* background-color: var(--input-bg-light); */
+    /* border: 1px solid var(--border-color-light); */
+    /* border-radius: 6px; */
+    /* padding: 10px 12px; */
+    /* text-align: left; */ /* Asegurar alineación */
+}
+#request-material-wrapper .container .folio-display label {
+    /* Estilos para la etiqueta del folio si es diferente a otras labels */
+    font-size: 1.4rem; /* Tamaño similar a labels */
+    color: var(--label-color-light); /* Color similar a labels */
+    font-weight: normal; /* Menos negrita que otras labels si quieres */
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+}
+#request-material-wrapper .container .folio-value {
     display: block;
-}
-
-/* --- Logo (si hubiera uno DENTRO del wrapper) --- */
-#request-material-wrapper #logo {
-    display: block; margin: 0 auto 25px auto; max-width: 150px; height: auto;
-}
-
-/* --- Estilos específicos prefijados --- */
-#request-material-wrapper h1 {
-    font-family: 'Orbitron', sans-serif; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 1px; text-align: center; margin-bottom: 30px;
-    color: #D42D2E; transition: color var(--transition-speed) ease; border-bottom: 1px solid var(--primario);;
-}
-
-
-#request-material-wrapper .form-group { margin-bottom: 15px; }
-
-#request-material-wrapper .form-row { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 0; }
-#request-material-wrapper .form-row > .form-group { margin-bottom: 15px; }
-#request-material-wrapper .form-row .form-group { flex: 1; min-width: 180px; }
-#request-material-wrapper .form-group:not(.form-row .form-group) { margin-bottom: 15px; margin-top: 30px; }
-#request-material-wrapper #dimensiones-container .form-row > .form-group {
-    flex-grow: 0;         /* Evita que crezcan para llenar espacio extra */
-    flex-shrink: 1;       /* Permite que se encojan si es necesario */
-
-    /* Establece un ancho base. Con 4 items y gap: 20px, calc es bueno */
-    /* 25% por item, menos aprox. 3/4 del gap (15px si gap es 20px) */
-    flex-basis: calc(25% - 15px);
-
-    /* Opcionalmente, usa un porcentaje fijo simple si calc es complejo: */
-    /* flex-basis: 22%; */ /* Ajusta este porcentaje */
-
-    min-width: 0;         /* Anula cualquier min-width heredado que pueda forzar el wrap */
-                          /* O establece un mínimo pequeño: min-width: 80px; */
-}
-
-/* Asegúrate de que los input dentro de estos grupos usen todo el ancho del grupo */
-#request-material-wrapper #dimensiones-container .form-row .form-group input[type="text"] {
     width: 100%;
+    padding: 10px 12px; /* Similar al padding de inputs */
+    border: 1px solid var(--border-color-light); /* Similar al borde de inputs */
+    border-radius: 6px; /* Similar al borde de inputs */
+    font-size: 1.5rem; /* Tamaño similar a inputs */
+    font-family: var(--Ubuntu); /* Fuente similar a inputs */
+    box-sizing: border-box;
+    line-height: 1.5;
+    background-color: var(--input-bg-light); /* Fondo similar a inputs */
+    color: var(--text-color-light); /* Color de texto similar a inputs */
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+
+    /* Estilos específicos para el display del folio si son diferentes */
+     /* background-color: transparent; */ /* Si quieres que se vea transparente */
+     /* border-color: transparent; */
+     /* color: #495057; */ /* Un gris específico para el folio */
+    white-space: nowrap; /* Evita saltos de línea en el folio */
+    overflow: hidden; /* Oculta el texto si es muy largo */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si es muy largo */
+    min-height: calc(1.5em + 20px + 2px); /* Altura mínima basada en font-size + padding + border */
 }
 
-#request-material-wrapper label {
+/* Estilos Dark Mode para el display del Folio */
+body.dark-mode #request-material-wrapper .container .folio-display label { color: var(--label-color-dark); }
+body.dark-mode #request-material-wrapper .container .folio-value {
+    background-color: var(--input-bg-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+    /* color: #adb5bd; si quieres un gris específico para el folio en dark */
+}
+
+
+/* --- Estilos de Filas y Grupos de Formulario --- */
+/* Aplica a .form-row y .form-group dentro del contenedor */
+#request-material-wrapper .container .form-row { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 0; }
+#request-material-wrapper .container .form-row > .form-group { margin-bottom: 15px; } /* Espacio entre grupos DENTRO de un form-row */
+#request-material-wrapper .container .form-row .form-group { flex: 1; min-width: 180px; } /* Comportamiento flex para grupos en fila */
+
+#request-material-wrapper .container .form-group:not(.form-row .form-group) { margin-bottom: 15px; margin-top: 30px; } /* Margen para grupos que no están en un form-row (si los hay) */
+
+
+/* --- Labels --- */
+/* Apunta a las etiquetas dentro del contenedor */
+#request-material-wrapper .container label {
     display: block; margin-bottom: 5px; font-weight: 600; color: var(--label-color-light);
     text-transform: uppercase; letter-spacing: 0.5px; transition: color var(--transition-speed) ease; font-size: 0.9em;
 }
+/* Estilo Dark Mode para Labels */
+body.dark-mode #request-material-wrapper .container label { color: var(--label-color-dark); }
 
-#request-material-wrapper input[type="text"],
-#request-material-wrapper input[type="number"],
-#request-material-wrapper input[type="date"],
-#request-material-wrapper select,
-#request-material-wrapper textarea {
+/* Estilos específicos para el checkbox label si es necesario */
+#request-material-wrapper .container .checkbox-label {
+    display: flex; align-items: center; cursor: pointer;
+    /* Color y peso se heredan de label o se definen aquí si son diferentes */
+    /* color: var(--gris-claro); font-weight: normal; */
+}
+#request-material-wrapper .container .checkbox-label span { margin-left: 8px; }
+
+
+/* --- Inputs, Selects, Textareas --- */
+/* Aplica a todos los tipos de input, select, textarea dentro del contenedor */
+#request-material-wrapper .container input[type="text"],
+#request-material-wrapper .container input[type="number"],
+#request-material-wrapper .container input[type="date"],
+#request-material-wrapper .container input[type="email"], /* Incluir email si lo usas */
+#request-material-wrapper .container input[type="password"], /* Incluir password si lo usas */
+#request-material-wrapper .container select,
+#request-material-wrapper .container textarea {
     width: 100%; padding: 10px; border: 1px solid var(--border-color-light); border-radius: 6px;
-    box-sizing: border-box; font-size: 16px; font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box; font-size: 16px; font-family: var(--Ubuntu);
     background-color: var(--input-bg-light); color: var(--text-color-light);
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
     line-height: 1.5;
 }
 
-#request-material-wrapper select {
-    padding-right: 30px; appearance: none; -webkit-appearance: none; -moz-appearance: none;
-    background-repeat: no-repeat; background-position: right 10px center;
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="#{var(--select-arrow-light)}" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>');
-}
-
-#request-material-wrapper textarea { height: 100px; resize: none; }
-
-#request-material-wrapper .folio-value {
-    display: block; width: 100%; padding: 10px; border: transparent;
-    border-radius: 6px; font-size: 16px; font-family: 'Ubuntu', sans-serif; box-sizing: border-box;
-    line-height: 1.5; background-color: transparent; color: #495057;
-    min-height: calc(1.5em + 20px + 2px); white-space: nowrap; overflow: hidden;
-    text-overflow: ellipsis; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
-}
-
-#request-material-wrapper .error-field { border: 1px solid var(--primary-color) !important; background-color: #fdd !important; }
-
-#request-material-wrapper input.na-field:disabled,
-#request-material-wrapper select.na-field:disabled {
-    background-color: #e9ecef; color: #6c757d; cursor: not-allowed;
-    border-color: var(--border-color-light); opacity: 0.7;
-}
-
-#request-material-wrapper #dimensiones-container,
-#request-material-wrapper #torni-table-container {
-    margin-top: 25px; margin-bottom: 0; padding: 20px; border: 1px solid var(--border-color-light);
-    border-radius: 6px; background-color: rgba(0, 0, 0, 0.02);
-    transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
-}
-
-#request-material-wrapper #dimensiones-container h3,
-#request-material-wrapper #torni-table-container h3 { /* Corregido # faltante */
-    padding: 0; margin-top: 0; margin-bottom: 15px; color: var(--label-color-light);
-    font-weight: 600; font-size: 1em; text-transform: uppercase; letter-spacing: 0.5px;
-    transition: color var(--transition-speed) ease; text-align: left;
-}
-
-#request-material-wrapper #torni-table-container { padding-bottom: 5px; overflow-x: auto; }
-#request-material-wrapper #torni-items-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
-
-#request-material-wrapper #torni-items-table th,
-#request-material-wrapper #torni-items-table td {
-    border: 1px solid var(--border-color-light); padding: 8px 10px; text-align: left;
-    vertical-align: top; transition: border-color var(--transition-speed) ease;
-}
-#request-material-wrapper #torni-items-table th {
-    background-color: #f8f9fa; font-weight: 600; font-size: 0.9em; text-transform: uppercase;
-    color: var(--label-color-light); transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-}
-#request-material-wrapper #torni-items-table th:nth-child(1),
-#request-material-wrapper #torni-items-table td:nth-child(1) { width: 15%; min-width: 80px; } /* Cantidad */
-#request-material-wrapper #torni-items-table th:nth-child(4),
-#request-material-wrapper #torni-items-table td:nth-child(4) { width: 10%; min-width: 60px; text-align: center; } /* Acción */
-#request-material-wrapper #torni-items-table th:nth-child(2),
-#request-material-wrapper #torni-items-table td:nth-child(2) { width: 30%; } /* ID */
-#request-material-wrapper #torni-items-table th:nth-child(3),
-#request-material-wrapper #torni-items-table td:nth-child(3) { width: 45%;  } /* Descripcion */
-
-#request-material-wrapper #torni-items-table td:nth-child(3) div.awesomplete > input {
-    width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-#request-material-wrapper #torni-items-table input[type="number"],
-#request-material-wrapper #torni-items-table input[type="text"] {
-    width: 100%; padding: 6px; font-size: 14px; box-sizing: border-box;
-}
-#request-material-wrapper .delete-row-btn,
-#request-material-wrapper .add-row-btn { /* Corregido: Asegúrate de que add-row-btn sea una clase */
-    color: white; border: none; border-radius: 4px; padding: 4px 8px;
-    cursor: pointer; font-size: 12px; line-height: 1.2; transition: background-color 0.2s ease;
-}
-#request-material-wrapper .delete-row-btn { background-color: #dc3545; }
-#request-material-wrapper .delete-row-btn:hover { background-color: #c82333; }
-#request-material-wrapper .add-row-btn { background-color: #28a745; display: block; margin: 0 auto 15px auto; padding: 8px 15px; font-size: 14px; }
-#request-material-wrapper .add-row-btn:hover { background-color: #218838; }
-
-#request-material-wrapper button[type="submit"] {
-    background-color: var(--primary-color); color: white; padding: 12px 20px; border: none; border-radius: 6px;
-    cursor: pointer; font-size: 18px; font-weight: bold; transition: background-color var(--transition-speed) ease;
-    display: block; width: 100%; margin-top: 30px; font-family: 'Ubuntu', sans-serif; text-transform: uppercase; letter-spacing: 1px;
-}
-#request-material-wrapper button[type="submit"]:hover { background-color: var(--primary-hover-color); }
-
-#request-material-wrapper .mensaje {
-    margin-top: 15px; padding: 10px 15px; border-radius: 6px; text-align: center;
-    border: 1px solid transparent; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
-    line-height: 1.4;
-}
-#request-material-wrapper .mensaje.oculto { display: none !important; }
-#request-material-wrapper #mensaje-exito { background-color: #d4edda; color: #155724; border-color: #c3e6cb; }
-#request-material-wrapper #mensaje-exito a { color: #0d5b21; font-weight: bold; text-decoration: underline; }
-#request-material-wrapper #mensaje-exito.mensaje-warning-estilo { background-color: #fff3cd; color: #856404; border-color: #ffeeba; }
-#request-material-wrapper #mensaje-exito.mensaje-warning-estilo a { color: #664d03; }
-#request-material-wrapper .mensaje-error { background-color: #f8d7da; color: #721c24; border-color: #f5c6cb; }
-
-#request-material-wrapper .oculto { display: none !important; } /* Esta regla está duplicada, puedes borrar una */
-
-/* --- Estilos Dark Mode (CORREGIDOS) --- */
-/* Aplica estilos a elementos DENTRO del wrapper CUANDO BODY tiene .dark-mode */
-body.dark-mode #request-material-wrapper .container {
-    background-color: var(--container-bg-dark);
-    box-shadow: 0 0 15px var(--shadow-dark);
-}
-body.dark-mode #request-material-wrapper h1 { color: #D42D2E; }
-body.dark-mode #request-material-wrapper label { color: var(--text-color-dark); }
-
-body.dark-mode #request-material-wrapper input[type="text"],
-body.dark-mode #request-material-wrapper input[type="number"],
-body.dark-mode #request-material-wrapper input[type="date"],
-body.dark-mode #request-material-wrapper select,
-body.dark-mode #request-material-wrapper textarea {
+/* Estilos Dark Mode para Inputs, Selects, Textareas */
+body.dark-mode #request-material-wrapper .container input[type="text"],
+body.dark-mode #request-material-wrapper .container input[type="number"],
+body.dark-mode #request-material-wrapper .container input[type="date"],
+body.dark-mode #request-material-wrapper input[type="email"],
+body.dark-mode #request-material-wrapper input[type="password"],
+body.dark-mode #request-material-wrapper .container select,
+body.dark-mode #request-material-wrapper .container textarea {
     background-color: var(--input-bg-dark);
     border-color: var(--border-color-dark);
     color: var(--text-color-dark);
 }
-body.dark-mode #request-material-wrapper input::placeholder,
-body.dark-mode #request-material-wrapper textarea::placeholder { color: var(--label-color-dark); opacity: 0.7; }
 
-body.dark-mode #request-material-wrapper select option { background-color: var(--input-bg-dark); color: var(--text-color-dark); }
-body.dark-mode #request-material-wrapper select { background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="#{var(--select-arrow-dark)}" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>'); }
-
-body.dark-mode #request-material-wrapper .folio-value { background-color: transparent; border-color: transparent; color: #adb5bd; }
-body.dark-mode #request-material-wrapper .error-field { border-color: #ff7b7b !important; background-color: #5c3030 !important; }
-
-body.dark-mode #request-material-wrapper input.na-field:disabled,
-body.dark-mode #request-material-wrapper select.na-field:disabled {
-    background-color: #3a3f44; color: #adb5bd; border-color: var(--border-color-dark);
+/* Estilos de focus para Inputs, Selects, Textareas */
+#request-material-wrapper .container input:focus,
+#request-material-wrapper .container select:focus,
+#request-material-wrapper .container textarea:focus {
+    outline: none; border-color: var(--primario); box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3);
 }
-body.dark-mode #request-material-wrapper #dimensiones-container,
-body.dark-mode #request-material-wrapper #torni-table-container {
-     background-color: rgba(255, 255, 255, 0.03); border-color: var(--border-color-dark);
+
+/* Estilos específicos para Selects (flecha) */
+#request-material-wrapper .container select {
+    padding-right: 30px; appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    background-repeat: no-repeat; background-position: right 10px center;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="${var(--select-arrow-light)}" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>');
 }
-body.dark-mode #request-material-wrapper #dimensiones-container h3,
-body.dark-mode #request-material-wrapper #torni-table-container h3 { color: var(--label-color-dark); }
-
-body.dark-mode #request-material-wrapper #torni-items-table th,
-body.dark-mode #request-material-wrapper #torni-items-table td { border-color: var(--border-color-dark); }
-body.dark-mode #request-material-wrapper #torni-items-table th { background-color: #343a40; color: var(--label-color-dark); }
-
-body.dark-mode #request-material-wrapper #mensaje-exito { background-color: #1a3a24; color: #a7d7b4; border-color: #2a573a; }
-body.dark-mode #request-material-wrapper #mensaje-exito a { color: #c3e6cb; }
-body.dark-mode #request-material-wrapper #mensaje-exito.mensaje-warning-estilo { background-color: #4d3e1e; color: #ffeeba; border-color: #6b5821; }
-body.dark-mode #request-material-wrapper #mensaje-exito.mensaje-warning-estilo a { color: #ffeeba; }
-body.dark-mode #request-material-wrapper .mensaje-error { background-color: #4d2429; color: #f1b0b7; border-color: #7d3a40; }
-
-/* --- Toggle Dark Mode (Asegúrate de que pertenezca aquí o a CSS global) --- */
-#request-material-wrapper .dark-mode-toggle {
-    position: fixed; top: 100px; right: 15px; z-index: 1000; padding: 8px 12px; font-size: 1.2em;
-    background-color: var(--container-bg-light); color: var(--text-color-light); border: 1px solid var(--border-color-light);
-    border-radius: 5px; cursor: pointer; transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease; line-height: 1;
+/* Estilos Dark Mode para la flecha del Select */
+body.dark-mode #request-material-wrapper .container select {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="${var(--select-arrow-dark)}" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>');
 }
-#request-material-wrapper .dark-mode-toggle:hover { opacity: 0.8; }
-body.dark-mode #request-material-wrapper .dark-mode-toggle { background-color: var(--container-bg-dark); color: var(--text-color-dark); border-color: var(--border-color-dark); }
+
+/* Estilos para el checkbox (input type="checkbox") */
+#request-material-wrapper .container input[type="checkbox"] {
+    width: auto; /* Permite que el checkbox tenga su tamaño natural */
+    margin-right: 5px;
+    accent-color: var(--primario); /* Color del check */
+    cursor: pointer;
+    transform: scale(1.2); /* Hacerlo ligeramente más grande */
+}
+
+/* Estilos para el textarea */
+#request-material-wrapper .container textarea { height: 100px; resize: vertical; } /* Permite redimensionar verticalmente */
+
+
+/* --- Estilos de Campos Deshabilitados (READONLY o DISABLED) --- */
+/* Aplica a campos deshabilitados dentro del contenedor */
+#request-material-wrapper .container input:disabled,
+#request-material-wrapper .container select:disabled,
+#request-material-wrapper .container textarea:disabled,
+#request-material-wrapper .container input[readonly] { /* Incluir readonly si usas eso (como en torni-id) */
+    background-color: #e9ecef; /* Fondo claro */
+    color: #6c757d; /* Texto gris */
+    cursor: not-allowed;
+    opacity: 0.7;
+    border-color: var(--border-color-light);
+    /* Estilos Dark Mode para campos deshabilitados */
+    body.dark-mode & { /* '&' se refiere al selector padre en Sass/CSS anidado. En CSS plano, repite el selector. */
+         background-color: #3a3f44;
+         color: #adb5bd;
+         border-color: var(--border-color-dark);
+    }
+}
+/* Estilo específico para campos "N/A" si los marcas con una clase */
+#request-material-wrapper .container input.na-field:disabled,
+#request-material-wrapper .container select.na-field:disabled {
+     /* Puedes añadir estilos diferentes si quieres, pero los estilos de :disabled ya aplican */
+}
+
+
+/* --- Estilos de la Tabla Torni --- */
+/* Apunta a los contenedores y elementos de la tabla Torni */
+#request-material-wrapper .container #torni-table-container {
+    margin-top: 25px; margin-bottom: 0; padding: 20px;
+    border: 1px solid var(--border-color-light); border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.02); /* Fondo sutil */
+    transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+}
+/* Estilos Dark Mode para el contenedor de la tabla Torni */
+body.dark-mode #request-material-wrapper .container #torni-table-container {
+     background-color: rgba(255, 255, 255, 0.03);
+     border-color: var(--border-color-dark);
+}
+
+/* Título dentro del contenedor de la tabla Torni */
+#request-material-wrapper .container #torni-table-container h3 {
+    padding: 0; margin-top: 0; margin-bottom: 15px;
+    color: var(--label-color-light); font-weight: 600; font-size: 1em;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    transition: color var(--transition-speed) ease; text-align: left;
+}
+/* Estilo Dark Mode para el título de la tabla Torni */
+body.dark-mode #request-material-wrapper .container #torni-table-container h3 { color: var(--label-color-dark); }
+
+
+/* Tabla Torni */
+#request-material-wrapper .container #torni-items-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 15px;
+}
+#request-material-wrapper .container #torni-items-table th,
+#request-material-wrapper .container #torni-items-table td {
+    border: 1px solid var(--border-color-light); padding: 8px 10px; text-align: left;
+    vertical-align: top; transition: border-color var(--transition-speed) ease;
+}
+/* Estilo Dark Mode para bordes de la tabla */
+body.dark-mode #request-material-wrapper .container #torni-items-table th,
+body.dark-mode #request-material-wrapper .container #torni-items-table td { border-color: var(--border-color-dark); }
+
+/* Encabezados de la tabla */
+#request-material-wrapper .container #torni-items-table th {
+    background-color: #f8f9fa; font-weight: 600; font-size: 0.9em; text-transform: uppercase;
+    color: var(--label-color-light); transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+/* Estilo Dark Mode para encabezados de la tabla */
+body.dark-mode #request-material-wrapper .container #torni-items-table th {
+    background-color: #343a40; color: var(--label-color-dark);
+}
+
+/* Anchos de columnas (ajusta si es necesario) */
+#request-material-wrapper .container #torni-items-table th:nth-child(1),
+#request-material-wrapper .container #torni-items-table td:nth-child(1) { width: 15%; min-width: 80px; } /* Cantidad */
+#request-material-wrapper .container #torni-items-table th:nth-child(4),
+#request-material-wrapper .container #torni-items-table td:nth-child(4) { width: 10%; min-width: 60px; text-align: center; } /* Acción (botón eliminar) */
+#request-material-wrapper .container #torni-items-table th:nth-child(2),
+#request-material-wrapper .container #torni-items-table td:nth-child(2) { width: 30%; } /* ID */
+#request-material-wrapper .container #torni-items-table th:nth-child(3),
+#request-material-wrapper .container #torni-items-table td:nth-child(3) { width: 45%;  } /* Descripcion */
+
+/* Estilos específicos para inputs dentro de la tabla Torni */
+#request-material-wrapper .container #torni-items-table input[type="number"],
+#request-material-wrapper .container #torni-items-table input[type="text"] {
+    width: 100%; padding: 6px; font-size: 14px; box-sizing: border-box;
+    /* Hereda la mayoría de estilos de input general */
+}
+/* Ajuste específico para Awesomplete input dentro de la tabla */
+#request-material-wrapper .container #torni-items-table td .awesomplete > input {
+    width: 100% !important; /* Asegurar que el input Awesomplete ocupa el 100% */
+    box-sizing: border-box !important;
+}
+
+/* Estilos para botones de añadir/eliminar fila */
+#request-material-wrapper .container .delete-row-btn,
+#request-material-wrapper .container .add-row-btn {
+    color: white; border: none; border-radius: 4px; padding: 4px 8px;
+    cursor: pointer; font-size: 12px; line-height: 1.2; transition: background-color 0.2s ease;
+}
+#request-material-wrapper .container .delete-row-btn { background-color: #dc3545; } /* Rojo */
+#request-material-wrapper .container .delete-row-btn:hover { background-color: #c82333; }
+#request-material-wrapper .container .add-row-btn {
+    background-color: #28a745; /* Verde */
+    display: block; margin: 0 auto 15px auto; padding: 8px 15px; font-size: 14px;
+}
+#request-material-wrapper .container .add-row-btn:hover { background-color: #218838; }
+
+
+/* --- Estilos de la Sección Dimensiones --- */
+/* Apunta al contenedor de dimensiones */
+#request-material-wrapper .container #dimensiones-container {
+    margin-top: 25px; margin-bottom: 0; padding: 20px;
+    border: 1px solid var(--border-color-light); border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.02); /* Fondo sutil */
+    transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+/* Estilos Dark Mode para el contenedor de dimensiones */
+body.dark-mode #request-material-wrapper .container #dimensiones-container {
+     background-color: rgba(255, 255, 255, 0.03);
+     border-color: var(--border-color-dark);
+}
+
+/* Título dentro del contenedor de dimensiones */
+#request-material-wrapper .container #dimensiones-container h3 {
+    padding: 0; margin-top: 0; margin-bottom: 15px;
+    color: var(--label-color-light); font-weight: 600; font-size: 1em;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    transition: color var(--transition-speed) ease; text-align: left;
+}
+/* Estilo Dark Mode para el título de dimensiones */
+body.dark-mode #request-material-wrapper .container #dimensiones-container h3 { color: var(--label-color-dark); }
+
+/* Estilos para la fila de inputs de dimensiones (dentro de #dimensiones-container) */
+#request-material-wrapper .container #dimensiones-container .form-row {
+    /* Los estilos de .form-row ya aplican */
+    /* Puedes añadir estilos específicos si necesitas */
+}
+
+/* Estilos para los grupos de inputs de dimensiones (dentro de #dimensiones-container .form-row) */
+#request-material-wrapper .container #dimensiones-container .form-row .form-group {
+     /* Los estilos de .form-row .form-group ya aplican */
+     /* Puedes afinar el flex-basis o min-width aquí si necesitas que se comporten diferente */
+      flex-grow: 0;         /* Evita que crezcan para llenar espacio extra */
+      flex-shrink: 1;       /* Permite que se encojan si es necesario */
+      flex-basis: calc(25% - 15px); /* Intenta que sean del 25% menos gap */
+      min-width: 80px;      /* Ancho mínimo aceptable antes de apilar */
+}
+
+/* Estilos para los inputs de dimensiones */
+#request-material-wrapper .container #dimensiones-container input[type="text"] {
+    /* Hereda estilos de input general */
+    width: 100%; /* Asegura que ocupan el 100% de su form-group */
+}
+
+
+/* --- Estilos para Especificaciones Adicionales (Textarea) --- */
+/* Apunta al form-group y textarea */
+/* Ya hereda estilos de .form-group y textarea generales */
+
+
+/* --- Contenedor del Botón de Envío --- */
+/* Apunta a .button-container dentro del contenedor */
+#request-material-wrapper .container .button-container {
+     margin-top: 30px; /* Espacio similar a otros elementos */
+     text-align: center; /* Centra el botón */
+}
+
+
+/* --- Botón Principal de Envío --- */
+/* Apunta al botón submit dentro del contenedor */
+#request-material-wrapper .container button[type="submit"] {
+    background-color: var(--primario); color: var(--blanco);
+    padding: 12px 20px; border: none; border-radius: 6px;
+    cursor: pointer; font-size: 18px; font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform 0.1s ease;
+    display: block; width: 100%; /* Ocupa todo el ancho del contenedor */
+    font-family: var(--Ubuntu); text-transform: uppercase; letter-spacing: 1px;
+}
+#request-material-wrapper .container button[type="submit"]:hover { background-color: var(--primary-hover-color); }
+#request-material-wrapper .container button[type="submit"]:active { transform: scale(0.98); }
+#request-material-wrapper .container button[type="submit"]:disabled {
+    background-color: #555; cursor: not-allowed; opacity: 0.7;
+}
+
+
+/* --- Contenedor de Mensajes de Respuesta AJAX --- */
+/* Apunta al div #response-message dentro del contenedor */
+/* Las clases .processing, .success, .error se añadirán por JS */
+#request-material-wrapper .container #response-message {
+    margin-top: 25px; /* Espacio encima del área de mensajes */
+    padding: 15px; border-radius: 6px; text-align: center;
+    font-size: 1.5rem; min-height: 50px; display: flex; align-items: center;
+    justify-content: center; border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    word-break: break-word; /* Romper palabras largas si es necesario */
+}
+#request-material-wrapper .container #response-message.processing {
+    border-color: var(--processing-text); color: var(--processing-text);
+    background-color: rgba(240, 173, 78, 0.1);
+}
+#request-material-wrapper .container #response-message.success {
+    background-color: var(--success-bg); color: var(--success-text);
+    border-color: var(--success-text);
+}
+#request-material-wrapper .container #response-message.error {
+    background-color: var(--error-bg); color: var(--error-text);
+    border-color: var(--error-text);
+}
+/* Estilo para enlaces dentro de mensajes de resultado */
+#request-material-wrapper .container #response-message a {
+    color: inherit; /* Hereda el color del mensaje (verde/rojo) */
+    text-decoration: underline; /* Subrayado */
+    font-weight: bold;
+    margin-left: 5px; /* Espacio a la izquierda */
+}
+
+
+/* --- Estilos para Mensajes Flash de Flask --- */
+/* Apunta al contenedor .message-container y a los mensajes .flash-message dentro del contenedor principal */
+/* Estos estilos se heredan o se definen aquí si son específicos */
+/* La visibilidad (oculto) se maneja por JS o por defecto si no hay mensajes */
+#request-material-wrapper .container .message-container {
+    /* Los estilos de posicionamiento absoluto y ancho deben ser específicos de cada página */
+    position: absolute; top: 15px; left: 50%; transform: translateX(-50%);
+    width: calc(100% - 80px); /* Ancho del contenedor interno menos padding */
+    max-width: calc(900px - 80px); /* Max-width del wrapper menos padding */
+    z-index: 1050; display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+#request-material-wrapper .container .flash-message {
+    padding: 12px 18px; border: 1px solid transparent; border-radius: 6px; text-align: center;
+    width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.15); opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out; font-size: 1.4rem;
+    /* Color y fondo específicos por categoría se definen abajo */
+}
+/* Estilos específicos por categoría (usan las mismas variables) */
+#request-material-wrapper .container .flash-message.success { background-color: var(--success-bg); color: var(--success-text); border-color: var(--success-text); }
+#request-material-wrapper .container .flash-message.danger { background-color: var(--error-bg); color: var(--error-text); border-color: var(--error-text); }
+#request-material-wrapper .container .flash-message.info { background-color: var(--info-bg); color: var(--info-text); border-color: var(--info-text); }
+#request-material-wrapper .container .flash-message.warning { background-color: var(--processing-text); color: var(--gris-oscuro); border-color: var(--processing-text); } /* Usar processing para warning */
+/* Clase para desvanecer/deslizar (si usas el script JS) */
+#request-material-wrapper .container .flash-message.fade-out { opacity: 0; transform: translateY(-20px); }
+
 
 /* --- Estilos Awesomplete Prefijados --- */
-#request-material-wrapper .awesomplete ul { border-radius: 4px; border: 1px solid var(--border-color-light); box-shadow: 0 3px 8px rgba(0,0,0,0.1); background: var(--input-bg-light); color: var(--text-color-light); z-index: 99; }
-body.dark-mode #request-material-wrapper .awesomplete ul { border-color: var(--border-color-dark); background: var(--input-bg-dark); color: var(--text-color-dark); }
+/* Aplica estilos a los elementos de Awesomplete (lista desplegable) */
+#request-material-wrapper .awesomplete ul {
+    border-radius: 4px; border: 1px solid var(--border-color-light); box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    background: var(--input-bg-light); color: var(--text-color-light);
+    z-index: 99; /* Asegura que la lista esté por encima de otros elementos */
+}
+/* Estilos Dark Mode para la lista Awesomplete */
+body.dark-mode #request-material-wrapper .awesomplete ul {
+    border-color: var(--border-color-dark); background: var(--input-bg-dark); color: var(--text-color-dark);
+}
+/* Estilos para los items de la lista */
 #request-material-wrapper .awesomplete ul li { padding: 5px 10px; font-size: 14px; transition: background-color 0.1s ease; }
+/* Estilos para el item seleccionado o al pasar el ratón */
 #request-material-wrapper .awesomplete ul li[aria-selected="true"],
-#request-material-wrapper .awesomplete ul li:hover { background-color: var(--primary-color); color: white; cursor: pointer; }
+#request-material-wrapper .awesomplete ul li:hover { background-color: var(--primario); color: white; cursor: pointer; }
+/* Estilos Dark Mode para el item seleccionado/hover */
 body.dark-mode #request-material-wrapper .awesomplete ul li[aria-selected="true"],
 body.dark-mode #request-material-wrapper .awesomplete ul li:hover { background-color: var(--primary-hover-color); }
-#request-material-wrapper .awesomplete mark { background-color: #ffffa0; color: inherit; padding: 0; }
-body.dark-mode #request-material-wrapper .awesomplete mark { background-color: #86861a; }
+/* Estilos para la parte marcada (coincidencia de texto) */
+#request-material-wrapper .awesomplete mark { background-color: #ffffa0; color: inherit; padding: 0; } /* Amarillo claro en light */
+/* Estilos Dark Mode para la parte marcada */
+body.dark-mode #request-material-wrapper .awesomplete mark { background-color: #86861a; /* Un amarillo verdoso oscuro */ }
 /* --- Fin Estilos Awesomplete --- */
 
 
+/* --- Toggle Dark Mode (Asegúrate de que pertenezca aquí o a CSS global) --- */
+/* Si el botón está en base.html, estos estilos DEBEN estar en styles.css */
+/* Si el botón está dentro del wrapper de esta página, estos estilos son correctos aquí */
+#request-material-wrapper .dark-mode-toggle {
+    /* Los estilos de posicionamiento fijo probablemente NO deben estar aquí si el botón está en el header */
+    /* Si el botón está en el header, este selector debería ser general en styles.css */
+    /* position: fixed; top: 100px; right: 15px; z-index: 1000; */
+
+    padding: 8px 12px; font-size: 1.2em; line-height: 1;
+    background-color: var(--container-bg-light); color: var(--text-color-light);
+    border: 1px solid var(--border-color-light); border-radius: 5px; cursor: pointer;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+#request-material-wrapper .dark-mode-toggle:hover { opacity: 0.8; }
+/* Estilos Dark Mode para el Toggle */
+body.dark-mode #request-material-wrapper .dark-mode-toggle {
+    background-color: var(--container-bg-dark); color: var(--text-color-dark); border-color: var(--border-color-dark);
+}
+
+/* --- Clase para ocultar elementos --- */
+/* Asegúrate de que esta clase está definida en tu CSS global si la usas en múltiples lugares */
+/* .oculto { display: none !important; } */ /* Si ya está en styles.css, elimínala de aquí */
+
+
+/* --- Estilos de Campos con Error Visual --- */
+/* Clase añadida por JS a campos con errores de validación */
+#request-material-wrapper .container .error-field {
+     border-color: var(--primario) !important; /* Borde rojo principal */
+     background-color: rgba(212, 45, 46, 0.1) !important; /* Fondo rojo sutil */
+     /* Opcional: Color de texto */
+     /* color: var(--text-color-light); */
+}
+/* Estilo Dark Mode para campos con error */
+body.dark-mode #request-material-wrapper .container .error-field {
+     border-color: var(--primary-hover-color) !important;
+     background-color: rgba(212, 45, 46, 0.2) !important;
+     /* color: var(--text-color-dark); */
+}
+
+
 /* --- Media Queries (Selectores internos prefijados) --- */
+/* Ajusta los breakpoints y los ajustes a tu diseño */
 @media (max-width: 768px) {
-    #request-material-wrapper .form-row { flex-direction: column; gap: 0; }
-    #request-material-wrapper .form-row .form-group { min-width: 100%; margin-bottom: 15px; }
-    #request-material-wrapper .form-row .form-group:last-child { margin-bottom: 0; }
-    #request-material-wrapper .container { padding: 20px; }
-    #request-material-wrapper #dimensiones-container,
-    #request-material-wrapper #torni-table-container { padding: 15px; }
-    #request-material-wrapper #torni-items-table th:nth-child(1),
-    #request-material-wrapper #torni-items-table td:nth-child(1) { min-width: 60px; } /* Cantidad */
-    #request-material-wrapper #torni-items-table th:nth-child(4),
-    #request-material-wrapper #torni-items-table td:nth-child(4) { min-width: 40px; } /* Acción */
+    #request-material-wrapper .container {
+        padding: 25px 30px; width: 98%;
+        max-width: calc(768px - (20px * 2)); /* Ajustar max-width del contenedor interno si el wrapper es 100% en móvil */
+    }
+    #request-material-wrapper .container h1.titulo-pagina { font-size: 2.4rem; }
+    #request-material-wrapper .container .form-row { flex-direction: column; gap: 15px; } /* Apilar filas en móvil */
+    #request-material-wrapper .container .form-row .form-group { min-width: 100%; margin-bottom: 0; } /* Ocupar todo el ancho al apilar */
+
+    #request-material-wrapper .container #dimensiones-container .form-row .form-group {
+        /* Forzar a que los grupos de dimensiones se apilen también */
+        flex-basis: 100%;
+        min-width: 100%;
+        margin-bottom: 15px; /* Espacio entre ellos */
+    }
+
+    #request-material-wrapper .container button[type="submit"] { font-size: 1.5rem; padding: 10px 25px; }
+    #request-material-wrapper .container #response-message { font-size: 1.4rem; padding: 12px; }
+    #request-material-wrapper .container .message-container { width: calc(100% - 60px); max-width: unset; /* Permitir que ocupe el ancho disponible */ }
+
+    #request-material-wrapper .container #torni-items-table { /* Ajustar tabla para móvil si es necesario */ }
+    #request-material-wrapper .container #torni-items-table th,
+    #request-material-wrapper .container #torni-items-table td { padding: 6px 8px; } /* Reducir padding */
+
 }
 
 @media (max-width: 480px) {
-    #request-material-wrapper #logo { max-width: 100px; margin-bottom: 15px; }
-    #request-material-wrapper h1 { font-size: 1.5em; }
-    #request-material-wrapper button[type="submit"] { font-size: 16px; padding: 10px 15px; }
-    #request-material-wrapper input[type="text"],
-    #request-material-wrapper input[type="number"],
-    #request-material-wrapper input[type="date"],
-    #request-material-wrapper select,
-    #request-material-wrapper textarea,
-    #request-material-wrapper .folio-value { font-size: 15px; }
-    #request-material-wrapper #torni-items-table input[type="number"],
-    #request-material-wrapper #torni-items-table input[type="text"] { font-size: 13px; }
-    #request-material-wrapper #torni-items-table th,
-    #request-material-wrapper #torni-items-table td { padding: 6px 8px; }
+    #request-material-wrapper .container { padding: 20px 25px; width: 100%; max-width: unset; }
+    #request-material-wrapper .container h1.titulo-pagina { font-size: 2rem; margin-bottom: 20px; }
+    #request-material-wrapper .container label { font-size: 1.3rem; }
+    #request-material-wrapper .container input, #request-material-wrapper .container select, #request-material-wrapper .container textarea { font-size: 1.4rem; padding: 8px 10px; }
+    #request-material-wrapper .container button[type="submit"] { font-size: 1.4rem; padding: 9px 20px; }
+    #request-material-wrapper .container #response-message { font-size: 1.3rem; padding: 10px; }
+    #request-material-wrapper .container .message-container { top: 10px; width: calc(100% - 50px); max-width: unset; }
+
+    /* Ajustes finos para la tabla en móviles si es necesario */
+    #request-material-wrapper .container #torni-items-table input[type="number"],
+    #request-material-wrapper .container #torni-items-table input[type="text"] { font-size: 13px; padding: 4px 6px; }
+
+    #request-material-wrapper .container .delete-row-btn,
+    #request-material-wrapper .container .add-row-btn { font-size: 11px; padding: 3px 6px; }
+    #request-material-wrapper .container .add-row-btn { padding: 6px 12px; font-size: 13px; }
+
 }
+
+/* --- Estilos para elementos Ocultos --- */
+/* Manten esta clase para ocultar secciones con JS */
+.oculto { display: none !important; }

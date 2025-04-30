@@ -398,7 +398,15 @@ def list_available_properties(notion_client: Client, database_id: str) -> List[D
 
 # Función principal llamada desde la ruta /solicitudes/submit
 # Devuelve (respuesta_dict, status_code)
-def submit_request_for_material_logic(notion_client: Client, database_id_db1: str, database_id_db2: str, data: Dict) -> Tuple[Dict, int]:
+def submit_request_for_material_logic(
+        notion_client: Client, 
+        database_id_db1: str, 
+        database_id_db2: str, 
+        data: Dict,
+        user_id: Optional[int] = None
+    ) -> Tuple[Dict, int]:
+
+    logger.info(f"[User ID: {user_id}] Iniciando procesamiento de solicitud de material...")
     """
     Procesa la solicitud de material y crea páginas en Notion.
     Acepta el cliente Notion, IDs de DB y los datos del formulario.
@@ -424,7 +432,7 @@ def submit_request_for_material_logic(notion_client: Client, database_id_db1: st
         torni_items = data.get('torni_items')
 
         # Generar Folio único si no viene
-        folio_solicitud = data.get("folio_solicitud", f"EMG-{datetime.datetime.now().strftime('%Y%m%d%H%M%S%f')[:-3]}")
+        folio_solicitud = data.get("folio_solicitud", f"EMG-{datetime.now().strftime('%Y%m%d%H%M%S%f')[:-3]}") # <<< CAMBIO CORRECTO
         logger.info(f"Procesando Folio de Materiales: {folio_solicitud}")
 
         # Propiedades Comunes
@@ -434,7 +442,7 @@ def submit_request_for_material_logic(notion_client: Client, database_id_db1: st
         if data.get("departamento_area"): common_properties["Departamento/Área"] = {"select": {"name": data["departamento_area"]}}
         if data.get("fecha_solicitud"):
              try:
-                 datetime.datetime.fromisoformat(data["fecha_solicitud"].replace('Z', '+00:00'))
+                 datetime.fromisoformat(data["fecha_solicitud"].replace('Z', '+00:00'))
                  common_properties["Fecha de solicitud"] = {"date": {"start": data["fecha_solicitud"]}}
              except ValueError:
                  logger.warning(f"Formato de fecha inválido para fecha_solicitud: {data['fecha_solicitud']}")
