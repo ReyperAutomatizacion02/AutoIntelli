@@ -1,0 +1,129 @@
+{# templates/proyectos/create_project.html #}
+
+{% extends 'base.html' %}
+
+{% block title %}Crear Nuevo Proyecto - AutoIntelli{% endblock %}
+
+{% block head_extra %}
+    {# Enlaza la hoja de estilos específica #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create_project.css') }}"> {# <<< ASEGÚRATE DE ESTA LÍNEA #}
+    {# Si necesitas enlazar styles.css aquí de nuevo, hazlo, aunque normalmente base.html ya lo hace #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> {# Asegúrate de que styles.css se carga #}
+{% endblock %}
+
+{% block content %}
+    <div id="create-project-wrapper">
+        <div class="container">
+            <h1 class="titulo-pagina">Crear Nuevo Proyecto</h1>
+
+            {# Contenedor para mensajes flash #}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="message-container">
+                    {% for category, message in messages %}
+                    <div role="alert" class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            <form id="create-project-form" method="POST"> {# Usaremos JS para enviar via AJAX #}
+                <div class="form-group">
+                    <label for="nombre_proyecto">Nombre del Proyecto:</label>
+                    <input type="text" id="nombre_proyecto" name="nombre_proyecto" required>
+                </div>
+                <div class="form-group">
+                    <label for="num_partidas">Número de Partidas:</label>
+                    <input type="number" id="num_partidas" name="num_partidas" min="1" required>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Crear Proyecto</button>
+                </div>
+            </form>
+
+            {# Área para mostrar respuesta de AJAX #}
+            <div id="response-message" style="margin-top: 20px; font-weight: bold;"></div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+    // Script para manejar el envío del formulario vía AJAX
+    document.getElementById('create-project-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir el envío de formulario tradicional
+
+        const form = event.target;
+        const formData = new FormData(form); // <<< Crear objeto FormData
+
+        // Limpiar mensajes anteriores
+        const responseDiv = document.getElementById('response-message');
+        responseDiv.textContent = '';
+        responseDiv.style.color = ''; // Reset color
+        responseDiv.classList.remove('processing', 'success', 'error'); // Limpiar clases de estado
+
+        // Mostrar estado de procesamiento
+        responseDiv.textContent = 'Procesando...';
+        responseDiv.classList.add('processing');
+
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData, // <<< Enviar el objeto FormData (form-data)
+            // <<< NO INCLUIR header 'Content-Type': 'application/json'
+        })
+        .then(response => {
+            // Si la respuesta no es OK (ej. 400, 500), lanzar error para ir al catch
+            if (!response.ok) {
+                // Intentar leer el error del JSON de respuesta
+                return response.json().then(err => {
+                     // err debería ser el objeto JSON del backend, ej: { error: "..." }
+                     const errorMsg = err.error || `Error ${response.status}: ${response.statusText}`;
+                     throw new Error(errorMsg); // Lanzar un error con el mensaje del backend
+                }).catch(() => {
+                    // Si la respuesta no es JSON válido, lanzar un error genérico
+                    const errorMsg = `Error ${response.status}: ${response.statusText}`;
+                    throw new Error(errorMsg);
+                });
+            }
+            // Si la respuesta es OK (200, 207), procesar el JSON de éxito
+            return response.json();
+        })
+        .then(data => {
+            // Mostrar mensaje de éxito
+            responseDiv.textContent = data.message || 'Operación exitosa.';
+            responseDiv.classList.remove('processing', 'error');
+            responseDiv.classList.add('success');
+        })
+        .catch(error => {
+            // Mostrar mensaje de error
+            console.error('Error:', error);
+            // *** CORREGIR ESTA LÍNEA: Usar error.message que ya contiene el mensaje del backend ***
+            responseDiv.textContent = error.message || 'Error al procesar la solicitud.';
+            responseDiv.classList.remove('processing', 'success');
+            responseDiv.classList.add('error');
+        });
+    });
+
+    // Script opcional para auto-cerrar mensajes flash (si los usas)
+    // Manten este script si lo tenías y te gusta su funcionamiento.
+    document.addEventListener('DOMContentLoaded', () => {
+        const flashMessages = document.querySelectorAll('.flash-message');
+        const autoCloseDelay = 5000; // 5 segundos
+        const fadeOutDuration = 500; // 0.5 segundos
+        flashMessages.forEach(message => {
+            setTimeout(() => {
+                message.classList.add('fade-out');
+                setTimeout(() => {
+                    if (message.parentNode) {
+                       message.style.display = 'none';
+                    }
+                }, fadeOutDuration);
+            }, autoCloseDelay);
+        });
+    });
+</script>
+{% endblock %}

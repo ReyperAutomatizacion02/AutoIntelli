@@ -27,7 +27,7 @@ def create_app():
 
     template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))
     static_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'static'))
-
+    
     app = Flask(__name__,
                 instance_relative_config=True,
                 template_folder=template_dir,
@@ -63,14 +63,15 @@ def create_app():
     # Inicializar Cliente Notion y guardarlo en la instancia de app
     app.notion_client = None
     if app.config.get('NOTION_API_KEY'):
+         print("DEBUG: NOTION_API_KEY encontrada en config, intentando inicializar Notion Client...") 
          try:
               app.notion_client = Client(auth=app.config['NOTION_API_KEY'])
-              print("Cliente de Notion inicializado en la fábrica.")
+              print("DEBUG: Cliente de Notion inicializado.")
          except Exception as e:
-              print(f"ERROR al inicializar Notion Client: {e}")
+              print(f"DEBUG: ERROR al inicializar Notion Client: {e}") 
               app.notion_client = None
     else:
-         print("ADVERTENCIA: NOTION_API_KEY no configurada. La integración con Notion no funcionará.")
+          print("DEBUG: NOTION_API_KEY NO encontrada en config. Cliente de Notion no inicializado.")
 
     # --- Inicializar Extensiones con la App ---
     # Usar la instancia db IMPORTADA de models.py

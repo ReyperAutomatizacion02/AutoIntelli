@@ -1,15 +1,14 @@
 /* static/css/create_project.css */
 
-/* --- Variables de Color (Asumiendo herencia o copia) --- */
+/* --- Variables de Color (Asumiendo herencia de styles.css o copia) --- */
+/* Si tus variables están en styles.css, puedes eliminar este bloque */
 :root {
     --primario: #D42D2E;
-    --secundario: #000000;
-    --negro: #000000;
     --blanco: #FFFFFF;
     --gris-oscuro: #181A1B;
     --gris-claro: #858585;
     --gris: #313131;
-    --gris-t: #313131d5;
+    --gris-t: #313131d5; /* Fondo del contenedor */
     --input-bg: #414141;
     --input-border: #555;
     --input-text: #e0e0e0;
@@ -18,55 +17,89 @@
     --error-bg: #4d2429;
     --error-text: #f1b0b7;
     --processing-text: #f0ad4e;
+    --Onest: "Onest", sans-serif;
+    --Orbitron: "Orbitron", sans-serif;
+    --Ubuntu: 'Ubuntu Sans Mono', monospace; /* Asegúrate de que esta variable está definida */
+
+    /* Si tienes una variable para la altura del header en styles.css, úsala */
+    --header-height: 80px; /* Altura de ejemplo del header */
 }
 
-/* --- Estilos para el CONTENEDOR PRINCIPAL --- */
+
+/* --- Estilos para el WRAPPER principal (Posicionamiento y Espaciado) --- */
+/* Este contenedor posiciona el recuadro en el centro de la página */
 #create-project-wrapper {
-    max-width: 650px; /* Un poco más estrecho quizás? Ajusta */
-    margin: 3rem auto;
-    padding: 25px 35px;
-    background-color: var(--gris-t);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex; /* Para centrar el contenido interno (el recuadro) */
+    justify-content: center;
+    align-items: center;
+    /* Altura mínima: Viewport height menos la altura del header */
+    min-height: calc(100vh - var(--header-height));
+    padding: 20px; /* Espacio alrededor del recuadro */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+
+/* --- Estilos para el CONTENEDOR INTERNO (El "Recuadro" principal) --- */
+/* Aplicamos a .container dentro del wrapper los estilos del recuadro de login */
+#create-project-wrapper .container { /* <<< APUNTA AL DIV CON CLASE 'CONTAINER' */
+    max-width: 650px; /* Ancho similar al que tenías en el wrapper original */
+    width: 95%; /* Ancho relativo similar */
+    margin: 0 auto; /* Centrado horizontal dentro del flex container del wrapper */
+
+    /* Estilos copiados del recuadro de login (#login-wrapper en login.css) */
+    padding: 30px 40px; /* Padding interno similar */
+    background-color: var(--gris-t); /* Fondo translúcido similar */
+    border-radius: 12px; /* Bordes redondeados similares */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25); /* Sombra similar */
+    color: var(--blanco); /* Color de texto por defecto dentro del recuadro */
+    text-align: center; /* Centra texto e inline/inline-block elementos */
+    position: relative; /* Para posicionar mensajes flash dentro */
     box-sizing: border-box;
-    width: 95%;
-    color: var(--blanco);
 }
 
 /* --- Título de la Página --- */
-#create-project-wrapper .titulo-pagina {
+#create-project-wrapper .container .titulo-pagina { /* <<< Apunta al título dentro del contenedor */
     color: var(--primario);
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--Orbitron); /* Usa variable si está definida */
     font-size: 2.8rem;
     margin-bottom: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-bottom: 1px solid var(--primario);
     padding-bottom: 0.5rem;
+    font-weight: normal; /* Como en el login h2 */
 }
 
+
 /* --- Secciones/Grupos del Formulario --- */
-#create-project-wrapper .form-section {
-    margin-bottom: 1.5rem; /* Espacio entre secciones si añades más */
+/* Si usas form-section en tu HTML, aplica estilos. Si no, puedes omitirlo. */
+/*
+#create-project-wrapper .container .form-section {
+    margin-bottom: 1.5rem;
 }
-#create-project-wrapper .form-group {
-    margin-bottom: 20px; /* Espacio debajo de cada grupo label/input */
+*/
+#create-project-wrapper .container .form-group { /* <<< Apunta a .form-group dentro del contenedor */
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    text-align: left; /* Alinea etiquetas y campos a la izquierda */
 }
 
 /* --- Labels --- */
-#create-project-wrapper label {
+#create-project-wrapper .container label { /* <<< Apunta a label dentro del contenedor */
     font-weight: 600;
     color: var(--gris-claro);
     font-size: 1.4rem;
 }
 
 /* --- Inputs --- */
-#create-project-wrapper input[type="text"],
-#create-project-wrapper input[type="number"] {
+/* Aplica estilos a todos los tipos de input usados en el formulario */
+#create-project-wrapper .container input[type="text"], /* <<< Apunta a inputs dentro del contenedor */
+#create-project-wrapper .container input[type="number"],
+#create-project-wrapper .container input[type="email"], /* Incluir email si lo necesitas */
+#create-project-wrapper .container input[type="password"] { /* Incluir password si lo necesitas */
     width: 100%;
     padding: 10px 12px;
     border: 1px solid var(--input-border);
@@ -74,112 +107,184 @@
     background-color: var(--input-bg);
     color: var(--input-text);
     font-size: 1.5rem;
-    font-family: 'Onest', sans-serif;
+    font-family: var(--Onest); /* Usa variable si está definida */
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-#create-project-wrapper input:focus {
+#create-project-wrapper .container input:focus {
     outline: none;
     border-color: var(--primario);
     box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3);
 }
 
 /* --- Contenedor del Botón --- */
-#create-project-wrapper .button-container {
+#create-project-wrapper .container .button-container { /* <<< Apunta a .button-container dentro del contenedor */
     text-align: center;
     margin-top: 3rem;
 }
 
 /* --- Botón Principal --- */
-#create-project-wrapper button[type="submit"] {
+#create-project-wrapper .container button[type="submit"] { /* <<< Apunta al botón dentro del contenedor */
     background-color: var(--primario);
-    color: white;
+    color: var(--blanco);
     padding: 12px 30px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: bold;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--Ubuntu); /* Usa variable si está definida */
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
-#create-project-wrapper button[type="submit"]:hover {
-    background-color: #b02122;
+#create-project-wrapper .container button[type="submit"]:hover {
+    background-color: #b02122; /* Color de hover similar al login */
 }
-#create-project-wrapper button[type="submit"]:active {
+#create-project-wrapper .container button[type="submit"]:active {
     transform: scale(0.98);
 }
-#create-project-wrapper button[type="submit"]:disabled {
+#create-project-wrapper .container button[type="submit"]:disabled { /* <<< Apunta al botón deshabilitado */
     background-color: #555;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
-/* --- Contenedor de Resultados --- */
-#create-project-wrapper #result { /* Aplica a #result dentro del wrapper */
+/* --- Contenedor de Mensajes de Respuesta AJAX --- */
+/* Asegúrate de que el ID del elemento es #response-message en tu HTML */
+#create-project-wrapper .container #response-message { /* <<< Apunta al elemento con ID #response-message dentro del contenedor */
     margin-top: 2.5rem;
     padding: 15px;
     border-radius: 6px;
     text-align: center;
     font-size: 1.5rem;
     min-height: 50px;
-    display: flex;
+    display: flex; /* Para centrar contenido vert/horiz */
     align-items: center;
     justify-content: center;
     border: 1px solid transparent;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
-#create-project-wrapper #result.processing {
+/* Clases para estados de respuesta */
+#create-project-wrapper .container #response-message.processing {
     border-color: var(--processing-text);
     color: var(--processing-text);
-    background-color: rgba(240, 173, 78, 0.1);
+    background-color: rgba(240, 173, 78, 0.1); /* Fondo translúcido */
 }
-#create-project-wrapper #result.success {
+#create-project-wrapper .container #response-message.success {
     background-color: var(--success-bg);
     color: var(--success-text);
     border-color: var(--success-text);
 }
-#create-project-wrapper #result.error {
+#create-project-wrapper .container #response-message.error {
     background-color: var(--error-bg);
     color: var(--error-text);
     border-color: var(--error-text);
 }
 
-/* --- Media Queries (Ajustes Responsivos Opcionales) --- */
+
+/* --- Estilos para Mensajes Flash (Posicionamiento y Estilo) --- */
+/* Si usas mensajes flash estándar de Flask en esta página, usa estos estilos */
+/* Copiados y adaptados de login.css */
+/* Asegúrate de que tu template tiene el bloque {% with messages... %} */
+#create-project-wrapper .container .message-container { /* <<< Apunta al contenedor de mensajes */
+    position: absolute;
+    top: 15px; /* Distancia desde arriba DEL CONTENEDOR INTERNO */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 80px); /* Ancho casi completo del contenedor interno (padding 40px + 40px = 80px) */
+    max-width: 570px; /* Un poco menos que el max-width del contenedor (650px - 80px = 570px) */
+    z-index: 1050; /* Encima de otros elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio entre mensajes si hay varios */
+}
+
+#create-project-wrapper .container .flash-message { /* <<< Apunta a los mensajes flash */
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--blanco);
+    background-color: var(--gris);
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+    font-size: 1.4rem;
+}
+/* Estilos específicos por categoría (usa las mismas variables) */
+#create-project-wrapper .container .flash-message.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: var(--success-text);
+}
+#create-project-wrapper .container .flash-message.danger {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border-color: var(--error-text);
+}
+#create-project-wrapper .container .flash-message.info {
+     background-color: var(--info-bg);
+    color: var(--info-text);
+    border-color: var(--info-text);
+}
+/* Clase para desvanecer/deslizar (si usas el script JS) */
+#create-project-wrapper .container .flash-message.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+
+/* --- Media Queries (Ajustes Responsivos) --- */
+/* Adapta los breakpoints y los ajustes a tu diseño */
 @media (max-width: 768px) {
-    #create-project-wrapper {
-        padding: 20px 25px;
-        width: 98%;
+    #create-project-wrapper .container {
+        /* Ajusta padding, width, etc. si es necesario en pantallas medianas */
+        padding: 25px 30px;
+        width: 98%; /* Puede ser un poco más ancho */
     }
-    #create-project-wrapper .titulo-pagina {
+    #create-project-wrapper .container .titulo-pagina {
         font-size: 2.4rem;
     }
-    #create-project-wrapper button[type="submit"] {
+    #create-project-wrapper .container button[type="submit"] {
         padding: 10px 25px;
         font-size: 1.5rem;
+    }
+     #create-project-wrapper .container #response-message {
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+     #create-project-wrapper .container .message-container {
+        width: calc(100% - 60px); /* Ajusta ancho por padding */
     }
 }
 
 @media (max-width: 480px) {
-     #create-project-wrapper {
-        padding: 15px 20px;
+    #create-project-wrapper .container {
+        padding: 20px 25px;
+        width: 100%; /* Puede ocupar todo el ancho disponible del wrapper */
     }
-    #create-project-wrapper .titulo-pagina {
+    #create-project-wrapper .container .titulo-pagina {
         font-size: 2rem;
     }
-    #create-project-wrapper label {
+     #create-project-wrapper .container label {
         font-size: 1.3rem;
     }
-     #create-project-wrapper input {
+     #create-project-wrapper .container input {
         font-size: 1.4rem;
         padding: 8px 10px;
     }
-    #create-project-wrapper button[type="submit"] {
+    #create-project-wrapper .container button[type="submit"] {
         font-size: 1.4rem;
     }
-     #create-project-wrapper #result {
-        font-size: 1.4rem;
+     #create-project-wrapper .container #response-message {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+     #create-project-wrapper .container .message-container {
+        top: 10px;
+        width: calc(100% - 50px);
     }
 }

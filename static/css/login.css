@@ -48,9 +48,9 @@
 #login-wrapper h2 { /* Título "Acceso" */
     color: var(--blanco);
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin-bottom: 2.5rem;
-    font-weight: normal;
+    font-weight: 600;
 }
 
 /* --- Grupos de Formulario --- */
