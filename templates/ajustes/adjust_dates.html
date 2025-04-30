@@ -1,0 +1,185 @@
+{# templates/ajustes/adjust_dates.html #}
+
+{% extends 'base.html' %} {# Asegúrate de que hereda de la base #}
+
+{% block title %}Ajuste de Horarios - AutoIntelli{% endblock %} {# Título específico #}
+
+{% block head_extra %}
+    {# Enlaza la hoja de estilos específica para esta página #}
+    {# Asegúrate de que este archivo CSS existe en static/css/ #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/adjust_dates.css') }}">
+    {# Si usas variables CSS o estilos básicos definidos en styles.css, asegúrate de que se carga #}
+    {# Normalmente base.html ya carga styles.css, pero si no, puedes añadirlo aquí #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+    {# --- Estructura del WRAPPER y CONTENEDOR INTERNO --- #}
+    {# Esto coincide con los selectores #adjust-dates-wrapper y #adjust-dates-wrapper .container en el CSS #}
+    <div id="adjust-dates-wrapper">
+        <div class="container">
+
+            {# Título de la Página #}
+            <h1 class="titulo-pagina">Ajuste de Horarios en Notion</h1>
+
+            {# Contenedor para mensajes flash de Flask (ej: si Notion no está configurado) #}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="message-container"> {# Clase para mensajes flash, usada en CSS #}
+                    {% for category, message in messages %}
+                    <div role="alert" class="flash-message {{ category }}"> {# Clase para mensaje individual y categoría #}
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            {# Formulario de Ajuste de Horarios #}
+            {# La acción apunta al endpoint POST del Blueprint 'ajustes' para ejecutar el script #}
+            <form id="adjust-dates-form" method="POST" action="{{ url_for('ajustes.run_adjust_script') }}">
+                <div class="form-section"> {# Sección principal del formulario #}
+                    <div class="form-row"> {# Fila para horas y dirección #}
+                        <div class="form-group"> {# Grupo para horas #}
+                            <label for="hours">Horas a ajustar:</label>
+                            {# El nombre del input debe coincidir con request.form.get('hours') en el backend #}
+                            <input type="number" id="hours" name="hours" required>
+                        </div>
+                         <div class="form-group bloqueMovimiento"> {# Grupo/fila para checkbox #}
+                            {# El nombre del checkbox debe coincidir con request.form.get('move_backward') #}
+                             <label for="move_backward" class="checkbox-label">
+                                 <input type="checkbox" id="move_backward" name="move_backward">
+                                 <span>Mover hacia atrás</span>
+                             </label>
+                        </div>
+                    </div>
+                     <div class="form-row"> {# Fila para fecha de inicio #}
+                         <div class="form-group" style="flex-basis: 100%;"> {# Usar flex-basis para que ocupe toda la fila #}
+                             <label for="start_date">A partir de la fecha (inclusive):</label>
+                             {# El nombre del input debe coincidir con request.form.get('start_date') #}
+                             <input type="date" id="start_date" name="start_date" required>
+                         </div>
+                     </div>
+                </div>
+
+                <div class="form-section"> {# Sección opcional para filtros #}
+                    <h2 class="filtros-titulo">Filtros Opcionales</h2>
+                    {# Puedes añadir un párrafo explicativo si quieres #}
+                    {# <p>Filtra los registros de Notion por hasta 3 propiedades.</p> #}
+
+                    {# Bucle para generar 3 pares de campos de filtro #}
+                    {% for i in range(1, 4) %}
+                        {# Usar form-row o input-group como en el CSS #}
+                        <div class="form-row"> {# Opcional: usar input-group si el CSS lo define #}
+                             <div class="form-group"> {# Grupo para nombre de propiedad #}
+                                 <label for="property_name_{{ i }}">Nombre de Propiedad {{ i }}:</label>
+                                 {# Nombres de inputs deben coincidir con request.form.get('property_name_i') #}
+                                 <input type="text" id="property_name_{{ i }}" name="property_name_{{ i }}">
+                             </div>
+                              <div class="form-group"> {# Grupo para valor de propiedad #}
+                                  <label for="property_value_{{ i }}">Valor de Propiedad {{ i }}:</label>
+                                  {# Nombres de inputs deben coincidir con request.form.get('property_value_i') #}
+                                  <input type="text" id="property_value_{{ i }}" name="property_value_{{ i }}">
+                              </div>
+                        </div>
+                    {% endfor %}
+
+                </div> {# Fin form-section filtros #}
+
+                <div class="boton-container"> {# Contenedor para el botón, usa la clase definida en CSS #}
+                    <button type="submit">Ejecutar Ajuste</button>
+                </div>
+            </form>
+
+            {# Área para mostrar respuesta de AJAX #}
+            {# El ID debe coincidir con el selector CSS y el script JS (#result) #}
+            <div id="result"></div> {# <<< ID DEBE COINCIDIR CON CSS Y JS #}
+
+        </div> {# Cierre de .container #}
+    </div> {# Cierre de #adjust-dates-wrapper #}
+
+{% endblock %}
+
+{% block scripts_extra %}
+    {# --- Script para manejar el envío del formulario vía AJAX --- #}
+    <script>
+        // Selecciona el formulario por su ID
+        const adjustDatesForm = document.getElementById('adjust-dates-form');
+        // Selecciona el div donde mostrar el resultado por su ID
+        const resultDiv = document.getElementById('result'); // <<< Coincide con el ID en el HTML
+
+        // Añade un listener para el evento 'submit' del formulario
+        adjustDatesForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene el envío de formulario tradicional (recarga de página)
+
+            const form = event.target;
+            const formData = new FormData(form); // Recopila todos los datos del formulario en formato FormData
+
+            // Limpiar mensajes anteriores y clases de estado
+            resultDiv.textContent = '';
+            resultDiv.classList.remove('processing', 'success', 'error');
+
+            // Mostrar estado de procesamiento
+            resultDiv.textContent = 'Ejecutando ajuste...';
+            resultDiv.classList.add('processing');
+
+            // Enviar la solicitud POST usando fetch API
+            fetch(form.action, { // Obtiene la URL del atributo 'action' del formulario
+                method: form.method, // Obtiene el método (POST) del atributo 'method'
+                body: formData, // Envía los datos en formato FormData (backend espera request.form)
+                // No es necesario establecer Content-Type para FormData, el navegador lo hace automáticamente
+            })
+            .then(response => {
+                 // Si la respuesta no es OK (ej. 400, 500), lanzar error para ir al bloque .catch
+                 if (!response.ok) {
+                      // Intentar leer el error del JSON de respuesta que envía el backend
+                      return response.json().then(err => {
+                           // err debería ser el objeto JSON del backend, ej: { "error": "Mensaje de error..." }
+                           const errorMsg = err.error || `Error ${response.status}: ${response.statusText}`;
+                           throw new Error(errorMsg); // Lanzar un nuevo error con el mensaje del backend
+                      }).catch(() => {
+                           // Si la respuesta no es JSON válido, lanzar un error genérico
+                           const errorMsg = `Error ${response.status}: ${response.statusText}`;
+                           throw new Error(errorMsg);
+                      });
+                 }
+                 // Si la respuesta es OK (200, 207), procesar el JSON de éxito
+                 return response.json();
+            })
+            .then(data => {
+                // Esto se ejecuta si la solicitud fue exitosa (response.ok)
+                // data es el objeto JSON de éxito del backend, ej: { "message": "..." }
+
+                // Mostrar mensaje de éxito en el div de resultado
+                resultDiv.textContent = data.message || 'Operación de ajuste completada.';
+                resultDiv.classList.remove('processing', 'error'); // Eliminar clases de procesamiento/error
+                resultDiv.classList.add('success'); // Añadir clase de éxito
+            })
+            .catch(error => {
+                // Esto se ejecuta si fetch falló o si una respuesta no OK lanzó un error
+                console.error('Error en fetch o respuesta no OK:', error);
+
+                // Mostrar mensaje de error en el div de resultado
+                resultDiv.textContent = error.message || 'Error inesperado al procesar la solicitud.';
+                resultDiv.classList.remove('processing', 'success'); // Eliminar clases de procesamiento/éxito
+                resultDiv.classList.add('error'); // Añadir clase de error
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            const autoCloseDelay = 5000; // 5 segundos
+            const fadeOutDuration = 500; // 0.5 segundos
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (message.parentNode) {
+                           message.style.display = 'none';
+                        }
+                    }, fadeOutDuration);
+                }, autoCloseDelay);
+            });
+        });
+    </script>
+{% endblock %}

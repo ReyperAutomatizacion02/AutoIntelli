@@ -101,26 +101,38 @@ def get_pages_with_filter_util(notion_client: Client, database_id: str, filters:
 
     try:
         while has_more:
-            payload = { "page_size": page_size }
+            # >>> PREPARAR LOS ARGUMENTOS PARA LA LLAMADA A query - ESTA ES LA TERCERA VERSIÓN <<<
+            query_args = {
+                "database_id": database_id,
+                "page_size": page_size,
+            }
 
+            # --- CORRECCIÓN: Solo añadir 'filter' si hay filtros ---
+            # Construye el dict de filtro, o deja filter_arg como None
+            filter_arg = None
             if filters and len(filters) > 0:
                 if len(filters) == 1:
-                    payload["filter"] = filters[0]
+                    filter_arg = filters[0] # Pasa el dict de un solo filtro
                 else:
-                    payload["filter"] = { "and": filters }
+                    filter_arg = { "and": filters } # Pasa el dict con la lógica 'and'
 
+            # *** Solo añade la clave 'filter' a query_args si filter_arg NO es None ***
+            if filter_arg is not None:
+                 query_args["filter"] = filter_arg
+
+            # --- FIN CORRECCIÓN ---
+
+
+            # Agregar start_cursor si existe
             if start_cursor:
-                payload["start_cursor"] = start_cursor
+                query_args["start_cursor"] = start_cursor
 
             # Usa el cliente Notion para consultar
-            # La API query recibe database_id, filter, sort, start_cursor, page_size
-            response = notion_client.databases.query(
-                database_id=database_id,
-                filter=payload.get("filter"), # None si no hay filtros
-                start_cursor=payload.get("start_cursor"), # None si es la primera página
-                page_size=page_size # Siempre pasamos page_size
-            )
-            data = response # El cliente Notion ya devuelve el dict
+            # Pasar el diccionario de argumentos usando **
+            # Si filter_arg es None, la clave "filter" no estará en query_args, y no se pasará.
+            response = notion_client.databases.query(**query_args) # <<< Pasar los argumentos usando **
+
+            data = response
 
             results = data.get("results", [])
             all_pages.extend(results)
@@ -130,7 +142,7 @@ def get_pages_with_filter_util(notion_client: Client, database_id: str, filters:
 
             logger.info(f"Obtenidas {len(results)} páginas con filtros de {database_id}. Total acumulado: {len(all_pages)}")
 
-    except Exception as e: # Capturar excepciones del cliente Notion
+    except Exception as e:
         logger.error(f"Error al obtener páginas de Notion con filtros de {database_id}: {str(e)}", exc_info=True)
 
     return all_pages

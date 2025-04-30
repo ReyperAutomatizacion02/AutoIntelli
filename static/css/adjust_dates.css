@@ -1,10 +1,9 @@
 /* static/css/adjust_dates.css */
 
-/* --- Variables de Color (Puedes importar desde un archivo base o redefinir) --- */
+/* --- Variables de Color (Asumiendo herencia de styles.css o copia) --- */
+/* Si tus variables están en styles.css, puedes eliminar este bloque */
 :root {
     --primario: #D42D2E;
-    --secundario: #000000;
-    --negro: #000000;
     --blanco: #FFFFFF;
     --gris-oscuro: #181A1B; /* Fondo del body (heredado) */
     --gris-claro: #858585;   /* Color de texto secundario/labels */
@@ -18,121 +17,149 @@
     --error-bg: #4d2429;
     --error-text: #f1b0b7;
     --processing-text: #f0ad4e; /* Amarillo/Naranja para procesando */
+    --Onest: "Onest", sans-serif; /* Asegúrate de que esta variable está definida */
+    --Orbitron: "Orbitron", sans-serif; /* Asegúrate de que esta variable está definida */
+    --Ubuntu: 'Ubuntu Sans Mono', monospace; /* Asegúrate de que esta variable está definida */
+
+    /* Si tienes una variable para la altura del header en styles.css, úsala */
+    --header-height: 80px; /* Altura de ejemplo del header */
 }
 
-/* --- Estilos para el CONTENEDOR PRINCIPAL de la herramienta --- */
-#adjust-dates-wrapper {
-    max-width: 800px; /* Ancho máximo para esta sección */
-    margin: 3rem auto; /* Margen superior/inferior y centrado horizontal */
-    padding: 25px 35px; /* Padding interno */
-    background-color: var(--gris-t); /* Fondo semi-transparente */
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+/* --- Estilos para el WRAPPER principal (Posicionamiento y Espaciado) --- */
+/* Este contenedor posiciona el recuadro en el centro de la página */
+#adjust-dates-wrapper { /* <<< Asegúrate de que tu plantilla tiene un div con este ID */
+    display: flex; /* Para centrar el contenido interno (el recuadro) */
+    justify-content: center;
+    align-items: center;
+    /* Altura mínima: Viewport height menos la altura del header */
+    min-height: calc(100vh - var(--header-height));
+    padding: 20px; /* Espacio alrededor del recuadro */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+
+/* --- Estilos para el CONTENEDOR INTERNO (El "Recuadro" principal) --- */
+/* Aplicamos a .container dentro del wrapper los estilos del recuadro de login/create_project */
+#adjust-dates-wrapper .container { /* <<< Apunta al div con clase 'container' dentro del wrapper */
+    max-width: 800px; /* Ancho máximo para esta sección (copiado de tu CSS original) */
+    width: 95%; /* Ancho relativo similar */
+    margin: 0 auto; /* Centrado horizontal dentro del flex container del wrapper */
+
+    /* Estilos copiados del recuadro de login/create_project */
+    padding: 30px 40px; /* Padding interno similar */
+    background-color: var(--gris-t); /* Fondo translúcido similar */
+    border-radius: 12px; /* Bordes redondeados similares */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25); /* Sombra similar */
+    color: var(--blanco); /* Color de texto por defecto dentro del recuadro */
+    text-align: left; /* Alinea texto por defecto a la izquierda si el formulario está alineado así */
+    position: relative; /* Para posicionar mensajes flash dentro */
     box-sizing: border-box;
-    width: 95%;
-    color: var(--blanco); /* Color de texto principal dentro del wrapper */
 }
 
 /* --- Título de la Página --- */
-#adjust-dates-wrapper .titulo-pagina {
+#adjust-dates-wrapper .container .titulo-pagina { /* <<< Apunta al título dentro del contenedor */
     color: var(--primario);
     text-align: center;
-    font-family: 'Orbitron', sans-serif; /* O la fuente que uses para títulos */
+    font-family: var(--Orbitron); /* Usa variable si está definida */
     font-size: 2.8rem;
     margin-bottom: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-bottom: 1px solid var(--primario);
     padding-bottom: 0.5rem;
+    font-weight: normal; /* Como en el login h2 */
 }
 
 /* --- Secciones del Formulario --- */
-#adjust-dates-wrapper .form-section {
+#adjust-dates-wrapper .container .form-section { /* <<< Apunta a .form-section dentro del contenedor */
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--input-border);
 }
-#adjust-dates-wrapper .form-section:last-of-type {
+#adjust-dates-wrapper .container .form-section:last-of-type {
     border-bottom: none;
     padding-bottom: 0;
 }
 
 /* --- Filas del Formulario --- */
-#adjust-dates-wrapper .form-row {
+#adjust-dates-wrapper .container .form-row { /* <<< Apunta a .form-row dentro del contenedor */
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
-    gap: 20px; /* Espacio entre elementos en la misma fila */
-    margin-bottom: 15px; /* Espacio debajo de cada fila */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
 }
-#adjust-dates-wrapper .form-row:last-child {
+#adjust-dates-wrapper .container .form-row:last-child {
     margin-bottom: 0;
 }
 
 /* --- Grupos de Formulario --- */
-#adjust-dates-wrapper .form-group {
-    flex: 1; /* Intenta que los grupos ocupen espacio equitativo */
-    min-width: 200px; /* Ancho mínimo antes de pasar a la siguiente línea */
+#adjust-dates-wrapper .container .form-group { /* <<< Apunta a .form-group dentro del contenedor */
+    flex: 1;
+    min-width: 200px;
     display: flex;
-    flex-direction: column; /* Apila label e input verticalmente */
-    gap: 8px; /* Espacio entre label e input */
+    flex-direction: column;
+    gap: 8px;
+    /* text-align: left; Ya heredado del contenedor */
 }
 /* Ajuste para el checkbox */
-#adjust-dates-wrapper .bloqueMovimiento {
-   flex-direction: row; /* Checkbox y label en horizontal */
+#adjust-dates-wrapper .container .bloqueMovimiento { /* <<< Apunta a .bloqueMovimiento dentro del contenedor */
+   flex-direction: row;
    align-items: center;
-   flex-basis: 100%; /* Ocupa toda la fila si es necesario */
-   margin-top: 10px; /* Pequeño espacio extra */
+   flex-basis: 100%;
+   margin-top: 10px;
 }
 
 /* --- Labels --- */
-#adjust-dates-wrapper label {
+#adjust-dates-wrapper .container label { /* <<< Apunta a label dentro del contenedor */
     font-weight: 600;
     color: var(--gris-claro);
     font-size: 1.4rem;
 }
-#adjust-dates-wrapper .checkbox-label {
+#adjust-dates-wrapper .container .checkbox-label { /* <<< Apunta a .checkbox-label dentro del contenedor */
     display: flex;
     align-items: center;
     cursor: pointer;
     color: var(--gris-claro);
-    font-weight: normal; /* Normal para checkbox */
+    font-weight: normal;
 }
-#adjust-dates-wrapper .checkbox-label span {
-    margin-left: 8px; /* Espacio entre checkbox y texto */
+#adjust-dates-wrapper .container .checkbox-label span {
+    margin-left: 8px;
 }
 
 /* --- Inputs y Selects --- */
-#adjust-dates-wrapper input[type="number"],
-#adjust-dates-wrapper input[type="date"],
-#adjust-dates-wrapper input[type="text"],
-#adjust-dates-wrapper select {
-    width: 100%; /* Ocupa el ancho del .form-group */
+/* Aplica a todos los tipos de input y select usados en el formulario */
+#adjust-dates-wrapper .container input[type="number"], /* <<< Apunta a inputs/selects dentro del contenedor */
+#adjust-dates-wrapper .container input[type="date"],
+#adjust-dates-wrapper .container input[type="text"],
+#adjust-dates-wrapper .container select {
+    width: 100%;
     padding: 10px 12px;
     border: 1px solid var(--input-border);
     border-radius: 6px;
     background-color: var(--input-bg);
     color: var(--input-text);
     font-size: 1.5rem;
-    font-family: 'Onest', sans-serif; /* O tu fuente de texto principal */
+    font-family: var(--Onest); /* Usa variable si está definida */
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-#adjust-dates-wrapper input:focus,
-#adjust-dates-wrapper select:focus {
+#adjust-dates-wrapper .container input:focus,
+#adjust-dates-wrapper .container select:focus {
     outline: none;
     border-color: var(--primario);
-    box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3); /* Sutil brillo rojo al enfocar */
+    box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3);
 }
-#adjust-dates-wrapper input[type="checkbox"] {
-    width: auto; /* Tamaño natural del checkbox */
-    margin-right: 5px; /* Pequeño espacio a la derecha */
-    accent-color: var(--primario); /* Color del check */
+#adjust-dates-wrapper .container input[type="checkbox"] { /* <<< Apunta al checkbox */
+    width: auto;
+    margin-right: 5px;
+    accent-color: var(--primario);
     cursor: pointer;
-    transform: scale(1.2); /* Hacerlo ligeramente más grande */
+    transform: scale(1.2);
 }
 
 /* --- Títulos de Filtros --- */
-#adjust-dates-wrapper .filtros-titulo {
+#adjust-dates-wrapper .container .filtros-titulo { /* <<< Apunta a .filtros-titulo dentro del contenedor */
     color: var(--blanco);
     text-align: center;
     font-size: 2rem;
@@ -141,7 +168,7 @@
     font-weight: normal;
     letter-spacing: 0.5px;
 }
-#adjust-dates-wrapper h3.subFiltro {
+#adjust-dates-wrapper .container h3.subFiltro { /* <<< Apunta a h3.subFiltro dentro del contenedor */
     color: var(--gris-claro);
     font-size: 1.6rem;
     margin-bottom: 1rem;
@@ -149,118 +176,200 @@
     border-bottom: 1px dashed var(--input-border);
     padding-bottom: 0.5rem;
 }
-#adjust-dates-wrapper .input-group {
-    margin-bottom: 15px; /* Espacio entre label/input dentro de un filtro */
+#adjust-dates-wrapper .container .input-group { /* <<< Apunta a .input-group dentro del contenedor */
+    margin-bottom: 15px;
 }
-#adjust-dates-wrapper .input-group label {
-    font-size: 1.3rem; /* Labels de filtro un poco más pequeñas */
-    color: #bbb; /* Ligeramente más claras */
+#adjust-dates-wrapper .container .input-group label { /* <<< Apunta a label dentro de .input-group */
+    font-size: 1.3rem;
+    color: #bbb;
 }
 
+
 /* --- Contenedor del Botón --- */
-#adjust-dates-wrapper .boton-container {
-    text-align: center; /* Centra el botón */
+#adjust-dates-wrapper .container .boton-container { /* <<< Apunta a .boton-container dentro del contenedor */
+    text-align: center;
     margin-top: 3rem;
 }
 
 /* --- Botón Principal --- */
-#adjust-dates-wrapper button[type="submit"] {
+#adjust-dates-wrapper .container button[type="submit"] { /* <<< Apunta al botón dentro del contenedor */
     background-color: var(--primario);
-    color: white;
+    color: var(--blanco);
     padding: 12px 30px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: bold;
-    font-family: 'Ubuntu', sans-serif; /* O tu fuente preferida */
+    font-family: var(--Ubuntu); /* Usa variable si está definida */
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
-#adjust-dates-wrapper button[type="submit"]:hover {
+#adjust-dates-wrapper .container button[type="submit"]:hover {
     background-color: #b02122; /* Un rojo más oscuro */
 }
-#adjust-dates-wrapper button[type="submit"]:active {
-    transform: scale(0.98); /* Efecto al presionar */
+#adjust-dates-wrapper .container button[type="submit"]:active {
+    transform: scale(0.98);
 }
-#adjust-dates-wrapper button[type="submit"]:disabled {
-    background-color: #555; /* Color cuando está deshabilitado */
+#adjust-dates-wrapper .container button[type="submit"]:disabled {
+    background-color: #555;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
-/* --- Contenedor de Resultados --- */
-#adjust-dates-wrapper #result {
+
+/* --- Contenedor de Mensajes de Respuesta AJAX --- */
+/* Asegúrate de que el ID del elemento es #response-message en tu HTML */
+#adjust-dates-wrapper .container #response-message { /* <<< Apunta al elemento con ID #response-message dentro del contenedor */
     margin-top: 2.5rem;
     padding: 15px;
     border-radius: 6px;
     text-align: center;
     font-size: 1.5rem;
-    min-height: 50px; /* Para que no colapse al estar vacío */
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid transparent; /* Borde base */
+    border: 1px solid transparent;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
-#adjust-dates-wrapper #result.processing {
+/* Clases para estados de respuesta */
+#adjust-dates-wrapper .container #response-message.processing {
     border-color: var(--processing-text);
     color: var(--processing-text);
-    background-color: rgba(240, 173, 78, 0.1); /* Fondo sutil amarillo */
+    background-color: rgba(240, 173, 78, 0.1);
 }
-#adjust-dates-wrapper #result.success {
+#adjust-dates-wrapper .container #response-message.success {
     background-color: var(--success-bg);
     color: var(--success-text);
     border-color: var(--success-text);
 }
-#adjust-dates-wrapper #result.error {
+#adjust-dates-wrapper .container #response-message.error {
     background-color: var(--error-bg);
     color: var(--error-text);
     border-color: var(--error-text);
 }
 
 
-/* --- Media Queries (Ajustes Responsivos Opcionales) --- */
+/* --- Estilos para Mensajes Flash (Posicionamiento y Estilo) --- */
+/* Si usas mensajes flash estándar de Flask en esta página, usa estos estilos */
+/* Copiados y adaptados de login.css */
+/* Asegúrate de que tu template tiene el bloque {% with messages... %} */
+#adjust-dates-wrapper .container .message-container { /* <<< Apunta al contenedor de mensajes */
+    position: absolute;
+    top: 15px; /* Distancia desde arriba DEL CONTENEDOR INTERNO */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 80px); /* Ancho casi completo del contenedor interno (padding 40px + 40px = 80px) */
+    max-width: 720px; /* Un poco menos que el max-width del contenedor (800px - 80px = 720px) */
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#adjust-dates-wrapper .container .flash-message { /* <<< Apunta a los mensajes flash */
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--blanco);
+    background-color: var(--gris);
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+    font-size: 1.4rem;
+}
+/* Estilos específicos por categoría (usa las mismas variables) */
+#adjust-dates-wrapper .container .flash-message.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: var(--success-text);
+}
+#adjust-dates-wrapper .container .flash-message.danger {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border-color: var(--error-text);
+}
+#adjust-dates-wrapper .container .flash-message.info {
+     background-color: var(--info-bg);
+    color: var(--info-text);
+    border-color: var(--info-text);
+}
+/* Clase para desvanecer/deslizar (si usas el script JS) */
+#adjust-dates-wrapper .container .flash-message.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+
+/* --- Media Queries (Ajustes Responsivos) --- */
+/* Adapta los breakpoints y los ajustes a tu diseño */
 @media (max-width: 768px) {
-    #adjust-dates-wrapper {
-        padding: 20px 25px;
+    #adjust-dates-wrapper .container {
+        /* Ajusta padding, width, etc. si es necesario en pantallas medianas */
+        padding: 25px 30px;
         width: 98%;
     }
-    #adjust-dates-wrapper .form-row {
-        flex-direction: column; /* Apilar en pantallas pequeñas */
-        gap: 15px; /* Reducir gap vertical */
+    #adjust-dates-wrapper .container .form-row {
+         /* Decide si quieres apilar o mantener en fila. Apilar es común en pantallas pequeñas/medianas */
+         /* flex-direction: column; */
+         /* gap: 15px; */
     }
-    #adjust-dates-wrapper .form-group {
-        min-width: 100%; /* Ocupar todo el ancho al apilar */
+    #adjust-dates-wrapper .container .form-group {
+         /* min-width: 100%; si apilas */
+         min-width: unset; /* Permitir que se encojan si no apilas */
     }
-    #adjust-dates-wrapper .titulo-pagina {
+    #adjust-dates-wrapper .container .titulo-pagina {
         font-size: 2.4rem;
     }
-    #adjust-dates-wrapper button[type="submit"] {
+    #adjust-dates-wrapper .container button[type="submit"] {
         padding: 10px 25px;
         font-size: 1.5rem;
+    }
+     #adjust-dates-wrapper .container #response-message {
+        font-size: 1.4rem;
+        padding: 12px;
+    }
+     #adjust-dates-wrapper .container .message-container {
+        width: calc(100% - 60px);
     }
 }
 
 @media (max-width: 480px) {
-     #adjust-dates-wrapper {
-        padding: 15px 20px;
+    #adjust-dates-wrapper .container {
+        padding: 20px 25px;
+        width: 100%;
     }
-    #adjust-dates-wrapper .titulo-pagina {
+    #adjust-dates-wrapper .container .titulo-pagina {
         font-size: 2rem;
     }
-    #adjust-dates-wrapper label {
+     #adjust-dates-wrapper .container label {
         font-size: 1.3rem;
     }
-     #adjust-dates-wrapper input, #adjust-dates-wrapper select {
+     #adjust-dates-wrapper .container input, #adjust-dates-wrapper .container select {
         font-size: 1.4rem;
         padding: 8px 10px;
     }
-    #adjust-dates-wrapper button[type="submit"] {
+    #adjust-dates-wrapper .container button[type="submit"] {
         font-size: 1.4rem;
     }
-     #adjust-dates-wrapper #result {
-        font-size: 1.4rem;
+     #adjust-dates-wrapper .container #response-message {
+        font-size: 1.3rem;
+        padding: 10px;
     }
+     #adjust-dates-wrapper .container .message-container {
+        top: 10px;
+        width: calc(100% - 50px);
+    }
+     #adjust-dates-wrapper .container .form-row {
+         flex-direction: column; /* Forzar apilamiento en móviles */
+         gap: 10px; /* Reducir gap aún más */
+     }
+     #adjust-dates-wrapper .container .form-group {
+         min-width: 100%; /* Asegurar que ocupan todo el ancho */
+     }
 }
