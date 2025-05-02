@@ -50,13 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let torniMasterList = []; // Para lista maestra de items Torni (cargado de JSON)
     let currentFolio = null; // Para folio actual
 
-    // --- ** DEFINICIÓN DE FUNCIONES (MOVER AQUÍ ARRIBA) ** ---
+    // --- ** DEFINICIÓN DE FUNCIONES ** ---
 
     // --- Funciones de Folio ---
     function generateFolio() {
         const timestamp = Date.now();
         const randomPart = Math.random().toString(36).substring(2, 8).toUpperCase();
-        // Usar un prefijo diferente si es necesario, por ejemplo "MAT"
         return `MAT-${timestamp}-${randomPart}`;
     }
 
@@ -66,12 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Lógica Interdependiente de Dimensiones ---
-    // Asegurarse de que los inputs de dimensiones existen antes de añadir listeners
     function handleDiameterLogic() { if (!largoInput || !anchoInput || !altoInput || !diametroInput) return; const largoValue = largoInput.value.trim(); const anchoValue = anchoInput.value.trim(); const altoValue = altoInput.value.trim(); if (largoValue && (anchoValue || altoValue)) { if (!anchoInput.disabled || !altoInput.disabled) { if (!diametroInput.disabled) { diametroInput.value = "N/A"; diametroInput.disabled = true; diametroInput.classList.add('na-field'); diametroInput.classList.remove('error-field'); } } } else { if (!anchoInput.disabled && !altoInput.disabled) { diametroInput.disabled = false; diametroInput.classList.remove('na-field'); if (diametroInput.value === "N/A") diametroInput.value = ""; } } }
     function handleWidthHeightLogic() { if (!anchoInput || !altoInput || !diametroInput) return; const diametroValue = diametroInput.value.trim(); if (diametroValue && diametroValue !== "N/A" && !diametroInput.disabled) { anchoInput.value = "N/A"; anchoInput.disabled = true; anchoInput.classList.add('na-field'); anchoInput.classList.remove('error-field'); altoInput.value = "N/A"; altoInput.disabled = true; altoInput.classList.add('na-field'); altoInput.classList.remove('error-field'); } else { if (!diametroInput.disabled || (diametroInput.disabled && diametroInput.value === "N/A")) { anchoInput.disabled = false; anchoInput.classList.remove('na-field'); if (anchoInput.value === "N/A") anchoInput.value = ""; altoInput.disabled = false; altoInput.classList.remove('na-field'); if (altoInput.value === "N/A") altoInput.value = ""; } } }
     function updateDimensionLogic() { handleWidthHeightLogic(); handleDiameterLogic(); }
-    // Los event listeners para los inputs de dimensiones se añaden al final del script dentro del DOMContentLoaded
-
 
     // --- Funciones de Datalist ---
     function populateDimensionDatalist(dimensionsArray) {
@@ -96,13 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const dimensionsForUnit = allStandardDimensions[selectedUnit] || [];
         populateDimensionDatalist(dimensionsForUnit);
     }
-     // El event listener para el select de unidad se añade al final del script
-
 
     // --- Lógica Modo Oscuro ---
      const applyMode = (mode) => { if (!darkModeToggle) return; if (mode === 'dark') { body.classList.add('dark-mode'); localStorage.setItem('darkMode', 'enabled'); darkModeToggle.textContent = '☀️'; darkModeToggle.setAttribute('aria-label', 'Cambiar a modo claro'); } else { body.classList.remove('dark-mode'); localStorage.setItem('darkMode', 'disabled'); darkModeToggle.textContent = '🌙'; darkModeToggle.setAttribute('aria-label', 'Cambiar a modo oscuro'); } };
-    // El event listener para el toggle se añade al final del script
-
 
     // --- Lógica Dropdowns Dependientes (Material/Tipo) ---
     const materialesPorProveedor = { "Mipsa": ["D2", "Cobre", "Aluminio"], "LBO": ["H13", "1018", "4140T"], "Grupo Collado": ["D2", "4140T", "H13", "1018", "Acetal"], "Cameisa": ["Aluminio", "Cobre", "Acetal", "Nylamid"], "Surcosa": ["1018", "Nylamid", "Acetal", "D2"], "Diace": ["D2", "H13", "Aluminio", "4140T", "Cobre", "1018"] };
@@ -142,8 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
             tipoMaterialSelect.disabled = true;
         }
     }
-    // Los event listeners para proveedor y material se añaden al final del script
-
 
     // --- Lógica Tabla Torni (con Awesomplete) ---
     function addTorniRow() {
@@ -176,60 +166,83 @@ document.addEventListener('DOMContentLoaded', function() {
              const awesompleteInstance = new Awesomplete(descInput, {
                  list: torniMasterList, // Pasar el ARRAY COMPLETO de objetos
                  data: function (item, input) { // Trabajar con objetos { id, description }
+                     console.log("Awesomplete 'data' function - input item:", item);
                      let html = item.description.replace(new RegExp(Awesomplete.$.regExpEscape(input.trim()), "gi"), "<mark>$&</mark>");
-                     return { label: html, value: item.description, original: item }; // Incluir 'original'
+                     return { label: html, value: item.description, original: item, id: item.id }; // <<< Incluir 'original' Y 'id' explícitamente
                  },
-                 item: function (data, input) { // Recibe el objeto {label, value, original}
-                      return Awesomplete.ITEM(data.label, input); // Usar data.label (el HTML)
+                 item: function (data, input) { // Recibe el objeto {label, value, original, id}
+                      return Awesomplete.ITEM(data.label, input);
                  },
-                 replace: function(suggestion) { // Recibe el objeto {label, value, original}
-                     this.input.value = suggestion.value; // Usar suggestion.value (la descripción)
+                 replace: function(suggestion) { // Recibe el objeto {label, value, original, id}
+                     console.log("Awesomplete 'replace' function - suggestion:", suggestion);
+                     this.input.value = suggestion.value;
                  },
                  minChars: 1, maxItems: 10, autoFirst: true,
                  filter: function(item, input) { // Custom filter por descripción (case-insensitive, trim)
+                    // item aquí es el objeto retornado por la función 'data': {label, value, original, id}
+                    // Asegúrate de que la propiedad a filtrar es 'value' (la descripción)
                     return item.value.trim().toLowerCase().includes(input.trim().toLowerCase());
                  }
              });
 
              // --- Listener para cuando se SELECCIONA un item ---
              descInput.addEventListener('awesomplete-selectcomplete', function(event) {
-                const selectedItemData = event.text.original; // Objeto item maestro seleccionado
-                console.log("--- Awesomplete Selección Completa ---");
-                console.log("Objeto de item maestro seleccionado:", selectedItemData);
+                console.log("--- Awesomplete Selección Completa (DEBUG) ---");
+                console.log("Contenido completo de event.text:", event.text); // {label: ..., value: ...}
+
+                // El valor seleccionado por Awesomplete (la descripción)
+                const selectedValueFromAwesomplete = event.text.value;
+
+                // Limpiar y normalizar el valor seleccionado (quitar espacios, mayúsculas, posibles saltos de línea)
+                const normalizedSelectedValue = selectedValueFromAwesomplete.trim().toLowerCase().replace(/[\r\n]/g, ''); // <<< CORREGIDO
+
+                // Intentar encontrar el objeto original en la lista maestra
+                // Asegúrate de que la comparación en find() también normaliza la descripción del item maestro
+                const selectedItemData = torniMasterList.find(item => {
+                    if (item && typeof item.description === 'string') {
+                        const normalizedItemDescription = item.description.trim().toLowerCase().replace(/[\r\n]/g, '');
+                        console.log(`Comparando "${normalizedSelectedValue}" con item "${item.id}": "${normalizedItemDescription}" -> ${normalizedSelectedValue === normalizedItemDescription}`); // Log de comparación
+                        return normalizedItemDescription === normalizedSelectedValue;
+                    }
+                    return false;
+                });
+
+                console.log("Objeto original encontrado en lista maestra:", selectedItemData); // LOGUEA ESTO (DEBERÍA SER EL OBJETO {id, description})
+
 
                 // Buscar el input ID en la misma fila
-                const currentRow = this.closest('tr'); // 'this' es el input descInput
+                const currentRow = this.closest('tr');
                 const idInputInRow = currentRow ? currentRow.querySelector('.torni-id') : null;
 
-                // Actualizar el input ID
-                if (idInputInRow && selectedItemData && selectedItemData.id) {
-                    console.log(`Actualizando ID para fila con ID ${rowId}:`, selectedItemData.id);
+                // Actualizar el input ID usando el ID del objeto encontrado
+                if (idInputInRow && selectedItemData && selectedItemData.id) { // Verifica que selectedItemData existe Y tiene propiedad .id
+                    console.log(`Actualizando ID para fila con ID ${currentRow.getAttribute('data-row-id')}:`, selectedItemData.id);
                     idInputInRow.value = selectedItemData.id.trim();
                     idInputInRow.classList.remove('error-field');
-                    this.classList.remove('error-field'); // Limpiar error visual en descripción
+                    this.classList.remove('error-field'); // Limpiar error visual en descripción si se encontró el ID
                 } else if (idInputInRow) {
-                     idInputInRow.value = '';
-                     console.warn(`Fila con ID ${rowId}: Objeto seleccionado no tiene ID o es inválido. Limpiando campo ID.`, selectedItemData);
+                     idInputInRow.value = ''; // Limpiar si no se encontró el objeto o no tiene ID
+                     console.warn(`Fila con ID ${currentRow.getAttribute('data-row-id')}: No se pudo determinar el ID en lista maestra para "${selectedValueFromAwesomplete}". Limpiando campo ID.`, selectedItemData);
+                      // Marcar error visual en el campo de descripción si no se encontró coincidencia exacta en la lista maestra
+                     this.classList.add('error-field');
                 } else {
-                     console.error(`Fila con ID ${rowId}: No se pudo encontrar el campo ID en la fila para actualizar.`);
+                     console.error(`Fila con ID ${currentRow.getAttribute('data-row-id')}: No se pudo encontrar el campo ID en la fila para actualizar.`);
                 }
             });
 
              // --- Limpiar ID si se borra/cambia descripción manualmente ---
              descInput.addEventListener('input', function() {
-                 const currentDesc = this.value.trim(); // 'this' es el input descInput
-                 const idInputInRow = this.closest('tr').querySelector('.torni-id'); // Obtener ID input en la misma fila
+                 const currentDesc = this.value.trim();
+                 const idInputInRow = this.closest('tr').querySelector('.torni-id');
 
-                 // Buscar si el texto actual coincide EXACTAMENTE con una descripción en la lista de sugerencias actual
-                 const awesompleteInstance = this.awesomplete; // Obtener la instancia Awesomplete asociada
-                 const awesompleteItemMatch = awesompleteInstance ? awesompleteInstance.list.find(item => item.value.trim() === currentDesc) : null;
-
-
-                 if (idInputInRow && (!awesompleteItemMatch || idInputInRow.value.trim() !== awesompleteItemMatch.original.id.trim())) {
-                     // Si no hay coincidencia exacta en la lista de sugerencias actual
-                     // O si hay coincidencia pero el ID actual en el input no coincide con el ID de la sugerencia encontrada
-                      idInputInRow.value = ''; // Borrar ID
+                 // Para evitar limpiar el ID si el usuario solo borra y vuelve a escribir la descripción correcta
+                 // Solo limpiamos el ID si la descripción está vacía
+                 if (idInputInRow && currentDesc === '') {
+                     idInputInRow.value = ''; // Borrar ID si la descripción está vacía
                  }
+                 // Opcional: Lógica más compleja para verificar si la descripción actual coincide con algún item en la lista maestra
+                 // (similar a la lógica find() en selectcomplete, pero más pesada)
+                 // Por ahora, limpiar solo si la descripción está vacía es suficiente.
              });
 
 
@@ -239,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
              if (!descInput) console.error("Input de descripción (.torni-desc) no encontrado en la nueva fila.");
              if (!idInput) console.error("Input de ID (.torni-id) no encontrado en la nueva fila.");
         }
-         return newRow; // Opcional: devolver la fila creada
+         return newRow;
     } // Fin addTorniRow
 
     function deleteTorniRow(event) {
@@ -248,11 +261,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const row = button.closest('tr');
         if (row) {
             row.remove();
-            // Opcional: Añadir una fila vacía si la tabla queda vacía después de eliminar
-            // if (torniTableBody.rows.length === 0 && proveedorSelect && proveedorSelect.value === 'Torni') { addTorniRow(); }
         }
+        // No añadir una fila vacía por defecto aquí, la lógica handleProveedorChange lo maneja al inicio.
     }
-    // Los event listeners para añadir/eliminar filas se añaden al final del script
 
 
     // --- Lógica de UI basada en Proveedor ---
@@ -265,107 +276,95 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Mostrar/Ocultar secciones y limpiar errores visuales
         const allInputSelects = materialForm.querySelectorAll('input, select, textarea');
-        allInputSelects.forEach(el => el.classList.remove('error-field')); // Limpiar errores visuales
+        allInputSelects.forEach(el => el.classList.remove('error-field'));
          if (responseMessageDiv) { // Limpiar div de respuesta AJAX
              responseMessageDiv.textContent = '';
              responseMessageDiv.classList.remove('processing', 'success', 'error');
          }
 
-
+        // Ocultar/mostrar contenedores principales
         dimensionesContainer.classList.toggle('oculto', esTorni);
         torniTableContainer.classList.toggle('oculto', !esTorni);
-        standardFieldsContainer.classList.toggle('oculto', esTorni); // Ocultar/mostrar el contenedor completo de campos estándar
+        standardFieldsContainer.classList.toggle('oculto', esTorni);
 
-        // Habilitar/Deshabilitar inputs según sección visible y limpiar valores/estado
+
+        // Habilitar/Deshabilitar inputs y limpiar valores/estado según sección visible
         allInputSelects.forEach(el => {
-            // Campos siempre habilitados (comunes)
-            if (el.id === 'nombre_solicitante' || el.id === 'proyecto' || el.id === 'fecha_solicitud' ||
-                el.id === 'departamento_area' || el.id === 'proveedor' || el.id === 'especificaciones_adicionales' || el.id === 'folio_solicitud') {
-                 el.disabled = false;
-                 // Requeridos excepto especificaciones (usar el atributo required en el HTML)
-                 // el.required = (el.id !== 'especificaciones_adicionales');
+            const isTorniInput = el.closest('#torni-items-table');
+            const isStandardInput = el.closest('#standard-fields-container');
+            const isCommonInput = el.id === 'nombre_solicitante' || el.id === 'proyecto' || el.id === 'fecha_solicitud' || el.id === 'departamento_area' || el.id === 'proveedor' || el.id === 'especificaciones_adicionales' || el.id === 'folio_solicitud';
+
+            if (isCommonInput) {
+                 el.disabled = false; // Campos comunes siempre habilitados
+            } else if (isTorniInput) {
+                 el.disabled = !esTorni; // Campos Torni habilitados solo en modo Torni
+            } else if (isStandardInput) {
+                 el.disabled = esTorni; // Campos estándar habilitados solo en modo estándar
+            } else {
+                 // Otros campos no identificados, quizás deshabilitarlos por defecto si no son comunes
+                 el.disabled = true;
             }
-            // Campos de Torni (inputs dentro de la tabla Torni)
-            else if (el.closest('#torni-items-table')) {
-                el.disabled = !esTorni; // Habilitar si es Torni, deshabilitar si no
-                // El estado 'required' para los inputs Torni se maneja en la validación JS, no en el HTML disabled/required
+
+            // Limpiar valor del input si ha sido deshabilitado por el cambio de proveedor
+             // o si es un campo específico que debe resetearse
+            if (el.disabled) {
+                 el.value = ''; // Limpiar el valor si el campo está deshabilitado
+            } else {
+                 // Lógica específica de limpieza para campos habilitados
+                 if (el.id === 'cantidad_solicitada' && el.value === '') el.value = '1'; // Default 1 para cantidad solicitada estándar si se habilita y está vacío
+                 // Puedes añadir otros defaults si es necesario
             }
-            // Campos estándar (inputs/selects dentro del contenedor de campos estándar)
-            else if (el.closest('#standard-fields-container')) {
-                 el.disabled = esTorni; // Habilitar si NO es Torni, deshabilitar si es
-                 // El estado 'required' para los campos estándar se maneja en la validación JS, no en el HTML disabled/required
-            }
-            // Otros campos (si los hay fuera de estas secciones)
-            // ...
+
         });
 
-
-        // Lógicas específicas después de habilitar/deshabilitar y limpiar errores/estado
+        // Lógicas específicas después de habilitar/deshabilitar y limpiar
         if (esTorni) {
-            // Si es Torni, asegurar que la tabla tiene al menos una fila
-            if (torniTableBody && torniTableBody.rows.length === 0 && torniMasterList.length > 0) { addTorniRow(); } // Solo añadir si hay datos maestros para Awesomplete
-             // Limpiar valores de campos estándar (si no se borran con disabled)
-             if (cantidadSolicitadaInput) cantidadSolicitadaInput.value = '1';
-             if (unidadMedidaSelect) unidadMedidaSelect.value = '';
-             if (materialSelect) materialSelect.value = '';
-             if (tipoMaterialSelect) tipoMaterialSelect.value = '';
-             if (largoInput) largoInput.value = ''; if (anchoInput) anchoInput.value = ''; if (altoInput) altoInput.value = ''; if (diametroInput) diametroInput.value = '';
-
-             // Deshabilitar los selects de material y tipo en modo Torni (se hace arriba, pero re-confirmar)
-             if (materialSelect) { materialSelect.disabled = true; }
-             if (tipoMaterialSelect) { tipoMaterialSelect.disabled = true; }
+            // Si es Torni, asegurar que la tabla tiene al menos una fila si hay datos maestros
+            if (torniTableBody && torniTableBody.rows.length === 0 && torniMasterList.length > 0) { addTorniRow(); }
+             // Limpiar la tabla Torni si NO hay datos maestros (para evitar añadir filas vacías)
+             if (torniTableBody && torniMasterList.length === 0) { torniTableBody.innerHTML = '';}
 
         } else { // No es Torni (Proveedor estándar)
             // Limpiar filas de la tabla Torni (si había alguna)
              if (torniTableBody){ torniTableBody.innerHTML = ''; }
 
-             // Habilitar selects dependientes si aplica
-             if (proveedorSelect) { actualizarMateriales(); } // Recargar materiales según el proveedor seleccionado
-             // Asegurar que la unidad de medida no es N/A por defecto en modo estándar
-             if (unidadMedidaSelect && unidadMedidaSelect.value === 'N/A') { unidadMedidaSelect.value = ''; } // O establecer un valor por defecto válido
+             // Recargar dropdowns dependientes para campos estándar
+             if (proveedorSelect) { actualizarMateriales(); }
+             updateDatalistForUnit(); // Asegura que datalist se pobla para la unidad seleccionada
 
-            // Actualizar lógicas dependientes
-            updateDimensionLogic(); // Asegura que las reglas de dimensiones se aplican al estado inicial
-            updateDatalistForUnit(); // Asegura que datalist se pobla para la unidad seleccionada
+            // Actualizar lógicas de dimensiones si aplica
+            updateDimensionLogic();
         }
 
-     } // Fin handleProveedorChange
-     // El event listener para proveedor se añade al final del script
+     }
 
 
     // --- Función para Recolectar TODOS los Datos del Formulario en un Objeto JavaScript (JSON Structure) ---
-    // Esto es crucial para enviar JSON al backend que espera request.get_json()
+    // ESTA FUNCIÓN FALTABA O ESTABA INCOMPLETA EN EL CÓDIGO ANTERIOR.
     function collectFormData() {
         const data = {};
-        const form = materialForm; // Usa la referencia al formulario
+        const form = materialForm;
 
-        // Recolectar campos comunes y estándar (si no están deshabilitados)
-        // Usa el atributo 'name' para identificar los campos
+        // Recolectar campos comunes y estándar (solo si están habilitados)
         form.querySelectorAll('input, select, textarea').forEach(input => {
              // No recolectar inputs dentro de la tabla torni en este bucle principal
-             // O si un campo está deshabilitado (ya lo hace el check input.name && !input.disabled)
-             // Pero vamos a asegurarnos de no recolectar campos Torni aquí explícitamente
              if (input.closest('#torni-items-table')) {
-                  return; // Saltar este input, se maneja en la lógica de Torni
+                  return; // Saltar este input
              }
 
-             if (input.name && !input.disabled) { // Solo recolectar campos con nombre y habilitados
+             if (input.name && !input.disabled) {
                   if (input.type === 'number') {
-                       // Parsear a float, default 0 si no es un número válido
-                       data[input.name] = parseFloat(input.value) || 0;
+                       data[input.name] = parseFloat(input.value) || 0; // Default a 0 si no es número válido
                   } else if (input.type === 'checkbox') {
                       data[input.name] = input.checked;
-                  }
-                   else if (['largo', 'ancho', 'alto', 'diametro'].includes(input.name)) {
-                      // Dimensiones: Si no están vacías, recolectarlas como string.
-                      if (input.value.trim()) {
+                  } else {
+                       // Para campos de texto como dimensiones o texto general
+                       // Solo incluir si tienen un valor no vacío
+                       if (input.value.trim()) {
                            data[input.name] = input.value.trim();
-                      }
-                      // Si están vacías u opcionales, simplemente no las añadimos al objeto JSON
+                       }
+                       // Si el campo está vacío, simplemente no se añade al objeto data
                    }
-                  else {
-                       data[input.name] = input.value.trim();
-                  }
              }
         });
 
@@ -374,185 +373,140 @@ document.addEventListener('DOMContentLoaded', function() {
         // Recolectar items Torni si es el proveedor seleccionado
         if (selectedProvider === 'Torni' && torniTableBody) {
             const torniItems = [];
-            // Iterar sobre las filas DEL BODY de la tabla
             torniTableBody.querySelectorAll('tr').forEach(row => {
                 const qtyInput = row.querySelector('.torni-qty');
                 const idInput = row.querySelector('.torni-id');
                 const descInput = row.querySelector('.torni-desc');
 
-                // Solo añadir item si los campos esenciales (cantidad, ID, descripción) tienen valor
-                // La validación ya verificó si son obligatorios y válidos antes.
                 if (qtyInput && idInput && descInput) {
-                     const quantityValue = parseInt(qtyInput.value, 10); // Parsear a entero para cantidad Torni
-                    // Solo añadir si la cantidad es válida (>0) y la descripción/ID no están vacíos
-                    if (quantityValue > 0 && idInput.value.trim() && descInput.value.trim()) {
-                         torniItems.push({
-                             quantity: quantityValue,
-                             id: idInput.value.trim(),
-                             description: descInput.value.trim()
-                         });
+                    const quantityValue = parseInt(qtyInput.value, 10);
+                    const idValue = idInput.value.trim();
+                    const descValue = descInput.value.trim();
+
+                    // Validar si el item completo es válido para incluirlo
+                    if (quantityValue > 0 && idValue !== '' && descValue !== '') {
+                        torniItems.push({
+                            quantity: quantityValue,
+                            id: idValue,
+                            description: descValue
+                        });
                     } else {
-                         // Esto no debería pasar si la validación frontend funciona, pero loguear advertencia
-                         console.warn("Saltando item Torni inválido o incompleto en recolección:", {
-                              qty: qtyInput ? qtyInput.value : null,
-                              id: idInput ? idInput.value : null,
-                              desc: descInput ? descInput.value : null
-                         });
+                        console.warn("Saltando item Torni inválido o incompleto en recolección:", {
+                            qty: qtyInput.value,
+                            id: idInput.value,
+                            desc: descInput.value,
+                            parsedQty: quantityValue,
+                            isQtyValid: quantityValue > 0,
+                            isIdEmpty: idValue === '',
+                            isDescEmpty: descValue === ''
+                        });
+                         // Marcar visualmente los campos si son inválidos en la recolección (opcional, la validación de submit ya lo hace)
+                         if (!(quantityValue > 0)) qtyInput.classList.add('error-field');
+                         if (idValue === '') idInput.classList.add('error-field');
+                         if (descValue === '') descInput.classList.add('error-field');
                     }
                 } else {
-                     console.warn("Fila Torni sin todos los campos esperados encontrada en recolección.");
+                    console.error("Fila Torni sin todos los campos esperados encontrada en recolección.");
                 }
             });
-            data['torni_items'] = torniItems; // Añadir el array al objeto principal con la clave esperada por el backend
+            data['torni_items'] = torniItems; // Añadir el array al objeto principal
         }
 
         console.log('Datos recolectados para JSON:', data);
-        return data; // Retorna el objeto con todos los datos para enviar como JSON
+        return data;
     }
 
 
     // --- Función para Configurar el Envío del Formulario (Fetch API) ---
-    // Esta función contiene el listener del submit del formulario
     function setupFormSubmitListener() {
-        // materialForm ya está definida en el ámbito superior
         if (!materialForm) {
-             console.error("Formulario #materialForm no encontrado. No se pudo configurar el listener de submit.");
+             console.error("Formulario #materialForm no encontrado.");
              if(responseMessageDiv){
                   responseMessageDiv.textContent = `Error interno: Formulario principal no encontrado.`;
                   responseMessageDiv.classList.add('error');
              }
-             // if (materialForm) materialForm.querySelector('button[type="submit"]').disabled = true; // No puedes usar materialForm.querySelector si materialForm es null
-             return; // Salir si el formulario no existe
+             return;
         }
 
-       // Listener para el evento submit del formulario #materialForm
        materialForm.addEventListener('submit', function(event) {
-           event.preventDefault(); // Prevenir envío tradicional
+           event.preventDefault();
 
-           // >>> CORRECCIÓN: Obtener la referencia al formulario (event.target) aquí <<<
-           const form = event.target; // <-- Define 'form' dentro del listener
+           const form = event.target;
 
-           // 1. Validación
-           let isValid = true; // Bandera de validación
-           const errores = []; // Array para errores
-           const selectedProvider = proveedorSelect ? proveedorSelect.value : null; // Proveedor seleccionado
+           // 1. Validación (Llama a collectFormData para ayudar a validar y obtener datos)
+           // Ya no necesitamos hacer toda la validación aquí si collectFormData lo hace y loguea advertencias.
+           // Pero es bueno validar campos comunes y al menos si hay items Torni válidos.
+           // Vamos a simplificar esta parte para no duplicar validación de items Torni.
 
-           // --- Lógica de Validación (Usa la variable 'form' aquí) ---
            // Limpiar errores visuales y mensajes anteriores
-            form.querySelectorAll('.error-field').forEach(el => el.classList.remove('error-field')); // Usar 'form' para seleccionar dentro del formulario
-            if (responseMessageDiv) { // Limpiar div de respuesta AJAX
+            form.querySelectorAll('.error-field').forEach(el => el.classList.remove('error-field'));
+            if (responseMessageDiv) {
                  responseMessageDiv.textContent = '';
                  responseMessageDiv.classList.remove('processing', 'success', 'error');
             }
 
-           // Validar campos comunes (requeridos en HTML)
+           const selectedProvider = proveedorSelect ? proveedorSelect.value : null;
+           const datosSolicitud = collectFormData(); // Recolectar datos Y validar items Torni si aplica
+
+           let isValid = true;
+           const errores = [];
+
+           // Validar campos comunes requeridos
            const camposComunesReq = ['nombre_solicitante', 'fecha_solicitud', 'proveedor', 'departamento_area', 'proyecto'];
            camposComunesReq.forEach(id => {
-               const campo = form.querySelector(`#${id}`); // Usar form.querySelector para seleccionar dentro del formulario
-               // Verificar si el elemento existe, si es requerido en HTML5 (.required), no está deshabilitado y su valor no está vacío después de trim
+               const campo = form.querySelector(`#${id}`);
                if (campo && campo.required && !campo.disabled && !campo.value.trim()) {
                    isValid = false;
-                   const label = form.querySelector(`label[for="${id}"]`); // Usar form.querySelector
+                   const label = form.querySelector(`label[for="${id}"]`);
                    const nombreCampo = label ? label.textContent.replace(':', '').trim() : (campo.placeholder || campo.name || id);
                    errores.push(`"${nombreCampo}" obligatorio.`);
                    campo.classList.add('error-field');
-                } else if (campo) { campo.classList.remove('error-field'); } // Limpiar si es válido o no requerido/deshabilitado
+                } // Limpiar errores ya se hizo al inicio
            });
 
-           // Validación específica de Torni si el proveedor es Torni
+           // Validar si es modo Torni y NO se recolectó ningún item Torni válido
            if (selectedProvider === 'Torni') {
-               // Si el proveedor es Torni, la tabla DEBE tener al menos una fila con datos VÁLIDOS
-               if (!torniTableBody || torniTableBody.rows.length === 0) {
-                   isValid = false;
-                   errores.push("Añadir al menos un producto para proveedor Torni.");
-               } else {
-                    // Validar cada fila de Torni
-                    let hasValidTorniItem = false; // Verificar si al menos un item es válido (opcional, la validación por fila es más granular)
-                    torniTableBody.querySelectorAll('tr').forEach((row, index) => {
-                        const qtyInput = row.querySelector('.torni-qty');
-                        const idInput = row.querySelector('.torni-id');
-                        const descInput = row.querySelector('.torni-desc');
-
-                        let isRowValid = true; // Bandera para la fila actual
-
-                        // Validar Cantidad (>0)
-                        if (!qtyInput || parseFloat(qtyInput.value) <= 0 || isNaN(parseFloat(qtyInput.value))) {
-                            isRowValid = false; errores.push(`Fila Torni ${index + 1}: Cantidad > 0.`); if(qtyInput) qtyInput.classList.add('error-field'); // Marcar error visual
-                        } else { if (qtyInput) qtyInput.classList.remove('error-field'); } // Limpiar si es válido
-
-
-                        // Validar Descripción (no vacía)
-                        if (!descInput || !descInput.value.trim()) {
-                            isRowValid = false; errores.push(`Fila Torni ${index + 1}: Descripción obligatoria.`); if(descInput) descInput.classList.add('error-field');
-                        } else { if (descInput) descInput.classList.remove('error-field'); }
-
-                        // Validar ID (no vacío - debe ser llenado por Awesomplete select)
-                        // El IDinput es readonly, su valor solo cambia al seleccionar de Awesomplete
-                        if (!idInput || !idInput.value.trim()) {
-                             isRowValid = false; errores.push(`Fila Torni ${index + 1}: Producto no seleccionado correctamente (usa sugerencias).`);
-                             if(idInput) idInput.classList.add('error-field');
-                             if(descInput && !descInput.classList.contains('error-field')) descInput.classList.add('error-field'); // Marcar descripción como error también si el ID falta
-                        } else { if (idInput) idInput.classList.remove('error-field'); }
-
-                        // Si la fila es válida, marcar que hay al menos un item válido (si es necesario para una validación general)
-                        if (isRowValid) { hasValidTorniItem = true; } // Si al menos una fila es válida
-                    });
-                    // Si hay filas pero ninguna es completamente válida
-                    // La validación general de 'isValid' ya se maneja por los errores individuales añadidos anteriormente.
-                    // Si quieres que isValid sea false A MENOS QUE HAYA AL MENOS UNA FILA VÁLIDA:
-                    // if (torniTableBody.rows.length > 0 && !hasValidTorniItem) isValid = false;
-
-
-               }
-           } else if (selectedProvider && selectedProvider !== '') { // Proveedor estándar seleccionado
-                // Validar campos estándar requeridos (si están habilitados)
-                const camposRequeridosStd = ['cantidad_solicitada', 'tipo_material', 'nombre_material', 'unidad_medida']; // Dimensiones NO son requeridas por defecto
-                camposRequeridosStd.forEach(id => {
-                    const campo = form.querySelector(`#${id}`); // Usar form.querySelector
-                    if (campo && campo.required && !campo.disabled && !campo.value.trim()) {
-                         isValid = false; const label = form.querySelector(`label[for="${id}"]`);
-                         const nombreCampo = label ? label.textContent.replace(':', '').trim() : id;
-                         errores.push(`"${nombreCampo}" obligatorio.`); campo.classList.add('error-field');
-                     } else if (campo) { campo.classList.remove('error-field'); }
-                });
-
-                // Validación específica de cantidad solicitada si está habilitada y no es Torni
-                if (cantidadSolicitadaInput && !cantidadSolicitadaInput.disabled) {
-                    const valorCampo = cantidadSolicitadaInput.value.trim();
-                    if (!valorCampo || parseFloat(valorCampo) <= 0 || isNaN(parseFloat(valorCampo))) {
-                         isValid = false; errores.push(`"Cantidad Solicitada" > 0.`); cantidadSolicitadaInput.classList.add('error-field');
-                    } else { cantidadSolicitadaInput.classList.remove('error-field'); }
+                const torniItemsRecogidos = datosSolicitud.torni_items || [];
+                if (torniItemsRecogidos.length === 0) {
+                    isValid = false;
+                    errores.push("Debe añadir al menos un producto con cantidad, ID y descripción para proveedor Torni.");
+                    // Opcional: Marcar la tabla como error visual
+                    if(torniTableContainer) torniTableContainer.classList.add('error-field');
+                } else {
+                    if(torniTableContainer) torniTableContainer.classList.remove('error-field');
                 }
-                // Validación opcional de dimensiones si están llenas (puedes añadir aquí)
-                // ['largo', 'ancho', 'alto', 'diametro'].forEach(id => { ... });
-           } else {
-                // Si no se ha seleccionado proveedor, la validación de 'proveedor' ya lo marcó como obligatorio
-                // No necesitas añadir más errores generales aquí.
+           } else if (selectedProvider && selectedProvider !== '') { // Proveedor estándar seleccionado
+                // Validar si es modo estándar y la cantidad solicitada es inválida/faltante
+                // La lógica de collectFormData ya salta items inválidos, pero aquí validamos el campo principal
+                 const cantidadInput = form.querySelector('#cantidad_solicitada');
+                 if (cantidadInput && !cantidadInput.disabled) {
+                     const valorCampo = cantidadInput.value.trim();
+                     if (!valorCampo || parseFloat(valorCampo) <= 0 || isNaN(parseFloat(valorCampo))) {
+                          isValid = false; errores.push(`"Cantidad Solicitada" > 0.`); cantidadInput.classList.add('error-field');
+                     } // Limpiar errores ya se hizo al inicio
+                 }
+                // Puedes añadir validación para otros campos estándar requeridos aquí si es necesario
+                // (ej: nombre material, unidad medida si no son Torni)
            }
 
 
-           // 2. Si hay errores, mostrar y detener el submit
+           // 2. Si hay errores de validación general, mostrar y detener
            if (!isValid) {
-                console.log("Validación fallida en frontend:", errores);
+                console.log("Validación general fallida en frontend:", errores);
                 const uniqueErrors = [...new Set(errores)];
                 if (responseMessageDiv) {
                     responseMessageDiv.innerHTML = "Por favor, corrige los errores:<br>" + uniqueErrors.join('<br>');
                     responseMessageDiv.classList.add('error');
                 }
-                const primerErrorField = form.querySelector('.error-field:not(:disabled)'); // Usar 'form' para seleccionar
+                const primerErrorField = form.querySelector('.error-field:not(:disabled)');
                 if(primerErrorField) primerErrorField.focus();
-                return; // Detener el submit
+                return;
            }
-           // --- Fin Lógica de Validación ---
+           // --- Fin Validación General ---
 
 
-           // 3. Recolectar datos en formato JSON
-           console.log("Validación exitosa. Recolectando datos para JSON...");
-           const datosSolicitud = collectFormData(); // Llama a la función de recolección implementada
-
-
-           // 4. Fetch al backend
-           console.log('Datos del formulario a enviar:', datosSolicitud);
+           // 3. Si la validación general fue exitosa, proceder con el fetch
+           console.log('Validación general exitosa. Datos del formulario a enviar:', datosSolicitud);
 
            // Mostrar estado de procesamiento ANTES del fetch
            if (responseMessageDiv) {
@@ -561,11 +515,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 responseMessageDiv.classList.add('processing');
             }
 
-
-           fetch(form.action, { // Usa form.action para obtener la URL correcta
-               method: form.method, // Usa el método del formulario (POST)
+           fetch(form.action, {
+               method: form.method,
                headers: {
-                   'Content-Type': 'application/json', // Indicar que enviamos JSON
+                   'Content-Type': 'application/json', // Enviamos JSON al backend
                },
                body: JSON.stringify(datosSolicitud) // Convertir el objeto de datos a string JSON
            })
@@ -575,14 +528,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!response.ok) {
                      return response.json().then(errData => {
                           let msg = errData.error || `Error: ${response.status}`;
-                          if(errData.notion_error) msg += ` (Notion: ${errData.notion_error.message})`;
-                          else if(errData.details) msg += `: ${errData.details}`;
+                          if(errData.details) msg += `: ${errData.details}`; // Añadir detalles si existen
+                          // Aquí puedes añadir manejo de errores específicos de Notion si vienen en la respuesta del backend
+                          // Ej: if(errData.notion_error) msg += ` (Notion: ${errData.notion_error.message})`;
 
-                          throw new Error(msg);
+                          throw new Error(msg); // Lanzar un error con el mensaje construido
                      }).catch(() => {
+                          // Si la respuesta no es JSON o hay un error al parsear JSON
                           throw new Error(`Error ${response.status}: ${response.statusText}`);
                      });
                 }
+                // Si la respuesta es OK (200, 207), procesar el JSON de éxito
                 return response.json();
            })
            .then(data => {
@@ -592,42 +548,50 @@ document.addEventListener('DOMContentLoaded', function() {
                let isSuccess = false;
                let firstUrl = null;
 
+               // Determinar mensaje de feedback y si fue éxito basado en la respuesta del backend
                if (data.message) { feedbackMessage = data.message; isSuccess = true; firstUrl = data.notion_url || data.notion_url_db2; }
-               else if (data.warning) { feedbackMessage = data.warning; isSuccess = true; firstUrl = data.notion_url || data.notion_url_db2; }
-               else if (data.error) { feedbackMessage = data.error; isSuccess = false; }
-               else { feedbackMessage = "Respuesta inesperada del servidor."; isSuccess = false; }
+               else if (data.warning) { feedbackMessage = data.warning; isSuccess = true; firstUrl = data.notion_url || data.notion_url_db2; } // Considera warning como éxito parcial
+               else if (data.error) { feedbackMessage = data.error; isSuccess = false; } // Considera error como fallo total
+               else { feedbackMessage = "Respuesta inesperada del servidor."; isSuccess = false; } // Fallback
 
-               if (responseMessageDiv) { // Asegurarse que existe
+
+               if (responseMessageDiv) {
+                   // Usar innerHTML para permitir enlaces si firstUrl existe
+                   responseMessageDiv.innerHTML = feedbackMessage + (firstUrl ? ` <a href="${firstUrl}" target="_blank" rel="noopener noreferrer">Ver Registro</a>` : '');
+
+                   // Aplicar clase CSS según el estado
+                   responseMessageDiv.classList.remove('success', 'error'); // Limpiar ambas antes
                    if (isSuccess) {
-                       responseMessageDiv.innerHTML = feedbackMessage + (firstUrl ? ` <a href="${firstUrl}" target="_blank" rel="noopener noreferrer">Ver Registro</a>` : '');
                        responseMessageDiv.classList.add('success');
                    } else {
-                       responseMessageDiv.textContent = feedbackMessage;
                        responseMessageDiv.classList.add('error');
                    }
                }
 
-               // Resetear formulario y UI solo si fue éxito total o parcial manejado
+               // Resetear formulario y UI solo si fue éxito total o parcial (isSuccess es true)
                if (isSuccess) {
-                   form.reset(); // <<< Usar 'form' aquí para resetear
+                   form.reset();
+                   // Generar nuevo folio para la próxima solicitud
                    currentFolio = generateFolio(); updateFolioDisplay(currentFolio);
-                   // Llama a handleProveedorChange para resetear UI y habilitar/deshabilitar
-                   handleProveedorChange(); // Esto también llama a actualizarMateriales y updateDatalistForUnit si es necesario
+                   // Resetear UI a estado inicial (basado en proveedor por defecto o el que quedó)
+                   handleProveedorChange(); // Esto limpia campos y restablece la tabla Torni si es necesario
 
-                   // Asegurar que la fecha actual se restablece
-                    if(fechaInput) {
+                   // Asegurar que la fecha actual se restablece (si no se resetea con form.reset)
+                    if(fechaInput && !fechaInput.value) { // Solo si está vacío después del reset
                         const today = new Date();
                         const year = today.getFullYear();
                         const month = ('0' + (today.getMonth() + 1)).slice(-2);
                         const day = ('0' + today.getDate()).slice(-2);
                         fechaInput.value = `${year}-${month}-${day}`;
                    }
-                   // Limpiar la tabla Torni
-                   if (torniTableBody) torniTableBody.innerHTML = '';
-                   // Añadir una fila Torni inicial si es el proveedor por defecto y la tabla está vacía
-                    if (proveedorSelect && proveedorSelect.value === 'Torni' && torniTableBody && torniTableBody.rows.length === 0 && torniMasterList.length > 0) {
-                         addTorniRow();
-                    }
+                   // Limpiar la tabla Torni si no se limpió en handleProveedorChange
+                   if (torniTableBody && proveedorSelect && proveedorSelect.value !== 'Torni') {
+                        torniTableBody.innerHTML = '';
+                   }
+                   // Asegurar una fila Torni si el proveedor es Torni después del reset
+                   if (proveedorSelect && proveedorSelect.value === 'Torni' && torniTableBody && torniTableBody.rows.length === 0 && torniMasterList.length > 0) {
+                        addTorniRow();
+                   }
                }
            })
            .catch(error => {
@@ -635,6 +599,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (responseMessageDiv) {
                     responseMessageDiv.classList.remove('processing');
+                    // Usar error.message para mostrar el mensaje del error capturado
                     responseMessageDiv.textContent = error.message || 'Error de red o del servidor.';
                     responseMessageDiv.classList.add('error');
                 }
@@ -658,35 +623,31 @@ document.addEventListener('DOMContentLoaded', function() {
          console.log("Folio existente cargado:", currentFolio);
     }
 
+    // Deshabilitar el botón de submit inicialmente hasta que los datos se carguen (si es necesario)
+    // if(materialForm) materialForm.querySelector('button[type="submit"]').disabled = true; # Ya lo haces más abajo
+
 
     // Carga de Datos (LLAMA A fetch, que en su .then llama a funciones para inicializar UI)
-    // Verificar si las variables de URL existen antes de usar fetch
     if (typeof STANDARD_DIMENSIONS_URL !== 'undefined' && typeof TORNI_MASTERLIST_URL !== 'undefined') {
         Promise.all([
-            // Usar las variables JavaScript definidas en la plantilla HTML
             fetch(STANDARD_DIMENSIONS_URL).then(res => {
                  if (!res.ok) throw new Error(`Dimensiones: ${res.status} ${res.statusText}`);
                  return res.json();
-             }).catch(error => { console.error("Error en fetch de Dimensiones:", error); throw error; }), // Re-lanzar error después de log
+             }).catch(error => { console.error("Error en fetch de Dimensiones:", error); throw error; }),
             fetch(TORNI_MASTERLIST_URL).then(res => {
                  if (!res.ok) throw new Error(`Items Torni: ${res.status} ${res.statusText}`);
                  return res.json();
-             }).catch(error => { console.error("Error en fetch de Items Torni:", error); throw error; }) // Re-lanzar error después de log
+             }).catch(error => { console.error("Error en fetch de Items Torni:", error); throw error; })
         ])
         .then(([dimensionsData, torniData]) => {
             console.log("Datos iniciales cargados con éxito.");
-            allStandardDimensions = dimensionsData; // Guardar datos de dimensiones
-            torniMasterList = torniData || []; // Guardar lista maestra Torni o array vacío
+            allStandardDimensions = dimensionsData;
+            torniMasterList = torniData || [];
+            console.log("Contenido de torniMasterList:", torniMasterList); // LOGUEA EL CONTENIDO
 
             // --- Llamadas a funciones para inicializar la UI *después* de cargar los datos ---
-            updateDatalistForUnit(); // Poblar datalist inicial con unidad por defecto
-            handleProveedorChange(); // Trigger initial UI state based on default/saved proveedor
-
-            // Añadir una fila Torni por defecto si el proveedor inicial es Torni y la tabla está vacía
-            // Solo si hay datos maestros cargados
-            if (proveedorSelect && proveedorSelect.value === 'Torni' && torniTableBody && torniTableBody.rows.length === 0 && torniMasterList.length > 0) {
-                 addTorniRow();
-            }
+            updateDatalistForUnit();
+            handleProveedorChange(); // Esto configura la UI inicial y puede añadir la fila Torni si es el proveedor por defecto
 
              // Asegurar que el botón de submit esté habilitado si los datos cargaron correctamente y el formulario existe
              if(materialForm) materialForm.querySelector('button[type="submit"]').disabled = false;
@@ -694,17 +655,15 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error("Error general al cargar datos JSON iniciales:", error);
-            // Mostrar error en el div de respuesta AJAX
             if(responseMessageDiv){
                  responseMessageDiv.textContent = `Error al cargar datos iniciales: ${error.message || 'Ver logs de consola.'}`;
                  responseMessageDiv.classList.add('error');
             }
-             // Deshabilitar el formulario o el botón de submit si los datos iniciales son críticos
+            // Deshabilitar el formulario si faltan URLs o datos iniciales son críticos
             if(materialForm) materialForm.querySelector('button[type="submit"]').disabled = true;
         });
     } else {
          console.error("URLs para datos iniciales (JSON estáticos) no definidas. Asegura que STANDARD_DIMENSIONS_URL y TORNI_MASTERLIST_URL están definidas en la plantilla HTML antes de cargar request_for_material.js.");
-          // Mostrar error en el div de respuesta AJAX
          if(responseMessageDiv){
               responseMessageDiv.textContent = `Error: URLs de datos iniciales no configuradas en la plantilla HTML.`;
               responseMessageDiv.classList.add('error');
@@ -715,54 +674,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // --- Event Listeners (Añadirlos después de definir las funciones) ---
-    // Event listeners para inputs de dimensiones
+    // Los event listeners se añaden aquí
     if(largoInput) largoInput.addEventListener('input', updateDimensionLogic);
     if(anchoInput) anchoInput.addEventListener('input', updateDimensionLogic);
     if(altoInput) altoInput.addEventListener('input', updateDimensionLogic);
     if(diametroInput) diametroInput.addEventListener('input', updateDimensionLogic);
 
-    // Event listener para Unidad de Medida
     if (unidadMedidaSelect) { unidadMedidaSelect.addEventListener('change', updateDatalistForUnit); }
 
-    // Event listeners para dropdowns dependientes (Proveedor y Material)
-     if (proveedorSelect) { proveedorSelect.addEventListener('change', handleProveedorChange); } // Este controla UI y llama a actualizarMateriales
+    if (proveedorSelect) { proveedorSelect.addEventListener('change', handleProveedorChange); }
     if (materialSelect) { materialSelect.addEventListener('change', actualizarTipoMaterial); }
 
-
-    // Event listeners para botones de añadir/eliminar filas Torni (el botón añadir está en el HTML)
     if (addTorniItemBtn) { addTorniItemBtn.addEventListener('click', addTorniRow); }
-     // Listener para botones de eliminar filas existentes al cargar (si las hubiera)
-     // y para botones de eliminar en filas añadidas dinámicamente (gestionado en addTorniRow)
-     if (torniTableBody) {
+    if (torniTableBody) {
          torniTableBody.querySelectorAll('.delete-row-btn').forEach(btn => {
              btn.addEventListener('click', deleteTorniRow);
          });
-         // Opcional: Observar cambios en el DOM para añadir listeners a nuevos botones de eliminar
-         // const observer = new MutationObserver(mutations => {
-         //    mutations.forEach(mutation => {
-         //        if (mutation.type === 'childList') {
-         //            mutation.addedNodes.forEach(node => {
-         //                if (node.tagName === 'TR') {
-         //                    const deleteBtn = node.querySelector('.delete-row-btn');
-         //                    if (deleteBtn) deleteBtn.addEventListener('click', deleteTorniRow);
-         //                }
-         //            });
-         //        }
-         //    });
-         // });
-         // observer.observe(torniTableBody, { childList: true });
      }
 
-    // Event listener para el submit del formulario
     setupFormSubmitListener(); // Configura el listener del submit
 
-
-    // --- Lógica de Inicialización de UI (Llamadas de funciones al cargar) ---
-    // Estas llamadas se hacen DESPUÉS de definir las funciones y DESPUÉS de cargar los datos iniciales
-    // Algunas de estas llamadas ya están integradas en el .then() de Promise.all o en handleProveedorChange()
-
-    // Establecer fecha por defecto si no está puesta
-    // Esto ya lo haces, asegúrate que está en el DOMContentLoaded
+    // Establecer fecha por defecto si no está puesta inicialmente
     if (fechaInput && !fechaInput.value) {
         const today = new Date();
         const year = today.getFullYear();
@@ -770,12 +702,5 @@ document.addEventListener('DOMContentLoaded', function() {
         const day = ('0' + today.getDate()).slice(-2);
         fechaInput.value = `${year}-${month}-${day}`;
     }
-
-     // La lógica de UI inicial (mostrar/ocultar secciones, habilitar/deshabilitar campos)
-     // y la lógica de actualizar dropdowns dependientes
-     // y la lógica de añadir fila Torni por defecto (si aplica)
-     // SE EJECUTAN DENTRO DEL .then() de Promise.all, DESPUÉS de que los datos JSON se cargan.
-     // Esto es correcto porque estas lógicas dependen de tener los datos (torniMasterList) y la UI lista.
-
 
 }); // Fin DOMContentLoaded

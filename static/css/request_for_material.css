@@ -89,7 +89,7 @@ body.dark-mode #request-material-wrapper {
     background-color: var(--gris-t); /* Fondo translúcido similar */
     border-radius: 12px; /* Bordes redondeados similares */
     box-shadow: 0 5px 20px var(--shadow-light); /* Sombra similar, usando variable light */
-    color: var(--text-color-light); /* Color de texto principal por defecto (light mode) */
+    color: var(--gris-claro); /* Color de texto principal por defecto (light mode) */
     text-align: left; /* Alinea texto e inline/inline-block elementos a la izquierda (ajusta si quieres centrar) */
     position: relative; /* Para posicionar mensajes flash dentro */
     box-sizing: border-box;
@@ -151,7 +151,7 @@ body.dark-mode #request-material-wrapper .container {
 #request-material-wrapper .container .folio-display label {
     /* Estilos para la etiqueta del folio si es diferente a otras labels */
     font-size: 1.4rem; /* Tamaño similar a labels */
-    color: var(--label-color-light); /* Color similar a labels */
+    color: var(--gris-claro); /* Color similar a labels */
     font-weight: normal; /* Menos negrita que otras labels si quieres */
     margin-bottom: 5px; /* Espacio debajo de la etiqueta */
 }
@@ -201,7 +201,7 @@ body.dark-mode #request-material-wrapper .container .folio-value {
 /* --- Labels --- */
 /* Apunta a las etiquetas dentro del contenedor */
 #request-material-wrapper .container label {
-    display: block; margin-bottom: 5px; font-weight: 600; color: var(--label-color-light);
+    display: block; margin-bottom: 5px; font-weight: 600; color: var(--gris-claro);
     text-transform: uppercase; letter-spacing: 0.5px; transition: color var(--transition-speed) ease; font-size: 0.9em;
 }
 /* Estilo Dark Mode para Labels */
@@ -404,7 +404,7 @@ body.dark-mode #request-material-wrapper .container #dimensiones-container {
 /* Título dentro del contenedor de dimensiones */
 #request-material-wrapper .container #dimensiones-container h3 {
     padding: 0; margin-top: 0; margin-bottom: 15px;
-    color: var(--label-color-light); font-weight: 600; font-size: 1em;
+    color: var(--gris-claro); font-weight: 600; font-size: 1em;
     text-transform: uppercase; letter-spacing: 0.5px;
     transition: color var(--transition-speed) ease; text-align: left;
 }
