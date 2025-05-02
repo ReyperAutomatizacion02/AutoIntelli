@@ -26,18 +26,48 @@
                             Notion
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {# Asegúrate de que los nombres de los Blueprints y endpoints sean correctos #}
-                            <a class="dropdown-item" href="{{ url_for('solicitudes.request_for_material_index') }}">Solicitudes de Materiales</a>
-                            <a class="dropdown-item" href="{{ url_for('ajustes.adjust_dates_page') }}">Ajuste de horarios</a>
-                            <a class="dropdown-item" href="{{ url_for('proyectos.create_project_page') }}">Nuevo Proyecto</a>
+                            {# Enlaces a herramientas, condicionales por rol #}
+
+                            {# Enlace a Solicitud Estándar (Logística) #}
+                            {% if current_user.is_authenticated and (current_user.role == 'logistica' or current_user.role == 'admin') %}
+                                <a class="dropdown-item" href="{{ url_for('solicitudes.standard_material_request_page') }}">Solicitud Estándar (Logística)</a>
+                            {% endif %}
+
+                            {# Enlace a Solicitud Accesorios (Diseño) #}
+                            {# Asume que el endpoint es 'accesorios.torni_accessories_request_page' y los roles son 'diseno' o 'admin' #}
+                            {% if current_user.is_authenticated and (current_user.role == 'diseno' or current_user.role == 'admin') %}
+                                <a class="dropdown-item" href="{{ url_for('accesorios.torni_accessories_request_page') }}">Solicitud Accesorios (Diseño)</a>
+                            {% endif %}
+
+                            {# Enlace al Panel de Almacén #}
+                            {# Asume que el endpoint es 'almacen.almacen_dashboard' y los roles son 'almacen' o 'admin' #}
+                            {% if current_user.is_authenticated and (current_user.role == 'almacen' or current_user.role == 'admin') %}
+                                <a class="dropdown-item" href="{{ url_for('almacen.almacen_dashboard') }}">Panel Almacén</a>
+                            {% endif %}
+
+                            {# Enlace al Panel de Ventas #}
+                            {# Asume que el endpoint es 'ventas.ventas_dashboard' y los roles son 'ventas' o 'admin' #}
+                            {% if current_user.is_authenticated and (current_user.role == 'ventas' or current_user.role == 'admin') %}
+                                <a class="dropdown-item" href="{{ url_for('ventas.ventas_dashboard') }}">Panel Ventas</a>
+                            {% endif %}
+
+                            {# Enlace a Nuevo Proyecto #}
+                            {# Asume que el endpoint es 'proyectos.create_project_page' #}
+                            {# Define qué roles pueden crear proyectos (quizás todos, o solo específicos) #}
+                             {% if current_user.is_authenticated and (current_user.role in ['logistica', 'diseno', 'ventas', 'admin']) %} {# Ejemplo: si Logística, Diseño, Ventas y Admin pueden crear proyectos #}
+                                <a class="dropdown-item" href="{{ url_for('proyectos.create_project_page') }}">Nuevo Proyecto</a>
+                            {% endif %}
+
+                            {# Puedes añadir un enlace a una página de administración general si solo los admins pueden acceder #}
+                            {# {% if current_user.is_authenticated and current_user.role == 'admin' %} #}
+                            {#    <a class="dropdown-item" href="{{ url_for('admin.dashboard') }}">Administración</a> #}
+                            {# {% endif %} #}
+
                         </div>
                     </li>
+                    {# ... (otros enlaces, ej: Inicio) ... #}
                 </ul>
-                <ul class="navbar-nav">
-                    <li>
-                        <a class="nav-link" href="{{ url_for('main.index') }}">Inicio</a> {# Enlace al index del Blueprint main #}
-                    </li>
-                </ul>
+                 {# ... (auth-links) ... #}
             </nav>
         </div>
         <div class="auth-links">

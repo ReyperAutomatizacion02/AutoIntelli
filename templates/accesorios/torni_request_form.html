@@ -1,0 +1,174 @@
+{# templates/accesorios/torni_request_form.html #}
+
+{% extends 'base.html' %}
+
+{% block title %}Solicitud de Accesorios Torni - AutoIntelli{% endblock %}
+
+{% block head_extra %}
+    {# Enlaza los archivos CSS específicos para esta vista #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/torni_request.css') }}"> {# Asume static/css/torni_request.css #}
+    {# Enlaza el CSS de Awesomplete #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/awesomplete.min.css') }}">
+    {# Asegúrate de que tu archivo styles.css general se carga en base.html #}
+{% endblock %}
+
+{% block content %}
+    {# Contenedor principal (wrapper) #}
+    {# Puedes usar un ID como #torni-request-wrapper si quieres estilos específicos #}
+    <div id="torni-request-wrapper">
+
+        {# Contenedor interno #}
+        <div class="container">
+            <h1 class="titulo-pagina">Solicitud de Accesorios Torni</h1>
+
+            {# Contenedor para mensajes flash #}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="message-container">
+                    {% for category, message in messages %}
+                    <div role="alert" class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            {# Formulario de Solicitud Torni #}
+            {# Su acción POST apunta a la nueva ruta en el Blueprint 'accesorios' #}
+            <form id="torni-accessories-form" method="POST" action="{{ url_for('accesorios.submit_torni_accessories_request') }}">
+
+                {# --- Campos Comunes --- #}
+                {# Estos campos estarán presentes en ambos formularios (estándar y Torni) #}
+                {# Sus IDs y names deben ser los mismos para que el backend los reconozca #}
+
+                <div class="form-group">
+                    <label for="nombre_solicitante">Nombre del solicitante:</label>
+                    <input type="text" id="nombre_solicitante" name="nombre_solicitante" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="proveedor">Proveedor:</label>
+                    {# Este select solo incluirá "Torni" y quizás deshabilitarlo para que no cambie #}
+                    <select id="proveedor" name="proveedor" required disabled> {# Deshabilitar para que solo sea "Torni" #}
+                         <option value="Torni" selected>Torni</option> {# Valor fijo "Torni" #}
+                    </select>
+                    {# Campo oculto para enviar el valor "Torni" si el select está deshabilitado #}
+                    <input type="hidden" name="proveedor" value="Torni"> {# Asegura que el valor "Torni" se envía #}
+                </div>
+
+                <div class="form-group">
+                    <label for="departamento_area">Departamento/Área:</label>
+                    <select id="departamento_area" name="departamento_area" required>
+                         <option value="" disabled selected>Seleccionar departamento:</option>
+                         <option value="Producción">Producción</option>
+                         <option value="Diseño">Diseño</option>
+                         <option value="Almacén">Almacén</option>
+                         <option value="Ventas">Ventas</option>
+                         <option value="Administración">Administración</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha_solicitud">Fecha de solicitud:</label>
+                    <input type="date" id="fecha_solicitud" name="fecha_solicitud" required>
+                     {# El script JS establecerá la fecha por defecto #}
+                </div>
+
+                <div class="form-group">
+                    <label for="proyecto">Proyecto:</label>
+                     {# Asegúrate de que el 'name' coincide con lo que tu backend espera #}
+                    <input type="text" id="proyecto" name="Proyecto" required> 
+                </div>
+
+                {# Campo oculto para el folio (generado por JS y enviado al backend) #}
+                <input type="hidden" id="folio_solicitud" name="folio_solicitud">
+                {# Opcional: Muestra el folio en pantalla para el usuario #}
+                <p>Folio: <span id="folio-display-value">Generando...</span></p>
+
+
+                {# --- Sección para Items Torni --- #}
+                {# Usar IDs y names originales si tu JS los espera así #}
+                <div id="torni-table-container">
+                     <h4>Productos Torni:</h4>
+                     <table id="torni-items-table">
+                         <thead>
+                             <tr>
+                                 <th>Cantidad</th>
+                                 <th>ID Producto</th> {# Input oculto o readonly llenado por Awesomplete #}
+                                 <th>Descripción</th> {# Input para búsqueda con Awesomplete #}
+                                 <th>Acciones</th>
+                             </tr>
+                         </thead>
+                         <tbody id="torni-items-tbody">
+                             {# Filas de productos se añadirán aquí por JS #}
+                             {# Asegúrate de que los inputs dentro de las filas tienen los nombres correctos (name="quantity", name="id", name="description") #}
+                         </tbody>
+                     </table>
+                     {# Botón para añadir nuevas filas de producto Torni #}
+                     <button type="button" id="add-torni-item-btn">Añadir Producto</button>
+                 </div>
+
+
+                {# Campo de especificaciones adicionales (común, pero opcional) #}
+                <div class="form-group">
+                     <label for="especificaciones_adicionales">Especificaciones Adicionales (opcional):</label>
+                     <textarea id="especificaciones_adicionales" name="especificaciones_adicionales"></textarea>
+                </div>
+
+
+                <div class="button-container">
+                    <button type="submit">Enviar Solicitud Torni</button>
+                </div>
+
+            </form>
+
+            {# Área para mostrar respuesta de AJAX #}
+            <div id="response-message" style="margin-top: 20px; font-weight: bold;"></div>
+
+        </div> {# Cierre de .container #}
+
+
+    </div> {# Cierre de #torni-request-wrapper #}
+{% endblock %}
+
+{% block scripts_extra %}
+    {# Enlaza el script de Awesomplete #}
+    <script src="{{ url_for('static', filename='js/awesomplete.min.js') }}"></script>
+    {# Enlaza el script JavaScript específico para este formulario Torni #}
+    {# Este script manejará la lógica Torni (Awesomplete, añadir/eliminar filas, recolección) #}
+    {# Asegúrate de que se carga DESPUÉS de awesomplete.min.js #}
+    <script src="{{ url_for('static', filename='js/torni_request.js') }}"></script>
+
+     {# Script opcional para auto-cerrar mensajes flash (si lo usas y no está en el script principal) #}
+     {# Mueve este script al archivo JS específico si lo necesitas solo aquí #}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            const autoCloseDelay = 5000; // 5 segundos
+            const fadeOutDuration = 500; // 0.5 segundos
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (message.parentNode) {
+                           message.style.display = 'none';
+                        }
+                    }, fadeOutDuration);
+                }, autoCloseDelay);
+            });
+        });
+    </script>
+
+    {# Asegúrate de que STANDARD_DIMENSIONS_URL y TORNI_MASTERLIST_URL están definidas en la plantilla si tu script JS las usa #}
+    {# Si tu script torni_request.js solo usa TORNI_MASTERLIST_URL, define solo esa aquí #}
+    <script>
+        // Define las URLs para archivos JSON estáticos usando url_for de Flask
+        // Asume que standard_request.js usa STANDARD_DIMENSIONS_URL y torni_request.js usa TORNI_MASTERLIST_URL
+        // Si este script necesita ambas, defínelas aquí.
+        // Si solo necesita TORNI_MASTERLIST_URL, elimina la otra o déjala comentada.
+        // const STANDARD_DIMENSIONS_URL = "{{ url_for('static', filename='data/standard_dimensions_by_unit.json') }}"; // Solo necesaria si torni_request.js la usa
+        const TORNI_MASTERLIST_URL = "{{ url_for('static', filename='data/torni_items_masterlist.json') }}"; // Necesaria para torni_request.js
+    </script>
+
+{% endblock %}

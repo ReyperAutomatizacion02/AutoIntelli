@@ -1,0 +1,401 @@
+/* static/css/torni_request.css */
+
+/*
+   Este archivo define estilos específicos para el formulario de solicitud de accesorios Torni.
+   Reutiliza variables y estilos generales de formulario/tabla definidos en styles.css.
+   También asume que awesomplete.min.css proporciona los estilos básicos para el autocompletado.
+*/
+
+/* --- Variables (Opcional si ya están en styles.css) --- */
+/* Copia el bloque :root de tu request_for_material.css aquí si tus variables no son globales */
+
+
+/* --- Estilos para el WRAPPER principal (Posicionamiento y Espaciado) --- */
+/* Debe coincidir con el ID <div id="torni-request-wrapper"> en la plantilla */
+#torni-request-wrapper {
+    display: flex; /* Para centrar el contenido interno */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header-height, 80px)); /* Altura mínima */
+    padding: 20px;
+    box-sizing: border-box;
+     /* Fondo del body en light/dark mode si aplica al wrapper */
+    /* background-color: var(--bg-color-light); */
+}
+
+/* --- Estilos del Dark Mode para el WRAPPER --- */
+/* body.dark-mode #torni-request-wrapper { background-color: var(--bg-color-dark); } */
+
+
+/* --- Estilos para el CONTENEDOR INTERNO (El "Recuadro" principal) --- */
+/* Aplica a .container dentro del wrapper los estilos del recuadro */
+#torni-request-wrapper .container {
+    max-width: 800px; /* Un poco más ancho para la tabla */
+    width: 100%;
+    margin: 0 auto;
+
+    /* Estilos del recuadro */
+    padding: 30px 40px;
+    background-color: var(--gris-t, #313131d5);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-light, rgba(0, 0, 0, 0.1));
+    color: var(--gris-claro, #858585);
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed, 0.3s) ease, box-shadow var(--transition-speed, 0.3s) ease, color var(--transition-speed, 0.3s) ease;
+}
+
+/* --- Estilos del Dark Mode para el CONTENEDOR INTERNO --- */
+body.dark-mode #torni-request-wrapper .container {
+    background-color: var(--container-bg-dark, #2c2c2c);
+    box-shadow: 0 5px 20px var(--shadow-dark, rgba(255, 255, 255, 0.08));
+    color: var(--text-color-dark, #e0e0e0);
+}
+
+
+/* --- Título de la Página --- */
+#torni-request-wrapper .container .titulo-pagina {
+    color: var(--primario, #D42D2E);
+    text-align: center;
+    font-family: var(--Orbitron, sans-serif);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--primario, #D42D2E);
+    padding-bottom: 0.5rem;
+    font-size: 2.4rem; /* Ajusta tamaño */
+}
+
+/* Estilos para el párrafo del folio */
+#torni-request-wrapper .container p {
+    font-size: 1.3rem;
+    color: var(--gris-claro, #858585);
+    margin-bottom: 15px;
+    text-align: center;
+}
+#torni-request-wrapper .container span {
+     /* Estilos para el valor del folio (el span) si es necesario */
+     color: var(--text-color-light, #333);
+     body.dark-mode & { color: var(--text-color-dark, #e0e0e0); }
+}
+
+
+/* --- Estilos de Filas y Grupos de Formulario --- */
+/* Aplica a .form-row y .form-group dentro del contenedor */
+#torni-request-wrapper .container .form-row { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 0; }
+#torni-request-wrapper .container .form-row > .form-group { margin-bottom: 15px; }
+#torni-request-wrapper .container .form-row .form-group { flex: 1; min-width: 180px; }
+
+#torni-request-wrapper .container .form-group:not(.form-row .form-group) { margin-bottom: 15px; /* Puedes ajustar el margin-top para campos principales */ }
+
+
+/* --- Labels --- */
+#torni-request-wrapper .container label {
+    display: block; margin-bottom: 5px; font-weight: 600;
+    color: var(--label-color-light, #555); text-transform: uppercase; letter-spacing: 0.5px;
+    transition: color var(--transition-speed) ease; font-size: 0.9em;
+}
+/* Estilo Dark Mode para Labels */
+body.dark-mode #torni-request-wrapper .container label { color: var(--label-color-dark, #b0b0b0); }
+
+
+/* --- Inputs, Selects, Textareas --- */
+/* Aplica a todos los tipos de input, select, textarea dentro del contenedor */
+#torni-request-wrapper .container input[type="text"],
+#torni-request-wrapper .container input[type="number"],
+#torni-request-wrapper .container input[type="date"],
+#torni-request-wrapper .container input[type="email"],
+#torni-request-wrapper .container input[type="password"],
+#torni-request-wrapper .container select,
+#torni-request-wrapper .container textarea {
+    width: 100%; padding: 10px; border: 1px solid var(--border-color-light, #ccc); border-radius: 6px;
+    box-sizing: border-box; font-size: 16px; font-family: var(--Ubuntu, sans-serif);
+    background-color: var(--input-bg-light, #fff); color: var(--text-color-light, #333);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    line-height: 1.5;
+}
+
+/* Estilos Dark Mode para Inputs, Selects, Textareas */
+body.dark-mode #torni-request-wrapper .container input[type="text"],
+body.dark-mode #torni-request-wrapper .container input[type="number"],
+body.dark-mode #torni-request-wrapper .container input[type="date"],
+body.dark-mode #torni-request-wrapper input[type="email"],
+body.dark-mode #torni-request-wrapper input[type="password"],
+body.dark-mode #torni-request-wrapper .container select,
+body.dark-mode #torni-request-wrapper .container textarea {
+    background-color: var(--input-bg-dark, #3b3b3b);
+    border-color: var(--border-color-dark, #555);
+    color: var(--text-color-dark, #e0e0e0);
+}
+
+/* Estilos de focus */
+#torni-request-wrapper .container input:focus,
+#torni-request-wrapper .container select:focus,
+#torni-request-wrapper .container textarea:focus {
+    outline: none; border-color: var(--primario, #D42D2E); box-shadow: 0 0 0 2px rgba(212, 45, 46, 0.3);
+}
+
+/* Estilos específicos para Selects (flecha) */
+#torni-request-wrapper .container select {
+    padding-right: 30px; appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    background-repeat: no-repeat; background-position: right 10px center;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="hsl(0, 0%, 20%)" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>');
+}
+/* Estilos Dark Mode para la flecha del Select */
+body.dark-mode #torni-request-wrapper .container select {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="hsl(0, 0%, 80%)" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>');
+}
+
+/* Estilos para el checkbox */
+#torni-request-wrapper .container input[type="checkbox"] {
+    width: auto; margin-right: 5px; accent-color: var(--primario); cursor: pointer; transform: scale(1.2);
+}
+
+/* Estilos para el textarea */
+#torni-request-wrapper .container textarea { height: 100px; resize: vertical; }
+
+
+/* --- Estilos de Campos Deshabilitados (READONLY o DISABLED) --- */
+#torni-request-wrapper .container input:disabled,
+#torni-request-wrapper .container select:disabled,
+#torni-request-wrapper .container textarea:disabled,
+#torni-request-wrapper .container input[readonly] {
+    background-color: #e9ecef; color: #6c757d; cursor: not-allowed; opacity: 0.7; border-color: var(--border-color-light);
+    body.dark-mode & { background-color: #3a3f44; color: #adb5bd; border-color: var(--border-color-dark); }
+}
+
+/* --- Estilos de la Tabla Torni --- */
+#torni-request-wrapper .container #torni-table-container {
+    margin-top: 25px; margin-bottom: 0; padding: 20px;
+    border: 1px solid var(--border-color-light); border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.02);
+    transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    overflow-x: auto;
+}
+/* Estilos Dark Mode para el contenedor de la tabla Torni */
+body.dark-mode #torni-request-wrapper .container #torni-table-container {
+     background-color: rgba(255, 255, 255, 0.03);
+     border-color: var(--border-color-dark);
+}
+
+/* Título dentro del contenedor de la tabla Torni */
+#torni-request-wrapper .container #torni-table-container h4 { /* Corregido a h4 si es lo que usas */
+    padding: 0; margin-top: 0; margin-bottom: 15px;
+    color: var(--gris-claro, #858585); font-weight: 600; font-size: 1em;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    transition: color var(--transition-speed) ease; text-align: left;
+}
+/* Estilo Dark Mode para el título de la tabla Torni */
+body.dark-mode #torni-request-wrapper .container #torni-table-container h4 { color: var(--label-color-dark, #b0b0b0); }
+
+
+/* Tabla Torni */
+#torni-request-wrapper .container #torni-items-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 15px;
+}
+#torni-request-wrapper .container #torni-items-table th,
+#torni-request-wrapper .container #torni-items-table td {
+    border: 1px solid var(--border-color-light); padding: 8px 10px; text-align: left;
+    vertical-align: top; transition: border-color var(--transition-speed) ease;
+}
+/* Estilo Dark Mode para bordes de la tabla */
+body.dark-mode #torni-request-wrapper .container #torni-items-table th,
+body.dark-mode #torni-request-wrapper .container #torni-items-table td { border-color: var(--border-color-dark); }
+
+/* Encabezados de la tabla */
+#torni-request-wrapper .container #torni-items-table th {
+    background-color: #f8f9fa; font-weight: 600; font-size: 0.9em; text-transform: uppercase;
+    color: var(--label-color-light); transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+/* Estilo Dark Mode para encabezados de la tabla */
+body.dark-mode #torni-request-wrapper .container #torni-items-table th {
+    background-color: #343a40; color: var(--label-color-dark);
+}
+
+/* Anchos de columnas (ajusta si es necesario) */
+#torni-request-wrapper .container #torni-items-table th:nth-child(1),
+#torni-request-wrapper .container #torni-items-table td:nth-child(1) { width: 15%; min-width: 80px; } /* Cantidad */
+#torni-request-wrapper .container #torni-items-table th:nth-child(4),
+#torni-request-wrapper .container #torni-items-table td:nth-child(4) { width: 10%; min-width: 60px; text-align: center; } /* Acción (botón eliminar) */
+#torni-request-wrapper .container #torni-items-table th:nth-child(2),
+#torni-request-wrapper .container #torni-items-table td:nth-child(2) { width: 30%; } /* ID */
+#torni-request-wrapper .container #torni-items-table th:nth-child(3),
+#torni-request-wrapper .container #torni-items-table td:nth-child(3) { width: 45%; } /* Descripcion */
+
+
+/* Estilos específicos para inputs dentro de la tabla Torni */
+#torni-request-wrapper .container #torni-items-table input[type="number"],
+#torni-request-wrapper .container #torni-items-table input[type="text"] {
+    width: 100%; padding: 6px; font-size: 14px; box-sizing: border-box;
+    /* Hereda la mayoría de estilos de input general */
+}
+/* Ajuste específico para Awesomplete input dentro de la tabla */
+#torni-request-wrapper .container #torni-items-table td .awesomplete > input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Estilos para botones de añadir/eliminar fila */
+#torni-request-wrapper .container .delete-row-btn,
+#torni-request-wrapper .container .add-row-btn {
+    color: white; border: none; border-radius: 4px; padding: 4px 8px;
+    cursor: pointer; font-size: 12px; line-height: 1.2; transition: background-color 0.2s ease;
+}
+#torni-request-wrapper .container .delete-row-btn { background-color: #dc3545; } /* Rojo */
+#torni-request-wrapper .container .delete-row-btn:hover { background-color: #c82333; }
+#torni-request-wrapper .container .add-row-btn {
+    background-color: #28a745; /* Verde */
+    display: block; margin: 0 auto 15px auto; padding: 8px 15px; font-size: 14px;
+}
+#torni-request-wrapper .container .add-row-btn:hover { background-color: #218838; }
+
+
+/* Estilos para el contenedor del botón principal */
+#torni-request-wrapper .container .button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilos para el botón principal de submit */
+#torni-request-wrapper .container button[type="submit"] {
+    background-color: var(--primario, #D42D2E); color: var(--blanco, #FFFFFF);
+    padding: 12px 20px; border: none; border-radius: 6px;
+    cursor: pointer; font-size: 18px; font-weight: bold;
+    transition: background-color var(--transition-speed) ease, transform 0.1s ease;
+    display: block; width: 100%;
+    font-family: var(--Ubuntu, sans-serif); text-transform: uppercase; letter-spacing: 1px;
+}
+#torni-request-wrapper .container button[type="submit"]:hover { background-color: var(--primary-hover-color, #b02122); }
+#torni-request-wrapper .container button[type="submit"]:active { transform: scale(0.98); }
+#torni-request-wrapper .container button[type="submit"]:disabled {
+    background-color: #555; cursor: not-allowed; opacity: 0.7;
+}
+
+
+/* Estilos para el div de respuesta AJAX */
+#torni-request-wrapper .container #response-message {
+    margin-top: 25px;
+    padding: 15px; border-radius: 6px; text-align: center;
+    font-size: 1.5rem; min-height: 50px; display: flex; align-items: center;
+    justify-content: center; border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    word-break: break-word;
+}
+#torni-request-wrapper .container #response-message.processing {
+    border-color: var(--processing-text, #f0ad4e); color: var(--processing-text, #f0ad4e);
+    background-color: rgba(240, 173, 78, 0.1);
+}
+#torni-request-wrapper .container #response-message.success {
+    background-color: var(--success-bg, #2a573a); color: var(--success-text, #a7d7b4);
+    border-color: var(--success-text, #a7d7b4);
+}
+#torni-request-wrapper .container #response-message.error {
+    background-color: var(--error-bg, #4d2429); color: var(--error-text, #f1b0b7);
+    border-color: var(--error-text, #f1b0b7);
+}
+#torni-request-wrapper .container #response-message.warning {
+    background-color: var(--warning-bg, #fff3cd);
+    color: var(--warning-text, #856404);
+    border-color: var(--warning-text, #ffeeba);
+}
+#torni-request-wrapper .container #response-message a {
+    color: inherit; text-decoration: underline; font-weight: bold; margin-left: 5px;
+}
+
+
+/* --- Estilos para Mensajes Flash de Flask --- */
+#torni-request-wrapper .container .message-container {
+    position: absolute; top: 15px; left: 50%; transform: translateX(-50%);
+    width: calc(100% - 80px); max-width: calc(800px - 80px); /* Ajusta max-width */
+    z-index: 1050; display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+#torni-request-wrapper .container .flash-message {
+    padding: 12px 18px; border: 1px solid transparent; border-radius: 6px; text-align: center;
+    width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.15); opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out; font-size: 1.4rem;
+    color: var(--blanco); background-color: var(--gris);
+}
+#torni-request-wrapper .container .flash-message.success { background-color: var(--success-bg); color: var(--success-text); border-color: var(--success-text); }
+#torni-request-wrapper .container .flash-message.danger { background-color: var(--error-bg); color: var(--error-text); border-color: var(--error-text); }
+#torni-request-wrapper .container .flash-message.info { background-color: var(--info-bg); color: var(--info-text); border-color: var(--info-text); }
+#torni-request-wrapper .container .flash-message.warning { background-color: var(--warning-bg); color: var(--warning-text); border-color: var(--warning-text); }
+.flash-message.fade-out { opacity: 0; transform: translateY(-20px); }
+
+
+/* --- Estilos Awesomplete Prefijados --- */
+#torni-request-wrapper .awesomplete ul {
+    border-radius: 4px; border: 1px solid var(--border-color-light); box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    background: var(--input-bg-light); color: var(--text-color-light);
+    z-index: 99;
+}
+/* Estilos Dark Mode para la lista Awesomplete */
+body.dark-mode #torni-request-wrapper .awesomplete ul {
+    border-color: var(--border-color-dark); background: var(--input-bg-dark); color: var(--text-color-dark);
+}
+/* Estilos para los items de la lista */
+#torni-request-wrapper .awesomplete ul li { padding: 5px 10px; font-size: 14px; transition: background-color 0.1s ease; }
+/* Estilos para el item seleccionado o al pasar el ratón */
+#torni-request-wrapper .awesomplete ul li[aria-selected="true"],
+#torni-request-wrapper .awesomplete ul li:hover { background-color: var(--primario); color: white; cursor: pointer; }
+/* Estilos Dark Mode para el item seleccionado/hover */
+body.dark-mode #torni-request-wrapper .awesomplete ul li[aria-selected="true"],
+body.dark-mode #torni-request-wrapper .awesomplete ul li:hover { background-color: var(--primary-hover-color); }
+/* Estilos para la parte marcada (coincidencia de texto) */
+#torni-request-wrapper .awesomplete mark { background-color: #ffffa0; color: inherit; padding: 0; }
+/* Estilos Dark Mode para la parte marcada */
+body.dark-mode #torni-request-wrapper .awesomplete mark { background-color: #86861a; }
+/* --- Fin Estilos Awesomplete --- */
+
+
+/* --- Estilos Ocultos --- */
+.oculto { display: none !important; }
+
+/* Estilo para campos "N/A" (no se usa en este formulario, pero puede estar en CSS general) */
+/* .na-field { font-style: italic; color: var(--gris-claro); } */
+
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    #torni-request-wrapper .container {
+        padding: 25px 30px; width: 98%;
+        max-width: calc(768px - (20px * 2));
+    }
+    #torni-request-wrapper .container .titulo-pagina { font-size: 2rem; }
+    #torni-request-wrapper .container .form-row { flex-direction: column; gap: 15px; }
+    #torni-request-wrapper .container .form-row .form-group { min-width: 100%; margin-bottom: 0; }
+
+    #torni-request-wrapper .container button[type="submit"] { font-size: 1.5rem; padding: 10px 25px; }
+    #torni-request-wrapper .container #response-message { font-size: 1.4rem; padding: 12px; }
+    #torni-request-wrapper .container .message-container { width: calc(100% - 60px); max-width: none; }
+
+    /* Ajustar tabla para móvil si es necesario */
+    #torni-request-wrapper .container #torni-items-table th,
+    #torni-request-wrapper .container #torni-items-table td { padding: 8px; }
+    #torni-request-wrapper .container #torni-items-table input[type="number"],
+    #torni-request-wrapper .container #torni-items-table input[type="text"] { font-size: 1.3rem; padding: 6px; }
+
+    #torni-request-wrapper .container .delete-row-btn,
+    #torni_request-wrapper .container .add-row-btn { font-size: 1rem; padding: 4px 8px; }
+    #torni-request-wrapper .container #add-torni-item-btn { padding: 6px 15px; font-size: 1.3rem; }
+
+}
+
+@media (max-width: 480px) {
+    #torni-request-wrapper .container { padding: 20px 25px; width: 100%; max-width: unset; }
+    #torni-request-wrapper .container .titulo-pagina { font-size: 1.8rem; margin-bottom: 20px; }
+    #torni-request-wrapper .container label { font-size: 1.2rem; }
+    #torni-request-wrapper .container input, #torni-request-wrapper .container select, #torni-request-wrapper .container textarea { font-size: 1.3rem; padding: 8px 10px; }
+    #torni-request-wrapper .container button[type="submit"] { font-size: 1.4rem; padding: 9px 20px; }
+    #torni-request-wrapper .container #response-message { font-size: 1.2rem; padding: 10px; }
+    #torni_request-wrapper .container .message-container { top: 10px; width: calc(100% - 50px); max-width: unset; }
+
+    /* Ajustes finos para la tabla en móviles si es necesario */
+    #torni-request-wrapper .container #torni-items-table input[type="number"],
+    #torni-request-wrapper .container #torni-items-table input[type="text"] { font-size: 13px; padding: 4px 6px; }
+
+    #torni-request-wrapper .container .delete-row-btn,
+    #torni_request-wrapper .container .add-row-btn { font-size: 11px; padding: 3px 6px; }
+    #torni-request-wrapper .container #add-torni-item-btn { padding: 6px 12px; font-size: 13px; }
+}

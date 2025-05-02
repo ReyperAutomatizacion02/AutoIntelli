@@ -117,12 +117,18 @@ def create_app():
     from .ajustes import ajustes_bp
     from .proyectos import proyectos_bp
     from .main_routes import main_bp
+    from .accesorios import accesorios_bp
+    from .almacen import almacen_bp
+    from .ventas import ventas_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(solicitudes_bp, url_prefix='/solicitudes')
     app.register_blueprint(ajustes_bp, url_prefix='/ajustes')
     app.register_blueprint(proyectos_bp, url_prefix='/proyectos')
+    app.register_blueprint(accesorios_bp, url_prefix='/accesorios')
+    app.register_blueprint(almacen_bp, url_prefix='/almacen')
+    app.register_blueprint(ventas_bp, url_prefix='/ventas') 
 
     # Retornar la instancia de la aplicación configurada
     return app
