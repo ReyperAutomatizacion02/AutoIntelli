@@ -1,0 +1,174 @@
+{# templates/almacen/dashboard.html #}
+
+{% extends 'base.html' %}
+
+{% block title %}Panel de Almacén - AutoIntelli{% endblock %}
+
+{% block head_extra %}
+    {# Enlaza los archivos CSS específicos para esta vista #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_almacen.css') }}"> {# Asume static/css/dashboard_almacen.css #}
+    {# Puedes necesitar CSS para tablas si no lo tienes en styles.css #}
+{% endblock %}
+
+{% block content %}
+    {# Contenedor principal #}
+    <div id="almacen-dashboard-wrapper">
+
+        {# Contenedor interno #}
+        <div class="container">
+            <h1 class="titulo-pagina">Panel de Almacén</h1>
+
+            {# Contenedor para mensajes flash #}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="message-container">
+                    {% for category, message in messages %}
+                    <div role="alert" class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            {# --- Mostrar la Lista de Solicitudes --- #}
+            {# La variable 'solicitudes' se pasa desde la ruta del backend #}
+            <h2>Solicitudes Pendientes/En Proceso</h2>
+
+            {% if solicitudes %}
+                <table id="solicitudes-table">
+                    <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Proveedor</th>
+                            <th>Nombre Material / Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Fecha Solicitud</th>
+                            <th>Proyecto</th>
+                            <th>Estatus</th> {# Asumiendo que hay una propiedad Estatus #}
+                            <th>Acciones</th> {# Columna para botones de acción si añades funcionalidad #}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for solicitud in solicitudes %}
+                        <tr>
+                            {# Accede a las propiedades de la página de Notion a través del diccionario 'properties' #}
+                            {# Los nombres de las propiedades aquí deben coincidir exactamente con los de tu DB Notion #}
+                            <td>
+                                {# Acceder al valor del título (ej. 'Folio de solicitud') #}
+                                {# Verifica si la propiedad 'Folio de solicitud' es de tipo rich_text y tiene contenido #}
+                                {% set folio_prop = solicitud.properties.get('Folio de solicitud') %}
+                                {% if folio_prop and folio_prop.type == 'rich_text' and folio_prop.rich_text %}
+                                    {{ folio_prop.rich_text[0].plain_text }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                            <td>
+                                {# Acceder al valor de un select (ej. 'Proveedor') #}
+                                {% set proveedor_prop = solicitud.properties.get('Proveedor') %}
+                                {% if proveedor_prop and proveedor_prop.type == 'select' and proveedor_prop.select %}
+                                    {{ proveedor_prop.select.name }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                            <td>
+                                {# Acceder al valor de la Descripción (Torni) o Nombre Material (Estándar) #}
+                                {% set desc_prop = solicitud.properties.get('Descripción') %} {# Para items Torni #}
+                                {% set nombre_prop = solicitud.properties.get('Nombre del material') %} {# Para items Estándar #}
+                                {% if desc_prop and desc_prop.type == 'rich_text' and desc_prop.rich_text %}
+                                     {{ desc_prop.rich_text[0].plain_text }} {# Mostrar Descripción si es Torni #}
+                                {% elif nombre_prop and nombre_prop.type == 'select' and nombre_prop.select %}
+                                    {{ nombre_prop.select.name }} {# Mostrar Nombre Material si es Estándar #}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                             <td>
+                                {# Acceder al valor de una propiedad Number (ej. 'Cantidad solicitada') #}
+                                {% set cantidad_prop = solicitud.properties.get('Cantidad solicitada') %}
+                                {% if cantidad_prop and cantidad_prop.type == 'number' and cantidad_prop.number is not none %}
+                                    {{ cantidad_prop.number }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                             </td>
+                             <td>
+                                {# Acceder al valor de una propiedad Date (ej. 'Fecha de solicitud') #}
+                                {% set fecha_prop = solicitud.properties.get('Fecha de solicitud') %}
+                                {% if fecha_prop and fecha_prop.type == 'date' and fecha_prop.date and fecha_prop.date.start %}
+                                    {# Formatear la fecha si es necesario. Notion devuelve ISO 8601. #}
+                                    {{ fecha_prop.date.start.split('T')[0] }} {# Ejemplo simple: mostrar solo la parte de la fecha #}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                             </td>
+                              <td>
+                                {# Acceder al valor del Proyecto (ej. 'Proyecto') #}
+                                {% set proyecto_prop = solicitud.properties.get('Proyecto') %}
+                                {% if proyecto_prop and proyecto_prop.type == 'rich_text' and proyecto_prop.rich_text %}
+                                     {{ proyecto_prop.rich_text[0].plain_text }}
+                                {% else %}
+                                     N/A
+                                {% endif %}
+                             </td>
+                            <td>
+                                {# Acceder al valor del Estatus (ej. 'Estatus') #}
+                                {% set estatus_prop = solicitud.properties.get('Estatus') %}
+                                {% if estatus_prop and estatus_prop.type == 'select' and estatus_prop.select %}
+                                    {{ estatus_prop.select.name }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                            <td>
+                                {# Enlaces o botones de acción (ej: "Marcar como Procesado") #}
+                                {# Si añades rutas para actualizar estatus, usa url_for aquí #}
+                                {# <button data-page-id="{{ solicitud.id }}" data-new-status="Procesado" class="update-status-btn">Procesado</button> #}
+                                <a href="{{ solicitud.url }}" target="_blank" rel="noopener noreferrer">Ver en Notion</a> {# Enlace a la página original en Notion #}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                {# Mensaje si no hay solicitudes o si hubo un error al cargarlas #}
+                {% if error_msg %}
+                     <p>Error al cargar solicitudes.</p> {# El mensaje flash ya debería mostrar el detalle #}
+                {% else %}
+                     <p>No hay solicitudes pendientes o en proceso para mostrar.</p>
+                {% endif %}
+            {% endif %}
+
+
+        </div> {# Cierre de .container #}
+
+    </div> {# Cierre de #almacen-dashboard-wrapper #}
+{% endblock %}
+
+{% block scripts_extra %}
+    {# Puedes añadir un script JavaScript aquí si necesitas funcionalidades interactivas #}
+    {# como filtros en el frontend, paginación, o botones para actualizar estatus via AJAX. #}
+    {# Si añades scripts, asegúrate de que se cargan DESPUÉS del DOM. #}
+    {# <script src="{{ url_for('static', filename='js/dashboard_almacen.js') }}"></script> #}
+
+    {# Script opcional para auto-cerrar mensajes flash (si lo usas) #}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            const autoCloseDelay = 5000; // 5 segundos
+            const fadeOutDuration = 500; // 0.5 segundos
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (message.parentNode) {
+                           message.style.display = 'none';
+                        }
+                    }, fadeOutDuration);
+                }, autoCloseDelay);
+            });
+        });
+    </script>
+{% endblock %}
