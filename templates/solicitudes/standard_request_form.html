@@ -1,22 +1,31 @@
 {# templates/solicitudes/standard_request_form.html #}
 
-{% extends 'base.html' %}
+{% extends 'base.html' %} {# Hereda de la plantilla base #}
 
-{% block title %} Solicitud de Materiales - AutoIntelli{% endblock %}
+{% block title %}Solicitud Estándar de Materiales - AutoIntelli{% endblock %} {# Título específico #}
 
 {% block head_extra %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/standard_request.css') }}"> 
+    {# Enlaza los archivos CSS específicos para esta vista #}
+    {# Asume que tienes un archivo CSS para estilos específicos del formulario estándar #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/standard_request.css') }}">
+    {# Asegúrate de que tu archivo styles.css general se carga en base.html #}
 {% endblock %}
 
 {% block content %}
+    {# Contenedor principal para la página (similar al wrapper de login/create_project) #}
+    {# Usamos un ID para aplicar estilos específicos definidos en standard_request.css #}
     <div id="standard-request-wrapper">
-        <div class="container">
-            <h1 class="titulo-pagina">Solicitud de Materiales</h1>
 
+        {# Contenedor interno (similar al .container dentro de los wrappers) #}
+        <div class="container">
+            <h1 class="titulo-pagina">Solicitud Estándar de Materiales</h1>
+
+            {# Contenedor para mensajes flash (Flask-Login inyecta get_flashed_messages) #}
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                 <div class="message-container">
                     {% for category, message in messages %}
+                    {# La clase {{ category }} permitirá aplicar estilos de éxito, error, info, etc. #}
                     <div role="alert" class="flash-message {{ category }}">
                         {{ message }}
                     </div>
@@ -25,83 +34,118 @@
                 {% endif %}
             {% endwith %}
 
-            <form id="standard-material-form" method="POST" action="{{ url_for('solicitudes.submit_standard_request') }}"> {# <<< CORRECCIÓN APLICADA AQUÍ #}
+            {# Formulario de Solicitud Estándar #}
+            {# Su acción POST apunta a la nueva ruta en el Blueprint 'solicitudes' #}
+            {# La acción usa el endpoint completo 'nombre_blueprint.nombre_funcion' #}
+            <form id="standard-material-form" method="POST" action="{{ url_for('solicitudes.submit_standard_request') }}">
 
-                <div class="form-group">
-                    <label for="nombre_solicitante">Nombre del solicitante:</label>
-                    <input type="text" id="nombre_solicitante" name="nombre_solicitante" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="fecha_solicitud">Fecha de solicitud:</label>
-                    <input type="date" id="fecha_solicitud" name="fecha_solicitud" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="proyecto">Proyecto:</label>
-                    <input type="text" id="proyecto" name="proyecto" required> 
-                </div>
-
+                {# --- CAMPO FOLIO (MOVIDO A LA PARTE SUPERIOR) --- #}
+                {# El script JS generará el folio y actualizará este input y el span #}
                 <input type="hidden" id="folio_solicitud" name="folio_solicitud">
-                <p>Folio: <span id="folio-display-value">Generando...</span></p>
+                <p class="folio-display">Folio: <span id="folio-display-value">Generando...</span></p>
 
-                <div id="cantidad-unidad-group" class="form-group"> 
-                    <label for="cantidad_solicitada">Cantidad solicitada:</label>
-                    <input type="number" id="cantidad_solicitada" name="cantidad_solicitada" min="1" value="1" required>
+
+                {# --- CAMPOS OCULTOS (Proveedor y Departamento/Área) --- #}
+                {# Usamos inputs ocultos con valores por defecto. El JS los recolecta. #}
+                {# Asegúrate de que los 'name' coinciden con lo que el backend espera #}
+                <input type="hidden" name="proveedor" value="ProveedorLogistica">
+                <input type="hidden" name="departamento_area" value="Logística">
+
+
+                {# --- CAMPOS VISIBLES EN DOS COLUMNAS (usando form-row) --- #}
+
+                {# Fila 1: Nombre Solicitante y Fecha Solicitud (Ahora solo lectura) #}
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre_solicitante">Nombre del solicitante:</label>
+                        {# REMOVED 'required' para usar validación JS #}
+                        <input type="text" id="nombre_solicitante" name="nombre_solicitante">
+                    </div>
+                    {# CAMPO FECHA (Ahora input type="text" readonly) #}
+                    <div class="form-group">
+                        <label for="fecha_solicitud">Fecha de solicitud:</label>
+                        {# Usar type="text" y readonly. La clase readonly-field para estilos específicos. #}
+                        {# name="fecha_solicitud" para que el backend lo recolecte #}
+                         {# Removed 'required' para usar validación JS (aunque es readonly y siempre se llena por JS) #}
+                        <input type="text" id="fecha_solicitud" name="fecha_solicitud" class="readonly-field" readonly>
+                         {# El script JS en un bloque aparte establecerá la fecha aquí al cargar #}
+                    </div>
                 </div>
 
-                <div id="nombre-material-group" class="form-group">
-                    <label for="nombre_material">Nombre del material:</label>
-                    <select id="nombre_material" name="nombre_material" required disabled> 
-                        <option value="" disabled selected>Seleccionar material:</option>
-                    </select>
+                {# Fila 2: Proyecto y Cantidad Solicitada #}
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="proyecto">Proyecto:</label>
+                        {# name="Proyecto" #}
+                         {# REMOVED 'required' para usar validación JS #}
+                        <input type="text" id="proyecto" name="proyecto">
+                    </div>
+                    <div id="cantidad-unidad-group" class="form-group">
+                        <label for="cantidad_solicitada">Cantidad solicitada:</label>
+                        {# name="cantidad_solicitada" #}
+                        {# REMOVED 'required' para usar validación JS #}
+                        <input type="number" id="cantidad_solicitada" name="cantidad_solicitada" min="1" value="1">
+                    </div>
                 </div>
 
-                <div id="tipo-material-group" class="form-group">
-                    <label for="tipo_material">Tipo de material:</label>
-                    <input type="text" id="tipo_material" name="tipo_material" readonly disabled> 
+                {# Fila 3: Nombre Material y Tipo Material #}
+                <div class="form-row">
+                    <div id="nombre-material-group" class="form-group">
+                        <label for="nombre_material">Nombre del material:</label>
+                        {# name="nombre_material" #}
+                        {# disabled porque su valor depende del proveedor (aunque el proveedor sea oculto) y se pobla con JS #}
+                        {# REMOVED 'required' para usar validación JS #}
+                        <select id="nombre_material" name="nombre_material" disabled>
+                            <option value="" disabled selected>Seleccionar material:</option>
+                            {# Las opciones se llenan dinámicamente por JS #}
+                        </select>
+                    </div>
+                    <div id="tipo-material-group" class="form-group">
+                        <label for="tipo_material">Tipo de material:</label>
+                        {# name="tipo_material" #}
+                        {# readonly y disabled porque su valor se determina por JS basado en nombre_material #}
+                        <input type="text" id="tipo_material" name="tipo_material" readonly disabled>
+                         {# NOTA: collectFormData incluye este valor a pesar de estar disabled si tiene name #}
+                    </div>
                 </div>
 
-                <div id="unidad-medida-group" class="form-group"> 
-                    <label for="unidad_medida">Unidad de medida:</label>
-                    {# Asegúrate de que el 'name' coincide #}
-                    <select id="unidad_medida" name="unidad_medida" required>
-                        <option value="" disabled selected>Seleccionar unidad:</option>
-                        {# Opciones de unidades #}
-                        <option value="mm">mm</option>
-                        <option value="in">in</option>
-                        <option value="ga">ga</option>
-                        <option value="AWG">AWG</option>
-                        <option value="m">m</option>
-                        <option value="ft">ft</option>
-                    </select>
+                {# Fila 4: Unidad de Medida #}
+                <div class="form-row">
+                     <div id="unidad-medida-group" class="form-group" style="flex-basis: 50%;"> {# Darle 50% de ancho si está sola en una fila de 2 #}
+                          <label for="unidad_medida">Unidad de medida:</label>
+                          {# name="unidad_medida" #}
+                           {# REMOVED 'required' para usar validación JS #}
+                          <select id="unidad_medida" name="unidad_medida">
+                              <option value="" disabled selected>Seleccionar unidad:</option>
+                              {# Opciones ACTUALIZADAS para coincidir con las claves del JSON (Milímetros, Pulgadas, etc.) #}
+                               <option value="Milímetros">Milímetros</option>
+                               <option value="Pulgadas">Pulgadas</option>
+                               <option value="Centimetros">Centimetros</option>
+                               <option value="Metros">Metros</option>
+                               <option value="Piezas">Piezas</option>
+                          </select>
+                      </div>
                 </div>
 
-                 <div id="dimensiones-container"> 
-                     <h4>Dimensiones (opcional):</h4>
-                     <div class="dimension-inputs"> 
-                         <div class="form-group">
-                             <label for="largo">Largo:</label>
-                             <input type="text" id="largo" name="largo" list="dimensionList"> 
-                         </div>
-                          <div class="form-group">
-                             <label for="ancho">Ancho:</label>
-                             <input type="text" id="ancho" name="ancho" list="dimensionList"> 
-                         </div>
-                          <div class="form-group">
-                             <label for="alto">Alto:</label>
-                             <input type="text" id="alto" name="alto" list="dimensionList"> 
-                         </div>
-                         <div class="form-group">
-                             <label for="diametro">Diámetro:</label>
-                             <input type="text" id="diametro" name="diametro" list="dimensionList"> 
-                         </div>
-                     </div>
-                 </div>
 
+                {# --- Grupo de Dimensiones (en una sola fila de 4 columnas) --- #}
+                 <div id="dimensiones-container">
+                    <h4>Dimensiones:</h4> {# Changed to required by JS validation #}
+                    <div class="dimension-inputs">
+                        {# Asegúrate de que los 'name' coinciden #}
+                        {# Dimension inputs do NOT have 'required' as per the original HTML, relying on JS validation #}
+                        <div class="form-group"><label for="largo">Largo:</label><input type="text" id="largo" name="largo" list="dimensionList"></div>
+                        <div class="form-group"><label for="ancho">Ancho:</label><input type="text" id="ancho" name="ancho" list="dimensionList"></div>
+                        <div class="form-group"><label for="alto">Alto:</label><input type="text" id="alto" name="alto" list="dimensionList"></div>
+                        <div class="form-group"><label for="diametro">Diámetro:</label><input type="text" id="diametro" name="diametro" list="dimensionList"></div>
+                    </div>
+                </div>
+
+                {# --- Campo Especificaciones Adicionales (en su propio .form-group) --- #}
                 <div class="form-group">
                      <label for="especificaciones_adicionales">Especificaciones Adicionales (opcional):</label>
-                     {# Asegúrate de que el 'name' coincide #}
+                     {# name="especificaciones_adicionales" #}
+                     {# This field is OPTIONAL, no 'required' attribute #}
                      <textarea id="especificaciones_adicionales" name="especificaciones_adicionales"></textarea>
                 </div>
 
@@ -112,52 +156,98 @@
 
             </form>
 
-            {# Área para mostrar respuesta de AJAX #}
-            {# Usa el ID que tu script JS espera #}
             <div id="response-message" style="margin-top: 20px; font-weight: bold;"></div>
 
         </div> {# Cierre de .container #}
 
-         {# Datalist para dimensiones (puede ir aquí o al final del body) #}
-         {# Asegúrate de usar el ID correcto que los inputs 'list' apuntan #}
-         <datalist id="dimensionList"></datalist>
-
+        {# Datalist para dimensiones #}
+        <datalist id="dimensionList"></datalist>
 
     </div> {# Cierre de #standard-request-wrapper #}
 {% endblock %}
 
 {% block scripts_extra %}
-    {# --- DEFINIR VARIABLES JAVASCRIPT GLOBALES ANTES DE CARGAR LOS SCRIPTS --- #}
+    {# --- CÓDIGO PARA ESTABLECER LA FECHA AL CARGAR LA PÁGINA --- #}
+    <script>
+        // Establecer fecha por defecto al cargar la página
+        (function() {
+            const fechaInput = document.getElementById('fecha_solicitud');
+            if (fechaInput) {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = ('0' + (today.getMonth() + 1)).slice(-2);
+                const day = ('0' + today.getDate()).slice(-2);
+                fechaInput.value = `${year}-${month}-${day}`;
+            } else {
+                console.error("Input de fecha #fecha_solicitud no encontrado en la plantilla.");
+            }
+        })();
+    </script>
+
+    {# --- DEFINIR VARIABLES JAVASCRIPT GLOBALES --- #}
     <script>
         // Define la URL para el archivo JSON de dimensiones estándar usando url_for de Flask
         const STANDARD_DIMENSIONS_URL = "{{ url_for('static', filename='data/standard_dimensions_by_unit.json') }}";
-        // Si tuvieras otras URLs para este script, las definirías aquí también
-        // const OTRA_URL = "{{ url_for('static', filename='data/otro.json') }}";
     </script>
     {# --- FIN DEFINICIÓN VARIABLES --- #}
 
-
-    {# Enlaza el script JavaScript específico para este formulario #}
-    {# Asegúrate de que este script se carga DESPUÉS de las variables #}
+    {# --- SCRIPT JAVASCRIPT PRINCIPAL --- #}
     <script src="{{ url_for('static', filename='js/standard_request.js') }}"></script>
 
-     {# Script opcional para auto-cerrar mensajes flash (si lo usas y no está en el script principal) #}
-     {# Mueve este script al archivo JS específico si lo necesitas solo aquí #}
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const flashMessages = document.querySelectorAll('.flash-message');
-            const autoCloseDelay = 5000; // 5 segundos
-            const fadeOutDuration = 500; // 0.5 segundos
-            flashMessages.forEach(message => {
-                setTimeout(() => {
-                    message.classList.add('fade-out');
-                    setTimeout(() => {
-                        if (message.parentNode) {
-                           message.style.display = 'none';
-                        }
-                    }, fadeOutDuration);
-                }, autoCloseDelay);
-            });
-        });
-    </script>
+     {# Script opcional para auto-cerrar mensajes flash (si lo usas) #}
+     <script>
+         document.addEventListener('DOMContentLoaded', () => {
+             // Asegúrate de que esta lógica no esté duplicada en standard_request.js
+             // Si lo está, elimina este bloque
+             if (!document.body.dataset.autoCloseFlashMessagesAdded) { // Previene duplicación si el listener se añade varias veces
+                 document.body.dataset.autoCloseFlashMessagesAdded = 'true'; // Marca que el listener ya se añadió
+                 const autoCloseDelay = 5000; // 5 segundos
+                 const fadeOutDuration = 500; // 0.5 segundos
+                 const flashContainer = document.querySelector('#standard-request-wrapper .message-container');
+                 if (flashContainer) {
+                     // Usamos un observador de mutaciones para detectar la adición de nuevos mensajes flash
+                     const observer = new MutationObserver(mutationsList => {
+                         mutationsList.forEach(mutation => {
+                             if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                                 mutation.addedNodes.forEach(addedNode => {
+                                     // Procesa solo elementos que sean mensajes flash (y no solo texto)
+                                     if (addedNode.nodeType === Node.ELEMENT_NODE && addedNode.classList.contains('flash-message')) {
+                                         setTimeout(() => {
+                                             addedNode.classList.add('fade-out');
+                                             setTimeout(() => {
+                                                 if (addedNode.parentNode) {
+                                                    // Optional: addedNode.remove(); // Eliminar completamente del DOM
+                                                    addedNode.style.display = 'none'; // Ocultar con display none
+                                                 }
+                                             }, fadeOutDuration);
+                                         }, autoCloseDelay);
+                                     }
+                                 });
+                             }
+                         });
+                     });
+                     // Comienza a observar el contenedor de mensajes flash para cambios en su lista de hijos
+                     observer.observe(flashContainer, { childList: true });
+
+                     // También aplica la lógica a los mensajes que ya están presentes al cargar (si los hay)
+                     flashContainer.querySelectorAll('.flash-message').forEach(message => {
+                         setTimeout(() => {
+                              message.classList.add('fade-out');
+                              setTimeout(() => {
+                                   if (message.parentNode) {
+                                     // message.remove();
+                                      message.style.display = 'none';
+                                   }
+                              }, fadeOutDuration);
+                         }, autoCloseDelay);
+                     });
+
+                 } else {
+                     console.warn("Message container for flash messages not found in template.");
+                 }
+             } else {
+                 console.log("Auto-close flash messages listener already added.");
+             }
+         });
+     </script>
 {% endblock %}
