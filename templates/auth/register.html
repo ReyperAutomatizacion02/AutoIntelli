@@ -9,8 +9,8 @@
 {% block content %}
     <div id="register-wrapper">
 
-        {# *** INICIO: COPIAR ESTO DESDE LOGIN.HTML *** #}
-        <div class="login-header-visuals"> {# Reutilizamos la misma clase #}
+        {# *** INICIO: CABECERA VISUAL (COPIADO DE LOGIN.HTML) *** #}
+        <div class="login-header-visuals"> {# Reutilizamos la misma clase para consistencia visual #}
             <h1 class="titulo-login">AutoIntelli</h1> {# Reutilizamos la misma clase #}
             <dotlottie-player class="lottie-icon-login" {# Reutilizamos la misma clase #}
                 src="https://lottie.host/94254579-f9c6-481c-8e0e-295e37f5319b/xR9EBMkfAQ.lottie"
@@ -20,11 +20,12 @@
                 autoplay
                 ></dotlottie-player>
         </div>
-        {# *** FIN: COPIAR ESTO DESDE LOGIN.HTML *** #}
+        {# *** FIN: CABECERA VISUAL *** #}
 
         <div class="register-form-container">
-            <h2 class="titulo-pagina">Registrate</h2>
-            {# ... Resto del contenedor de mensajes y formulario ... #}
+            <h2 class="titulo-pagina">Regístrate</h2> {# Corregido "Registrate" a "Regístrate" #}
+
+             {# --- Contenedor para mensajes flash --- #}
              {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                 <div class="message-container">
@@ -38,7 +39,18 @@
             {% endwith %}
 
             <form method="POST" action="{{ url_for('auth.register') }}">
-               {# ... Tus form-groups ... #}
+                {# --- CAMPOS AÑADIDOS PARA NOMBRE Y APELLIDO --- #}
+                <div class="form-group">
+                    <label for="first_name">Nombre</label>
+                    <input type="text" id="first_name" name="first_name" required> {# Añadido 'required' #}
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Apellido</label>
+                    <input type="text" id="last_name" name="last_name" required> {# Añadido 'required' #}
+                </div>
+                {# --- FIN CAMPOS AÑADIDOS --- #}
+
+                {# --- CAMPOS EXISTENTES (Username, Email, Password, Confirm Password) --- #}
                 <div class="form-group">
                     <label for="username">Nombre de Usuario</label>
                     <input type="text" id="username" name="username" required>
@@ -55,11 +67,14 @@
                     <label for="confirm_password">Confirmar Contraseña</label>
                     <input type="password" id="confirm_password" name="confirm_password" required>
                 </div>
+                {# --- FIN CAMPOS EXISTENTES --- #}
+
                 <div class="button-container">
                     <button type="submit">Registrarse</button>
                 </div>
             </form>
 
+            {# --- Links Inferiores --- #}
             <div class="bottom-links">
                 <p>¿Ya tienes una cuenta? <a href="{{ url_for('auth.login') }}">Inicia sesión aquí</a></p>
                 <p><a href="{{ url_for('main.index') }}">Volver a la página principal</a></p>
@@ -69,8 +84,10 @@
 {% endblock %}
 
 {% block scripts_extra %}
-     {# Script opcional para auto-cerrar mensajes flash #}
+     {# Script opcional para auto-cerrar mensajes flash (Tu script existente) #}
      <script>
-        // ... Tu script JS ...
-    </script>
+         document.addEventListener('DOMContentLoaded', () => {
+             // ... Tu script de auto-cerrar mensajes flash ...
+         });
+     </script>
 {% endblock %}
