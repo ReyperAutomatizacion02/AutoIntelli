@@ -1,0 +1,181 @@
+{# templates/ventas/dashboard.html #}
+
+{% extends 'base.html' %}
+
+{% block title %}Panel de Ventas - AutoIntelli{% endblock %}
+
+{% block head_extra %}
+    {# Enlaza los archivos CSS específicos para esta vista #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_ventas.css') }}"> {# Asume static/css/dashboard_ventas.css #}
+    {# Puedes necesitar CSS para tablas si no lo tienes en styles.css #}
+{% endblock %}
+
+{% block content %}
+    {# Contenedor principal #}
+    <div id="ventas-dashboard-wrapper">
+
+        {# Contenedor interno #}
+        <div class="container">
+            <h1 class="titulo-pagina">Panel de Ventas</h1>
+
+            {# Contenedor para mensajes flash #}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="message-container">
+                    {% for category, message in messages %}
+                    <div role="alert" class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            {# --- Mostrar la Lista de Solicitudes --- #}
+            {# La variable 'solicitudes' se pasa desde la ruta del backend #}
+            <h2>Todas las Solicitudes (o Filtradas para Ventas)</h2>
+
+            {% if solicitudes %}
+                <table id="solicitudes-table-ventas"> {# Usar un ID diferente si necesitas estilos de tabla distintos #}
+                    <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Proveedor</th>
+                            <th>Nombre Material / Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Fecha Solicitud</th>
+                            <th>Proyecto</th>
+                            <th>Departamento</th> {# Quizás Ventas necesita ver el departamento #}
+                            <th>Estatus</th>
+                            <th>Especificaciones</th> {# Quizás Ventas necesita ver las especificaciones #}
+                            <th>Acciones</th> {# Columna para botones de acción #}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for solicitud in solicitudes %}
+                        <tr>
+                            {# Accede a las propiedades de la página de Notion #}
+                            {# Los nombres de las propiedades deben coincidir exactamente con tu DB Notion #}
+                            <td>
+                                {% set folio_prop = solicitud.properties.get('Folio de solicitud') %}
+                                {% if folio_prop and folio_prop.type == 'rich_text' and folio_prop.rich_text %}
+                                    {{ folio_prop.rich_text[0].plain_text }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% set proveedor_prop = solicitud.properties.get('Proveedor') %}
+                                {% if proveedor_prop and proveedor_prop.type == 'select' and proveedor_prop.select %}
+                                    {{ proveedor_prop.select.name }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% set desc_prop = solicitud.properties.get('Descripción') %}
+                                {% set nombre_prop = solicitud.properties.get('Nombre del material') %}
+                                {% if desc_prop and desc_prop.type == 'rich_text' and desc_prop.rich_text %}
+                                     {{ desc_prop.rich_text[0].plain_text }}
+                                {% elif nombre_prop and nombre_prop.type == 'select' and nombre_prop.select %}
+                                    {{ nombre_prop.select.name }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                             <td>
+                                {% set cantidad_prop = solicitud.properties.get('Cantidad solicitada') %}
+                                {% if cantidad_prop and cantidad_prop.type == 'number' and cantidad_prop.number is not none %}
+                                    {{ cantidad_prop.number }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                             </td>
+                             <td>
+                                {% set fecha_prop = solicitud.properties.get('Fecha de solicitud') %}
+                                {% if fecha_prop and fecha_prop.type == 'date' and fecha_prop.date and fecha_prop.date.start %}
+                                    {{ fecha_prop.date.start.split('T')[0] }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                             </td>
+                              <td>
+                                {% set proyecto_prop = solicitud.properties.get('Proyecto') %}
+                                {% if proyecto_prop and proyecto_prop.type == 'rich_text' and proyecto_prop.rich_text %}
+                                     {{ proyecto_prop.rich_text[0].plain_text }}
+                                {% else %}
+                                     N/A
+                                {% endif %}
+                             </td>
+                             <td> {# Mostrar Departamento para Ventas #}
+                                {% set depto_prop = solicitud.properties.get('Departamento/Área') %}
+                                {% if depto_prop and depto_prop.type == 'select' and depto_prop.select %}
+                                     {{ depto_prop.select.name }}
+                                {% else %}
+                                     N/A
+                                {% endif %}
+                             </td>
+                            <td>
+                                {% set estatus_prop = solicitud.properties.get('Estatus') %}
+                                {% if estatus_prop and estatus_prop.type == 'select' and estatus_prop.select %}
+                                    {{ estatus_prop.select.name }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+                             <td> {# Mostrar Especificaciones Adicionales para Ventas #}
+                                {% set espec_prop = solicitud.properties.get('Especificaciones adicionales') %}
+                                {% if espec_prop and espec_prop.type == 'rich_text' and espec_prop.rich_text %}
+                                     {{ espec_prop.rich_text[0].plain_text }}
+                                {% else %}
+                                     N/A
+                                {% endif %}
+                             </td>
+                            <td>
+                                {# Enlaces o botones de acción (ej: "Ver", "Editar Estatus", "Asignar") #}
+                                {# Si añades rutas para actualizar/editar, usa url_for o lógica JS aquí #}
+                                <a href="{{ solicitud.url }}" target="_blank" rel="noopener noreferrer">Ver en Notion</a>
+                                {# <button data-page-id="{{ solicitud.id }}" class="edit-solicitud-btn">Editar</button> #}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                {# Mensaje si no hay solicitudes o si hubo un error al cargarlas #}
+                {% if error_msg %}
+                     <p>Error al cargar solicitudes.</p>
+                {% else %}
+                     <p>No hay solicitudes para mostrar.</p>
+                {% endif %}
+            {% endif %}
+
+
+        </div> {# Cierre de .container #}
+
+    </div> {# Cierre de #ventas-dashboard-wrapper #}
+{% endblock %}
+
+{% block scripts_extra %}
+    {# Puedes añadir un script JavaScript aquí para funcionalidades interactivas (filtrar, paginar, editar por AJAX) #}
+    {# <script src="{{ url_for('static', filename='js/dashboard_ventas.js') }}"></script> #}
+
+    {# Script opcional para auto-cerrar mensajes flash (si lo usas) #}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            const autoCloseDelay = 5000; // 5 segundos
+            const fadeOutDuration = 500; // 0.5 segundos
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (message.parentNode) {
+                           message.style.display = 'none';
+                        }
+                    }, fadeOutDuration);
+                }, autoCloseDelay);
+            });
+        });
+    </script>
+{% endblock %}
