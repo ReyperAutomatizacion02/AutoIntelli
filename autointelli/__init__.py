@@ -119,7 +119,7 @@ def create_app():
     from .main_routes import main_bp
     from .accesorios import accesorios_bp
     from .almacen import almacen_bp
-    from .ventas import ventas_bp
+    from .compras import compras_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp, url_prefix='/auth')
@@ -128,7 +128,7 @@ def create_app():
     app.register_blueprint(proyectos_bp, url_prefix='/proyectos')
     app.register_blueprint(accesorios_bp, url_prefix='/accesorios')
     app.register_blueprint(almacen_bp, url_prefix='/almacen')
-    app.register_blueprint(ventas_bp, url_prefix='/ventas') 
+    app.register_blueprint(compras_bp, url_prefix='/compras') 
 
     # Retornar la instancia de la aplicación configurada
     return app

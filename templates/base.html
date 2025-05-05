@@ -45,16 +45,16 @@
                                 <a class="dropdown-item" href="{{ url_for('almacen.almacen_dashboard') }}">Panel Almacén</a>
                             {% endif %}
 
-                            {# Enlace al Panel de Ventas #}
-                            {# Asume que el endpoint es 'ventas.ventas_dashboard' y los roles son 'ventas' o 'admin' #}
-                            {% if current_user.is_authenticated and (current_user.role == 'ventas' or current_user.role == 'admin') %}
-                                <a class="dropdown-item" href="{{ url_for('ventas.ventas_dashboard') }}">Panel Ventas</a>
+                            {# Enlace al Panel de Compras #}
+                            {# Asume que el endpoint es 'compras.compras_dashboard' y los roles son 'compras' o 'admin' #}
+                            {% if current_user.is_authenticated and (current_user.role == 'compras' or current_user.role == 'admin') %}
+                                <a class="dropdown-item" href="{{ url_for('compras.compras_dashboard') }}">Panel Compras</a>
                             {% endif %}
 
                             {# Enlace a Nuevo Proyecto #}
                             {# Asume que el endpoint es 'proyectos.create_project_page' #}
                             {# Define qué roles pueden crear proyectos (quizás todos, o solo específicos) #}
-                             {% if current_user.is_authenticated and (current_user.role in ['logistica', 'diseno', 'ventas', 'admin']) %} {# Ejemplo: si Logística, Diseño, Ventas y Admin pueden crear proyectos #}
+                             {% if current_user.is_authenticated and (current_user.role in ['logistica', 'diseno', 'compras', 'admin']) %} {# Ejemplo: si Logística, Diseño, Compras y Admin pueden crear proyectos #}
                                 <a class="dropdown-item" href="{{ url_for('proyectos.create_project_page') }}">Nuevo Proyecto</a>
                             {% endif %}
 

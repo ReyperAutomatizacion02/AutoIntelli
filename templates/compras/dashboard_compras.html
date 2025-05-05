@@ -1,0 +1,139 @@
+{# templates/compras/dashboard.html (Modificado) #}
+
+{% extends 'base.html' %}
+
+{% block title %}Panel de Compras - AutoIntelli{% endblock %}
+
+{% block head_extra %}
+    {# Enlaza los archivos CSS específicos para esta vista #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_compras.css') }}">
+    {# Puedes necesitar CSS para tablas si no lo tienes en styles.css #}
+{% endblock %}
+
+{% block content %}
+    {# Contenedor principal #}
+    <div id="compras-dashboard-wrapper">
+
+        {# Contenedor interno #}
+        <div class="container">
+            <h1 class="titulo-pagina">Panel de Compras</h1>
+
+            {# Contenedor para mensajes flash #}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="message-container">
+                    {% for category, message in messages %}
+                    <div role="alert" class="flash-message {{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            {# Área para mostrar feedback de actualización AJAX (opcional) #}
+            {# Puedes usar un div específico para mensajes de feedback de actualización aquí, o confiar en los mensajes flash #}
+            {# <div id="compras-update-feedback" style="margin-top: 10px; font-weight: bold;"></div> #}
+
+
+            {# --- Mostrar la Lista de Solicitudes --- #}
+            <h2>Solicitudes (Vista Compras)</h2>
+
+            {% if solicitudes %}
+                <table id="solicitudes-table-compras">
+                    <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Proveedor</th>
+                            <th>Material / Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Fecha Solicitud</th>
+                            <th>Proyecto</th>
+                            <th>Departamento</th>
+                            <th>Estatus Actual</th> {# Columna para mostrar el estatus actual #}
+                            <th>Especificaciones</th>
+                            <th>Actualizar Estatus</th> {# Nueva columna para el select de actualización #}
+                            <th>Acciones</th> {# Columna para enlaces/botones adicionales #}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for solicitud in solicitudes %}
+                        <tr data-page-id="{{ solicitud.id }}"> {# Añadir atributo data-page-id a la fila para fácil referencia #}
+                            {# Celdas con datos de Notion (copiado de antes) #}
+                            <td>... Folio ...</td>
+                            <td>... Proveedor ...</td>
+                            <td>... Material / Descripción ...</td>
+                            <td>... Cantidad ...</td>
+                            <td>... Fecha Solicitud ...</td>
+                            <td>... Proyecto ...</td>
+                            <td>... Departamento ...</td>
+                            <td class="solicitud-estatus-celda" data-page-id="{{ solicitud.id }}"> {# Celda para mostrar el estatus actual #}
+                                {% set estatus_prop = solicitud.properties.get('Estatus') %}
+                                {% if estatus_prop and estatus_prop.type == 'select' and estatus_prop.select %}
+                                    <span class="current-estatus-text">{{ estatus_prop.select.name }}</span> {# Mostrar el estatus actual en un span #}
+                                {% else %}
+                                    <span class="current-estatus-text">N/A</span>
+                                {% endif %}
+                            </td>
+                            <td>... Especificaciones ...</td>
+                            <td> {# Celda para el control de actualización de estatus #}
+                                {# Select para cambiar estatus #}
+                                {# Asegúrate de que las opciones de estatus coinciden con tu DB Notion #}
+                                <select class="update-estatus-select">
+                                    <option value="" selected disabled>Cambiar Estatus</option>
+                                    {# Opciones de estatus disponibles en tu DB Notion (tipo Select) #}
+                                    <option value="Pendiente">Pendiente</option>
+                                    <option value="En Proceso">En Proceso</option>
+                                    <option value="Completada">Completada</option>
+                                    <option value="Cancelada">Cancelada</option>
+                                    {# Añade todas las opciones de estatus de tu DB Notion aquí #}
+                                </select>
+                                {# Puedes añadir un botón de "Confirmar" si no quieres actualizar inmediatamente al cambiar el select #}
+                                {# <button data-page-id="{{ solicitud.id }}" class="confirm-status-btn" style="display:none;">Confirmar</button> #}
+                            </td>
+                            <td> {# Celda para acciones adicionales #}
+                                <a href="{{ solicitud.url }}" target="_blank" rel="noopener noreferrer" class="view-in-notion-link">Ver</a>
+                                {# Puedes añadir otros botones/enlaces aquí #}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                {# Mensaje si no hay solicitudes o si hubo un error al cargarlas #}
+                {% if error_msg %}
+                     <p>Error al cargar solicitudes.</p>
+                {% else %}
+                     <p>No hay solicitudes para mostrar.</p>
+                {% endif %}
+            {% endif %}
+
+
+        </div> {# Cierre de .container #}
+
+    </div> {# Cierre de #compras-dashboard-wrapper #}
+{% endblock %}
+
+{% block scripts_extra %}
+    {# Script JavaScript específico para este dashboard #}
+    <script src="{{ url_for('static', filename='js/dashboard_compras.js') }}"></script>
+
+    {# Script opcional para auto-cerrar mensajes flash (si lo usas) #}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            const autoCloseDelay = 5000;
+            const fadeOutDuration = 500;
+            flashMessages.forEach(message => {
+                setTimeout(() => {
+                    message.classList.add('fade-out');
+                    setTimeout(() => {
+                        if (message.parentNode) {
+                           message.style.display = 'none';
+                        }
+                    }, fadeOutDuration);
+                }, autoCloseDelay);
+            });
+        });
+    </script>
+{% endblock %}

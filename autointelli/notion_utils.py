@@ -160,6 +160,35 @@ def update_page_util(notion_client: Client, page_id: str, new_start: datetime, n
     except Exception as e:
         logger.error(f"Error inesperado al actualizar página {page_id}: {str(e)}", exc_info=True)
         return 500, {"error": str(e)}
+    
+def update_notion_page_properties(notion_client: Client, page_id: str, properties_to_update: Dict) -> Tuple[int, Dict]:
+    """
+    Actualiza propiedades generales de una página de Notion.
+    properties_to_update debe ser un diccionario con el formato de la API de Notion.
+    Ej: {"Nombre Propiedad": {"tipo_propiedad": {...}}, ...}
+    """
+    if not notion_client or not page_id or not properties_to_update:
+         logger.error("Cliente de Notion, Page ID o propiedades a actualizar faltantes.")
+         return 400, {"error": "Request inválido."} # Bad Request
+
+    payload = {
+        "properties": properties_to_update # El payload directo es el diccionario de propiedades
+    }
+
+    try:
+        logger.info(f"Attempting to update properties for page {page_id}: {properties_to_update}")
+        # Usa el cliente Notion para actualizar
+        response = notion_client.pages.update(page_id=page_id, properties=payload["properties"])
+        logger.info(f"Página {page_id} actualizada correctamente")
+        # El cliente Notion no devuelve status_code directamente, asumimos 200 si no lanza excepción
+        return 200, response
+    except APIResponseError as e:
+        logger.error(f"Error API al actualizar página {page_id}: {e.code} - {e.message}", exc_info=True)
+        # Incluir el código y mensaje de la API en la respuesta de error
+        return e.status, {"error": f"Notion API Error: {e.message}", "code": e.code, "notion_message": e.message}
+    except Exception as e:
+        logger.error(f"Error inesperado al actualizar página {page_id}: {str(e)}", exc_info=True)
+        return 500, {"error": f"Error interno: {str(e)}"} # Error genérico del servidor
 
 
 def adjust_dates_with_filters_util(

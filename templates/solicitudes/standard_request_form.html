@@ -1,31 +1,22 @@
 {# templates/solicitudes/standard_request_form.html #}
 
-{% extends 'base.html' %} {# Hereda de la plantilla base #}
+{% extends 'base.html' %}
 
-{% block title %}Solicitud Estándar de Materiales - AutoIntelli{% endblock %} {# Título específico #}
+{% block title %} Solicitud de Materiales - AutoIntelli{% endblock %}
 
 {% block head_extra %}
-    {# Enlaza los archivos CSS específicos para esta vista #}
-    {# Asume que tienes un archivo CSS para estilos específicos del formulario estándar #}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/standard_request.css') }}"> 
-    {# Asegúrate de que tu archivo styles.css general se carga en base.html #}
 {% endblock %}
 
 {% block content %}
-    {# Contenedor principal para la página (similar al wrapper de login/create_project) #}
-    {# Usamos un ID para aplicar estilos específicos definidos en standard_request.css #}
     <div id="standard-request-wrapper">
-
-        {# Contenedor interno (similar al .container dentro de los wrappers) #}
         <div class="container">
-            <h1 class="titulo-pagina">Solicitud Estándar de Materiales</h1>
+            <h1 class="titulo-pagina">Solicitud de Materiales</h1>
 
-            {# Contenedor para mensajes flash (Flask-Login inyecta get_flashed_messages) #}
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                 <div class="message-container">
                     {% for category, message in messages %}
-                    {# La clase {{ category }} permitirá aplicar estilos de éxito, error, info, etc. #}
                     <div role="alert" class="flash-message {{ category }}">
                         {{ message }}
                     </div>
@@ -34,14 +25,7 @@
                 {% endif %}
             {% endwith %}
 
-            {# Formulario de Solicitud Estándar #}
-            {# Su acción POST apunta a la nueva ruta en el Blueprint 'solicitudes' #}
-            {# La acción usa el endpoint completo 'nombre_blueprint.nombre_funcion' #}
             <form id="standard-material-form" method="POST" action="{{ url_for('solicitudes.submit_standard_request') }}"> {# <<< CORRECCIÓN APLICADA AQUÍ #}
-
-                {# --- Campos Comunes --- #}
-                {# Estos campos estarán presentes en ambos formularios (estándar y Torni) #}
-                {# Pero sus IDs y names deben ser los mismos para que el backend los reconozca #}
 
                 <div class="form-group">
                     <label for="nombre_solicitante">Nombre del solicitante:</label>
@@ -49,85 +33,53 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="proveedor">Proveedor:</label>
-                    {# Este select solo incluirá proveedores estándar en este formulario #}
-                    <select id="proveedor" name="proveedor" required>
-                         <option value="" disabled selected>Seleccionar proveedor:</option>
-                         <option value="Mipsa">Mipsa</option>
-                         <option value="LBO">LBO</option>
-                         <option value="Grupo Collado">Grupo Collado</option>
-                         <option value="Cameisa">Cameisa</option>
-                         <option value="Surcosa">Surcosa</option>
-                         <option value="Diace">Diace</option>
-                         {# OJO: NO incluir "Torni" en este formulario #}
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="departamento_area">Departamento/Área:</label>
-                    <select id="departamento_area" name="departamento_area" required>
-                         <option value="" disabled selected>Seleccionar departamento:</option>
-                         <option value="Producción">Producción</option>
-                         <option value="Diseño">Diseño</option>
-                         <option value="Almacén">Almacén</option>
-                         <option value="Ventas">Ventas</option>
-                         <option value="Administración">Administración</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="fecha_solicitud">Fecha de solicitud:</label>
                     <input type="date" id="fecha_solicitud" name="fecha_solicitud" required>
-                     {# El script JS establecerá la fecha por defecto #}
                 </div>
 
                 <div class="form-group">
                     <label for="proyecto">Proyecto:</label>
-                    {# Asegúrate de que el 'name' coincide con lo que tu backend espera (ej. 'Proyecto' vs 'proyecto') #}
                     <input type="text" id="proyecto" name="proyecto" required> 
                 </div>
 
-                {# Campo oculto para el folio (generado por JS y enviado al backend) #}
                 <input type="hidden" id="folio_solicitud" name="folio_solicitud">
-                {# Opcional: Muestra el folio en pantalla para el usuario #}
                 <p>Folio: <span id="folio-display-value">Generando...</span></p>
 
+                <div id="cantidad-unidad-group" class="form-group"> 
+                    <label for="cantidad_solicitada">Cantidad solicitada:</label>
+                    <input type="number" id="cantidad_solicitada" name="cantidad_solicitada" min="1" value="1" required>
+                </div>
 
-                {# --- Campos Específicos del Formulario Estándar --- #}
-                {# Estos campos solo estarán presentes en este formulario (no en el de Torni) #}
-                {# Mantén los IDs y names originales si tu backend los espera así #}
+                <div id="nombre-material-group" class="form-group">
+                    <label for="nombre_material">Nombre del material:</label>
+                    <select id="nombre_material" name="nombre_material" required disabled> 
+                        <option value="" disabled selected>Seleccionar material:</option>
+                    </select>
+                </div>
 
-                 <div id="cantidad-unidad-group" class="form-group"> 
-                     <label for="cantidad_solicitada">Cantidad solicitada:</label>
-                     {# Asegúrate de que el 'name' coincide #}
-                     <input type="number" id="cantidad_solicitada" name="cantidad_solicitada" min="1" value="1" required>
-                 </div>
+                <div id="tipo-material-group" class="form-group">
+                    <label for="tipo_material">Tipo de material:</label>
+                    <input type="text" id="tipo_material" name="tipo_material" readonly disabled> 
+                </div>
 
-                 {# Los dropdowns dependientes de Material y Tipo #}
-                 <div id="nombre-material-group" class="form-group">
-                     <label for="nombre_material">Nombre del material:</label>
-                     {# Asegúrate de que el 'name' coincide #}
-                     {# Las opciones se poblarán con JS #}
-                     <select id="nombre_material" name="nombre_material" required disabled> 
-                         <option value="" disabled selected>Seleccionar material:</option>
-                     </select>
-                 </div>
+                <div id="unidad-medida-group" class="form-group"> 
+                    <label for="unidad_medida">Unidad de medida:</label>
+                    {# Asegúrate de que el 'name' coincide #}
+                    <select id="unidad_medida" name="unidad_medida" required>
+                        <option value="" disabled selected>Seleccionar unidad:</option>
+                        {# Opciones de unidades #}
+                        <option value="mm">mm</option>
+                        <option value="in">in</option>
+                        <option value="ga">ga</option>
+                        <option value="AWG">AWG</option>
+                        <option value="m">m</option>
+                        <option value="ft">ft</option>
+                    </select>
+                </div>
 
-                 <div id="tipo-material-group" class="form-group">
-                     <label for="tipo_material">Tipo de material:</label>
-                     {# Asegúrate de que el 'name' coincide #}
-                     {# Este input generalmente solo muestra el tipo basado en la selección anterior #}
-                     <input type="text" id="tipo_material" name="tipo_material" readonly disabled> 
-                 </div>
-
-
-                 {# Grupo de Dimensiones (con datalist) #}
-                 {# Asegúrate de tener el datalist en el HTML (puede estar aquí o al final del body) #}
                  <div id="dimensiones-container"> 
                      <h4>Dimensiones (opcional):</h4>
                      <div class="dimension-inputs"> 
-                         {# Asegúrate de que los 'name' coinciden con lo que tu backend espera #}
-                         {# Y que 'list' apunta al ID correcto del datalist #}
                          <div class="form-group">
                              <label for="largo">Largo:</label>
                              <input type="text" id="largo" name="largo" list="dimensionList"> 
@@ -147,24 +99,6 @@
                      </div>
                  </div>
 
-                 <div id="unidad-medida-group" class="form-group"> 
-                      <label for="unidad_medida">Unidad de medida:</label>
-                      {# Asegúrate de que el 'name' coincide #}
-                      <select id="unidad_medida" name="unidad_medida" required>
-                          <option value="" disabled selected>Seleccionar unidad:</option>
-                          {# Opciones de unidades #}
-                          <option value="mm">mm</option>
-                          <option value="in">in</option>
-                           <option value="ga">ga</option>
-                           <option value="AWG">AWG</option>
-                           <option value="m">m</option>
-                           <option value="ft">ft</option>
-                           {# Puedes añadir más unidades si las manejas en tu JSON de dimensiones #}
-                      </select>
-                  </div>
-
-
-                {# Campo de especificaciones adicionales #}
                 <div class="form-group">
                      <label for="especificaciones_adicionales">Especificaciones Adicionales (opcional):</label>
                      {# Asegúrate de que el 'name' coincide #}

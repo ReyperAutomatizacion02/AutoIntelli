@@ -6,15 +6,15 @@ from datetime import datetime
 
 db = SQLAlchemy()
 
-# Clase de Usuario (Modelo de Base de Datos)
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    # --- AÑADIR CAMPO DE ROL ---
-    role = db.Column(db.String(50), default='logistica', nullable=False) # Rol por defecto
-    # -------------------------
+    # --- CAMBIAR ROL POR DEFECTO Y NOTA ---
+    role = db.Column(db.String(50), default='visitante', nullable=False) # Rol por defecto. Ajusta si es necesario.
+    # Roles posibles: 'admin', 'logistica', 'diseno', 'almacen', 'compras', 'visitante'
+    # ------------------------------------
 
     def __repr__(self):
         return f'<User {self.username} (Role: {self.role})>'

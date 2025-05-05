@@ -1,0 +1,285 @@
+/* static/css/dashboard_compras.css */
+
+/*
+   Este archivo define estilos específicos para el panel de Compras.
+   Reutiliza variables y estilos generales de tabla/layout definidos en styles.css.
+*/
+
+/* --- Variables (Opcional si ya están en styles.css) --- */
+/* Copia el bloque :root si tus variables no son globales */
+
+
+/* --- Estilos para el WRAPPER principal (Posicionamiento y Espaciado) --- */
+/* Debe coincidir con el ID <div id="compras-dashboard-wrapper"> en la plantilla */
+#compras-dashboard-wrapper {
+    display: flex; /* Para centrar el contenido interno */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header-height, 80px)); /* Altura mínima */
+    padding: 20px;
+    box-sizing: border-box;
+     /* Fondo del body en light/dark mode si aplica al wrapper */
+    /* background-color: var(--bg-color-light); */
+}
+
+/* --- Estilos del Dark Mode para el WRAPPER --- */
+/* body.dark-mode #compras-dashboard-wrapper { background-color: var(--bg-color-dark); } */
+
+
+/* --- Estilos para el CONTENEDOR INTERNO (El "Recuadro" principal) --- */
+/* Aplica a .container dentro del wrapper los estilos del recuadro */
+#compras-dashboard-wrapper .container {
+    max-width: 1000px; /* Quizás más ancho que Almacén para más columnas */
+    width: 100%;
+    margin: 0 auto;
+
+    /* Estilos del recuadro */
+    padding: 30px 40px;
+    background-color: var(--gris-t, #313131d5);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-light, rgba(0, 0, 0, 0.1));
+    color: var(--gris-claro, #858585);
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+    transition: background-color var(--transition-speed, 0.3s) ease, box-shadow var(--transition-speed, 0.3s) ease, color var(--transition-speed, 0.3s) ease;
+}
+
+/* --- Estilos del Dark Mode para el CONTENEDOR INTERNO --- */
+body.dark-mode #compras-dashboard-wrapper .container {
+    background-color: var(--container-bg-dark, #2c2c2c);
+    box-shadow: 0 5px 20px var(--shadow-dark, rgba(255, 255, 255, 0.08));
+    color: var(--text-color-dark, #e0e0e0);
+}
+
+
+/* --- Título de la Página --- */
+#compras-dashboard-wrapper .container .titulo-pagina {
+    color: var(--primario, #D42D2E);
+    text-align: center;
+    font-family: var(--Orbitron, sans-serif);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--primario, #D42D2E);
+    padding-bottom: 0.5rem;
+    font-size: 2.4rem;
+}
+
+/* Títulos de sección */
+#compras-dashboard-wrapper .container h2 {
+     color: var(--blanco, #FFFFFF);
+     margin-top: 20px;
+     margin-bottom: 15px;
+     font-size: 1.8rem;
+     font-weight: bold;
+}
+
+/* Estilos para la tabla de solicitudes */
+/* Usamos un ID específico para esta tabla */
+#compras-dashboard-wrapper .container #solicitudes-table-compras {
+    width: 100%; border-collapse: collapse; margin-bottom: 20px;
+    overflow-x: auto; /* Permite scroll horizontal si es demasiado ancha */
+    display: block; /* Necesario para overflow-x */
+    white-space: nowrap; /* Evita que el texto se envuelva en celdas */
+}
+#compras-dashboard-wrapper .container #solicitudes-table-compras thead,
+#compras-dashboard-wrapper .container #solicitudes-table-compras tbody,
+#compras-dashboard-wrapper .container #solicitudes-table-compras tr,
+#compras-dashboard-wrapper .container #solicitudes-table-compras th,
+#compras-dashboard-wrapper .container #solicitudes-table-compras td {
+     display: block; /* Convierte elementos de tabla a bloque para controlar el ancho y el scroll */
+}
+#compras-dashboard-wrapper .container #solicitudes-table-compras tr {
+    /* Estilos si necesitas bordes o separadores entre filas */
+    border-bottom: 1px solid var(--border-color-light, #ccc);
+    body.dark-mode & { border-color: var(--border-color-dark, #555); }
+}
+
+
+#compras-dashboard-wrapper .container #solicitudes-table-compras th,
+#compras-dashboard-wrapper .container #solicitudes-table-compras td {
+    border: 1px solid var(--border-color-light);
+    padding: 10px; text-align: left; vertical-align: top;
+    transition: border-color var(--transition-speed) ease;
+     /* Define el ancho para cada columna (debe sumar 100%) */
+     /* NOTA: Ajusta estos anchos para que se ajusten a tus columnas */
+     width: 100px; /* ANCHO POR DEFECTO, AJUSTA ABAJO POR ENCABEZADO */
+}
+/* Estilo Dark Mode para bordes de la tabla */
+body.dark-mode #compras-dashboard-wrapper .container #solicitudes-table-compras th,
+body.dark-mode #compras-dashboard-wrapper .container #solicitudes-table-compras td { border-color: var(--border-color-dark); }
+
+
+/* Encabezados de la tabla */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th {
+    background-color: #f8f9fa; font-weight: 600; font-size: 0.9em; text-transform: uppercase;
+    color: var(--label-color-light); transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+/* Estilo Dark Mode para encabezados de la tabla */
+body.dark-mode #compras-dashboard-wrapper .container #solicitudes-table-compras th {
+    background-color: #343a40; color: var(--label-color-dark);
+}
+
+/* ANCHOS DE COLUMNAS ESPECÍFICOS (AJUSTA SEGÚN TUS COLUMNAS) */
+/* Estos deben coincidir con el orden de tus columnas en la plantilla */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(1), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(1) { width: 150px; } /* Folio */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(2), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(2) { width: 100px; } /* Proveedor */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(3), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(3) { width: 250px; } /* Material / Descripción */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(4), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(4) { width: 80px; text-align: center; } /* Cantidad */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(5), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(5) { width: 120px; } /* Fecha Solicitud */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(6), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(6) { width: 150px; } /* Proyecto */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(7), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(7) { width: 150px; } /* Departamento */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(8), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(8) { width: 120px; } /* Estatus */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(9), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(9) { width: 300px; } /* Especificaciones */
+#compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(10), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(10) { width: 100px; text-align: center; } /* Acciones */
+
+
+/* Estilo para enlaces de "Ver en Notion" en la tabla */
+#compras-dashboard-wrapper .container .view-in-notion-link {
+     color: var(--azul-marino-trans, #257787ca); text-decoration: none; font-size: 0.9em;
+     transition: color 0.2s ease;
+     body.dark-mode & { color: #66c0d2; }
+}
+#compras-dashboard-wrapper .container .view-in-notion-link:hover { text-decoration: underline; }
+
+
+/* Estilos para el div de respuesta AJAX (si aplicas JS para edición) */
+#compras-dashboard-wrapper .container #update-feedback-message {
+    margin-top: 10px; padding: 10px; border-radius: 4px; text-align: center; font-size: 1.4rem;
+    border: 1px solid transparent; word-break: break-word;
+}
+#compras-dashboard-wrapper .container #update-feedback-message.processing {
+    border-color: var(--processing-text, #f0ad4e); color: var(--processing-text, #f0ad4e);
+    background-color: rgba(240, 173, 78, 0.1);
+}
+#compras-dashboard-wrapper .container #update-feedback-message.success {
+    background-color: var(--success-bg, #2a573a); color: var(--success-text, #a7d7b4);
+    border-color: var(--success-text, #a7d7b4);
+}
+#compras-dashboard-wrapper .container #update-feedback-message.error {
+    background-color: var(--error-bg, #4d2429); color: var(--error-text, #f1b0b7);
+    border-color: var(--error-text, #f1b0b7);
+}
+
+
+/* --- Estilos para Mensajes Flash de Flask --- */
+#compras-dashboard-wrapper .container .message-container {
+    position: absolute; top: 15px; left: 50%; transform: translateX(-50%);
+    width: calc(100% - 80px); max-width: calc(1000px - 80px); /* Ajusta max-width */
+    z-index: 1050; display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+#compras-dashboard-wrapper .container .flash-message {
+    padding: 12px 18px; border: 1px solid transparent; border-radius: 6px; text-align: center;
+    width: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.15); opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out; font-size: 1.4rem;
+    color: var(--blanco); background-color: var(--gris);
+}
+#compras-dashboard-wrapper .container .flash-message.success { background-color: var(--success-bg); color: var(--success-text); border-color: var(--success-text); }
+#compras-dashboard-wrapper .container .flash-message.danger { background-color: var(--error-bg); color: var(--error-text); border-color: var(--error-text); }
+#compras-dashboard-wrapper .container .flash-message.info { background-color: var(--info-bg); color: var(--info-text); border-color: var(--info-text); }
+#compras-dashboard-wrapper .container .flash-message.warning { background-color: var(--warning-bg); color: var(--warning-text); border-color: var(--warning-text); }
+.flash-message.fade-out { opacity: 0; transform: translateY(-20px); }
+
+/* static/css/dashboard_compras.css */
+
+/* ... (código CSS existente para el wrapper, container, título, tabla general) ... */
+
+/* --- Estilos Específicos para la Tabla de Solicitudes --- */
+/* Apunta a la tabla con el ID específico de Compras */
+#compras-dashboard-wrapper .container #solicitudes-table-compras {
+    /* ... estilos de tabla general ... */
+}
+
+/* Estilo para la celda que muestra el estatus actual */
+#compras-dashboard-wrapper .container #solicitudes-table-compras .solicitud-estatus-celda {
+    /* Puedes añadir padding, text-align si es diferente */
+     /* text-align: center; */
+     /* min-width: 100px; */
+}
+
+/* Estilo para el select de actualización de estatus */
+#compras-dashboard-wrapper .container #solicitudes-table-compras .update-estatus-select {
+    /* Hereda estilos de select general, pero puedes afinar */
+     width: 100%; /* Ocupa todo el ancho de la celda */
+     padding: 6px 8px; /* Ajusta padding */
+     font-size: 0.9em; /* Tamaño similar a otros textos de la tabla */
+     /* Otros ajustes de borde, fondo, color si es necesario */
+     /* background-color: var(--input-bg-light); */
+     /* color: var(--text-color-light); */
+     /* border-color: var(--border-color-light); */
+}
+/* Estilo Dark Mode para el select */
+body.dark-mode #compras-dashboard-wrapper .container #solicitudes-table-compras .update-estatus-select {
+    /* background-color: var(--input-bg-dark); */
+    /* color: var(--text-color-dark); */
+    /* border-color: var(--border-color-dark); */
+}
+
+/* Estilos para el enlace "Ver en Notion" */
+#compras-dashboard-wrapper .container .view-in-notion-link {
+     /* Hereda estilos de enlace general, pero puedes afinar */
+     font-size: 0.9em;
+     margin-left: 0; /* Eliminar margin-left si no hay botón Confirmar */
+}
+
+/* Estilo para la fila cuando se está actualizando (clase añadida por JS) */
+#compras-dashboard-wrapper .container #solicitudes-table-compras tr.updating {
+    /* Puedes añadir un fondo sutil o borde para indicar que se está procesando */
+    background-color: rgba(240, 173, 78, 0.1); /* Fondo amarillo claro translúcido */
+    opacity: 0.8; /* Reducir opacidad */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+     body.dark-mode & { background-color: rgba(240, 173, 78, 0.2); }
+}
+
+/* Estilo para el div de feedback de actualización si lo usas */
+/* #compras-dashboard-wrapper .container #compras-update-feedback { ... } */
+
+/* ... (resto del CSS) ... */
+
+
+/* --- Estilos Ocultos --- */
+.oculto { display: none !important; }
+
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    #compras-dashboard-wrapper .container {
+        padding: 25px 30px; width: 98%;
+        max-width: calc(768px - (20px * 2));
+    }
+    #compras-dashboard-wrapper .container .titulo-pagina { font-size: 2rem; }
+    #compras-dashboard-wrapper .container h2 { font-size: 1.6rem; }
+
+    /* Ajustar tabla para móvil */
+    #compras-dashboard-wrapper .container #solicitudes-table-compras {
+        /* Técnicas para tablas responsivas: hacer que las celdas se apilen */
+         /* Eliminar display: block; de th, td, tr, thead, tbody */
+         /* Hacer que los encabezados de columna aparezcan como labels en móviles */
+         /* display: block; white-space: nowrap; NO es ideal para tablas complejas */
+         /* Considera flexbox o grid para las filas en móvil */
+         /* O una librería CSS/JS para tablas responsivas */
+         /* Como alternativa simple, solo permite el scroll horizontal (ya implementado con overflow-x) */
+    }
+    #compras-dashboard-wrapper .container #solicitudes-table-compras th,
+    #compras-dashboard-wrapper .container #solicitudes-table-compras td {
+        padding: 8px;
+    }
+     /* Ajustar anchos de columna si es necesario en pantallas medianas */
+     #compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(1), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(1) { width: 120px; }
+     #compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(3), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(3) { width: 200px; }
+     #compras-dashboard-wrapper .container #solicitudes-table-compras th:nth-child(9), #compras-dashboard-wrapper .container #solicitudes-table-compras td:nth-child(9) { width: 250px; }
+
+     #compras-dashboard-wrapper .container .message-container { width: calc(100% - 60px); max-width: none; }
+}
+
+@media (max-width: 480px) {
+    #compras-dashboard-wrapper .container { padding: 20px 25px; width: 100%; max-width: unset; }
+    #compras-dashboard-wrapper .container .titulo-pagina { font-size: 1.8rem; margin-bottom: 20px; }
+    #compras-dashboard-wrapper .container h2 { font-size: 1.4rem; }
+    #compras-dashboard-wrapper .container .message-container { top: 10px; width: calc(100% - 50px); max-width: unset; }
+
+    /* Ajustar tabla para móvil extremo si es necesario */
+    /* Considera ocultar columnas menos importantes en pantallas muy pequeñas */
+}
