@@ -2,7 +2,7 @@
 
 from flask import Blueprint, request, jsonify, render_template, current_app
 from flask_login import login_required, current_user
-from .notion_utils import submit_request_for_material_logic # Reutiliza la lógica principal
+from .notion.solicitudes import submit_request_for_material_logic # Reutiliza la lógica principal
 from .models import db, AuditLog # Importar para auditoría
 from .decorators import role_required # Importar el decorador
 

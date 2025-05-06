@@ -5,7 +5,7 @@ from flask_login import login_required, current_user
 from .models import db, AuditLog
 from .decorators import role_required
 # Importar funciones para consultar/actualizar Notion
-from .notion_utils import get_pages_with_filter_util, build_filter_from_properties_util, update_notion_page_properties # <<< Asegurarse de que update_notion_page_properties está importada
+from .notion.utils import get_pages_with_filter_util, update_notion_page_properties, build_filter_from_properties_util
 
 import logging
 

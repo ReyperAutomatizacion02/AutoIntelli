@@ -5,7 +5,7 @@ from flask_login import login_required, current_user
 from .models import db, AuditLog # Importar para auditoría si es necesario en el Blueprint
 from .decorators import role_required # Importar el decorador
 # Importar funciones para consultar/actualizar Notion
-from .notion_utils import get_pages_with_filter_util, update_page_util, build_filter_from_properties_util # Necesitaremos get_pages y build_filter
+from .notion.utils import get_pages_with_filter_util, update_notion_page_properties, build_filter_from_properties_util
 
 import logging
 

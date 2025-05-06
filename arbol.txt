@@ -1,0 +1,89 @@
+sys_autointelli
+├── README.md
+├── arbol.txt
+├── autointelli
+│   ├── __init__.py
+│   ├── accesorios.py
+│   ├── ajustes.py
+│   ├── almacen.py
+│   ├── auth.py
+│   ├── compras.py
+│   ├── decorators.py
+│   ├── desktop.ini
+│   ├── main_routes.py
+│   ├── models.py
+│   ├── notion_utils.py
+│   ├── nuevosRegistros.py
+│   ├── proyectos.py
+│   └── solicitudes.py
+├── desktop.ini
+├── generar_arbol.py
+├── requirements.txt
+├── run.py
+├── static
+│   ├── css
+│   │   ├── adjust_dates.css
+│   │   ├── awesomplete.min.css
+│   │   ├── create_project.css
+│   │   ├── dashboard_almacen.css
+│   │   ├── dashboard_compras.css
+│   │   ├── desktop.ini
+│   │   ├── login.css
+│   │   ├── recover_password.css
+│   │   ├── register.css
+│   │   ├── request_for_material.css
+│   │   ├── reset_password.css
+│   │   ├── standard_request.css
+│   │   ├── styles.css
+│   │   └── torni_request.css
+│   ├── data
+│   │   ├── accesorios.csv
+│   │   ├── accesorios.json
+│   │   ├── desktop.ini
+│   │   ├── standard_dimensions_by_unit.json
+│   │   └── torni_items_masterlist.json
+│   ├── desktop.ini
+│   ├── img
+│   │   ├── Carpetas.png
+│   │   ├── desktop.ini
+│   │   ├── favicon.ico
+│   │   ├── logo.png
+│   │   ├── logo_reyper.png
+│   │   └── machine.jpg
+│   └── js
+│       ├── awesomplete.min.js
+│       ├── dashboard_compras.js
+│       ├── desktop.ini
+│       ├── request_for_material.js
+│       ├── standard_request.js
+│       └── torni_request.js
+├── templates
+│   ├── accesorios
+│   │   ├── desktop.ini
+│   │   └── torni_request_form.html
+│   ├── ajustes
+│   │   ├── adjust_dates.html
+│   │   └── desktop.ini
+│   ├── almacen
+│   │   ├── dashboard.html
+│   │   └── desktop.ini
+│   ├── auth
+│   │   ├── desktop.ini
+│   │   ├── login.html
+│   │   ├── recover_password.html
+│   │   ├── register.html
+│   │   └── reset_password.html
+│   ├── base.html
+│   ├── compras
+│   │   ├── dashboard_compras.html
+│   │   └── desktop.ini
+│   ├── desktop.ini
+│   ├── index.html
+│   ├── proyectos
+│   │   ├── create_project.html
+│   │   └── desktop.ini
+│   └── solicitudes
+│       ├── desktop.ini
+│       ├── request_for_material.html
+│       └── standard_request_form.html
+└── wsgi.py

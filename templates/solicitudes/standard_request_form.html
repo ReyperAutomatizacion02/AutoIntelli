@@ -29,7 +29,7 @@
             {% endwith %}
 
             <form id="standard-material-form" method="POST" action="{{ url_for('solicitudes.submit_standard_request') }}">
-                
+
                 {# Campo Folio (oculto + display) #}
                 <input type="hidden" id="folio_solicitud" name="folio_solicitud">
                 <p class="folio-display">Folio: <span id="folio-display-value">Generando...</span></p>
@@ -45,15 +45,11 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nombre_solicitante">Nombre del solicitante:</label>
-                        {# --- MODIFICADO: Valor por defecto del usuario logueado y Readonly --- #}
                         <input type="text"
                                id="nombre_solicitante"
                                name="nombre_solicitante"
-                               value="{{ current_user_full_name }}" {# <<<< USAR LA VARIABLE PASADA DEL BACKEND #}
-                               readonly> {# <<<< HACER EL CAMPO READONLY #}
-                        {# Ya quitamos 'required' en un paso anterior para usar validación JS #}
-                        {# El campo siempre tendrá un valor si el usuario está logueado (y full_name no es vacío) #}
-                        {# La validación JS para 'nombre_solicitante' pasará si tiene un valor #}
+                               value="{{ current_user_full_name }}"
+                               readonly>
                     </div>
                     {# CAMPO FECHA (Readonly) #}
                     <div class="form-group">
@@ -61,8 +57,6 @@
                         <input type="text" id="fecha_solicitud" name="fecha_solicitud" class="readonly-field" readonly>
                     </div>
                 </div>
-
-                {# ... (Resto de campos del formulario) ... #}
 
                 {# Fila 2: Proyecto y Cantidad Solicitada #}
                 <div class="form-row">
@@ -117,6 +111,16 @@
                         <div class="form-group"><label for="diametro">Diámetro:</label><input type="text" id="diametro" name="diametro" list="dimensionList"></div>
                     </div>
                 </div>
+
+                 {# --- NUEVO: Campo de Checkbox para Urgencia --- #}
+                 {# Puedes envolver esto en un form-row si quieres, o dejarlo en su propio grupo #}
+                 <div class="form-group checkbox-group"> {# Usar una clase adicional si quieres estilos específicos para checkboxes #}
+                     {# El label se coloca DESPUÉS del input para poder usar el selector ~ o + si es necesario para estilos avanzados #}
+                     <input type="checkbox" id="urgente" name="urgente"> {# <<< Input Checkbox #}
+                     <label for="urgente">Solicitud Urgente</label> {# <<< Label para el Checkbox #}
+                 </div>
+                 {# --- FIN NUEVO --- #}
+
 
                 {# Campo Especificaciones Adicionales (Opcional) #}
                 <div class="form-group">

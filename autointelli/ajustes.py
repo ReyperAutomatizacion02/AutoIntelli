@@ -2,9 +2,8 @@
 
 from flask import Blueprint, request, jsonify, render_template, current_app # Importar current_app
 from flask_login import login_required, current_user
-# Importar las funciones auxiliares de ajuste desde notion_utils
-from .notion_utils import adjust_dates_api, list_available_properties
-# Importar db y AuditLog si quieres registrar auditoría DENTRO de este Blueprint
+from .notion.ajustes import adjust_dates_api
+from .notion.utils import list_available_properties
 from .models import db, AuditLog # Importarlos para registro de auditoría
 
 

@@ -2,15 +2,8 @@
 
 from flask import Blueprint, request, jsonify, render_template, current_app
 from flask_login import login_required, current_user # Necesitas current_user
-# Importa las funciones de notion_utils que necesitas para las rutas
-from .notion_utils import submit_request_for_material_logic, list_available_properties # Asegúrate de importar todas las que uses en este archivo
-# Si usas find_project_page_by_property_value directamente en este archivo (fuera de submit_request_for_material_logic) impórtala también.
-# from .notion_utils import find_project_page_by_property_value # Ejemplo
-
-# Si usas db o AuditLog en este archivo (por ejemplo, para auditoría directamente en la ruta), impórtalos.
-# from .models import db, AuditLog
-
-# Importar el decorador de roles
+from .notion.solicitudes import submit_request_for_material_logic
+from .notion.utils import list_available_properties
 from .decorators import role_required
 
 import logging
