@@ -1,4 +1,4 @@
-{# templates/compras/dashboard.html (Modificado) #}
+{# templates/compras/dashboard.html (CORREGIDO para mostrar datos de Notion) #}
 
 {% extends 'base.html' %}
 
@@ -32,8 +32,7 @@
             {% endwith %}
 
             {# Área para mostrar feedback de actualización AJAX (opcional) #}
-            {# Puedes usar un div específico para mensajes de feedback de actualización aquí, o confiar en los mensajes flash #}
-            {# <div id="compras-update-feedback" style="margin-top: 10px; font-weight: bold;"></div> #}
+            <div id="compras-update-feedback" style="margin-top: 10px; font-weight: bold;"></div>
 
 
             {# --- Mostrar la Lista de Solicitudes --- #}
@@ -45,10 +44,10 @@
                         <tr>
                             <th>Folio</th>
                             <th>Proveedor</th>
-                            <th>Material / Descripción</th>
+                            <th>Material / Descripción</th> {# Encabezado genérico, mostrará Nombre del Material o Descripción Torni #}
                             <th>Cantidad</th>
                             <th>Fecha Solicitud</th>
-                            <th>Proyecto</th>
+                            <th>Proyecto</th> {# Mostrará 'Vinculado' si tiene relación #}
                             <th>Departamento</th>
                             <th>Estatus Actual</th> {# Columna para mostrar el estatus actual #}
                             <th>Especificaciones</th>
@@ -59,42 +58,131 @@
                     <tbody>
                         {% for solicitud in solicitudes %}
                         <tr data-page-id="{{ solicitud.id }}"> {# Añadir atributo data-page-id a la fila para fácil referencia #}
-                            {# Celdas con datos de Notion (copiado de antes) #}
-                            <td>... Folio ...</td>
-                            <td>... Proveedor ...</td>
-                            <td>... Material / Descripción ...</td>
-                            <td>... Cantidad ...</td>
-                            <td>... Fecha Solicitud ...</td>
-                            <td>... Proyecto ...</td>
-                            <td>... Departamento ...</td>
-                            <td class="solicitud-estatus-celda" data-page-id="{{ solicitud.id }}"> {# Celda para mostrar el estatus actual #}
-                                {% set estatus_prop = solicitud.properties.get('Estatus') %}
+
+                            {# --- Mostrar datos reales de Notion en las celdas --- #}
+
+                            {# Folio (Asumiendo Rich Text o Title) #}
+                            <td>
+                                {% set folio_prop = solicitud.properties.get('Folio de solicitud') %} {# <-- Usa el nombre EXACTO de la propiedad Folio #}
+                                {% if folio_prop and (folio_prop.type == 'rich_text' or folio_prop.type == 'title') %}
+                                    {% for text_part in folio_prop.get(folio_prop.type, []) %}
+                                        {{ text_part.text.content }}
+                                    {% endfor %}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+
+                            {# Proveedor (Asumiendo Select) #}
+                            <td>
+                                {% set proveedor_prop = solicitud.properties.get('Proveedor') %} {# <-- Usa el nombre EXACTO de la propiedad Proveedor #}
+                                {% if proveedor_prop and proveedor_prop.type == 'select' and proveedor_prop.select %}
+                                    {{ proveedor_prop.select.name }}
+                                {% else %}
+                                    N/A
+                                {% endif %}
+                            </td>
+
+                            {# Material / Descripción (Intentar mostrar Nombre del material (Select) o Descripción (Rich Text)) #}
+                            <td>
+                                {% set nombre_mat_prop = solicitud.properties.get('Nombre del material') %} {# <-- Usa el nombre EXACTO #}
+                                {% set desc_torni_prop = solicitud.properties.get('Descripción') %} {# <-- Usa el nombre EXACTO #}
+                                {% if nombre_mat_prop and nombre_mat_prop.type == 'select' and nombre_mat_prop.select %}
+                                     {{ nombre_mat_prop.select.name }}
+                                {% elif desc_torni_prop and desc_torni_prop.type == 'rich_text' %}
+                                     {# Mostrar contenido de Rich Text (puede haber varios segmentos) #}
+                                     {% for text_part in desc_torni_prop.get('rich_text', []) %}
+                                         {{ text_part.text.content }}
+                                     {% endfor %}
+                                {% else %}
+                                     N/A {# Fallback si ninguna de las propiedades es encontrada o tiene valor #}
+                                {% endif %}
+                            </td>
+
+                            {# Cantidad (Asumiendo Number) #}
+                            <td>
+                                {% set cantidad_prop = solicitud.properties.get('Cantidad solicitada') %} {# <-- Usa el nombre EXACTO #}
+                                {% if cantidad_prop is not none and cantidad_prop.type == 'number' and cantidad_prop.number is not none %} {# Check explicitamente for none #}
+                                     {{ cantidad_prop.number }}
+                                {% else %}
+                                     0 {# O N/A, según lo que prefieras para cantidad 0/null #}
+                                {% endif %}
+                            </td>
+
+                            {# Fecha Solicitud (Asumiendo Date) #}
+                            <td>
+                                {% set fecha_prop = solicitud.properties.get('Fecha de solicitud') %} {# <-- Usa el nombre EXACTO #}
+                                {% if fecha_prop and fecha_prop.type == 'date' and fecha_prop.date and fecha_prop.date.start %}
+                                     {# Mostrar solo la parte de la fecha (YYYY-MM-DD) #}
+                                     {{ fecha_prop.date.start.split('T')[0] if 'T' in fecha_prop.date.start else fecha_prop.date.start }}
+                                {% else %}
+                                     N/A
+                                {% endif %}
+                            </td>
+
+                            {# Proyecto (Asumiendo Relation) #}
+                            <td>
+                                {% set proyecto_prop = solicitud.properties.get('Proyecto') %} {# <-- Usa el nombre EXACTO de la propiedad Relation en Materiales #}
+                                {% if proyecto_prop and proyecto_prop.type == 'relation' and proyecto_prop.relation %}
+                                     {# Solo podemos saber que hay una relación(es), no el nombre(s) del proyecto sin consulta adicional #}
+                                     Vinculado ({{ proyecto_prop.relation | length }}) {# Muestra "Vinculado (1)" si hay una relación #}
+                                     {# Para mostrar el nombre del proyecto, necesitas modificar la lógica en compras.py #}
+                                {% else %}
+                                     Sin vincular {# O N/A #}
+                                {% endif %}
+                            </td>
+
+                            {# Departamento (Asumiendo Select) #}
+                            <td>
+                                {% set departamento_prop = solicitud.properties.get('Departamento/Área') %} {# <-- Usa el nombre EXACTO #}
+                                {% if departamento_prop and departamento_prop.type == 'select' and departamento_prop.select %}
+                                     {{ departamento_prop.select.name }}
+                                {% else %}
+                                     N/A
+                                {% endif %}
+                            </td>
+
+                            {# Estatus Actual (Este ya estaba correcto, asumiendo que la propiedad se llama 'Estatus' y es Select) #}
+                            <td class="solicitud-estatus-celda" data-page-id="{{ solicitud.id }}">
+                                {% set estatus_prop = solicitud.properties.get('Estatus') %} {# <-- CONFIRMA que tu propiedad de Estatus se llama EXACTAMENTE 'Estatus' #}
                                 {% if estatus_prop and estatus_prop.type == 'select' and estatus_prop.select %}
-                                    <span class="current-estatus-text">{{ estatus_prop.select.name }}</span> {# Mostrar el estatus actual en un span #}
+                                    <span class="current-estatus-text">{{ estatus_prop.select.name }}</span>
                                 {% else %}
                                     <span class="current-estatus-text">N/A</span>
                                 {% endif %}
                             </td>
-                            <td>... Especificaciones ...</td>
-                            <td> {# Celda para el control de actualización de estatus #}
-                                {# Select para cambiar estatus #}
-                                {# Asegúrate de que las opciones de estatus coinciden con tu DB Notion #}
+
+                            {# Especificaciones (Asumiendo Rich Text) #}
+                            <td>
+                                {% set especificaciones_prop = solicitud.properties.get('Especificaciones adicionales') %} {# <-- Usa el nombre EXACTO #}
+                                 {% if especificaciones_prop and especificaciones_prop.type == 'rich_text' %}
+                                     {% for text_part in especificaciones_prop.get('rich_text', []) %}
+                                         {{ text_part.text.content }}
+                                     {% endfor %}
+                                {% else %}
+                                     N/A
+                                {% endif %}
+                            </td>
+
+                            {# Celda para el control de actualización de estatus (Este no cambia, la lógica es con JS POST) #}
+                            <td>
                                 <select class="update-estatus-select">
                                     <option value="" selected disabled>Cambiar Estatus</option>
-                                    {# Opciones de estatus disponibles en tu DB Notion (tipo Select) #}
+                                    {# Opciones de estatus: Deben coincidir con las opciones de tu propiedad 'Estatus' en Notion #}
                                     <option value="Pendiente">Pendiente</option>
                                     <option value="En Proceso">En Proceso</option>
                                     <option value="Completada">Completada</option>
                                     <option value="Cancelada">Cancelada</option>
-                                    {# Añade todas las opciones de estatus de tu DB Notion aquí #}
+                                    {# ¡IMPORTANTE! Añade/modifica estas opciones según las que realmente existen en tu DB Notion #}
                                 </select>
-                                {# Puedes añadir un botón de "Confirmar" si no quieres actualizar inmediatamente al cambiar el select #}
-                                {# <button data-page-id="{{ solicitud.id }}" class="confirm-status-btn" style="display:none;">Confirmar</button> #}
                             </td>
-                            <td> {# Celda para acciones adicionales #}
-                                <a href="{{ solicitud.url }}" target="_blank" rel="noopener noreferrer" class="view-in-notion-link">Ver</a>
+
+                            {# Celda para acciones adicionales #}
+                            <td>
+                                <a href="{{ solicitud.url }}" target="_blank" rel="noopener noreferrer" class="view-in-notion-link">Ver</a> {# <-- Usa solicitud.url, ya estaba correcto #}
                                 {# Puedes añadir otros botones/enlaces aquí #}
                             </td>
+
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -102,7 +190,7 @@
             {% else %}
                 {# Mensaje si no hay solicitudes o si hubo un error al cargarlas #}
                 {% if error_msg %}
-                     <p>Error al cargar solicitudes.</p>
+                     <p class="error-message-text">Error al cargar solicitudes: {{ error_msg }}</p> {# Muestra el mensaje de error si existe #}
                 {% else %}
                      <p>No hay solicitudes para mostrar.</p>
                 {% endif %}
@@ -118,22 +206,112 @@
     {# Script JavaScript específico para este dashboard #}
     <script src="{{ url_for('static', filename='js/dashboard_compras.js') }}"></script>
 
-    {# Script opcional para auto-cerrar mensajes flash (si lo usas) #}
+    {# Script para manejar la actualización de estatus via AJAX. Este script debe escuchar cambios en el select. #}
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const flashMessages = document.querySelectorAll('.flash-message');
-            const autoCloseDelay = 5000;
-            const fadeOutDuration = 500;
-            flashMessages.forEach(message => {
-                setTimeout(() => {
-                    message.classList.add('fade-out');
-                    setTimeout(() => {
-                        if (message.parentNode) {
-                           message.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', () => {
+        const updateStatusSelects = document.querySelectorAll('.update-estatus-select');
+        const feedbackDiv = document.getElementById('compras-update-feedback'); // Usa el div de feedback
+
+        updateStatusSelects.forEach(select => {
+            select.addEventListener('change', function() {
+                const newStatus = this.value; // El valor seleccionado
+                const row = this.closest('tr'); // Encuentra la fila (<tr>) padre
+                const pageId = row.dataset.pageId; // Obtiene el ID de página del atributo data-page-id
+
+                if (!pageId || !newStatus) {
+                    console.error("No se pudo obtener Page ID o nuevo estatus.");
+                    displayFeedback("Error: Datos de actualización incompletos.", 'error');
+                    return;
+                }
+
+                // Preparar los datos a enviar al backend. La ruta /update_solicitud_status espera {'properties': {...}}
+                const dataToSend = {
+                    properties: {
+                        "Estatus": { // <-- Nombre exacto de la propiedad de Estatus en Notion
+                            "select": { "name": newStatus }
                         }
-                    }, fadeOutDuration);
-                }, autoCloseDelay);
+                        // Puedes añadir otras propiedades si quisieras actualizar más campos
+                    }
+                };
+
+                console.log(`Actualizando solicitud ${pageId} a estatus: ${newStatus}`);
+                displayFeedback(`Actualizando solicitud ${pageId}...`, 'processing');
+                row.classList.add('updating'); // Añade clase para indicar estado visualmente
+
+                fetch(`/compras/update_solicitud_status/${pageId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Si usas CSRF protection, añade el token aquí
+                        // 'X-CSRFToken': '{# {{ csrf_token() }} #}'
+                    },
+                    body: JSON.stringify(dataToSend)
+                })
+                .then(response => {
+                    row.classList.remove('updating'); // Remueve clase de estado
+                    if (!response.ok) {
+                         // Intenta leer la respuesta de error del backend (puede ser JSON)
+                         return response.json().then(err => Promise.reject(err));
+                    }
+                    return response.json(); // Procesar la respuesta exitosa (espera JSON)
+                })
+                .then(data => {
+                    // Actualización exitosa en el backend (y Notion)
+                    console.log("Actualización exitosa:", data);
+                    displayFeedback("Solicitud actualizada con éxito.", 'success');
+
+                    // Opcional: Actualizar visualmente la celda del estatus actual sin recargar
+                    const currentStatusCell = row.querySelector('.solicitud-estatus-celda .current-estatus-text');
+                    if (currentStatusCell) {
+                        currentStatusCell.textContent = newStatus; // Actualiza el texto visible
+                    }
+
+                    // Resetea el select a "Cambiar Estatus" o deja el nuevo valor seleccionado
+                    // this.value = ""; // Deselecciona el nuevo valor si quieres forzar otra selección
+                     this.selectedIndex = 0; // Opcional: vuelve a seleccionar la opción "Cambiar Estatus"
+                     // this.disabled = true; // Opcional: deshabilitar select temporalmente
+
+                })
+                .catch(error => {
+                    // Error en el backend o en la API de Notion
+                    console.error("Error al actualizar:", error);
+                    const errorMessage = error.error || error.message || "Error desconocido al actualizar."; // Intenta obtener un mensaje de error descriptivo
+                    displayFeedback(`Fallo al actualizar: ${errorMessage}`, 'error');
+                });
             });
         });
+
+        // Función auxiliar para mostrar feedback
+        function displayFeedback(message, type) {
+             feedbackDiv.textContent = message;
+             feedbackDiv.className = ''; // Limpia clases previas
+             feedbackDiv.classList.add('message', type); // Añade clases para CSS (processing, success, error)
+             feedbackDiv.style.display = 'block'; // Asegura que sea visible
+
+             // Opcional: Ocultar el mensaje de feedback después de un tiempo para éxito/error
+             if (type !== 'processing') {
+                  setTimeout(() => {
+                      feedbackDiv.style.display = 'none';
+                  }, 8000); // Oculta después de 8 segundos
+             }
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const flashMessages = document.querySelectorAll('.flash-message');
+        const autoCloseDelay = 5000; // 5 segundos
+        const fadeOutDuration = 500; // 0.5 segundos
+        flashMessages.forEach(message => {
+            setTimeout(() => {
+                message.classList.add('fade-out');
+                setTimeout(() => {
+                    if (message.parentNode) {
+                       message.parentNode.removeChild(message); // Elimina del DOM
+                    }
+                }, fadeOutDuration);
+            }, autoCloseDelay);
+        });
+    });
     </script>
+
 {% endblock %}
