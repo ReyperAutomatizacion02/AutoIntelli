@@ -146,9 +146,15 @@
                             <td class="solicitud-estatus-celda" data-page-id="{{ solicitud.id }}">
                                 {% set estatus_prop = solicitud.properties.get('Estatus') %} {# <-- CONFIRMA que tu propiedad de Estatus se llama EXACTAMENTE 'Estatus' #}
                                 {% if estatus_prop and estatus_prop.type == 'select' and estatus_prop.select %}
-                                    <span class="current-estatus-text">{{ estatus_prop.select.name }}</span>
+                                    {# Obtén el nombre del estatus #}
+                                    {% set raw_estatus_name = estatus_prop.select.name %}
+                                    {# Formatea el nombre para usarlo en una clase CSS: minúsculas, espacios a guiones #}
+                                    {% set estatus_name_class = raw_estatus_name | lower | replace(' ', '-') | replace('/', '-') %} {# Añadir manejo de '/' si aplica #}
+                                    <span class="current-estatus-text status-badge status-{{ estatus_name_class }}">
+                                        {{ raw_estatus_name }} {# Muestra el nombre original #}
+                                    </span>
                                 {% else %}
-                                    <span class="current-estatus-text">N/A</span>
+                                    <span class="current-estatus-text">N/A</span> {# Sin clase de badge si es N/A #}
                                 {% endif %}
                             </td>
 
