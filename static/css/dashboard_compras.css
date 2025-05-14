@@ -10,23 +10,86 @@
 /* o styles.css no se carga ANTES de dashboard_compras.css, descomenta y ajusta este bloque :root */
 /* para definir las variables necesarias para este archivo. */
 
+/* --- Variables (Opcional, si no están definidas globalmente) --- */
 :root {
-    --primario: #D42D2E;             /* Rojo principal */
-    --gris-t: #313131d5;           /* Gris con transparencia */
-    --gris-claro: #858585;         /* Gris claro para texto secundario */
+    --primario: #D42D2E; /* Rojo principal */
+    --fondo-oscuro: #2a2a2a; /* Fondo principal oscuro */
+    --fondo-tabla-header: #3a3a3a; /* Color de fondo para encabezados de tabla */
+    --gris-oscuro-claro: #3a3a3a; /* Gris oscuro ligeramente más claro para fondos */
+    --gris-claro: #b0b0b0; /* Gris claro para texto secundario, ajustado para dark mode */
     --blanco: #FFFFFF;             /* Blanco */
- 
+    --borde-tabla-sutil: #444; /* Un color de borde sutil para la cuadrícula en tema oscuro */
     --border-color-light: #ccc;    /* Color de borde claro */
     --border-color-dark: #555;     /* Color de borde oscuro para dark mode */
  }
- 
- /* AQUI CONTINUAN TUS ESTILOS ESPECIFICOS PARA EL DASHBOARD DE COMPRAS */
- /* ... (Mantén el resto de tus estilos actuales aquí) ... */
- /* Por ejemplo, estilos para la tabla, títulos, etc. */
- 
- 
- /* --- Nuevos estilos para el feedback de actualización --- */
- 
+
+/* --- Estilos Generales del Dashboard --- */
+/* Estilos para el contenedor principal del dashboard */
+#compras-dashboard-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px; /* Espaciado interno */
+    background-color: var(--fondo-oscuro); /* Fondo oscuro */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    font-family: 'Roboto', sans-serif; /* Fuente */
+}
+
+/* Estilo para el título de la página */
+.titulo-pagina { 
+    text-align: center;
+    color: var(--primario);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primario);
+    padding-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* --- Estilos para la Tabla de Solicitudes --- */
+/* Estilos para la tabla */
+#solicitudes-table-compras {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar bordes para la cuadrícula */
+    margin-top: 20px; /* Espacio superior */
+    table-layout: fixed; /* Fija el ancho de las columnas según los th */
+}
+
+#solicitudes-table-compras thead th {
+    background-color: var(--fondo-tabla-header); /* Fondo ligeramente más oscuro para encabezados */
+    color: var(--blanco); /* Texto de encabezado */
+    font-weight: bold;
+    text-align: left; /* Alinear texto a la izquierda en encabezados */
+    padding: 12px 15px; /* Espaciado interno aumentado */
+    border: 1px solid var(--borde-tabla-sutil); /* Bordes en todos los lados */
+}
+
+/* Ancho de las columnas (ajustar según necesidad) */
+#solicitudes-table-compras thead th:nth-child(1) { width: 15%; } /* Folio */ /* Ajustar anchos según las columnas actuales */
+#solicitudes-table-compras thead th:nth-child(2) { width: 10%; }  /* Fecha de solicitud */
+#solicitudes-table-compras thead th:nth-child(3) { width: 15%; } /* Nombre del solicitante */
+#solicitudes-table-compras thead th:nth-child(4) { width: 15%; } /* Material */
+#solicitudes-table-compras thead th:nth-child(5) { width: 8%; }  /* Cantidad */
+#solicitudes-table-compras thead th:nth-child(6) { width: 12%; } /* Partida */
+#solicitudes-table-compras thead th:nth-child(7) { width: 8%; }  /* Urgente */
+#solicitudes-table-compras thead th:nth-child(8) { width: 10%; }  /* Estatus Actual */
+#solicitudes-table-compras thead th:nth-child(9) { width: 10%; } /* Actualizar Estatus */
+#solicitudes-table-compras thead th:nth-child(10) { width: 7%; } /* Acciones */ /* El total debería sumar 100% */
+
+ /* Bordes y padding para todas las celdas (th y td) */
+ #solicitudes-table-compras th, 
+ #solicitudes-table-compras td {
+    border: 1px solid var(--borde-tabla-sutil); /* Borde sutil en todos los lados para la cuadrícula */
+    text-align: left;
+    padding: 10px 15px; /* Espaciado interno aumentado */
+    word-wrap: break-word; /* Permite que palabras largas se rompan */
+}
+
+/* Estilo hover para las filas del cuerpo de la tabla */
+#solicitudes-table-compras tbody tr:hover {
+    background-color: var(--gris-oscuro-claro); /* Fondo ligeramente más claro al pasar el ratón */
+}
+
+/* --- Estilos para Mensajes de Feedback y Elementos Específicos --- */
  /* Estilos básicos para el div de feedback */
  #compras-update-feedback {
      margin-top: 10px;
@@ -76,7 +139,6 @@
      min-height: 0; /* Altura mínima de 0 cuando está vacío */
  }
  
- 
  /* Opcional: Estilo para la fila mientras se actualiza (solo visual) */
  tr.updating {
      opacity: 0.6; /* Hacer la fila ligeramente transparente */
@@ -91,7 +153,7 @@
      font-weight: bold;
      white-space: nowrap; /* Evita saltos de línea */
  }
- 
+
  /* Clases para los colores de los estatus (EJEMPLOS) */
  /* Ajusta estos colores según tu diseño */
  .status-badge.status-pendiente {
@@ -113,7 +175,7 @@
      background-color: #dc3545; /* Rojo */
      color: #fff;
  }
- 
+
  /* Añade más clases si tienes otros estatus en Notion */
  /* Asegúrate de que la clase coincida con el nombre del estatus en minúsculas y con guiones */
  /* por ejemplo, "En Revisión" -> status-en-revision */
